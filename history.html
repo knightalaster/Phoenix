@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kahulugan ng Kasaysayan - Phoenix</title>
+<title>Phoenix - Kahulugan ng Kasaysayan</title>
 
 <style>
 
@@ -15,54 +15,97 @@ body{
     background:#b99272;
     font-family:Georgia, serif;
     text-align:center;
+    overflow-x:hidden;
 }
 
 
-.scroll{
-    width:70%;
-    margin:70px auto;
-    background:#efe0b3;
-    border:8px solid #c6a46d;
-    border-radius:12px;
+.paper{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    box-sizing:border-box;
+    background:#f8f1df;
+    border:8px solid #d8c3a3;
     padding:50px;
-    box-shadow:0 0 15px rgba(0,0,0,.3);
+    position:relative;
+    box-shadow:0 0 20px rgba(0,0,0,.25);
 }
 
 
-h1{
-    color:#16186b;
+.paper h1{
+    color:#5b3a1e;
     font-size:45px;
     font-family:cursive;
 }
 
 
-h2{
-    color:#16186b;
-    font-size:30px;
-}
-
-
-p{
-    color:#16186b;
-    font-size:22px;
+.paper p{
+    color:#5b3a1e;
+    font-size:20px;
     line-height:1.7;
+    text-align:left;
 }
 
 
-button{
-    background:#16186b;
+.phoenix-logo{
+    width:120px;
+}
+
+
+/* Navigation Buttons */
+
+.navigation{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+
+.info-button{
+    background:#8b5a2b;
     color:#f8f1df;
     border:none;
-    padding:15px 35px;
-    border-radius:10px;
-    font-size:20px;
+    padding:18px 40px;
+    margin:40px 10px 10px;
+    font-size:22px;
     font-family:Georgia, serif;
+    border-radius:12px;
     cursor:pointer;
+    box-shadow:0 5px 10px rgba(0,0,0,.3);
+    transition:.3s;
 }
 
 
-button:hover{
-    background:#2b2d9b;
+.info-button:hover{
+    background:#a66b35;
+    transform:translateY(-5px);
+}
+
+
+@media screen and (max-width:600px){
+
+.paper{
+    width:90%;
+    padding:30px;
+}
+
+
+.paper h1{
+    font-size:35px;
+}
+
+
+.paper p{
+    font-size:17px;
+}
+
+
+.info-button{
+    width:80%;
+    font-size:18px;
+}
+
 }
 
 </style>
@@ -73,19 +116,51 @@ button:hover{
 <body>
 
 
-<div class="scroll">
+<div class="paper">
 
-<h1>KAHULUGAN NG KASAYSAYAN</h1>
+
+<img class="phoenix-logo" src="Phoenix.png">
+
+
+<h1>Kahulugan ng Kasaysayan</h1>
 
 
 <p>
-  pag-aaral ng mga pangyayari sa nakaraan batay sa mga ebidensya upang maunawaan ang kasalukuyan at makapagbigay-gabay sa hinaharap.
 
-<br><b>
+
+<b>HERODOTUS (Ama ng Kasaysayan)</b><br>
+Ang kasaysayan ay pagsasalaysay o pagsisiyasat ng mga pangyayari sa nakaraan.
+
+<br><br>
+
+
+<b>THUCYDIDES (Ebidensya)</b><br>
+Isang masusing pag-aaral ng mga pangyayari batay sa ebidensya at katotohanan.
+
+<br><br>
+
+
+<b>ZEUS SALAZAR</b><br>
+Ang kasaysayan ay saysay na may saysay para sa isang pangkat ng tao.
+
+<br><br>
+
+
+<b>RENATO CONSTANTINO</b><br>
+Ang kasaysayan ay kasangkapan sa paghubog ng kamalayang pambansa at pag-unawa sa lipunan.
+
+<br><br><br>
+
+
+<b>KAHULUGAN NG KASAYSAYAN</b><br>
+
+Ang sistematikong pag-aaral ng mga pangyayari sa nakaraan batay sa mga ebidensya upang maunawaan ang kasalukuyan at makapagbigay-gabay sa hinaharap.
+
+<br><br>
 
 
 <b>Pag-aaral ng Nakaraan</b><br>
-Sinusuri ang mga pangyayari, tao, at lugar na naganap noon at kung paano nito hinubog ang lipunan.
+Sinusuri ang mga pangyayari, tao, at lugar na naganap noon at hinuhubog ang lipunan.
 
 <br><br>
 
@@ -116,36 +191,23 @@ Nagbibigay ng aral at gabay upang makagawa ng mas mabuting desisyon sa hinaharap
 
 Sa madaling salita, ang <b>KASAYSAYAN</b> ay hindi lamang tungkol sa nakaraan, kundi ito ay daan upang maunawaan ang kasalukuyan at hubugin ang mas maayos na hinaharap.
 
-</p>
-  <p>
 
-<b>HERODOTUS (Ama ng Kasaysayan)</b><br>
-Ang kasaysayan ay pagsasalaysay o pagsisiyasat ng mga pangyayari sa nakaraan.
-
-<br><br>
-
-<b>THUCYDIDES (Ebidensya)</b><br>
-Isang masusing pag-aaral ng mga pangyayari batay sa ebidensya at katotohanan.
-
-<br><br>
-
-<b>ZEUS SALAZAR</b><br>
-Ang kasaysayan ay saysay na may saysay para sa isang pangkat ng tao.
-
-<br><br>
-
-<b>RENATO CONSTANTINO</b><br>
-Ang kasaysayan ay kasangkapan sa paghubog ng kamalayang pambansa at pag-unawa sa lipunan.
-
-<br><br>
-
-<b>KAHULUGAN NG KASAYSAYAN</b><br>
-Ang sistematikong pag-aaral ng mga pangyayari sa nakaraan batay sa mga ebidensya upang maunawaan ang kasalukuyan at makapagbigay-gabay sa hinaharap.
 </p>
 
-<button onclick="location.href='index.html'">
-Back
+
+
+<div class="navigation">
+
+<button class="info-button" onclick="location.href='index.html'">
+Back to Home
 </button>
+
+
+<button class="info-button" onclick="location.href='heograpiya.html'">
+Next Lesson
+</button>
+
+</div>
 
 
 </div>
