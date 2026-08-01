@@ -1,67 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Members - Phoenix</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Phoenix - Members</title>
 
 <style>
+
 body{
+    margin:0;
+    min-height:100vh;
     background:#b99272;
     font-family:Georgia, serif;
     text-align:center;
+    overflow-x:hidden;
 }
 
-.scroll{
-    width:430px;
-    margin:80px auto;
-    background:#efe0b3;
-    border:8px solid #c6a46d;
-    border-radius:12px;
+
+.paper{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    box-sizing:border-box;
+    background:#f8f1df;
+    border:8px solid #d8c3a3;
     padding:50px;
+    position:relative;
+    box-shadow:0 0 20px rgba(0,0,0,.25);
 }
 
-h1{
-    color:#16186b;
+
+.paper h1{
+    color:#5b3a1e;
+    font-size:55px;
+    font-family:cursive;
 }
 
-p{
-    color:#16186b;
+
+.paper p{
+    color:#5b3a1e;
     font-size:25px;
+    line-height:1.8;
 }
 
-button{
-    background:#16186b;
-    color:white;
-    padding:15px 30px;
-    border:none;
-    border-radius:10px;
-    font-size:20px;
-    cursor:pointer;
+
+.phoenix-logo{
+    width:120px;
 }
+
+
+/* Button */
+
+.info-button{
+    background:#8b5a2b;
+    color:#f8f1df;
+    border:none;
+    padding:18px 40px;
+    margin:40px 10px 10px;
+    font-size:22px;
+    font-family:Georgia, serif;
+    border-radius:12px;
+    cursor:pointer;
+    box-shadow:0 5px 10px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+
+.info-button:hover{
+    background:#a66b35;
+    transform:translateY(-5px);
+}
+
+
+@media screen and (max-width:600px){
+
+.paper{
+    width:90%;
+    padding:30px;
+}
+
+
+.paper h1{
+    font-size:40px;
+}
+
+
+.paper p{
+    font-size:20px;
+}
+
+
+.info-button{
+    width:80%;
+    font-size:18px;
+}
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<div class="scroll">
+
+<div class="paper">
+
+
+<img class="phoenix-logo" src="Phoenix.png">
+
 
 <h1>Members</h1>
 
+
 <p>
-Sam Eduard O. Alaan<br>
-Angeline Blando<br>
-Ilyn Plaza<br>
-Venice Dela Cruz<br>
-Elmer Jr. Alcaraz<br>
-Prince Delgado<br>
+
+Sam Eduard O. Alaan<br><br>
+
+Angeline Blando<br><br>
+
+Ilyn Plaza<br><br>
+
+Venice Dela Cruz<br><br>
+
+Elmer Jr. Alcaraz<br><br>
+
+Prince Delgado<br><br>
+
 Ariane Mae Dailisan
+
 </p>
 
-<button onclick="location.href='index.html'">
-Back
+
+
+<button class="info-button" onclick="location.href='index.html'">
+Back to Home
 </button>
+
 
 </div>
 
+
 </body>
+
 </html>
