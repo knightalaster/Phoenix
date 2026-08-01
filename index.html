@@ -22,32 +22,34 @@ body{
 /* Top Paper */
 
 .paper{
-    width:75%;
+    width:80%;
+    max-width:900px;
     margin:40px auto;
+    box-sizing:border-box;
     background:#f8f1df;
     border:8px solid #d8c3a3;
-    padding:70px;
+    padding:50px;
     position:relative;
     box-shadow:0 0 20px rgba(0,0,0,.25);
 }
 
 
 .paper h3{
-    color:#16186b;
+    color:#5b3a1e;
     margin:0;
     font-size:32px;
 }
 
 
 .paper h4{
-    color:#16186b;
+    color:#5b3a1e;
     margin:10px 0;
     font-size:24px;
 }
 
 
 .paper h1{
-    color:#16186b;
+    color:#5b3a1e;
     font-size:90px;
     font-family:cursive;
     margin-top:70px;
@@ -81,26 +83,39 @@ body{
 /* Buttons */
 
 .buttons{
+    width:100%;
     margin:60px auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 
 .info-button{
-    background:#16186b;
+    width:60%;
+    background:#8b5a2b;
     color:#f8f1df;
     border:none;
     padding:20px 40px;
-    margin:20px;
+    margin:25px auto;
     font-size:25px;
     font-family:Georgia, serif;
     border-radius:12px;
     cursor:pointer;
     box-shadow:0 5px 10px rgba(0,0,0,.3);
+    transition:0.3s;
 }
 
 
 .info-button:hover{
-    background:#2b2d9b;
+    background:#a66b35;
+    transform:translateY(-5px);
+    box-shadow:0 10px 15px rgba(0,0,0,.4);
+}
+
+
+.info-button:active{
+    transform:translateY(2px);
 }
 
 
@@ -122,6 +137,65 @@ body{
 
 .tower{
     width:120px;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width:600px){
+
+.paper{
+    width:90%;
+    padding:30px;
+}
+
+
+.paper h1{
+    font-size:55px;
+}
+
+
+.paper h3{
+    font-size:24px;
+}
+
+
+.paper h4{
+    font-size:18px;
+}
+
+
+.phoenix-logo{
+    width:90px;
+}
+
+
+.info-button{
+    width:85%;
+    font-size:18px;
+    padding:15px 20px;
+}
+
+
+.clock{
+    width:60px;
+}
+
+
+.feather{
+    width:90px;
+}
+
+
+.church{
+    width:150px;
+}
+
+
+.tower{
+    width:100px;
+}
+
 }
 
 </style>
@@ -151,6 +225,7 @@ body{
 
 <div class="buttons">
 
+
 <button class="info-button" onclick="location.href='members.html'">
 Members
 </button>
@@ -161,9 +236,35 @@ Kahulugan ng Kasaysayan
 </button>
 
 
-<button class="info-button" onclick="location.href='groups.html'">
-Pangkat ng Tao
+<button class="info-button" onclick="location.href='heograpiya.html'">
+Pag-aaral ng Heograpiya ng Mundo
 </button>
+
+
+<button class="info-button" onclick="location.href='muntinlupa.html'">
+Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
+</button>
+
+
+<button class="info-button" onclick="location.href='groups.html'">
+Iba't-ibang Pangkat ng Tao na Naging Bahagi ng Ating Pinagmulan
+</button>
+
+
+<button class="info-button" onclick="location.href='ilaya_ilawod.html'">
+Ilaya at Ilawod
+</button>
+
+
+<button class="info-button" onclick="location.href='kultura.html'">
+Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+</button>
+
+
+<button class="info-button" onclick="location.href='paniniwala.html'">
+Paniniwala at Pananampalataya
+</button>
+
 
 </div>
 
