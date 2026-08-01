@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Phoenix - Pag-aaral ng Heograpiya ng Mundo</title>
+
+<style>
+
+body{
+    margin:0;
+    min-height:100vh;
+    background:#b99272;
+    font-family:Georgia, serif;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+
+.paper{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    box-sizing:border-box;
+    background:#f8f1df;
+    border:8px solid #d8c3a3;
+    padding:50px;
+    position:relative;
+    box-shadow:0 0 20px rgba(0,0,0,.25);
+}
+
+
+.paper h1{
+    color:#5b3a1e;
+    font-size:45px;
+    font-family:cursive;
+}
+
+
+.paper h2{
+    color:#5b3a1e;
+    font-size:30px;
+}
+
+
+.paper p{
+    color:#5b3a1e;
+    font-size:20px;
+    line-height:1.7;
+    text-align:left;
+}
+
+
+.phoenix-logo{
+    width:120px;
+}
+
+
+/* Images */
+
+.image-box img{
+    width:80%;
+    max-width:500px;
+    margin:20px auto;
+    border:5px solid #d8c3a3;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+
+/* Navigation */
+
+.navigation{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+
+.info-button{
+    background:#8b5a2b;
+    color:#f8f1df;
+    border:none;
+    padding:18px 40px;
+    margin:40px 10px 10px;
+    font-size:22px;
+    font-family:Georgia, serif;
+    border-radius:12px;
+    cursor:pointer;
+    box-shadow:0 5px 10px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+
+.info-button:hover{
+    background:#a66b35;
+    transform:translateY(-5px);
+}
+
+
+@media screen and (max-width:600px){
+
+.paper{
+    width:90%;
+    padding:30px;
+}
+
+
+.paper h1{
+    font-size:35px;
+}
+
+
+.paper h2{
+    font-size:24px;
+}
+
+
+.paper p{
+    font-size:17px;
+}
+
+
+.info-button{
+    width:80%;
+    font-size:18px;
+}
+
+
+.image-box img{
+    width:95%;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="paper">
+
+
+<img class="phoenix-logo" src="Phoenix.png">
+
+
+<h1>Pag-aaral ng Heograpiya ng Mundo</h1>
+
+
+<h2>Mapa</h2>
+
+<div class="image-box">
+<img src="Mapa.png">
+</div>
+
+
+<p>
+
+Ang mapa ay isang representasyon o larawan ng isang lugar na nagpapakita ng lokasyon, anyo, at katangian ng isang pook.
+
+</p>
+
+
+<br>
+
+
+<h2>Globo</h2>
+
+<div class="image-box">
+<img src="Globo.png">
+</div>
+
+
+<p>
+
+Ang globo ay isang modelo ng mundo na nagpapakita ng tunay na hugis at pagkakaugnay ng mga kontinente at karagatan.
+
+<br><br>
+
+
+<b>Latitude</b><br>
+Mga guhit na pahalang sa globo na ginagamit upang malaman ang layo ng isang lugar mula sa Ekwador.
+
+<br><br>
+
+
+<b>Longitude</b><br>
+Mga guhit na patayo sa globo na ginagamit upang malaman ang lokasyon ng isang lugar mula sa Prime Meridian.
+
+<br><br>
+
+
+<b>Ekwador</b><br>
+Guhit na naghahati sa mundo sa Hilaga at Timog na bahagi.
+
+<br><br>
+
+
+<b>Prime Meridian</b><br>
+Pangunahing guhit ng longitude na nagsisilbing batayan ng lokasyon sa Silangan at Kanlurang bahagi ng mundo.
+
+</p>
+
+
+<br>
+
+
+<h2>Pilipinas</h2>
+
+<div class="image-box">
+<img src="Pilipinas.png">
+</div>
+
+
+<p>
+
+Ang Pilipinas ay isang arkipelago na binubuo ng maraming pulo.
+
+<br><br>
+
+
+<b>Main Islands:</b><br>
+• Luzon<br>
+• Visayas<br>
+• Mindanao
+
+<br><br>
+
+
+<b>Lokasyon ng Pilipinas:</b><br>
+Matatagpuan sa pagitan ng 4° at 22° Hilagang latitud.
+
+<br><br>
+
+
+<b>Absolute Location:</b><br>
+Matatagpuan sa pagitan ng 116° at 127° Silangang longhitud.
+
+</p>
+
+
+<br>
+
+
+<h2>Relative Location</h2>
+
+<div class="image-box">
+<img src="Location.png">
+</div>
+
+
+<p>
+
+Tumutukoy sa lokasyon ng isang lugar batay sa kalapit na kalupaan o katubigan.
+
+<br><br>
+
+
+<b>Vicinal Location</b><br>
+Kalapit na kalupaan.
+
+<br><br>
+
+
+<b>Incular Location</b><br>
+Kalapit na katubigan.
+
+<br><br>
+
+
+<b>Kartograpo</b><br>
+Isang taong gumagawa o nag-aaral ng mapa.
+
+</p>
+
+
+
+<div class="navigation">
+
+<button class="info-button" onclick="location.href='history.html'">
+Previous Lesson
+</button>
+
+
+<button class="info-button" onclick="location.href='index.html'">
+Back to Home
+</button>
+
+
+<button class="info-button" onclick="location.href='muntinlupa.html'">
+Next Lesson
+</button>
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
