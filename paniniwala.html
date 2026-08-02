@@ -19,6 +19,8 @@ body{
 }
 
 
+/* Paper */
+
 .paper{
     width:80%;
     max-width:900px;
@@ -43,6 +45,11 @@ body{
     color:#5b3a1e;
     font-size:32px;
 }
+    
+    .paper h3{
+    color:#5b3a1e;
+    font-size:19px;
+}
 
 
 .paper p{
@@ -58,7 +65,7 @@ body{
 }
 
 
-/* Image */
+/* Images */
 
 .image-box img{
     width:80%;
@@ -66,8 +73,39 @@ body{
     margin:20px auto;
     border:5px solid #d8c3a3;
     box-shadow:0 0 10px rgba(0,0,0,.2);
+    display:block;
 }
 
+
+/* Religion Table */
+
+.religion-table{
+    width:100%;
+    min-width:700px;
+    border-collapse:collapse;
+    background:#fffaf0;
+    margin:auto;
+}
+
+.religion-table th{
+    background:#8b5a2b;
+    color:#f8f1df;
+    border:2px solid #d8c3a3;
+    padding:15px;
+}
+
+.religion-table td{
+    border:2px solid #d8c3a3;
+    padding:12px;
+    color:#5b3a1e;
+    text-align:center;
+}
+
+    .table-container{
+    width:100%;
+    overflow-x:auto;
+    margin:30px 0;
+}
 
 /* Navigation */
 
@@ -100,6 +138,8 @@ body{
 }
 
 
+/* Mobile */
+
 @media screen and (max-width:600px){
 
 .paper{
@@ -117,9 +157,29 @@ body{
     font-size:25px;
 }
 
+    .paper h2{
+    font-size:15px;
+}
 
 .paper p{
     font-size:17px;
+}
+
+
+.image-box img{
+    width:95%;
+}
+
+
+.religion-table{
+    width:100%;
+    font-size:14px;
+}
+
+
+.religion-table th,
+.religion-table td{
+    padding:8px;
 }
 
 
@@ -128,70 +188,48 @@ body{
     font-size:18px;
 }
 
-
-.image-box img{
-    width:95%;
-}
-
 }
 
 </style>
 
 </head>
-
-
 <body>
-
 
 <div class="paper">
 
-
 <img class="phoenix-logo" src="Phoenix.png">
-
 
 <h1>Paniniwala at Pananampalataya</h1>
 
-
 <div class="image-box">
-<img src="Paniniwala.png">
+    <img src="a.jpeg">
 </div>
 
-
-
 <p>
-
 
 <b>Paniniwala</b><br>
 
 Ang paniniwala ay mga ideya, pananaw, o kaisipan na tinatanggap ng isang tao o pangkat bilang bahagi ng kanilang pag-unawa sa mundo.
 
-
 <br><br>
-
 
 <b>Pananampalataya</b><br>
 
 Ang pananampalataya ay mas malalim na pagtitiwala o paniniwala na kadalasang may kaugnayan sa relihiyon at espirituwalidad.
 
-
 <br><br>
-
 
 <b>Kahalagahan ng Paniniwala at Pananampalataya</b><br>
 
 Ang mga paniniwala at pananampalataya ay may malaking papel sa paghubog ng kultura, tradisyon, at pagkakakilanlan ng isang pangkat ng tao.
 
-
 <br><br>
-
 
 <b>Bahagi ng Kasaysayan</b><br>
 
 Makikita sa mga paniniwala ng mga tao ang kanilang paraan ng pamumuhay, pagpapahalaga, at pakikitungo sa kapwa.
 
-
 <br><br>
-
 
 <b>Epekto sa Kultura</b><br>
 
@@ -199,44 +237,177 @@ Makikita sa mga paniniwala ng mga tao ang kanilang paraan ng pamumuhay, pagpapah
 • Nagpapatibay ng pagkakaisa ng isang komunidad.<br>
 • Nagpapasa ng mga tradisyon mula sa isang henerasyon patungo sa susunod.
 
-
 <br><br>
-
 
 <b>Pagkakaugnay sa Kasaysayan</b><br>
 
 Ang pag-aaral ng paniniwala at pananampalataya ay tumutulong upang mas maunawaan ang mga dahilan kung bakit nabuo ang iba't ibang kultura at pamayanan.
 
+<br><br>
+
+Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin ang kanilang kasaysayan, kultura, at pagkatao.
+
+</p>
+
+<h2>Mga Pangunahing Relihiyon sa Mundo</h2>
+    <div class="table-container">
+    <table class="religion-table">
+
+<tr>
+    <th>Kristiyanismo</th>
+    <th>Islam</th>
+    <th>Hudaismo</th>
+    <th>Budismo</th>
+</tr>
+
+<tr>
+    <td>Krus</td>
+    <td>Koran</td>
+    <td>Torah</td>
+    <td>Ginoong Buddha</td>
+</tr>
+
+<tr>
+    <td>Bibliya</td>
+    <td>Moske</td>
+    <td>Sinagoga</td>
+    <td>Reincarnation</td>
+</tr>
+
+<tr>
+    <td>Simbahan</td>
+    <td>Crescent Moon and Star</td>
+    <td>Menorah</td>
+    <td>Nirvana</td>
+</tr>
+
+<tr>
+    <td>Simbang Gabi</td>
+    <td>Ramadan</td>
+    <td>Sabbath</td>
+    <td>Dharma</td>
+</tr>
+
+<tr>
+    <td>Papa (Pope)</td>
+    <td>Praying Mat</td>
+    <td>Kosher</td>
+    <td>Walong Dakilang Landas</td>
+</tr>
+
+<tr>
+    <td>Rosaryo</td>
+    <td>Pagdarasal isang beses sa isang araw</td>
+    <td>Rabbi</td>
+    <td>Monghe</td>
+</tr>
+
+<tr>
+    <td>Pasko</td>
+    <td>Eid al-Fitr</td>
+    <td>Kandila ng Hanukkah</td>
+    <td>Monasteryo</td>
+</tr>
+
+<tr>
+    <td>Kumpisal</td>
+    <td>Halal</td>
+    <td>-</td>
+    <td>-</td>
+</tr>
+
+<tr>
+    <td>-</td>
+    <td>Imam</td>
+    <td>-</td>
+    <td>-</td>
+</tr>
+
+<tr>
+    <td>-</td>
+    <td>Hindi nakain ng baboy</td>
+    <td>-</td>
+    <td>-</td>
+</tr>
+
+</table>
+    </div>
+    
+    <b><h1>Pagkakaiba ng Paniniwala at Pananampalataya</h1>
+    </b>
+
+<br>
+    <p>
+<b>PANINIWALA</b><br>
+
+Nakabase sa 5 senses na ginagamitan ng isip.
+
+<br><br>
+
+• Paningin<br>
+• Pandinig<br>
+• Panlasa<br>
+• Pang-amoy<br>
+• Pandama
 
 <br><br>
 
 
-Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin ang kanilang kasaysayan, kultura, at pagkatao.
+<b>PANANAMPALATAYA</b><br>
 
+Hindi naka-base sa 5 senses at mas ginagamitan ng puso.
+
+<br><br>
+
+Ito ay paniniwala o pag-asa na ang kanilang hinahangad ay mangyayari.
+
+<br><br>
+    
+</p>
+    
+    <h1>Mga Sinaunang Paniniwala at Sistema ng Pananampalataya:</h1>
+    
+    <p>
+
+<b>1. Animismo</b><br>
+Ito ang paniniwala na ang lahat ng bagay sa kalikasan, buhay man o hindi, ay may sariling kaluluwa, espiritu, o kamalayan.
+
+<br><br>
+
+<b>2. Paganismo</b><br>
+Ito ay tumutukoy sa relihiyong nakasentro sa kalikasan o mga lumang tradisyon na labas sa mga pangunahing relihiyon sa mundo.
+
+<br><br>
+
+<b>3. Mitolohiya</b><br>
+Ito ay tumutukoy sa mga kuwento, alamat, at salaysay ng isang partikular na kultura o grupo ng mga tao tungkol sa kanilang diyos, bayani, at pinagmulan ng mundo.
+
+<br><br>
+
+<b>4. Politeismo</b><br>
+Ito ay paniniwala o relihiyon kung saan sumasamba ang mga tao sa higit sa isang diyos.
+
+<br><br>
+
+<b>5. Monoteismo</b><br>
+Ito ay paniniwala o pagsamba sa iisang diyos.
 
 </p>
-
-
-
-<div class="navigation">
-
-
+    
+    <div class="navigation">
+       
 <button class="info-button" onclick="location.href='kultura.html'">
 Previous Lesson
 </button>
-
 
 <button class="info-button" onclick="location.href='index.html'">
 Back to Home
 </button>
 
-
 </div>
 
-
 </div>
-
 
 </body>
 
-  </html>
+</html>
