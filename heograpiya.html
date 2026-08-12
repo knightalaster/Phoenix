@@ -29,6 +29,20 @@ body{
     padding:50px;
     position:relative;
     box-shadow:0 0 20px rgba(0,0,0,.25);
+
+    animation:paperEnter 0.8s ease-out;
+}
+
+
+@keyframes paperEnter{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -36,6 +50,20 @@ body{
     color:#5b3a1e;
     font-size:45px;
     font-family:cursive;
+
+    animation:titleEnter 1s ease-out 0.5s both;
+}
+
+
+@keyframes titleEnter{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -55,6 +83,20 @@ body{
 
 .phoenix-logo{
     width:120px;
+
+    animation:logoEnter 1s ease-out 0.3s both;
+}
+
+
+@keyframes logoEnter{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
 }
 
 
@@ -91,6 +133,29 @@ body{
     cursor:pointer;
     box-shadow:0 5px 10px rgba(0,0,0,.3);
     transition:.3s;
+
+    animation:buttonEnter 0.6s ease-out both;
+}
+
+
+.info-button:nth-child(1){
+    animation-delay:0.2s;
+}
+
+.info-button:nth-child(2){
+    animation-delay:0.3s;
+}
+
+
+@keyframes buttonEnter{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -146,7 +211,7 @@ body{
 <div class="paper">
 
 
-<img class="phoenix-logo" src="Project/Img/Phoenix.png">
+<img class="phoenix-logo" src="Phoenix.png">
 
 
 <h1>Pag-aaral ng Heograpiya ng Mundo</h1>
@@ -155,7 +220,7 @@ body{
 <h2>Mapa</h2>
 
 <div class="image-box">
-<img src="Project/Img/map.jpg">
+<img src="map.jpg">
 </div>
 
 
@@ -172,7 +237,7 @@ Ang mapa ay isang representasyon o larawan ng isang lugar na nagpapakita ng loka
 <h2>Globo</h2>
 
 <div class="image-box">
-<img src="Project/Img/globe.png">
+<img src="globe1.png">
 </div>
 
 
@@ -185,7 +250,7 @@ Ang globo ay isang modelo ng mundo na nagpapakita ng tunay na hugis at pagkakaug
        </p>
     
 <div class="image-box">
-<img src="Project/Img/lat.jpeg">
+<img src="lat.jpeg">
 </div>
     
 <p>
@@ -204,7 +269,7 @@ Mga guhit na patayo sa globo na ginagamit upang malaman ang lokasyon ng isang lu
     </p>
     
 <div class="image-box">
-<img src="Project/Img/ep.jpeg">
+<img src="ep.jpeg">
 </div>
     
 <p>
@@ -227,7 +292,7 @@ Pangunahing guhit ng longitude na nagsisilbing batayan ng lokasyon sa Silangan a
 <h2>Pilipinas</h2>
 
 <div class="image-box">
-<img src="Project/Img/ph.jpeg">
+<img src="ph.jpeg">
 </div>
 
 
@@ -264,7 +329,7 @@ Matatagpuan sa pagitan ng 116° at 127° Silangang longhitud.
 <h2>Relative Location</h2>
 
 <div class="image-box">
-<img src="Project/Img/rl.jpeg">
+<img src="rl.jpeg">
 </div>
 
 
