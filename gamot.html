@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Phoenix - Sinaunang Paniniwala at Kultura ng mga Pilipino</title>
+
+<style>
+
+body{
+    margin:0;
+    min-height:100vh;
+    background:#b99272;
+    font-family:Georgia, serif;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+
+/* Paper */
+
+.paper{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    box-sizing:border-box;
+    background:#f8f1df;
+    border:8px solid #d8c3a3;
+    padding:50px;
+    position:relative;
+    box-shadow:0 0 20px rgba(0,0,0,.25);
+
+    animation:paperEnter 0.8s ease-out;
+}
+
+
+.paper h1{
+    color:#5b3a1e;
+    font-size:45px;
+    font-family:cursive;
+
+    animation:headingEnter 0.8s ease-out;
+}
+
+
+.paper h2{
+    color:#5b3a1e;
+    font-size:32px;
+
+    animation:headingEnter 0.8s ease-out;
+}
+
+
+.paper p{
+    color:#5b3a1e;
+    font-size:20px;
+    line-height:1.7;
+    text-align:left;
+}
+
+
+.phoenix-logo{
+    width:120px;
+
+    animation:imageEnter 1s ease-out;
+}
+
+
+/* Images */
+
+.image-box img{
+    width:80%;
+    max-width:500px;
+    margin:20px auto;
+    border:5px solid #d8c3a3;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    display:block;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation:imageEnter 1s ease-out;
+}
+
+
+.image-box img:hover{
+    transform:scale(1.03);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+
+/* Navigation */
+
+.navigation{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+
+.info-button{
+    background:#8b5a2b;
+    color:#f8f1df;
+    border:none;
+    padding:18px 40px;
+    margin:40px 10px 10px;
+    font-size:22px;
+    font-family:Georgia, serif;
+    border-radius:12px;
+    cursor:pointer;
+    box-shadow:0 5px 10px rgba(0,0,0,.3);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.info-button:hover{
+    background:#a66b35;
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 10px 15px rgba(0,0,0,.4);
+}
+
+
+.info-button:active{
+    transform:translateY(2px) scale(.98);
+}
+
+
+/* Easter Egg */
+
+.easter-egg{
+    width:10px;
+    height:10px;
+    opacity:100;
+    display:block;
+    margin-top:30px;
+    margin-left:5px;
+}
+
+
+/* Animations */
+
+@keyframes paperEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes headingEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes imageEnter{
+
+    from{
+        opacity:0;
+        transform:scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+/* Mobile */
+
+@media screen and (max-width:600px){
+
+.paper{
+    width:90%;
+    padding:30px;
+}
+
+
+.paper h1{
+    font-size:35px;
+}
+
+
+.paper h2{
+    font-size:25px;
+}
+
+
+.paper p{
+    font-size:17px;
+}
+
+
+.image-box img{
+    width:95%;
+}
+
+
+.info-button{
+    width:80%;
+    font-size:18px;
+}
+
+}
+
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce){
+
+    .paper,
+    .paper h1,
+    .paper h2,
+    .phoenix-logo,
+    .image-box img{
+        animation:none;
+    }
+
+    .image-box img,
+    .info-button{
+        transition:none;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+  
+<div class="paper">
+
+<img class="phoenix-logo" src="Phoenix.png">
+
+ <div class="navigation">
+
+<button class="info-button" onclick="location.href='pamahiin.html'">
+Previous Lesson
+</button>
+
+<button class="info-button" onclick="location.href='index.html'">
+Back to Home
+</button>
+
+</div>   
+    
+</div>
+
+</body>
+
+</html>
