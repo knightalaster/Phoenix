@@ -2,12 +2,17 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Phoenix - Histo Page</title>
 
 <style>
+
+/* =========================
+   BODY
+========================= */
 
 body{
     margin:0;
@@ -19,18 +24,44 @@ body{
 }
 
 
-/* Top Paper */
+/* =========================
+   TOP PAPER
+========================= */
 
 .paper{
     width:80%;
     max-width:900px;
+
     margin:40px auto;
+
     box-sizing:border-box;
+
     background:#f8f1df;
+
     border:8px solid #d8c3a3;
+
     padding:50px;
+
     position:relative;
+
     box-shadow:0 0 20px rgba(0,0,0,.25);
+
+    animation:paperEnter .8s ease-out;
+}
+
+
+@keyframes paperEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 
@@ -50,156 +81,483 @@ body{
 
 .paper h1{
     color:#5b3a1e;
+
     font-size:90px;
+
     font-family:cursive;
+
     margin-top:70px;
+
+    animation:titleEnter 1s ease-out .5s both;
 }
 
 
-/* Decorations */
+@keyframes titleEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================
+   DECORATIONS
+========================= */
 
 .clock{
     position:absolute;
+
     top:-20px;
     right:-20px;
+
     width:80px;
 }
 
 
 .feather{
     position:absolute;
+
     left:-20px;
     bottom:10px;
+
     width:130px;
 }
 
 
 .phoenix-logo{
     width:120px;
+
     margin-bottom:20px;
+
+    animation:logoEnter 1s ease-out .3s both;
 }
 
 
-/* Buttons */
+@keyframes logoEnter{
 
-.buttons{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation{
     width:100%;
+
     margin:60px auto;
+
     display:flex;
     flex-direction:column;
     align-items:center;
 }
 
 
-.info-button{
+/* =========================
+   SCROLL HANDLE
+========================= */
+
+.scroll-button{
     width:60%;
+
     background:#8b5a2b;
+
     color:#f8f1df;
+
     border:none;
+
     padding:20px 40px;
-    margin:25px auto;
+
+    margin:20px auto 0;
+
     font-size:25px;
+
     font-family:Georgia, serif;
+
     border-radius:12px;
+
     cursor:pointer;
+
     box-shadow:0 5px 10px rgba(0,0,0,.3);
-    transition:0.3s;
+
+    transition:.3s;
+
+    position:relative;
+
+    z-index:2;
 }
 
 
-.info-button:hover{
+.scroll-button:hover{
     background:#a66b35;
+
     transform:translateY(-5px);
+
     box-shadow:0 10px 15px rgba(0,0,0,.4);
 }
 
 
-.info-button:active{
+.scroll-button:active{
     transform:translateY(2px);
 }
 
 
-/* Bottom Images */
+/* =========================
+   SCROLL PAPER
+========================= */
+
+.scroll{
+    width:60%;
+
+    box-sizing:border-box;
+
+    background:#f8f1df;
+
+    border-left:5px solid #d8c3a3;
+    border-right:5px solid #d8c3a3;
+
+    overflow:hidden;
+
+    max-height:0;
+
+    opacity:0;
+
+    transform:scaleY(0);
+
+    transform-origin:top;
+
+    transition:
+        max-height .7s ease,
+        opacity .4s ease,
+        transform .7s ease,
+        padding .7s ease;
+
+    box-shadow:0 8px 15px rgba(0,0,0,.2);
+}
+
+
+/* Open Scroll */
+
+.scroll.open{
+    max-height:1200px;
+
+    opacity:1;
+
+    transform:scaleY(1);
+
+    padding:25px 20px;
+}
+
+
+/* =========================
+   SCROLL ROLLS
+========================= */
+
+.scroll-top,
+.scroll-bottom{
+    height:18px;
+
+    background:#d8c3a3;
+
+    border-radius:12px;
+
+    box-shadow:0 3px 5px rgba(0,0,0,.2);
+}
+
+
+.scroll-bottom{
+    margin-top:20px;
+
+    box-shadow:0 -3px 5px rgba(0,0,0,.2);
+}
+
+
+/* =========================
+   MEMBER NAMES
+========================= */
+
+.member-name{
+    color:#5b3a1e;
+
+    font-size:22px;
+
+    margin:14px 0;
+
+    opacity:0;
+
+    transform:translateY(-10px);
+
+    transition:.4s ease;
+}
+
+
+.scroll.open .member-name{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+.member-name:nth-child(2){
+    transition-delay:.1s;
+}
+
+.member-name:nth-child(3){
+    transition-delay:.15s;
+}
+
+.member-name:nth-child(4){
+    transition-delay:.2s;
+}
+
+.member-name:nth-child(5){
+    transition-delay:.25s;
+}
+
+.member-name:nth-child(6){
+    transition-delay:.3s;
+}
+
+.member-name:nth-child(7){
+    transition-delay:.35s;
+}
+
+.member-name:nth-child(8){
+    transition-delay:.4s;
+}
+
+.member-name:nth-child(9){
+    transition-delay:.45s;
+}
+
+
+/* =========================
+   LESSON BUTTONS
+========================= */
+
+.lesson-button{
+    width:90%;
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    border:none;
+
+    padding:18px 25px;
+
+    margin:12px auto;
+
+    font-size:21px;
+
+    font-family:Georgia, serif;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 10px rgba(0,0,0,.3);
+
+    opacity:0;
+
+    transform:translateY(-10px);
+
+    transition:
+        opacity .4s ease,
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.scroll.open .lesson-button{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+.lesson-button:hover{
+    background:#a66b35;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 15px rgba(0,0,0,.4);
+}
+
+
+.lesson-button:active{
+    transform:translateY(2px);
+}
+
+
+/* Lesson stagger */
+
+.lesson-button:nth-child(2){
+    transition-delay:.1s;
+}
+
+.lesson-button:nth-child(3){
+    transition-delay:.15s;
+}
+
+.lesson-button:nth-child(4){
+    transition-delay:.2s;
+}
+
+.lesson-button:nth-child(5){
+    transition-delay:.25s;
+}
+
+.lesson-button:nth-child(6){
+    transition-delay:.3s;
+}
+
+.lesson-button:nth-child(7){
+    transition-delay:.35s;
+}
+
+.lesson-button:nth-child(8){
+    transition-delay:.4s;
+}
+
+.lesson-button:nth-child(9){
+    transition-delay:.45s;
+}
+
+.lesson-button:nth-child(10){
+    transition-delay:.5s;
+}
+
+
+/* =========================
+   BOTTOM IMAGES
+========================= */
 
 .bottom-images{
     width:100%;
+
     height:220px;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:flex-end;
+
     margin-top:100px;
 }
 
 
 .church{
     width:400px;
-    opacity:0.80;
+
+    opacity:.80;
 }
 
 
 .tower{
     width:280px;
-  opacity:0.80;
+
+    opacity:.80;
 }
 
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
 
 @media screen and (max-width:600px){
 
-.paper{
-    width:90%;
-    padding:30px;
-}
+    .paper{
+        width:90%;
+        padding:30px;
+    }
 
 
-.paper h1{
-    font-size:55px;
-}
+    .paper h1{
+        font-size:55px;
+    }
 
 
-.paper h3{
-    font-size:24px;
-}
+    .paper h3{
+        font-size:24px;
+    }
 
 
-.paper h4{
-    font-size:18px;
-}
+    .paper h4{
+        font-size:18px;
+    }
 
 
-.phoenix-logo{
-    width:90px;
-}
+    .phoenix-logo{
+        width:90px;
+    }
 
 
-.info-button{
-    width:85%;
-    font-size:18px;
-    padding:15px 20px;
-}
+    .scroll-button{
+        width:85%;
+
+        font-size:18px;
+
+        padding:15px 20px;
+    }
 
 
-.clock{
-    width:60px;
-}
+    .scroll{
+        width:85%;
+    }
 
 
-.feather{
-    width:90px;
-}
+    .lesson-button{
+        width:95%;
+
+        font-size:18px;
+
+        padding:15px;
+    }
 
 
-.church{
-    width:230px;
-    opacity:0.80;
-}
+    .member-name{
+        font-size:18px;
+    }
 
 
-.tower{
-    width:170px;
-    opacity:0.80;
-}
+    .clock{
+        width:60px;
+    }
+
+
+    .feather{
+        width:90px;
+    }
+
+
+    .church{
+        width:230px;
+    }
+
+
+    .tower{
+        width:170px;
+    }
 
 }
 
@@ -207,86 +565,193 @@ body{
 
 </head>
 
-
 <body>
 
 
+<!-- =========================
+     TOP PAPER
+========================= -->
+
 <div class="paper">
 
-    <img class="clock" src="Project/Img/Clock.png">
+    <img class="clock" src="Clock.png">
 
-    <img class="phoenix-logo" src="Project/Img/Phoenix.png">
+    <img class="phoenix-logo" src="Phoenix.png">
 
     <h3>HISTO PAGE</h3>
+
     <h4>TECH-PRO 1103</h4>
 
     <h1>"Phoenix"</h1>
 
-    <img class="feather" src="Project/Img/Feather.png">
+    <img class="feather" src="Feather.png">
 
 </div>
 
 
 
-<div class="buttons">
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<div class="navigation">
 
 
-<button class="info-button" onclick="location.href='members.html'">
-Members
-</button>
+<!-- =========================
+     MEMBERS SCROLL
+========================= -->
 
-<button class="info-button" onclick="location.href='heograpiya.html'">
-Pag-aaral ng Heograpiya ng Mundo
-</button>
-
-    
-<button class="info-button" onclick="location.href='history.html'">
-Kahulugan ng Kasaysayan
-</button>
-
-
-<button class="info-button" onclick="location.href='muntinlupa.html'">
-Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
+<button class="scroll-button" onclick="toggleScroll('membersScroll')">
+    Members ↓
 </button>
 
 
-<button class="info-button" onclick="location.href='groups.html'">
-Iba't-ibang Pangkat ng Tao na Naging Bahagi ng Ating Pinagmulan
+<div class="scroll" id="membersScroll">
+
+    <div class="scroll-top"></div>
+
+
+    <p class="member-name">
+        Sam Eduard O. Alaan
+    </p>
+
+    <p class="member-name">
+        Angeline Blando
+    </p>
+
+    <p class="member-name">
+        Ilyn Plaza
+    </p>
+
+    <p class="member-name">
+        Venice Dela Cruz
+    </p>
+
+    <p class="member-name">
+        Elmer Jr. Alcaraz
+    </p>
+
+    <p class="member-name">
+        Prince Delgado
+    </p>
+
+    <p class="member-name">
+        Ariane Mae Dailisan
+    </p>
+
+    <p class="member-name">
+        Ally Ian Santander
+    </p>
+
+
+    <div class="scroll-bottom"></div>
+
+</div>
+
+    <br><br>
+
+
+<!-- =========================
+     LESSONS SCROLL
+========================= -->
+
+<button class="scroll-button" onclick="toggleScroll('lessonsScroll')">
+    ↓ Lessons ↓
 </button>
 
 
-<button class="info-button" onclick="location.href='ilaya_ilawod.html'">
-Ilaya at Ilawod
-</button>
+<div class="scroll" id="lessonsScroll">
+
+    <div class="scroll-top"></div>
 
 
-<button class="info-button" onclick="location.href='kultura.html'">
-Ugnayan ng Kultura at Kamalayang Pangkasaysayan
-</button>
+    <button class="lesson-button"
+    onclick="location.href='heograpiya.html'">
+        Pag-aaral ng Heograpiya ng Mundo
+    </button>
 
 
-<button class="info-button" onclick="location.href='paniniwala.html'">
-Paniniwala at Pananampalataya
-</button>
-    
-    <button class="info-button" onclick="location.href='pamahiin.html'">
-Sinaunang paniniwala at kultura ng mga Pilipino
-</button>
+    <button class="lesson-button"
+    onclick="location.href='history.html'">
+        Kahulugan ng Kasaysayan
+    </button>
 
+
+    <button class="lesson-button"
+    onclick="location.href='muntinlupa.html'">
+        Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
+    </button>
+
+
+    <button class="lesson-button"
+    onclick="location.href='groups.html'">
+        Iba't-ibang Pangkat ng Tao na Naging Bahagi ng Ating Pinagmulan
+    </button>
+
+
+    <button class="lesson-button"
+    onclick="location.href='ilaya_ilawod.html'">
+        Ilaya at Ilawod
+    </button>
+
+
+    <button class="lesson-button"
+    onclick="location.href='kultura.html'">
+        Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+    </button>
+
+
+    <button class="lesson-button"
+    onclick="location.href='paniniwala.html'">
+        Paniniwala at Pananampalataya
+    </button>
+
+
+    <button class="lesson-button"
+    onclick="location.href='pamahiin.html'">
+        Sinaunang paniniwala at kultura ng mga Pilipino
+    </button>
+
+
+    <button class="lesson-button"
+    onclick="location.href='gamot.html'">
+        Halamang Gamot
+    </button>
+
+
+    <div class="scroll-bottom"></div>
+
+</div>
 
 </div>
 
 
+
+<!-- =========================
+     BOTTOM IMAGES
+========================= -->
 
 <div class="bottom-images">
 
-    <img class="church" src="Project/Img/Church.png">
+    <img class="church" src="Church.png">
 
-    <img class="tower" src="Project/Img/Tower.png">
+    <img class="tower" src="Tower.png">
 
 </div>
+    
+<script>
+
+function toggleScroll(id){
+
+    const scroll = document.getElementById(id);
+
+    scroll.classList.toggle("open");
+
+}
+
+</script>
 
 
 </body>
 
-</html>
+</html>    
