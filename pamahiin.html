@@ -31,6 +31,8 @@ body{
     padding:50px;
     position:relative;
     box-shadow:0 0 20px rgba(0,0,0,.25);
+
+    animation:paperEnter 0.8s ease-out;
 }
 
 
@@ -38,12 +40,16 @@ body{
     color:#5b3a1e;
     font-size:45px;
     font-family:cursive;
+
+    animation:headingEnter 0.8s ease-out;
 }
 
 
 .paper h2{
     color:#5b3a1e;
     font-size:32px;
+
+    animation:headingEnter 0.8s ease-out;
 }
 
 
@@ -57,6 +63,8 @@ body{
 
 .phoenix-logo{
     width:120px;
+
+    animation:imageEnter 1s ease-out;
 }
 
 
@@ -69,6 +77,18 @@ body{
     border:5px solid #d8c3a3;
     box-shadow:0 0 10px rgba(0,0,0,.2);
     display:block;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation:imageEnter 1s ease-out;
+}
+
+
+.image-box img:hover{
+    transform:scale(1.03);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 
@@ -93,14 +113,25 @@ body{
     border-radius:12px;
     cursor:pointer;
     box-shadow:0 5px 10px rgba(0,0,0,.3);
-    transition:.3s;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
 
 .info-button:hover{
     background:#a66b35;
-    transform:translateY(-5px);
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 10px 15px rgba(0,0,0,.4);
 }
+
+
+.info-button:active{
+    transform:translateY(2px) scale(.98);
+}
+
 
 /* Easter Egg */
 
@@ -111,7 +142,55 @@ body{
     display:block;
     margin-top:30px;
     margin-left:5px;
-}    
+}
+
+
+/* Animations */
+
+@keyframes paperEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes headingEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes imageEnter{
+
+    from{
+        opacity:0;
+        transform:scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
 
 /* Mobile */
 
@@ -150,31 +229,59 @@ body{
 
 }
 
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce){
+
+    .paper,
+    .paper h1,
+    .paper h2,
+    .phoenix-logo,
+    .image-box img{
+        animation:none;
+    }
+
+    .image-box img,
+    .info-button{
+        transition:none;
+    }
+
+}
+
 </style>
 
 </head>
 
 <body>
 
+
 <div class="paper">
 
-<img class="phoenix-logo" src="Project/Img/Phoenix.png">
+
+<img class="phoenix-logo" src="Phoenix.png">
+
 
 <h1>Sinaunang Paniniwala at Kultura ng mga Pilipino</h1>
+
 
 <p style="text-align:center;">
 <i>"Ang Kaluluwa at Diwa ng Ating mga Ninuno"</i>
 </p>
 
+
 <h2>Pamahiin</h2>
 
-<div class="image-box">
-    <img src="Project/Img/barya.jpeg" alt="Pamahiin">
-</div>
 
 <div class="image-box">
-    <img src="Project/Img/sap.jpeg" alt="Pamahiin">
+    <img src="barya.jpeg" alt="Pamahiin">
 </div>
+
+
+<div class="image-box">
+    <img src="sap.jpeg" alt="Pamahiin">
+</div>
+
 
 <p>
 
@@ -184,11 +291,14 @@ body{
 
 </p>
 
+
 <div class="image-box">
-    <img src="Project/Img/pa.png" alt="Barya sa sapatos">
+    <img src="pa.png" alt="Barya sa sapatos">
 </div>
 
+
 <h2>Ang Kaluluwa at Diwa ng Ating mga Ninuno</h2>
+
 
 <p>
 
@@ -198,12 +308,15 @@ body{
 • Pagnanais na magkaroon ng masaganang pamumuhay
 
 </p>
-    
-    <h2>Bathala</h2>
+
+
+<h2>Bathala</h2>
+
 
 <div class="image-box">
-    <img src="Project/Img/bathala.jpeg" alt="Bathala">
+    <img src="bathala.jpeg" alt="Bathala">
 </div>
+
 
 <p>
 
@@ -221,9 +334,11 @@ Ang <b>Bathala</b> ang pinakamataas at pinakamakapangyarihang diyos ng mga Tagal
 
 <h2>Manunggul Jar</h2>
 
+
 <div class="image-box">
-    <img src="Project/Img/jar.jpeg" alt="Manunggul Jar">
+    <img src="jar.jpeg" alt="Manunggul Jar">
 </div>
+
 
 <p>
 
@@ -234,6 +349,7 @@ Ang <b>Manunggul Jar</b> ay isang sinaunang banga na nilalagyan ng mga gamit ng 
 
 <h2>Kapangyarihan at Gabay ng mga Naunang Ninuno</h2>
 
+
 <p>
 
 • Nagbabantay ng naiwang pamilya.<br>
@@ -241,12 +357,15 @@ Ang <b>Manunggul Jar</b> ay isang sinaunang banga na nilalagyan ng mga gamit ng 
 • Maaaring magdala ng pagpapala sa komunidad.
 
 </p>
-    
-    <h2>Babaylan vs. Katalonan</h2>
+
+
+<h2>Babaylan vs. Katalonan</h2>
+
 
 <div class="image-box">
-    <img src="Project/Img/babay.jpg" alt="Babaylan at Katalonan">
+    <img src="babay.jpg" alt="Babaylan at Katalonan">
 </div>
+
 
 <p>
 
@@ -269,6 +388,7 @@ Ang <b>Manunggul Jar</b> ay isang sinaunang banga na nilalagyan ng mga gamit ng 
 
 <h2>Cycle</h2>
 
+
 <p>
 
 Ang mga ritwal ng mga sinaunang Pilipino ay isinasagawa sa mahahalagang yugto ng buhay.
@@ -282,12 +402,15 @@ Ang mga ritwal ng mga sinaunang Pilipino ay isinasagawa sa mahahalagang yugto ng
 • Pagpapagaling sa may sakit
 
 </p>
-    
-    <h2>Mga Pamahiin</h2>
+
+
+<h2>Mga Pamahiin</h2>
+
 
 <div class="image-box">
-    <img src="Project/Img/pam.jpeg" alt="Mga Pamahiin">
+    <img src="pam.jpeg" alt="Mga Pamahiin">
 </div>
+
 
 <p>
 
@@ -302,20 +425,29 @@ Ang mga ritwal ng mga sinaunang Pilipino ay isinasagawa sa mahahalagang yugto ng
 
 <div class="navigation">
 
+
 <button class="info-button" onclick="location.href='paniniwala.html'">
 Previous Lesson
 </button>
+
 
 <button class="info-button" onclick="location.href='index.html'">
 Back to Home
 </button>
 
-</div>
+<button class="info-button" onclick="location.href='gamot.html'">
+Next Lesson
+</button>    
 
 </div>
 
-<img class="easter-egg" src="Project/Img/light.png" alt="">
-    
+
+</div>
+
+
+<img class="easter-egg" src="light.png" alt="">
+
+
 </body>
 
 </html>
