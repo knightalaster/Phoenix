@@ -2,12 +2,17 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Phoenix - Sinaunang Paniniwala at Kultura ng mga Pilipino</title>
+<title>Phoenix - Halamang Gamot</title>
 
 <style>
+
+/* =========================
+   BODY
+========================= */
 
 body{
     margin:0;
@@ -19,47 +24,72 @@ body{
 }
 
 
-/* Paper */
+/* =========================
+   PAPER
+========================= */
 
 .paper{
     width:80%;
     max-width:900px;
+
     margin:40px auto;
+
     box-sizing:border-box;
+
     background:#f8f1df;
+
     border:8px solid #d8c3a3;
+
     padding:50px;
+
     position:relative;
+
     box-shadow:0 0 20px rgba(0,0,0,.25);
 
-    animation:paperEnter 0.8s ease-out;
+    animation:paperEnter .8s ease-out;
 }
 
 
+/* =========================
+   TEXT
+========================= */
+
 .paper h1{
     color:#5b3a1e;
+
     font-size:45px;
+
     font-family:cursive;
 
-    animation:headingEnter 0.8s ease-out;
+    animation:headingEnter .8s ease-out;
 }
 
 
 .paper h2{
     color:#5b3a1e;
+
     font-size:32px;
 
-    animation:headingEnter 0.8s ease-out;
+    margin-top:50px;
+
+    animation:headingEnter .8s ease-out;
 }
 
 
 .paper p{
     color:#5b3a1e;
+
     font-size:20px;
+
     line-height:1.7;
+
     text-align:left;
 }
 
+
+/* =========================
+   LOGO
+========================= */
 
 .phoenix-logo{
     width:120px;
@@ -68,84 +98,247 @@ body{
 }
 
 
-/* Images */
+/* =========================
+   IMAGES
+========================= */
 
 .image-box img{
     width:80%;
+
     max-width:500px;
+
     margin:20px auto;
+
     border:5px solid #d8c3a3;
+
     box-shadow:0 0 10px rgba(0,0,0,.2);
+
     display:block;
 
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-
     animation:imageEnter 1s ease-out;
+
+    transition:.4s;
 }
 
 
 .image-box img:hover{
     transform:scale(1.03);
+
     box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 
-/* Navigation */
+/* =========================
+   HELLO KITTY ENDING
+========================= */
+
+.thank-you-section{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:330px;
+
+    margin-top:80px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+}
+
+
+/* Thank You Card */
+
+.thank-you-card{
+
+    width:55%;
+
+    padding:30px 20px;
+
+    background:#f8f1df;
+
+    border:5px solid #d8c3a3;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.2);
+
+    position:relative;
+
+    z-index:2;
+
+    transform:rotate(-1deg);
+
+    animation:thankYouEnter .8s ease-out;
+}
+
+
+.thank-you-card h2{
+
+    margin:0 0 15px;
+
+    color:#5b3a1e;
+
+    font-family:cursive;
+
+    font-size:32px;
+}
+
+
+.thank-you-card p{
+
+    text-align:center;
+
+    color:#5b3a1e;
+
+    font-size:17px;
+
+    margin:10px 0 20px;
+}
+
+
+.thank-you-card h3{
+
+    color:#5b3a1e;
+
+    font-family:cursive;
+
+    font-size:26px;
+
+    margin:10px 0 5px;
+}
+
+
+.thank-you-card span{
+
+    color:#5b3a1e;
+
+    font-size:15px;
+}
+
+
+/* Hello Kitty */
+
+.hello-kitty{
+
+    position:absolute;
+
+    object-fit:contain;
+
+    filter:drop-shadow(0 5px 5px rgba(0,0,0,.2));
+
+    z-index:3;
+}
+
+
+.hello-left{
+
+    width:140px;
+
+    left:0;
+
+    bottom:10px;
+
+    transform:rotate(-8deg);
+
+    animation:kittyLeft 3s ease-in-out infinite;
+}
+
+
+.hello-right{
+
+    width:140px;
+
+    right:0;
+
+    top:10px;
+
+    transform:rotate(8deg);
+
+    animation:kittyRight 3s ease-in-out infinite;
+}
+
+
+.hello-bottom{
+
+    width:120px;
+
+    left:50%;
+
+    bottom:-15px;
+
+    transform:translateX(-50%);
+
+    animation:kittyBottom .8s ease-out;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .navigation{
+
     display:flex;
+
     justify-content:center;
+
     gap:20px;
+
     flex-wrap:wrap;
+
+    margin-top:30px;
 }
 
 
 .info-button{
+
     background:#8b5a2b;
+
     color:#f8f1df;
+
     border:none;
+
     padding:18px 40px;
-    margin:40px 10px 10px;
+
+    margin:20px 10px 10px;
+
     font-size:22px;
+
     font-family:Georgia, serif;
+
     border-radius:12px;
+
     cursor:pointer;
+
     box-shadow:0 5px 10px rgba(0,0,0,.3);
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
+    transition:.3s;
 }
 
 
 .info-button:hover{
+
     background:#a66b35;
-    transform:translateY(-5px) scale(1.02);
+
+    transform:translateY(-5px);
+
     box-shadow:0 10px 15px rgba(0,0,0,.4);
 }
 
 
 .info-button:active{
-    transform:translateY(2px) scale(.98);
+
+    transform:translateY(2px);
 }
 
 
-/* Easter Egg */
-
-.easter-egg{
-    width:10px;
-    height:10px;
-    opacity:100;
-    display:block;
-    margin-top:30px;
-    margin-left:5px;
-}
-
-
-/* Animations */
+/* =========================
+   ANIMATIONS
+========================= */
 
 @keyframes paperEnter{
 
@@ -192,59 +385,164 @@ body{
 }
 
 
-/* Mobile */
+@keyframes thankYouEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(20px) rotate(-1deg);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) rotate(-1deg);
+    }
+
+}
+
+
+@keyframes kittyLeft{
+
+    0%,100%{
+        transform:rotate(-8deg) translateY(0);
+    }
+
+    50%{
+        transform:rotate(-8deg) translateY(-8px);
+    }
+
+}
+
+
+@keyframes kittyRight{
+
+    0%,100%{
+        transform:rotate(8deg) translateY(0);
+    }
+
+    50%{
+        transform:rotate(8deg) translateY(-8px);
+    }
+
+}
+
+
+@keyframes kittyBottom{
+
+    from{
+        opacity:0;
+        transform:translate(-50%,20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translate(-50%,0);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media screen and (max-width:600px){
 
-.paper{
-    width:90%;
-    padding:30px;
-}
-
-
-.paper h1{
-    font-size:35px;
-}
-
-
-.paper h2{
-    font-size:25px;
-}
-
-
-.paper p{
-    font-size:17px;
-}
-
-
-.image-box img{
-    width:95%;
-}
-
-
-.info-button{
-    width:80%;
-    font-size:18px;
-}
-
-}
-
-
-/* Reduced Motion */
-
-@media (prefers-reduced-motion: reduce){
-
-    .paper,
-    .paper h1,
-    .paper h2,
-    .phoenix-logo,
-    .image-box img{
-        animation:none;
+    .paper{
+        width:90%;
+        padding:30px;
     }
 
-    .image-box img,
+
+    .paper h1{
+        font-size:35px;
+    }
+
+
+    .paper h2{
+        font-size:25px;
+    }
+
+
+    .paper p{
+        font-size:17px;
+    }
+
+
+    .phoenix-logo{
+        width:90px;
+    }
+
+
+    .image-box img{
+        width:95%;
+    }
+
+
+    .thank-you-section{
+        min-height:300px;
+        margin-top:60px;
+    }
+
+
+    .thank-you-card{
+        width:65%;
+        padding:22px 15px;
+    }
+
+
+    .thank-you-card h2{
+        font-size:25px;
+    }
+
+
+    .thank-you-card p{
+        font-size:14px;
+    }
+
+
+    .thank-you-card h3{
+        font-size:22px;
+    }
+
+
+    .hello-left{
+        width:90px;
+        left:-5px;
+        bottom:20px;
+    }
+
+
+    .hello-right{
+        width:90px;
+        right:-5px;
+        top:20px;
+    }
+
+
+    .hello-bottom{
+        width:80px;
+        bottom:-10px;
+    }
+
+
     .info-button{
-        transition:none;
+        width:80%;
+        font-size:18px;
+        padding:15px 20px;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+        animation:none !important;
+        transition:none !important;
     }
 
 }
@@ -253,25 +551,202 @@ body{
 
 </head>
 
+
 <body>
-  
+
+
 <div class="paper">
 
-<img class="phoenix-logo" src="Project/Img/Phoenix.png">
 
- <div class="navigation">
+<!-- =========================
+     LOGO
+========================= -->
 
-<button class="info-button" onclick="location.href='pamahiin.html'">
-Previous Lesson
-</button>
+<img
+    class="phoenix-logo"
+    src="Phoenix.png"
+    alt="Phoenix Logo"
+>
 
-<button class="info-button" onclick="location.href='index.html'">
-Back to Home
-</button>
 
-</div>   
-    
+<!-- =========================
+     MAIN TITLE
+========================= -->
+
+<h1>
+Halamang Gamot
+</h1>
+
+
+<!-- =========================
+     MATERIALS
+========================= -->
+
+<h2>
+Materials
+</h2>
+
+<p>
+<br>
+• Batman.<br>
+• Spooderman.<br>
+• Elmer.
+
+</p>
+
+
+<!-- =========================
+     PROCEDURES
+========================= -->
+
+<h2>
+Procedures
+</h2>
+
+
+<p>
+
+<br>
+
+1. una.<br><br>
+
+2. dawala.<br><br>
+
+3. three.<br><br>
+
+4. final boss.
+
+</p>
+
+
+<!-- =========================
+     ADVANTAGES
+========================= -->
+
+<h2>
+Advantages
+</h2>
+
+
+<p>
+
+<br>
+
+• random.<br>
+
+• diko alam.<br>
+
+• alaws pa.
+
+</p>
+
+
+<!-- =========================
+     DISADVANTAGES
+========================= -->
+
+<h2>
+Disadvantages
+</h2>
+
+
+<p>
+
+<br>
+
+• spongebob.<br>
+
+• patrick.<br>
+
+• mr crabs.
+
+</p>
+
+
+<!-- =========================
+     HELLO KITTY ENDING
+========================= -->
+
+<div class="thank-you-section">
+
+
+<img
+    class="hello-kitty hello-left"
+    src="hello1.png"
+    alt="Hello Kitty"
+>
+
+
+<div class="thank-you-card">
+
+    <h2>
+        Salamat sa Paglalakbay!
+    </h2>
+
+    <p>
+        Thank you for exploring our history with us.
+    </p>
+
+    <h3>
+        PHOENIX
+    </h3>
+
+    <span>
+        TECH-PRO 1103
+    </span>
+
 </div>
+
+
+<img
+    class="hello-kitty hello-right"
+    src="hello2.png"
+    alt="Hello Kitty"
+>
+
+
+<img
+    class="hello-kitty hello-bottom"
+    src="hello3.png"
+    alt="Hello Kitty"
+>
+
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<div class="navigation">
+
+
+<button
+    class="info-button"
+    onclick="location.href='pamahiin.html'"
+>
+
+Previous Lesson
+
+</button>
+
+
+<button
+    class="info-button"
+    onclick="location.href='index.html'"
+>
+
+Back to Home
+
+</button>
+
+
+</div>
+
+
+</div>
+
 
 </body>
 
