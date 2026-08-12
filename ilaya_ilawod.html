@@ -29,6 +29,20 @@ body{
     padding:50px;
     position:relative;
     box-shadow:0 0 20px rgba(0,0,0,.25);
+
+    animation:paperEnter 0.8s ease-out;
+}
+
+
+@keyframes paperEnter{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -36,6 +50,20 @@ body{
     color:#5b3a1e;
     font-size:45px;
     font-family:cursive;
+
+    animation:titleEnter 1s ease-out 0.5s both;
+}
+
+
+@keyframes titleEnter{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -55,6 +83,20 @@ body{
 
 .phoenix-logo{
     width:120px;
+
+    animation:logoEnter 1s ease-out 0.3s both;
+}
+
+
+@keyframes logoEnter{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
 }
 
 
@@ -91,6 +133,33 @@ body{
     cursor:pointer;
     box-shadow:0 5px 10px rgba(0,0,0,.3);
     transition:.3s;
+
+    animation:buttonEnter 0.6s ease-out both;
+}
+
+
+.info-button:nth-child(1){
+    animation-delay:0.2s;
+}
+
+.info-button:nth-child(2){
+    animation-delay:0.3s;
+}
+
+.info-button:nth-child(3){
+    animation-delay:0.4s;
+}
+
+
+@keyframes buttonEnter{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -146,11 +215,10 @@ body{
 <div class="paper">
 
 
-<img class="phoenix-logo" src="Project/Img/Phoenix.png">
+<img class="phoenix-logo" src="Phoenix.png">
 
 
 <h1>Ilaya at Ilawod</h1>
-
 
 
 
@@ -174,7 +242,7 @@ Nangangahulugan ng lugar na malapit sa dagat o mababang bahagi.
 
 
 <div class="image-box">
-<img src="Project/Img/ilaya.jpeg">
+<img src="ilaya.jpeg">
 </div>
 
 
@@ -214,7 +282,7 @@ Isang pangkat ng mga katutubo na naninirahan sa kabundukan ng Cordillera.
 <h2>ILAWOD</h2>
 
 <div class="image-box">
-<img src="Project/Img/ilawod.jpeg">
+<img src="ilawod.jpeg">
 </div>
 
 <p>
