@@ -11,16 +11,29 @@
 <style>
 
 /* =========================
-   BODY
+   BASIC PAGE
 ========================= */
 
+html,
 body{
     margin:0;
+    padding:0;
+    min-height:100%;
+}
+
+body{
     min-height:100vh;
+
     background:#b99272;
+
     font-family:Georgia, serif;
+
     text-align:center;
+
     overflow-x:hidden;
+
+    display:flex;
+    flex-direction:column;
 }
 
 
@@ -32,7 +45,7 @@ body{
     width:80%;
     max-width:900px;
 
-    margin:40px auto;
+    margin:40px auto 0;
 
     box-sizing:border-box;
 
@@ -67,14 +80,18 @@ body{
 
 .paper h3{
     color:#5b3a1e;
+
     margin:0;
+
     font-size:32px;
 }
 
 
 .paper h4{
     color:#5b3a1e;
+
     margin:10px 0;
+
     font-size:24px;
 }
 
@@ -162,19 +179,23 @@ body{
 .navigation{
     width:100%;
 
-    margin:60px auto;
+    margin:40px auto 0;
 
     display:flex;
     flex-direction:column;
+
     align-items:center;
+
+    flex:0 0 auto;
 }
 
 
 /* =========================
-   SCROLL HANDLE
+   MAIN SCROLL BUTTONS
 ========================= */
 
 .scroll-button{
+
     width:60%;
 
     background:#8b5a2b;
@@ -185,7 +206,7 @@ body{
 
     padding:20px 40px;
 
-    margin:20px auto 0;
+    margin:15px auto 0;
 
     font-size:25px;
 
@@ -202,28 +223,34 @@ body{
     position:relative;
 
     z-index:2;
+
 }
 
 
 .scroll-button:hover{
+
     background:#a66b35;
 
     transform:translateY(-5px);
 
     box-shadow:0 10px 15px rgba(0,0,0,.4);
+
 }
 
 
 .scroll-button:active{
+
     transform:translateY(2px);
+
 }
 
 
 /* =========================
-   SCROLL PAPER
+   DROPDOWN SCROLL
 ========================= */
 
 .scroll{
+
     width:60%;
 
     box-sizing:border-box;
@@ -231,6 +258,7 @@ body{
     background:#f8f1df;
 
     border-left:5px solid #d8c3a3;
+
     border-right:5px solid #d8c3a3;
 
     overflow:hidden;
@@ -243,6 +271,8 @@ body{
 
     transform-origin:top;
 
+    padding:0 20px;
+
     transition:
         max-height .7s ease,
         opacity .4s ease,
@@ -250,12 +280,14 @@ body{
         padding .7s ease;
 
     box-shadow:0 8px 15px rgba(0,0,0,.2);
+
 }
 
 
-/* Open Scroll */
+/* OPEN */
 
 .scroll.open{
+
     max-height:1200px;
 
     opacity:1;
@@ -263,6 +295,7 @@ body{
     transform:scaleY(1);
 
     padding:25px 20px;
+
 }
 
 
@@ -272,6 +305,7 @@ body{
 
 .scroll-top,
 .scroll-bottom{
+
     height:18px;
 
     background:#d8c3a3;
@@ -279,13 +313,16 @@ body{
     border-radius:12px;
 
     box-shadow:0 3px 5px rgba(0,0,0,.2);
+
 }
 
 
 .scroll-bottom{
+
     margin-top:20px;
 
     box-shadow:0 -3px 5px rgba(0,0,0,.2);
+
 }
 
 
@@ -294,6 +331,7 @@ body{
 ========================= */
 
 .member-name{
+
     color:#5b3a1e;
 
     font-size:22px;
@@ -305,18 +343,21 @@ body{
     transform:translateY(-10px);
 
     transition:.4s ease;
+
 }
 
 
 .scroll.open .member-name{
+
     opacity:1;
 
     transform:translateY(0);
+
 }
 
 
 .member-name:nth-child(2){
-    transition-delay:.1s;
+    transition-delay:.10s;
 }
 
 .member-name:nth-child(3){
@@ -324,7 +365,7 @@ body{
 }
 
 .member-name:nth-child(4){
-    transition-delay:.2s;
+    transition-delay:.20s;
 }
 
 .member-name:nth-child(5){
@@ -332,7 +373,7 @@ body{
 }
 
 .member-name:nth-child(6){
-    transition-delay:.3s;
+    transition-delay:.30s;
 }
 
 .member-name:nth-child(7){
@@ -340,7 +381,7 @@ body{
 }
 
 .member-name:nth-child(8){
-    transition-delay:.4s;
+    transition-delay:.40s;
 }
 
 .member-name:nth-child(9){
@@ -353,6 +394,7 @@ body{
 ========================= */
 
 .lesson-button{
+
     width:90%;
 
     background:#8b5a2b;
@@ -384,34 +426,41 @@ body{
         transform .3s ease,
         background .3s ease,
         box-shadow .3s ease;
+
 }
 
 
 .scroll.open .lesson-button{
+
     opacity:1;
 
     transform:translateY(0);
+
 }
 
 
 .lesson-button:hover{
+
     background:#a66b35;
 
     transform:translateY(-5px);
 
     box-shadow:0 10px 15px rgba(0,0,0,.4);
+
 }
 
 
 .lesson-button:active{
+
     transform:translateY(2px);
+
 }
 
 
-/* Lesson stagger */
+/* Lesson animation */
 
 .lesson-button:nth-child(2){
-    transition-delay:.1s;
+    transition-delay:.10s;
 }
 
 .lesson-button:nth-child(3){
@@ -419,7 +468,7 @@ body{
 }
 
 .lesson-button:nth-child(4){
-    transition-delay:.2s;
+    transition-delay:.20s;
 }
 
 .lesson-button:nth-child(5){
@@ -427,7 +476,7 @@ body{
 }
 
 .lesson-button:nth-child(6){
-    transition-delay:.3s;
+    transition-delay:.30s;
 }
 
 .lesson-button:nth-child(7){
@@ -435,7 +484,7 @@ body{
 }
 
 .lesson-button:nth-child(8){
-    transition-delay:.4s;
+    transition-delay:.40s;
 }
 
 .lesson-button:nth-child(9){
@@ -443,18 +492,17 @@ body{
 }
 
 .lesson-button:nth-child(10){
-    transition-delay:.5s;
+    transition-delay:.50s;
 }
 
 
 /* =========================
-   BOTTOM IMAGES
+   BOTTOM DECORATION
 ========================= */
 
 .bottom-images{
-    width:100%;
 
-    height:220px;
+    width:100%;
 
     display:flex;
 
@@ -462,21 +510,39 @@ body{
 
     align-items:flex-end;
 
-    margin-top:100px;
+    margin-top:auto;
+
+    padding-top:20px;
+
+    line-height:0;
+
+    flex-shrink:0;
+
+}
+
+
+.bottom-images img{
+
+    display:block;
+
 }
 
 
 .church{
+
     width:400px;
 
     opacity:.80;
+
 }
 
 
 .tower{
+
     width:280px;
 
     opacity:.80;
+
 }
 
 
@@ -487,76 +553,103 @@ body{
 @media screen and (max-width:600px){
 
     .paper{
+
         width:90%;
+
         padding:30px;
+
     }
 
 
     .paper h1{
+
         font-size:55px;
+
     }
 
 
     .paper h3{
+
         font-size:24px;
+
     }
 
 
     .paper h4{
+
         font-size:18px;
+
     }
 
 
     .phoenix-logo{
+
         width:90px;
+
     }
 
 
     .scroll-button{
+
         width:85%;
 
         font-size:18px;
 
         padding:15px 20px;
+
     }
 
 
     .scroll{
+
         width:85%;
+
     }
 
 
     .lesson-button{
+
         width:95%;
 
         font-size:18px;
 
         padding:15px;
+
     }
 
 
     .member-name{
+
         font-size:18px;
+
     }
 
 
     .clock{
+
         width:60px;
+
     }
 
 
     .feather{
+
         width:90px;
+
     }
 
 
     .church{
+
         width:230px;
+
     }
 
 
     .tower{
+
         width:170px;
+
     }
 
 }
@@ -564,6 +657,7 @@ body{
 </style>
 
 </head>
+
 
 <body>
 
@@ -574,9 +668,9 @@ body{
 
 <div class="paper">
 
-    <img class="clock" src="Project/Img/Clock.png">
+    <img class="clock" src="Clock.png">
 
-    <img class="phoenix-logo" src="Project/Img/Phoenix.png">
+    <img class="phoenix-logo" src="Phoenix.png">
 
     <h3>HISTO PAGE</h3>
 
@@ -584,7 +678,7 @@ body{
 
     <h1>"Phoenix"</h1>
 
-    <img class="feather" src="Project/Img/Feather.png">
+    <img class="feather" src="Feather.png">
 
 </div>
 
@@ -597,131 +691,165 @@ body{
 <div class="navigation">
 
 
-<!-- =========================
-     MEMBERS SCROLL
-========================= -->
+    <!-- MEMBERS -->
 
-<button class="scroll-button" onclick="toggleScroll('membersScroll')">
-    Members ↓
-</button>
+    <button
+        class="scroll-button"
+        onclick="toggleScroll('membersScroll')">
 
+        Members ↓
 
-<div class="scroll" id="membersScroll">
-
-    <div class="scroll-top"></div>
+    </button>
 
 
-    <p class="member-name">
-        Sam Eduard O. Alaan
-    </p>
+    <div
+        class="scroll"
+        id="membersScroll">
 
-    <p class="member-name">
-        Angeline Blando
-    </p>
-
-    <p class="member-name">
-        Ilyn Plaza
-    </p>
-
-    <p class="member-name">
-        Venice Dela Cruz
-    </p>
-
-    <p class="member-name">
-        Elmer Jr. Alcaraz
-    </p>
-
-    <p class="member-name">
-        Prince Delgado
-    </p>
-
-    <p class="member-name">
-        Ariane Mae Dailisan
-    </p>
-
-    <p class="member-name">
-        Ally Ian Santander
-    </p>
+        <div class="scroll-top"></div>
 
 
-    <div class="scroll-bottom"></div>
+        <p class="member-name">
+            Sam Eduard O. Alaan
+        </p>
 
-</div>
+        <p class="member-name">
+            Angeline Blando
+        </p>
+
+        <p class="member-name">
+            Ilyn Plaza
+        </p>
+
+        <p class="member-name">
+            Venice Dela Cruz
+        </p>
+
+        <p class="member-name">
+            Elmer Jr. Alcaraz
+        </p>
+
+        <p class="member-name">
+            Prince Delgado
+        </p>
+
+        <p class="member-name">
+            Ariane Mae Dailisan
+        </p>
+
+        <p class="member-name">
+            Ally Ian Santander
+        </p>
+
+
+        <div class="scroll-bottom"></div>
+
+    </div>
 
     <br><br>
 
+    <!-- LESSONS -->
 
-<!-- =========================
-     LESSONS SCROLL
-========================= -->
+    <button
+        class="scroll-button"
+        onclick="toggleScroll('lessonsScroll')">
 
-<button class="scroll-button" onclick="toggleScroll('lessonsScroll')">
-    ↓ Lessons ↓
-</button>
+        ↓ Lessons ↓
 
-
-<div class="scroll" id="lessonsScroll">
-
-    <div class="scroll-top"></div>
-
-
-    <button class="lesson-button"
-    onclick="location.href='heograpiya.html'">
-        Pag-aaral ng Heograpiya ng Mundo
     </button>
 
 
-    <button class="lesson-button"
-    onclick="location.href='history.html'">
-        Kahulugan ng Kasaysayan
-    </button>
+    <div
+        class="scroll"
+        id="lessonsScroll">
+
+        <div class="scroll-top"></div>
 
 
-    <button class="lesson-button"
-    onclick="location.href='muntinlupa.html'">
-        Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
-    </button>
+        <button
+            class="lesson-button"
+            onclick="location.href='heograpiya.html'">
+
+            Pag-aaral ng Heograpiya ng Mundo
+
+        </button>
 
 
-    <button class="lesson-button"
-    onclick="location.href='groups.html'">
-        Iba't-ibang Pangkat ng Tao na Naging Bahagi ng Ating Pinagmulan
-    </button>
+        <button
+            class="lesson-button"
+            onclick="location.href='history.html'">
+
+            Kahulugan ng Kasaysayan
+
+        </button>
 
 
-    <button class="lesson-button"
-    onclick="location.href='ilaya_ilawod.html'">
-        Ilaya at Ilawod
-    </button>
+        <button
+            class="lesson-button"
+            onclick="location.href='muntinlupa.html'">
+
+            Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
+
+        </button>
 
 
-    <button class="lesson-button"
-    onclick="location.href='kultura.html'">
-        Ugnayan ng Kultura at Kamalayang Pangkasaysayan
-    </button>
+        <button
+            class="lesson-button"
+            onclick="location.href='groups.html'">
+
+            Iba't-ibang Pangkat ng Tao na Naging Bahagi ng Ating Pinagmulan
+
+        </button>
 
 
-    <button class="lesson-button"
-    onclick="location.href='paniniwala.html'">
-        Paniniwala at Pananampalataya
-    </button>
+        <button
+            class="lesson-button"
+            onclick="location.href='ilaya_ilawod.html'">
+
+            Ilaya at Ilawod
+
+        </button>
 
 
-    <button class="lesson-button"
-    onclick="location.href='pamahiin.html'">
-        Sinaunang paniniwala at kultura ng mga Pilipino
-    </button>
+        <button
+            class="lesson-button"
+            onclick="location.href='kultura.html'">
+
+            Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+
+        </button>
 
 
-    <button class="lesson-button"
-    onclick="location.href='gamot.html'">
-        Halamang Gamot
-    </button>
+        <button
+            class="lesson-button"
+            onclick="location.href='paniniwala.html'">
+
+            Paniniwala at Pananampalataya
+
+        </button>
 
 
-    <div class="scroll-bottom"></div>
+        <button
+            class="lesson-button"
+            onclick="location.href='pamahiin.html'">
 
-</div>
+            Sinaunang paniniwala at kultura ng mga Pilipino
+
+        </button>
+
+
+        <button
+            class="lesson-button"
+            onclick="location.href='gamot.html'">
+
+            Halamang Gamot
+
+        </button>
+
+
+        <div class="scroll-bottom"></div>
+
+    </div>
 
 </div>
 
@@ -733,17 +861,24 @@ body{
 
 <div class="bottom-images">
 
-    <img class="church" src="Project/Img/Church.png">
+    <img
+        class="church"
+        src="Church.png">
 
-    <img class="tower" src="Project/Img/Tower.png">
+    <img
+        class="tower"
+        src="Tower.png">
 
 </div>
-    
+
+
+
 <script>
 
 function toggleScroll(id){
 
-    const scroll = document.getElementById(id);
+    const scroll =
+        document.getElementById(id);
 
     scroll.classList.toggle("open");
 
@@ -754,4 +889,4 @@ function toggleScroll(id){
 
 </body>
 
-</html>    
+</html>
