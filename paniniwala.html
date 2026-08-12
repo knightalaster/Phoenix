@@ -31,6 +31,8 @@ body{
     padding:50px;
     position:relative;
     box-shadow:0 0 20px rgba(0,0,0,.25);
+
+    animation:paperEnter 0.8s ease-out;
 }
 
 
@@ -38,17 +40,24 @@ body{
     color:#5b3a1e;
     font-size:45px;
     font-family:cursive;
+
+    animation:headingEnter 0.8s ease-out;
 }
 
 
 .paper h2{
     color:#5b3a1e;
     font-size:32px;
+
+    animation:headingEnter 0.8s ease-out;
 }
-    
-    .paper h3{
+
+
+.paper h3{
     color:#5b3a1e;
     font-size:19px;
+
+    animation:headingEnter 0.8s ease-out;
 }
 
 
@@ -62,6 +71,8 @@ body{
 
 .phoenix-logo{
     width:120px;
+
+    animation:imageEnter 1s ease-out;
 }
 
 
@@ -74,6 +85,18 @@ body{
     border:5px solid #d8c3a3;
     box-shadow:0 0 10px rgba(0,0,0,.2);
     display:block;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation:imageEnter 1s ease-out;
+}
+
+
+.image-box img:hover{
+    transform:scale(1.03);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 
@@ -87,12 +110,14 @@ body{
     margin:auto;
 }
 
+
 .religion-table th{
     background:#8b5a2b;
     color:#f8f1df;
     border:2px solid #d8c3a3;
     padding:15px;
 }
+
 
 .religion-table td{
     border:2px solid #d8c3a3;
@@ -101,11 +126,13 @@ body{
     text-align:center;
 }
 
-    .table-container{
+
+.table-container{
     width:100%;
     overflow-x:auto;
     margin:30px 0;
 }
+
 
 /* Navigation */
 
@@ -128,13 +155,70 @@ body{
     border-radius:12px;
     cursor:pointer;
     box-shadow:0 5px 10px rgba(0,0,0,.3);
-    transition:.3s;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
 
 .info-button:hover{
     background:#a66b35;
-    transform:translateY(-5px);
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 10px 15px rgba(0,0,0,.4);
+}
+
+
+.info-button:active{
+    transform:translateY(2px) scale(.98);
+}
+
+
+/* Animations */
+
+@keyframes paperEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes headingEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes imageEnter{
+
+    from{
+        opacity:0;
+        transform:scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
 }
 
 
@@ -157,9 +241,11 @@ body{
     font-size:25px;
 }
 
-    .paper h2{
-    font-size:15px;
+
+.paper h3{
+    font-size:17px;
 }
+
 
 .paper p{
     font-size:17px;
@@ -190,20 +276,48 @@ body{
 
 }
 
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce){
+
+    .paper,
+    .paper h1,
+    .paper h2,
+    .paper h3,
+    .phoenix-logo,
+    .image-box img{
+        animation:none;
+    }
+
+    .image-box img,
+    .info-button{
+        transition:none;
+    }
+
+}
+
 </style>
 
 </head>
+
+
 <body>
+
 
 <div class="paper">
 
-<img class="phoenix-logo" src="Project/Img/Phoenix.png">
+
+<img class="phoenix-logo" src="Phoenix.png">
+
 
 <h1>Paniniwala at Pananampalataya</h1>
 
+
 <div class="image-box">
-    <img src="Project/Img/a.jpeg">
+    <img src="a.jpeg">
 </div>
+
 
 <p>
 
@@ -249,9 +363,15 @@ Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin a
 
 </p>
 
+
 <h2>Mga Pangunahing Relihiyon sa Mundo</h2>
-    <div class="table-container">
-    <table class="religion-table">
+
+
+<div class="table-container">
+
+
+<table class="religion-table">
+
 
 <tr>
     <th>Kristiyanismo</th>
@@ -260,12 +380,14 @@ Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin a
     <th>Budismo</th>
 </tr>
 
+
 <tr>
     <td>Krus</td>
     <td>Koran</td>
     <td>Torah</td>
     <td>Ginoong Buddha</td>
 </tr>
+
 
 <tr>
     <td>Bibliya</td>
@@ -274,12 +396,14 @@ Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin a
     <td>Reincarnation</td>
 </tr>
 
+
 <tr>
     <td>Simbahan</td>
     <td>Crescent Moon and Star</td>
     <td>Menorah</td>
     <td>Nirvana</td>
 </tr>
+
 
 <tr>
     <td>Simbang Gabi</td>
@@ -288,12 +412,14 @@ Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin a
     <td>Dharma</td>
 </tr>
 
+
 <tr>
     <td>Papa (Pope)</td>
     <td>Praying Mat</td>
     <td>Kosher</td>
     <td>Walong Dakilang Landas</td>
 </tr>
+
 
 <tr>
     <td>Rosaryo</td>
@@ -302,12 +428,14 @@ Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin a
     <td>Monghe</td>
 </tr>
 
+
 <tr>
     <td>Pasko</td>
     <td>Eid al-Fitr</td>
     <td>Kandila ng Hanukkah</td>
     <td>Monasteryo</td>
 </tr>
+
 
 <tr>
     <td>Kumpisal</td>
@@ -316,12 +444,14 @@ Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin a
     <td>-</td>
 </tr>
 
+
 <tr>
     <td>-</td>
     <td>Imam</td>
     <td>-</td>
     <td>-</td>
 </tr>
+
 
 <tr>
     <td>-</td>
@@ -330,14 +460,21 @@ Sa pag-unawa sa paniniwala at pananampalataya ng mga tao, mas nakikilala natin a
     <td>-</td>
 </tr>
 
+
 </table>
-    </div>
-    
-    <b><h1>Pagkakaiba ng Paniniwala at Pananampalataya</h1>
-    </b>
+
+
+</div>
+
+
+<b><h1>Pagkakaiba ng Paniniwala at Pananampalataya</h1></b>
+
 
 <br>
-    <p>
+
+
+<p>
+
 <b>PANINIWALA</b><br>
 
 Nakabase sa 5 senses na ginagamitan ng isip.
@@ -362,12 +499,14 @@ Hindi naka-base sa 5 senses at mas ginagamitan ng puso.
 Ito ay paniniwala o pag-asa na ang kanilang hinahangad ay mangyayari.
 
 <br><br>
-    
+
 </p>
-    
-    <h1>Mga Sinaunang Paniniwala at Sistema ng Pananampalataya:</h1>
-    
-    <p>
+
+
+<h1>Mga Sinaunang Paniniwala at Sistema ng Pananampalataya:</h1>
+
+
+<p>
 
 <b>1. Animismo</b><br>
 Ito ang paniniwala na ang lahat ng bagay sa kalikasan, buhay man o hindi, ay may sariling kaluluwa, espiritu, o kamalayan.
@@ -393,24 +532,31 @@ Ito ay paniniwala o relihiyon kung saan sumasamba ang mga tao sa higit sa isang 
 Ito ay paniniwala o pagsamba sa iisang diyos.
 
 </p>
-    
-    <div class="navigation">
-       
+
+
+<div class="navigation">
+
+
 <button class="info-button" onclick="location.href='kultura.html'">
 Previous Lesson
 </button>
+
 
 <button class="info-button" onclick="location.href='index.html'">
 Back to Home
 </button>
 
+
 <button class="info-button" onclick="location.href='pamahiin.html'">
- Next Lesson
-</button>    
-        
-</div>
+Next Lesson
+</button>
+
 
 </div>
+
+
+</div>
+
 
 </body>
 
