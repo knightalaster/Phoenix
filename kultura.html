@@ -29,6 +29,21 @@ body{
     padding:50px;
     position:relative;
     box-shadow:0 0 20px rgba(0,0,0,.25);
+
+    animation:paperEnter 0.8s ease-out;
+}
+
+
+@keyframes paperEnter{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -36,6 +51,21 @@ body{
     color:#5b3a1e;
     font-size:45px;
     font-family:cursive;
+
+    animation:titleEnter 1s ease-out 0.5s both;
+}
+
+
+@keyframes titleEnter{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -55,6 +85,21 @@ body{
 
 .phoenix-logo{
     width:120px;
+
+    animation:logoEnter 1s ease-out 0.3s both;
+}
+
+
+@keyframes logoEnter{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
 }
 
 
@@ -91,6 +136,34 @@ body{
     cursor:pointer;
     box-shadow:0 5px 10px rgba(0,0,0,.3);
     transition:.3s;
+
+    animation:buttonEnter 0.6s ease-out both;
+}
+
+
+.info-button:nth-child(1){
+    animation-delay:0.2s;
+}
+
+.info-button:nth-child(2){
+    animation-delay:0.3s;
+}
+
+.info-button:nth-child(3){
+    animation-delay:0.4s;
+}
+
+
+@keyframes buttonEnter{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -146,14 +219,14 @@ body{
 <div class="paper">
 
 
-<img class="phoenix-logo" src="Project/Img/Phoenix.png">
+<img class="phoenix-logo" src="Phoenix.png">
 
 
 <h1>Ugnayan ng Kultura at Kamalayang Pangkasaysayan</h1>
 
 
 <div class="image-box">
-<img src="Project/Img/kultura.jpeg">
+<img src="kultura.jpeg">
 </div>
 
 
@@ -189,8 +262,8 @@ Ang kultura ay paraan ng pamumuhay ng isang pangkat ng tao. Kabilang dito ang ka
 
 <br><br>
 
-    <b>Pagbabago ng Kultura Kasabay ng Paglipas ng Maraming Taon</b>
-
+    <h1>Pagbabago ng Kultura Kasabay ng Paglipas ng Maraming Taon</h1>
+    <p>
     <br><br>
 
 <b>Panahon ng Katutubo</b><br>
@@ -220,7 +293,7 @@ Panahon ng Ikalawang Digmaang Pandaigdig (WWII).
     • Maganda, maputi, at parang prinsesa.<br>
 • Hindi maaaring tumapak sa lupa.<br>
 • Nakapag-aral matapos ang WW2.
-
+    
     <br><br>
     
 <b>Kamalayang Pangkasaysayan</b><br>
