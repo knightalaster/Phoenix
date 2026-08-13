@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,143 +10,50 @@
 
 <style>
 
+/* =========================
+   BASIC PAGE
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
-    min-height:100vh;
     background:#b99272;
     font-family:Georgia, serif;
-    text-align:center;
+    color:#5b3a1e;
     overflow-x:hidden;
 }
 
 
-/* Paper */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .paper{
-    width:80%;
-    max-width:900px;
-    margin:40px auto;
-    box-sizing:border-box;
+
+    width:90%;
+    max-width:1050px;
+
+    margin:30px auto 50px;
+
     background:#f8f1df;
-    border:8px solid #d8c3a3;
-    padding:50px;
-    position:relative;
-    box-shadow:0 0 20px rgba(0,0,0,.25);
 
-    animation:paperEnter 0.8s ease-out;
+    border:7px solid #d8c3a3;
+
+    padding:35px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+    animation:paperEnter .7s ease-out;
 }
 
-
-.paper h1{
-    color:#5b3a1e;
-    font-size:45px;
-    font-family:cursive;
-
-    animation:headingEnter 0.8s ease-out;
-}
-
-
-.paper h2{
-    color:#5b3a1e;
-    font-size:32px;
-
-    animation:headingEnter 0.8s ease-out;
-}
-
-
-.paper p{
-    color:#5b3a1e;
-    font-size:20px;
-    line-height:1.7;
-    text-align:left;
-}
-
-
-.phoenix-logo{
-    width:120px;
-
-    animation:imageEnter 1s ease-out;
-}
-
-
-/* Images */
-
-.image-box img{
-    width:80%;
-    max-width:500px;
-    margin:20px auto;
-    border:5px solid #d8c3a3;
-    box-shadow:0 0 10px rgba(0,0,0,.2);
-    display:block;
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-
-    animation:imageEnter 1s ease-out;
-}
-
-
-.image-box img:hover{
-    transform:scale(1.03);
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
-
-
-/* Navigation */
-
-.navigation{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-
-.info-button{
-    background:#8b5a2b;
-    color:#f8f1df;
-    border:none;
-    padding:18px 40px;
-    margin:40px 10px 10px;
-    font-size:22px;
-    font-family:Georgia, serif;
-    border-radius:12px;
-    cursor:pointer;
-    box-shadow:0 5px 10px rgba(0,0,0,.3);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
-}
-
-
-.info-button:hover{
-    background:#a66b35;
-    transform:translateY(-5px) scale(1.02);
-    box-shadow:0 10px 15px rgba(0,0,0,.4);
-}
-
-
-.info-button:active{
-    transform:translateY(2px) scale(.98);
-}
-
-
-/* Easter Egg */
-
-.easter-egg{
-    width:10px;
-    height:10px;
-    opacity:100;
-    display:block;
-    margin-top:30px;
-    margin-left:5px;
-}
-
-
-/* Animations */
 
 @keyframes paperEnter{
 
@@ -162,26 +70,98 @@ body{
 }
 
 
-@keyframes headingEnter{
+/* =========================
+   TOP BAR
+========================= */
 
-    from{
-        opacity:0;
-        transform:translateY(-15px);
-    }
+.top-bar{
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+    padding-bottom:18px;
+
+    border-bottom:2px solid #d8c3a3;
+}
+
+
+.back-home{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    box-shadow:0 3px 7px rgba(0,0,0,.2);
+
+    transition:.25s;
+}
+
+
+.back-home:hover{
+
+    background:#a66b35;
+
+    transform:translateY(-2px);
 
 }
 
 
-@keyframes imageEnter{
+.page-label{
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+    opacity:.75;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+
+    text-align:center;
+
+    padding:20px 10px 35px;
+}
+
+
+.phoenix-logo{
+
+    width:105px;
+
+    margin-bottom:12px;
+
+    animation:logoEnter .8s ease-out;
+}
+
+
+@keyframes logoEnter{
 
     from{
         opacity:0;
-        transform:scale(.96);
+        transform:scale(.85);
     }
 
     to{
@@ -192,59 +172,603 @@ body{
 }
 
 
-/* Mobile */
+.header h1{
 
-@media screen and (max-width:600px){
+    margin:0;
 
-.paper{
-    width:90%;
-    padding:30px;
+    font-family:cursive;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#5b3a1e;
+
+    animation:titleEnter .8s ease-out;
 }
 
 
-.paper h1{
-    font-size:35px;
-}
+.header p{
 
+    margin:14px auto 0;
 
-.paper h2{
-    font-size:25px;
-}
+    max-width:700px;
 
-
-.paper p{
     font-size:17px;
+
+    line-height:1.6;
+
+    opacity:.8;
+}
+
+
+@keyframes titleEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================
+   SECTION CARD
+========================= */
+
+.section{
+
+    margin:25px 0;
+
+    padding:28px;
+
+    background:#fffaf0;
+
+    border:3px solid #d8c3a3;
+
+    border-radius:14px;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.12);
+
+    text-align:left;
+
+    animation:sectionEnter .6s ease-out;
+}
+
+
+@keyframes sectionEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+.section-title{
+
+    margin:0 0 20px;
+
+    padding-bottom:10px;
+
+    border-bottom:2px solid #d8c3a3;
+
+    font-size:30px;
+
+    color:#5b3a1e;
+
+    text-align:center;
+}
+
+
+/* =========================
+   CONTENT LAYOUT
+========================= */
+
+.content-row{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(250px, 1fr)
+        minmax(250px, 1fr);
+
+    gap:30px;
+
+    align-items:center;
+}
+
+
+.content-text{
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+
+.content-text b{
+
+    color:#70451f;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box{
+
+    text-align:center;
 }
 
 
 .image-box img{
-    width:95%;
+
+    width:100%;
+
+    max-width:430px;
+
+    max-height:320px;
+
+    object-fit:contain;
+
+    border:5px solid #d8c3a3;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.18);
+
+    transition:.3s;
 }
 
 
-.info-button{
-    width:80%;
+.image-box img:hover{
+
+    transform:scale(1.025);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   INFORMATION CARDS
+========================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+}
+
+
+.info-card{
+
+    padding:20px;
+
+    background:#f3e6ce;
+
+    border-left:5px solid #8b5a2b;
+
+    border-radius:8px;
+
+}
+
+
+.info-card h3{
+
+    margin:0 0 8px;
+
+    font-size:21px;
+
+}
+
+
+.info-card p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   FULL WIDTH CONTENT
+========================= */
+
+.full-content{
+
+    margin-top:20px;
+
     font-size:18px;
-}
+
+    line-height:1.8;
 
 }
 
 
-/* Reduced Motion */
+.full-content p{
 
-@media (prefers-reduced-motion: reduce){
+    margin:12px 0;
 
-    .paper,
-    .paper h1,
-    .paper h2,
-    .phoenix-logo,
-    .image-box img{
-        animation:none;
+}
+
+
+/* =========================
+   BELIEFS
+========================= */
+
+.belief-list{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+.belief{
+
+    background:#f3e6ce;
+
+    border:2px solid #d8c3a3;
+
+    border-radius:10px;
+
+    padding:18px;
+
+}
+
+
+.belief h3{
+
+    margin:0 0 8px;
+
+    color:#5b3a1e;
+
+    font-size:21px;
+
+}
+
+
+.belief p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   HIGHLIGHT
+========================= */
+
+.highlight{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.18);
+}
+
+
+.highlight p{
+
+    margin:0;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.lesson-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+    padding-top:25px;
+
+    border-top:2px solid #d8c3a3;
+
+}
+
+
+.lesson-button{
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    border:none;
+
+    padding:15px 28px;
+
+    border-radius:10px;
+
+    font-family:Georgia, serif;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 9px rgba(0,0,0,.22);
+
+    transition:.3s;
+}
+
+
+.lesson-button:hover{
+
+    background:#a66b35;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 7px 13px rgba(0,0,0,.3);
+
+}
+
+
+.lesson-button:active{
+
+    transform:translateY(1px);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:2px solid #d8c3a3;
+}
+
+
+.footer p{
+
+    margin:5px 0;
+
+    font-size:14px;
+
+    opacity:.75;
+}
+
+
+.footer-title{
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:27px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width:700px){
+
+    .paper{
+
+        width:94%;
+
+        margin:20px auto 35px;
+
+        padding:20px;
+
+        border-width:5px;
+
     }
 
-    .image-box img,
-    .info-button{
-        transition:none;
+
+    .top-bar{
+
+        align-items:flex-start;
+
+    }
+
+
+    .page-label{
+
+        font-size:11px;
+
+        text-align:right;
+
+    }
+
+
+    .header{
+
+        padding:15px 5px 25px;
+
+    }
+
+    .easter-egg{
+    width:10px;
+    height:10px;
+    opacity:100;
+    display:block;
+    margin-top:30px;
+    margin-left:5px;
+}
+
+    .phoenix-logo{
+
+        width:85px;
+
+    }
+
+
+    .header h1{
+
+        font-size:34px;
+
+    }
+
+
+    .header p{
+
+        font-size:15px;
+
+    }
+
+
+    .section{
+
+        padding:20px;
+
+        margin:18px 0;
+
+    }
+
+
+    .section-title{
+
+        font-size:25px;
+
+    }
+
+
+    .content-row{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .content-text{
+
+        font-size:17px;
+
+    }
+
+
+    .image-box{
+
+        order:-1;
+
+    }
+
+
+    .image-box img{
+
+        max-width:100%;
+
+        max-height:280px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .belief-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .lesson-navigation{
+
+        flex-direction:column;
+
+    }
+
+
+    .lesson-button{
+
+        width:90%;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
     }
 
 }
@@ -253,201 +777,832 @@ body{
 
 </head>
 
-<body>
 
+<body>
 
 <div class="paper">
 
 
-<img class="phoenix-logo" src="Project/Img/Phoenix.png">
+<!-- =========================
+     TOP BAR
+========================= -->
 
+<div class="top-bar">
 
-<h1>Sinaunang Paniniwala at Kultura ng mga Pilipino</h1>
+    <a
+        href="index.html"
+        class="back-home">
 
+        ← Back to Home
 
-<p style="text-align:center;">
-<i>"Ang Kaluluwa at Diwa ng Ating mga Ninuno"</i>
-</p>
+    </a>
 
+    <div class="page-label">
 
-<h2>Pamahiin</h2>
+        PHOENIX • HISTO PAGE
 
-
-<div class="image-box">
-    <img src="Project/Img/barya.jpeg" alt="Pamahiin">
-</div>
-
-
-<div class="image-box">
-    <img src="Project/Img/sap.jpeg" alt="Pamahiin">
-</div>
-
-
-<p>
-
-<b>Halimbawa ng Pamahiin</b><br><br>
-
-• Maglagay ng barya sa sapatos habang nag-eexam.
-
-</p>
-
-
-<div class="image-box">
-    <img src="Project/Img/pa.png" alt="Barya sa sapatos">
-</div>
-
-
-<h2>Ang Kaluluwa at Diwa ng Ating mga Ninuno</h2>
-
-
-<p>
-
-• Pagmamasid sa Kalikasan<br>
-• Karanasan sa pang-araw-araw na buhay<br>
-• Paggalang sa mga espiritu at ninuno<br>
-• Pagnanais na magkaroon ng masaganang pamumuhay
-
-</p>
-
-
-<h2>Bathala</h2>
-
-
-<div class="image-box">
-    <img src="Project/Img/bathala.jpeg" alt="Bathala">
-</div>
-
-
-<p>
-
-Ang <b>Bathala</b> ang pinakamataas at pinakamakapangyarihang diyos ng mga Tagalog.
-
-<br><br>
-
-• Diyos ng Dagat<br>
-• Diyos ng Ani<br>
-• Diyos ng Kagubatan<br>
-• Diyos ng Digmaan
-
-</p>
-
-
-<h2>Manunggul Jar</h2>
-
-
-<div class="image-box">
-    <img src="Project/Img/jar.jpeg" alt="Manunggul Jar">
-</div>
-
-
-<p>
-
-Ang <b>Manunggul Jar</b> ay isang sinaunang banga na nilalagyan ng mga gamit ng namatay at sinasama sa libing. Isa ito sa mahahalagang ebidensya ng sinaunang paniniwala ng mga Pilipino tungkol sa buhay pagkatapos ng kamatayan.
-
-</p>
-
-
-<h2>Kapangyarihan at Gabay ng mga Naunang Ninuno</h2>
-
-
-<p>
-
-• Nagbabantay ng naiwang pamilya.<br>
-• Nagbibigay ng gabay sa mga desisyon.<br>
-• Maaaring magdala ng pagpapala sa komunidad.
-
-</p>
-
-
-<h2>Babaylan vs. Katalonan</h2>
-
-
-<div class="image-box">
-    <img src="Project/Img/babay.jpg" alt="Babaylan at Katalonan">
-</div>
-
-
-<p>
-
-<b>Babaylan</b><br><br>
-
-• Karaniwang tawag sa Visayas.<br>
-• Manggagamot.<br>
-• Pinuno ng ritwal.
-
-<br><br>
-
-<b>Katalonan</b><br><br>
-
-• Tawag sa mga Tagalog.<br>
-• Tagapayo.<br>
-• Tagapamagitan.
-
-</p>
-
-
-<h2>Cycle</h2>
-
-
-<p>
-
-Ang mga ritwal ng mga sinaunang Pilipino ay isinasagawa sa mahahalagang yugto ng buhay.
-
-<br><br>
-
-• Pagtatanim at Pag-aani<br>
-• Panganganak<br>
-• Kasal<br>
-• Pakikidigma at Paglalakbay<br>
-• Pagpapagaling sa may sakit
-
-</p>
-
-
-<h2>Mga Pamahiin</h2>
-
-
-<div class="image-box">
-    <img src="Project/Img/pam.jpeg" alt="Mga Pamahiin">
-</div>
-
-
-<p>
-
-• Huwag tumuro sa punso.<br>
-• Ugaliing magsabi ng "po" at "opo".<br>
-• Huwag sumipol sa gabi.<br>
-• Huwag magwalis sa gabi.<br>
-• Huwag dumaan sa ilalim ng hagdan.
-
-</p>
-
-
-<div class="navigation">
-
-
-<button class="info-button" onclick="location.href='paniniwala.html'">
-Previous Lesson
-</button>
-
-
-<button class="info-button" onclick="location.href='index.html'">
-Back to Home
-</button>
-
-<button class="info-button" onclick="location.href='gamot.html'">
-Next Lesson
-</button>    
+    </div>
 
 </div>
 
 
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <img
+        class="phoenix-logo"
+        src="Project/Img/Phoenix.png"
+        alt="Phoenix Logo"
+    >
+
+
+    <h1>
+
+        Sinaunang Paniniwala at
+        Kultura ng mga Pilipino
+
+    </h1>
+
+
+    <p>
+
+        Pagkilala sa mga sinaunang paniniwala,
+        pamahiin, ritwal, diyos, at paraan ng
+        pananampalataya ng mga Pilipino.
+
+    </p>
+
+</header>
+
+
+<!-- =========================
+     PAMAHIIN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Pamahiin
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>pamahiin</b> ay mga paniniwala o
+                kaugalian na ipinapasa mula sa isang
+                henerasyon patungo sa susunod.
+
+            </p>
+
+
+            <p>
+
+                Bahagi ito ng tradisyon at kultura ng
+                mga Pilipino at kadalasang nagmumula sa
+                karanasan, paniniwala, at mga kuwento
+                ng mga naunang henerasyon.
+
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/barya.jpeg"
+                alt="Barya"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="info-card" style="margin-top:20px;">
+
+        <h3>
+
+            Halimbawa ng Pamahiin
+
+        </h3>
+
+        <p>
+
+            Maglagay ng barya sa sapatos habang
+            nag-eexam.
+
+        </p>
+
+    </div>
+
+
+    <div class="image-box">
+
+        <img
+            src="Project/Img/sap.jpeg"
+            alt="Sapatos"
+        >
+
+    </div>
+
+
+    <div class="image-box">
+
+        <img
+            src="Project/Img/pa.png"
+            alt="Barya sa sapatos"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KALULUWA AT DIWA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Ang Kaluluwa at Diwa ng Ating mga Ninuno
+
+    </h2>
+
+
+    <div class="belief-list">
+
+        <div class="belief">
+
+            <h3>
+
+                Pagmamasid sa Kalikasan
+
+            </h3>
+
+            <p>
+
+                Pagbibigay-pansin sa mga pangyayari
+                at pagbabago sa kapaligiran.
+
+            </p>
+
+        </div>
+
+
+        <div class="belief">
+
+            <h3>
+
+                Karanasan
+
+            </h3>
+
+            <p>
+
+                Mga aral na nabuo mula sa
+                pang-araw-araw na buhay.
+
+            </p>
+
+        </div>
+
+
+        <div class="belief">
+
+            <h3>
+
+                Paggalang sa Espiritu
+
+            </h3>
+
+            <p>
+
+                Paggalang sa mga espiritu at
+                mga ninuno.
+
+            </p>
+
+        </div>
+
+
+        <div class="belief">
+
+            <h3>
+
+                Masaganang Pamumuhay
+
+            </h3>
+
+            <p>
+
+                Pagnanais na magkaroon ng
+                maayos at masaganang pamumuhay.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BATHALA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Bathala
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/bathala.jpeg"
+                alt="Bathala"
+            >
+
+        </div>
+
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>Bathala</b> ang pinakamataas at
+                pinakamakapangyarihang diyos ng mga Tagalog.
+
+            </p>
+
+
+            <p>
+
+                Sa sinaunang paniniwala, iniuugnay siya
+                sa iba't ibang aspeto ng kalikasan at
+                buhay ng mga tao.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <h3>
+
+                Diyos ng Dagat
+
+            </h3>
+
+            <p>
+
+                Kaugnay ng dagat at mga katubigan.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Diyos ng Ani
+
+            </h3>
+
+            <p>
+
+                Kaugnay ng ani at kasaganaan.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Diyos ng Kagubatan
+
+            </h3>
+
+            <p>
+
+                Kaugnay ng kalikasan at kagubatan.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Diyos ng Digmaan
+
+            </h3>
+
+            <p>
+
+                Kaugnay ng pakikidigma at pagtatanggol.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MANUNGGUL JAR
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Manunggul Jar
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>Manunggul Jar</b> ay isang sinaunang
+                banga na ginamit bilang bahagi ng mga
+                kaugalian sa paglilibing.
+
+            </p>
+
+
+            <p>
+
+                Isa ito sa mahahalagang ebidensya ng
+                sinaunang paniniwala ng mga Pilipino
+                tungkol sa buhay pagkatapos ng kamatayan.
+
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/jar.jpeg"
+                alt="Manunggul Jar"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MGA NINUNO
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Kapangyarihan at Gabay ng mga Naunang Ninuno
+
+    </h2>
+
+
+    <div class="belief-list">
+
+        <div class="belief">
+
+            <h3>
+
+                Pagbabantay
+
+            </h3>
+
+            <p>
+
+                Pinaniniwalaang nagbabantay sa
+                naiwang pamilya.
+
+            </p>
+
+        </div>
+
+
+        <div class="belief">
+
+            <h3>
+
+                Gabay
+
+            </h3>
+
+            <p>
+
+                Pinaniniwalaang nagbibigay ng gabay
+                sa mga desisyon.
+
+            </p>
+
+        </div>
+
+
+        <div class="belief">
+
+            <h3>
+
+                Pagpapala
+
+            </h3>
+
+            <p>
+
+                Maaaring magdala ng pagpapala
+                sa komunidad.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BABAYLAN AT KATALONAN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Babaylan vs. Katalonan
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/babay.jpg"
+                alt="Babaylan at Katalonan"
+            >
+
+        </div>
+
+
+        <div class="content-text">
+
+            <div class="info-card">
+
+                <h3>
+
+                    Babaylan
+
+                </h3>
+
+                <p>
+
+                    • Karaniwang tawag sa Visayas.<br>
+                    • Manggagamot.<br>
+                    • Pinuno ng ritwal.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card" style="margin-top:18px;">
+
+                <h3>
+
+                    Katalonan
+
+                </h3>
+
+                <p>
+
+                    • Tawag sa mga Tagalog.<br>
+                    • Tagapayo.<br>
+                    • Tagapamagitan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CYCLE
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Cycle
+
+    </h2>
+
+
+    <div class="full-content">
+
+        <p>
+
+            Ang mga ritwal ng mga sinaunang Pilipino
+            ay isinasagawa sa mahahalagang yugto ng buhay.
+
+        </p>
+
+
+        <div class="belief-list">
+
+            <div class="belief">
+
+                <h3>
+
+                    Pagtatanim at Pag-aani
+
+                </h3>
+
+                <p>
+
+                    Mga ritwal na may kaugnayan
+                    sa pagsasaka at ani.
+
+                </p>
+
+            </div>
+
+
+            <div class="belief">
+
+                <h3>
+
+                    Panganganak
+
+                </h3>
+
+                <p>
+
+                    Mga ritwal para sa bagong
+                    miyembro ng komunidad.
+
+                </p>
+
+            </div>
+
+
+            <div class="belief">
+
+                <h3>
+
+                    Kasal
+
+                </h3>
+
+                <p>
+
+                    Mga ritwal na kaugnay ng
+                    pagsasama ng dalawang tao.
+
+                </p>
+
+            </div>
+
+
+            <div class="belief">
+
+                <h3>
+
+                    Pakikidigma at Paglalakbay
+
+                </h3>
+
+                <p>
+
+                    Mga ritwal bago ang mahahalagang
+                    paglalakbay o pakikidigma.
+
+                </p>
+
+            </div>
+
+
+            <div class="belief">
+
+                <h3>
+
+                    Pagpapagaling
+
+                </h3>
+
+                <p>
+
+                    Mga ritwal na isinasagawa
+                    para sa may sakit.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MGA PAMAHIIN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Mga Pamahiin
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+
+                Ilan sa mga pamahiing ipinasa
+                ng mga naunang henerasyon ay:
+
+            </p>
+
+
+            <div class="info-card">
+
+                <p>
+
+                    • Huwag tumuro sa punso.<br>
+                    • Ugaliing magsabi ng "po" at "opo".<br>
+                    • Huwag sumipol sa gabi.<br>
+                    • Huwag magwalis sa gabi.<br>
+                    • Huwag dumaan sa ilalim ng hagdan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/pam.jpeg"
+                alt="Mga Pamahiin"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLOSING
+========================= -->
+
+<div class="highlight">
+
+    <p>
+
+        Ang mga sinaunang paniniwala at kultura ay
+        nagbibigay sa atin ng mahalagang pananaw tungkol
+        sa paraan ng pamumuhay, pag-iisip, at pagpapahalaga
+        ng mga Pilipino noong unang panahon.
+
+    </p>
+
 </div>
 
 
-<img class="easter-egg" src="light.png" alt="">
+<!-- =========================
+     LESSON NAVIGATION
+========================= -->
+
+<div class="lesson-navigation">
+
+    <button
+        class="lesson-button"
+        onclick="location.href='paniniwala.html'">
+
+        ← Previous Lesson
+
+    </button>
 
 
-</body>
+    <button
+        class="lesson-button"
+        onclick="location.href='index.html'">
 
-</html>
+        Back to Home
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='gamot.html'">
+
+        Next Lesson →
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <h2 class="footer-title">
+
+        PHOENIX
+
+    </h2>
+
+
+    <p>
+
+        TECH-PRO 1103
+
+    </p>
+
+
+    <p>
+
+        Sinaunang Paniniwala at Kultura ng mga Pilipino
+
+    </p>
+
+</footer>
+
+
+</div>
+
+
+<!-- =========================
+     EASTER EGG
+========================= -->
+
+<img
+    src="Project/Img/light.png"
+    alt=""
+  
