@@ -1747,4 +1747,2015 @@ body{
      ADVANTAGES AND DISADVANTAGES
 ===================================================== -->
 
-<sect
+<sect<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Phoenix - Halamang Gamot</title>
+
+
+<style>
+
+/* =====================================================
+   BASIC PAGE
+===================================================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    background:#b99272;
+
+    font-family:Georgia, serif;
+
+    color:#5b3a1e;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar{
+
+    width:90%;
+
+    max-width:1050px;
+
+    margin:20px auto 0;
+
+    display:flex;
+
+    justify-content:flex-start;
+
+}
+
+
+.back-home{
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    border:none;
+
+    padding:11px 20px;
+
+    border-radius:9px;
+
+    font-family:Georgia, serif;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 8px
+        rgba(0,0,0,.25);
+
+    transition:.25s;
+
+}
+
+
+.back-home:hover{
+
+    background:#a66b35;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =====================================================
+   MAIN PAPER
+===================================================== */
+
+.paper{
+
+    width:90%;
+
+    max-width:1050px;
+
+    margin:30px auto 50px;
+
+    box-sizing:border-box;
+
+    background:#f8f1df;
+
+    border:7px solid #d8c3a3;
+
+    padding:45px;
+
+    box-shadow:
+        0 0 20px
+        rgba(0,0,0,.25);
+
+    animation:
+        paperEnter
+        .8s
+        ease-out;
+
+}
+
+
+@keyframes paperEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   PAGE LABEL
+===================================================== */
+
+.page-label{
+
+    text-align:center;
+
+    color:#8b5a2b;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
+    animation:
+        fadeDown
+        .7s
+        ease-out;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+
+    text-align:center;
+
+    padding-bottom:30px;
+
+    border-bottom:
+        2px solid
+        #d8c3a3;
+
+}
+
+
+.header img{
+
+    width:120px;
+
+    margin-bottom:10px;
+
+    animation:
+        logoEnter
+        1s
+        ease-out;
+
+}
+
+
+.header h1{
+
+    margin:0;
+
+    color:#5b3a1e;
+
+    font-family:cursive;
+
+    font-size:45px;
+
+    line-height:1.25;
+
+    animation:
+        titleEnter
+        .9s
+        ease-out
+        .2s
+        both;
+
+}
+
+
+.header p{
+
+    max-width:780px;
+
+    margin:20px auto 0;
+
+    color:#765332;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section{
+
+    margin-top:45px;
+
+    animation:
+        sectionEnter
+        .7s
+        ease-out
+        both;
+
+}
+
+
+.section-title{
+
+    color:#5b3a1e;
+
+    font-size:30px;
+
+    text-align:center;
+
+    margin:
+        0
+        0
+        25px;
+
+    padding-bottom:10px;
+
+    border-bottom:
+        2px solid
+        #d8c3a3;
+
+}
+
+
+/* =====================================================
+   CONTENT ROW
+===================================================== */
+
+.content-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-bottom:30px;
+
+}
+
+
+.content-row.reverse{
+
+    flex-direction:row-reverse;
+
+}
+
+
+.content-text{
+
+    flex:1;
+
+}
+
+
+.content-text p{
+
+    margin:0;
+
+    color:#5b3a1e;
+
+    font-size:19px;
+
+    line-height:1.75;
+
+    text-align:left;
+
+}
+
+
+.content-text ul{
+
+    color:#5b3a1e;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    text-align:left;
+
+}
+
+
+/* =====================================================
+   IMAGE BOX
+===================================================== */
+
+.image-box{
+
+    flex:0 0 45%;
+
+    padding:10px;
+
+    box-sizing:border-box;
+
+    background:#eee3c9;
+
+    border:
+        4px solid
+        #d8c3a3;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0,0,0,.15);
+
+}
+
+
+.image-box img{
+
+    width:100%;
+
+    max-width:500px;
+
+    display:block;
+
+    margin:auto;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    animation:
+        imageEnter
+        .8s
+        ease-out;
+
+}
+
+
+.image-box img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+        0 8px 18px
+        rgba(0,0,0,.2);
+
+}
+
+
+/* =====================================================
+   MATERIALS / INFORMATION GRID
+===================================================== */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+
+.info-card{
+
+    background:#f4ead4;
+
+    border:
+        2px solid
+        #d8c3a3;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    box-shadow:
+        0 5px 12px
+        rgba(0,0,0,.12);
+
+    text-align:left;
+
+    animation:
+        cardEnter
+        .7s
+        ease-out
+        both;
+
+}
+
+
+.info-card h3{
+
+    margin:
+        0
+        0
+        15px;
+
+    padding-bottom:8px;
+
+    border-bottom:
+        2px solid
+        #d8c3a3;
+
+    text-align:center;
+
+    color:#5b3a1e;
+
+    font-size:24px;
+
+}
+
+
+.info-card p{
+
+    margin:8px 0;
+
+    color:#5b3a1e;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================================
+   FULL-WIDTH INFORMATION
+===================================================== */
+
+.info-box{
+
+    margin-top:25px;
+
+    padding:22px 25px;
+
+    background:#f4ead4;
+
+    border-left:
+        6px solid
+        #8b5a2b;
+
+    border-radius:
+        0
+        10px
+        10px
+        0;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0,0,0,.12);
+
+}
+
+
+.info-box p{
+
+    margin:8px 0;
+
+    color:#5b3a1e;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    text-align:left;
+
+}
+
+
+/* =====================================================
+   WARNING / PAALALA
+===================================================== */
+
+.warning{
+
+    margin-top:35px;
+
+    padding:22px;
+
+    background:#ead8b7;
+
+    border-left:
+        7px solid
+        #8b5a2b;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0,0,0,.12);
+
+    text-align:left;
+
+}
+
+
+.warning h3{
+
+    margin-top:0;
+
+    color:#5b3a1e;
+
+    font-size:24px;
+
+}
+
+
+.warning p{
+
+    margin:8px 0;
+
+    color:#5b3a1e;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================================
+   HELLO KITTY ENDING
+===================================================== */
+
+.thank-you-section{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:330px;
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+.thank-you-card{
+
+    width:55%;
+
+    padding:30px 20px;
+
+    background:#f8f1df;
+
+    border:
+        5px solid
+        #d8c3a3;
+
+    box-shadow:
+        0 6px 15px
+        rgba(0,0,0,.2);
+
+    position:relative;
+
+    z-index:2;
+
+    transform:rotate(-1deg);
+
+    animation:
+        thankYouEnter
+        .8s
+        ease-out;
+
+}
+
+
+.thank-you-card h2{
+
+    margin:
+        0
+        0
+        15px;
+
+    color:#5b3a1e;
+
+    font-family:cursive;
+
+    font-size:32px;
+
+}
+
+
+.thank-you-card p{
+
+    color:#5b3a1e;
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    text-align:center;
+
+    margin:
+        10px 0 20px;
+
+}
+
+
+.thank-you-card h3{
+
+    color:#5b3a1e;
+
+    font-family:cursive;
+
+    font-size:26px;
+
+    margin:
+        10px 0 5px;
+
+}
+
+
+.thank-you-card span{
+
+    color:#5b3a1e;
+
+    font-size:15px;
+
+}
+
+
+/* =====================================================
+   HELLO KITTY IMAGES
+===================================================== */
+
+.hello-kitty{
+
+    position:absolute;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 5px 5px
+            rgba(0,0,0,.2)
+        );
+
+    z-index:3;
+
+}
+
+
+.hello-left{
+
+    width:140px;
+
+    left:0;
+
+    bottom:10px;
+
+    transform:rotate(-8deg);
+
+    animation:
+        kittyLeft
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.hello-right{
+
+    width:140px;
+
+    right:0;
+
+    top:10px;
+
+    transform:rotate(8deg);
+
+    animation:
+        kittyRight
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.hello-bottom{
+
+    width:120px;
+
+    left:50%;
+
+    bottom:-15px;
+
+    transform:
+        translateX(-50%);
+
+    animation:
+        kittyBottom
+        .8s
+        ease-out;
+
+}
+
+
+/* =====================================================
+   LESSON NAVIGATION
+===================================================== */
+
+.lesson-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:45px;
+
+    padding-top:25px;
+
+    border-top:
+        2px solid
+        #d8c3a3;
+
+}
+
+
+.lesson-button{
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    border:none;
+
+    padding:
+        15px
+        25px;
+
+    font-size:18px;
+
+    font-family:Georgia, serif;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 8px
+        rgba(0,0,0,.25);
+
+    transition:.25s;
+
+}
+
+
+.lesson-button:hover{
+
+    background:#a66b35;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 7px 12px
+        rgba(0,0,0,.3);
+
+}
+
+
+.lesson-button:active{
+
+    transform:translateY(1px);
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    margin-top:30px;
+
+    padding-top:25px;
+
+    border-top:
+        2px solid
+        #d8c3a3;
+
+    text-align:center;
+
+    color:#8b5a2b;
+
+}
+
+
+.footer .phoenix-name{
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:25px;
+
+    color:#5b3a1e;
+
+}
+
+
+.footer p{
+
+    margin:5px 0;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+}
+
+
+.footer .lesson-name{
+
+    font-size:12px;
+
+    opacity:.75;
+
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes logoEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+@keyframes titleEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes sectionEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes imageEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+@keyframes cardEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes thankYouEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            rotate(-1deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            rotate(-1deg);
+
+    }
+
+}
+
+
+@keyframes kittyLeft{
+
+    0%,100%{
+
+        transform:
+            rotate(-8deg)
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            rotate(-8deg)
+            translateY(-8px);
+
+    }
+
+}
+
+
+@keyframes kittyRight{
+
+    0%,100%{
+
+        transform:
+            rotate(8deg)
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            rotate(8deg)
+            translateY(-8px);
+
+    }
+
+}
+
+
+@keyframes kittyBottom{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translate(-50%,20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translate(-50%,0);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width:700px){
+
+    .top-bar{
+
+        width:92%;
+
+        margin-top:18px;
+
+    }
+
+
+    .back-home{
+
+        font-size:14px;
+
+        padding:
+            10px
+            17px;
+
+    }
+
+
+    .paper{
+
+        width:92%;
+
+        padding:25px;
+
+        margin:
+            20px auto 30px;
+
+    }
+
+
+    .header img{
+
+        width:90px;
+
+    }
+
+
+    .header h1{
+
+        font-size:34px;
+
+    }
+
+
+    .page-label{
+
+        font-size:11px;
+
+        letter-spacing:1.5px;
+
+    }
+
+
+    .header p{
+
+        font-size:16px;
+
+    }
+
+
+    .section{
+
+        margin-top:35px;
+
+    }
+
+
+    .section-title{
+
+        font-size:25px;
+
+    }
+
+
+    .content-row,
+    .content-row.reverse{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+    .content-text{
+
+        width:100%;
+
+    }
+
+
+    .content-text p{
+
+        font-size:17px;
+
+    }
+
+
+    .content-text ul{
+
+        font-size:16px;
+
+    }
+
+
+    .image-box{
+
+        width:100%;
+
+        flex:none;
+
+    }
+
+
+    .image-box img{
+
+        width:100%;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+    .info-card p{
+
+        font-size:17px;
+
+    }
+
+
+    .info-box p{
+
+        font-size:17px;
+
+    }
+
+
+    .warning p{
+
+        font-size:16px;
+
+    }
+
+
+    .thank-you-section{
+
+        min-height:300px;
+
+        margin-top:55px;
+
+    }
+
+
+    .thank-you-card{
+
+        width:65%;
+
+        padding:
+            22px
+            15px;
+
+    }
+
+
+    .thank-you-card h2{
+
+        font-size:25px;
+
+    }
+
+
+    .thank-you-card p{
+
+        font-size:14px;
+
+    }
+
+
+    .thank-you-card h3{
+
+        font-size:22px;
+
+    }
+
+
+    .hello-left{
+
+        width:90px;
+
+        left:-5px;
+
+        bottom:20px;
+
+    }
+
+
+    .hello-right{
+
+        width:90px;
+
+        right:-5px;
+
+        top:20px;
+
+    }
+
+
+    .hello-bottom{
+
+        width:80px;
+
+        bottom:-10px;
+
+    }
+
+
+    .lesson-button{
+
+        width:100%;
+
+        font-size:17px;
+
+        padding:
+            14px
+            20px;
+
+    }
+
+
+    .footer{
+
+        font-size:12px;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <button
+        class="back-home"
+        onclick="location.href='index.html'"
+    >
+
+        ← Back to Home
+
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN PAPER
+===================================================== -->
+
+<div class="paper">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="page-label">
+
+        PHOENIX • KASAYSAYAN
+
+    </div>
+
+
+    <img
+        src="Project/Img/Phoenix.png"
+        alt="Phoenix Logo"
+    >
+
+
+    <h1>
+        Halamang Gamot
+    </h1>
+
+
+    <p>
+
+        Isang halimbawa ng tradisyunal na kaalaman
+        tungkol sa paggamit ng mga halamang gamot
+        sa pamayanang Pilipino.
+
+    </p>
+
+</header>
+
+
+<!-- =====================================================
+     HALAMANG GAMOT
+===================================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Dahon ng Tuba-Tuba
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+
+                Ang tuba-tuba ay isang halamang matatagpuan
+                sa mga tropikal na lugar at naging bahagi
+                ng tradisyunal na kaalaman tungkol sa
+                halamang gamot sa ilang pamayanan.
+
+                <br><br>
+
+                Ang paggamit nito ay bahagi ng tradisyunal
+                na kaalaman at hindi dapat ituring bilang
+                kapalit ng makabagong pagsusuring medikal.
+
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/putol.jpg"
+                alt="Dahon ng Tuba-Tuba"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MATERIALS
+===================================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Materials
+
+    </h2>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                Mga Kailangan
+            </h3>
+
+            <p>
+                • Dahon ng Tuba-Tuba
+            </p>
+
+            <p>
+                • Kaunting langis
+            </p>
+
+            <p>
+                • Malinis na tubig
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Paalala
+            </h3>
+
+            <p>
+                Gumamit lamang ng malinis na kagamitan
+                at iwasang gamitin ang halaman kung
+                hindi tiyak ang pagkakakilanlan nito.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCEDURES
+===================================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Procedures
+
+    </h2>
+
+
+    <!-- STEP 1 -->
+
+    <div class="info-card">
+
+        <h3>
+            1. Pagpili ng Dahon
+        </h3>
+
+        <p>
+
+            Pumili ng dahon ng tuba-tuba mula sa
+            malinis na lugar.
+
+        </p>
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/putol.jpg"
+                alt="Pagpili ng dahon"
+            >
+
+        </div>
+
+    </div>
+
+
+    <br>
+
+
+    <!-- STEP 2 -->
+
+    <div class="info-card">
+
+        <h3>
+            2. Paghuhugas
+        </h3>
+
+        <p>
+
+            Hugasan ang dahon gamit ang malinis
+            na tubig.
+
+        </p>
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/hugas.jpg"
+                alt="Paghuhugas ng dahon"
+            >
+
+        </div>
+
+    </div>
+
+
+    <br>
+
+
+    <!-- STEP 3 -->
+
+    <div class="info-card">
+
+        <h3>
+            3. Pagpapatuyo
+        </h3>
+
+        <p>
+
+            Patuyuin ang tuba-tuba bago ito ihanda
+            para sa susunod na hakbang.
+
+        </p>
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/tuyo.jpg"
+                alt="Pagpapatuyo ng dahon"
+            >
+
+        </div>
+
+    </div>
+
+
+    <br>
+
+
+    <!-- STEP 4 -->
+
+    <div class="info-card">
+
+        <h3>
+            4. Pagdadarang
+        </h3>
+
+        <p>
+
+            Idarang ang tuba-tuba sa apoy nang maingat.
+
+        </p>
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/pagdarang.jpeg"
+                alt="Pagdadarang ng tuba-tuba"
+            >
+
+        </div>
+
+    </div>
+
+
+    <br>
+
+
+    <!-- STEP 5 -->
+
+    <div class="info-card">
+
+        <h3>
+            5. Paglalagay ng Langis
+        </h3>
+
+        <p>
+
+            Lagyan ng kaunting langis ang dahon.
+
+        </p>
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/langis.jpg"
+                alt="Paglalagay ng langis"
+            >
+
+        </div>
+
+    </div>
+
+
+    <br>
+
+
+    <!-- STEP 6 -->
+
+    <div class="info-card">
+
+        <h3>
+            6. Paglalapat
+        </h3>
+
+        <p>
+
+            Ilapat ito sa balat ayon sa tradisyunal
+            na paggamit.
+
+        </p>
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/lapat.jpg"
+                alt="Paglalapat ng dahon"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADVANTAGES AND DISADVANTAGES
+===================================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Advantages and Disadvantages
+
+    </h2>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                Advantages
+            </h3>
+
+            <p>
+                • Tradisyunal na ginagamit bilang
+                halamang panlapat sa ilang lugar.
+            </p>
+
+            <p>
+                • Madaling tumubo sa tropical na klima.
+            </p>
+
+            <p>
+                • Bahagi ng tradisyunal na kaalaman
+                tungkol sa halamang gamot.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Disadvantages
+            </h3>
+
+            <p>
+                • Hindi ligtas inumin nang walang
+                wastong gabay.
+            </p>
+
+            <p>
+                • Maaaring magdulot ng pangangati,
+                pamumula, o pamamaga sa balat.
+            </p>
+
+            <p>
+                • Hindi dapat ilapat sa bukas o
+                malalim na sugat.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BENEFITS
+===================================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Benefits
+
+    </h2>
+
+
+    <div class="info-box">
+
+        <p>
+
+            • Tradisyunal na ginagamit bilang tapal
+            sa ilang uri ng pamamaga.
+
+        </p>
+
+        <p>
+
+            • Ginagamit sa ilang lugar para sa
+            minor na pananakit.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAALALA
+===================================================== -->
+
+<section class="section">
+
+    <div class="warning">
+
+        <h3>
+            Paalaala
+        </h3>
+
+
+        <p>
+
+            Ang paggamit ng tuba-tuba bilang halamang
+            gamot ay bahagi ng tradisyunal na kaalaman.
+            Hindi ito kapalit ng payo o paggamot mula
+            sa isang kwalipikadong health professional.
+
+        </p>
+
+
+        <p>
+
+            Huwag itong inumin at iwasang gamitin sa
+            bukas na sugat. Kung magkaroon ng matinding
+            pangangati, pamumula, pamamaga, o iba pang
+            hindi magandang reaksyon, itigil ang paggamit
+            at humingi ng angkop na payo.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HELLO KITTY ENDING
+===================================================== -->
+
+<div class="thank-you-section">
+
+
+    <img
+        class="hello-kitty hello-left"
+        src="Project/Img/hello1.png"
+        alt="Hello Kitty"
+    >
+
+
+    <div class="thank-you-card">
+
+        <h2>
+            Salamat sa Pakikinig!
+        </h2>
+
+
+        <p>
+
+            Maraming salamat sa inyong oras at
+            pakikinig sa aming presentasyon.
+
+        </p>
+
+
+        <h3>
+            PHOENIX
+        </h3>
+
+
+        <span>
+            TECH-PRO 1103
+        </span>
+
+    </div>
+
+
+    <img
+        class="hello-kitty hello-right"
+        src="Project/Img/hello2.png"
+        alt="Hello Kitty"
+    >
+
+
+    <img
+        class="hello-kitty hello-bottom"
+        src="Project/Img/hello3.png"
+        alt="Hello Kitty"
+    >
+
+</div>
+
+
+<!-- =====================================================
+     LESSON NAVIGATION
+===================================================== -->
+
+<nav
+    class="lesson-navigation"
+    aria-label="Lesson navigation"
+>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='pamahiin.html'"
+    >
+
+        ← Previous Lesson
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='index.html'"
+    >
+
+        Back to Home
+
+    </button>
+
+
+</nav>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <p class="phoenix-name">
+
+        PHOENIX
+
+    </p>
+
+
+    <p>
+
+        TECH-PRO 1103
+
+    </p>
+
+
+    <p class="lesson-name">
+
+        Halamang Gamot
+
+    </p>
+
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>
