@@ -11,7 +11,7 @@
 >
 
 <title>
-    Phoenix - Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+    Phoenix - Paniniwala at Pananampalataya
 </title>
 
 
@@ -63,6 +63,7 @@ body{
         paperEnter
         .7s
         ease-out;
+
 }
 
 
@@ -102,6 +103,7 @@ body{
     border-bottom:
         2px solid
         #d8c3a3;
+
 }
 
 
@@ -126,6 +128,7 @@ body{
         rgba(0,0,0,.2);
 
     transition:.25s;
+
 }
 
 
@@ -148,6 +151,7 @@ body{
     font-weight:bold;
 
     opacity:.75;
+
 }
 
 
@@ -160,6 +164,7 @@ body{
     text-align:center;
 
     padding:20px 10px 35px;
+
 }
 
 
@@ -173,6 +178,7 @@ body{
         logoEnter
         .8s
         ease-out;
+
 }
 
 
@@ -207,15 +213,13 @@ body{
         titleEnter
         .8s
         ease-out;
+
 }
 
 
 .header p{
 
-    margin:
-        14px
-        auto
-        0;
+    margin:14px auto 0;
 
     max-width:700px;
 
@@ -224,6 +228,7 @@ body{
     line-height:1.6;
 
     opacity:.8;
+
 }
 
 
@@ -254,9 +259,7 @@ body{
 
     background:#fffaf0;
 
-    border:
-        3px solid
-        #d8c3a3;
+    border:3px solid #d8c3a3;
 
     border-radius:14px;
 
@@ -270,6 +273,7 @@ body{
         sectionEnter
         .6s
         ease-out;
+
 }
 
 
@@ -290,10 +294,7 @@ body{
 
 .section-title{
 
-    margin:
-        0
-        0
-        20px;
+    margin:0 0 20px;
 
     padding-bottom:10px;
 
@@ -306,6 +307,7 @@ body{
     color:#5b3a1e;
 
     text-align:center;
+
 }
 
 
@@ -318,12 +320,13 @@ body{
     display:grid;
 
     grid-template-columns:
-        minmax(250px, 1fr)
-        minmax(250px, 1fr);
+        minmax(250px,1fr)
+        minmax(250px,1fr);
 
     gap:30px;
 
     align-items:center;
+
 }
 
 
@@ -332,22 +335,21 @@ body{
     font-size:18px;
 
     line-height:1.8;
+
 }
 
 
 .content-text b{
 
     color:#70451f;
+
 }
 
-
-/* =========================
-   IMAGE
-========================= */
 
 .image-box{
 
     text-align:center;
+
 }
 
 
@@ -372,21 +374,24 @@ body{
         rgba(0,0,0,.18);
 
     transition:.3s;
+
 }
 
 
 .image-box img:hover{
 
-    transform:scale(1.025);
+    transform:
+        scale(1.025);
 
     box-shadow:
         0 8px 18px
         rgba(0,0,0,.25);
+
 }
 
 
 /* =========================
-   SMALL INFORMATION CARDS
+   INFORMATION CARDS
 ========================= */
 
 .info-grid{
@@ -394,11 +399,12 @@ body{
     display:grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2,1fr);
 
     gap:18px;
 
     margin-top:20px;
+
 }
 
 
@@ -413,17 +419,16 @@ body{
         #8b5a2b;
 
     border-radius:8px;
+
 }
 
 
 .info-card h3{
 
-    margin:
-        0
-        0
-        8px;
+    margin:0 0 8px;
 
     font-size:21px;
+
 }
 
 
@@ -434,6 +439,7 @@ body{
     font-size:16px;
 
     line-height:1.6;
+
 }
 
 
@@ -448,163 +454,76 @@ body{
     font-size:18px;
 
     line-height:1.8;
+
 }
 
 
 .full-content p{
 
-    margin:
-        12px
-        0;
+    margin:12px 0;
+
 }
 
 
 /* =========================
-   CULTURE TYPES
+   RELIGION TABLE
 ========================= */
 
-.culture-list{
+.table-container{
 
-    display:grid;
+    width:100%;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+    overflow-x:auto;
 
-    gap:18px;
+    margin:25px 0;
 
-    margin-top:20px;
 }
 
 
-.culture-card{
+.religion-table{
 
-    background:#f3e6ce;
+    width:100%;
+
+    min-width:700px;
+
+    border-collapse:collapse;
+
+    background:#fffaf0;
+
+}
+
+
+.religion-table th{
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
 
     border:
         2px solid
         #d8c3a3;
 
-    border-radius:10px;
+    padding:15px;
 
-    padding:18px;
+    text-align:center;
+
 }
 
 
-.culture-card h3{
-
-    margin:
-        0
-        0
-        8px;
-
-    color:#5b3a1e;
-
-    font-size:21px;
-}
-
-
-.culture-card p{
-
-    margin:0;
-
-    font-size:16px;
-
-    line-height:1.6;
-}
-
-
-/* =========================
-   HISTORICAL PERIODS
-========================= */
-
-.period-list{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap:18px;
-
-    margin-top:20px;
-}
-
-
-.period{
-
-    background:#f3e6ce;
+.religion-table td{
 
     border:
         2px solid
         #d8c3a3;
 
-    border-radius:10px;
-
-    padding:18px;
-}
-
-
-.period h3{
-
-    margin:
-        0
-        0
-        8px;
+    padding:12px;
 
     color:#5b3a1e;
 
-    font-size:21px;
-}
+    text-align:center;
 
+    line-height:1.5;
 
-.period p{
-
-    margin:0;
-
-    font-size:16px;
-
-    line-height:1.6;
-}
-
-
-/* =========================
-   BINUKOT
-========================= */
-
-.binukot{
-
-    margin-top:20px;
-
-    padding:22px;
-
-    background:#f3e6ce;
-
-    border-left:
-        5px solid
-        #8b5a2b;
-
-    border-radius:8px;
-}
-
-
-.binukot h3{
-
-    margin:
-        0
-        0
-        10px;
-
-    font-size:22px;
-}
-
-
-.binukot p{
-
-    margin:0;
-
-    font-size:17px;
-
-    line-height:1.7;
 }
 
 
@@ -631,6 +550,7 @@ body{
     border-top:
         2px solid
         #d8c3a3;
+
 }
 
 
@@ -642,9 +562,7 @@ body{
 
     border:none;
 
-    padding:
-        15px
-        28px;
+    padding:15px 28px;
 
     border-radius:10px;
 
@@ -659,6 +577,7 @@ body{
         rgba(0,0,0,.22);
 
     transition:.3s;
+
 }
 
 
@@ -672,6 +591,7 @@ body{
     box-shadow:
         0 7px 13px
         rgba(0,0,0,.3);
+
 }
 
 
@@ -698,18 +618,18 @@ body{
     border-top:
         2px solid
         #d8c3a3;
+
 }
 
 
 .footer p{
 
-    margin:
-        5px
-        0;
+    margin:5px 0;
 
     font-size:14px;
 
     opacity:.75;
+
 }
 
 
@@ -720,6 +640,7 @@ body{
     font-family:cursive;
 
     font-size:27px;
+
 }
 
 
@@ -733,10 +654,7 @@ body{
 
         width:94%;
 
-        margin:
-            20px
-            auto
-            35px;
+        margin:20px auto 35px;
 
         padding:20px;
 
@@ -796,9 +714,7 @@ body{
 
         padding:20px;
 
-        margin:
-            18px
-            0;
+        margin:18px 0;
 
     }
 
@@ -849,16 +765,19 @@ body{
     }
 
 
-    .culture-list{
+    .religion-table{
 
-        grid-template-columns:1fr;
+        min-width:650px;
+
+        font-size:14px;
 
     }
 
 
-    .period-list{
+    .religion-table th,
+    .religion-table td{
 
-        grid-template-columns:1fr;
+        padding:8px;
 
     }
 
@@ -946,28 +865,27 @@ body{
 
 
     <h1>
-        Ugnayan ng Kultura at
-        Kamalayang Pangkasaysayan
+        Paniniwala at Pananampalataya
     </h1>
 
 
     <p>
-        Pag-unawa sa kultura, pagbabago nito sa paglipas
-        ng panahon, at kahalagahan ng kamalayang
-        pangkasaysayan sa pagkakakilanlan ng isang lipunan.
+        Pag-unawa sa mga paniniwala, pananampalataya,
+        relihiyon, at sinaunang sistema ng paniniwala
+        na naging bahagi ng kasaysayan at kultura.
     </p>
 
 </header>
 
 
 <!-- =========================
-     ANO ANG KULTURA
+     PANINIWALA AT PANANAMPALATAYA
 ========================= -->
 
 <section class="section">
 
     <h2 class="section-title">
-        Ano ang Kultura?
+        Paniniwala at Pananampalataya
     </h2>
 
 
@@ -976,17 +894,17 @@ body{
         <div class="content-text">
 
             <p>
-                Ang <b>kultura</b> ay paraan ng pamumuhay
-                ng isang pangkat ng tao. Kabilang dito ang
-                kanilang mga kaugalian, tradisyon, paniniwala,
-                wika, sining, at mga kagamitang nagpapakita
-                ng kanilang pagkakakilanlan.
+                Ang <b>paniniwala</b> ay mga ideya, pananaw,
+                o kaisipan na tinatanggap ng isang tao o
+                pangkat bilang bahagi ng kanilang pag-unawa
+                sa mundo.
             </p>
 
 
             <p>
-                Sa pamamagitan ng kultura, mas nauunawaan
-                natin ang ating kasaysayan at pinagmulan.
+                Ang <b>pananampalataya</b> ay mas malalim na
+                pagtitiwala o paniniwala na kadalasang may
+                kaugnayan sa relihiyon at espirituwalidad.
             </p>
 
         </div>
@@ -995,8 +913,8 @@ body{
         <div class="image-box">
 
             <img
-                src="Project/Img/kultura.jpeg"
-                alt="Kultura"
+                src="Project/Img/a.jpeg"
+                alt="Paniniwala at Pananampalataya"
             >
 
         </div>
@@ -1007,256 +925,29 @@ body{
 
 
 <!-- =========================
-     MATERYAL AT DI-MATERYAL
+     KAHALAGAHAN
 ========================= -->
 
 <section class="section">
 
     <h2 class="section-title">
-        Materyal at Di-Materyal na Kultura
-    </h2>
-
-
-    <div class="culture-list">
-
-
-        <div class="culture-card">
-
-            <h3>
-                Materyal (Tangible)
-            </h3>
-
-            <p>
-                • Bahay<br>
-                • Kasuotan<br>
-                • Kagamitan<br>
-                • Pagkain<br>
-                • Sining
-            </p>
-
-        </div>
-
-
-        <div class="culture-card">
-
-            <h3>
-                Di-Materyal (Intangible)
-            </h3>
-
-            <p>
-                • Wika<br>
-                • Kaugalian<br>
-                • Tradisyon<br>
-                • Paniniwala<br>
-                • Pagpapahalaga
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PAGBABAGO NG KULTURA
-========================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Pagbabago ng Kultura Kasabay ng Paglipas ng Maraming Taon
-    </h2>
-
-
-    <div class="period-list">
-
-
-        <div class="period">
-
-            <h3>
-                Panahon ng Katutubo
-            </h3>
-
-            <p>
-                Tradisyonal at payak na pamumuhay.
-            </p>
-
-        </div>
-
-
-        <div class="period">
-
-            <h3>
-                Panahon ng Espanyol
-            </h3>
-
-            <p>
-                Paglaganap ng Kristiyanismo.
-            </p>
-
-        </div>
-
-
-        <div class="period">
-
-            <h3>
-                Panahon ng Amerika
-            </h3>
-
-            <p>
-                Pagpapakilala ng wikang Ingles at
-                demokratikong pamahalaan.
-            </p>
-
-        </div>
-
-
-        <div class="period">
-
-            <h3>
-                Panahon ng Hapon
-            </h3>
-
-            <p>
-                Panahon ng Ikalawang Digmaang Pandaigdig
-                (WWII).
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     BINUKOT
-========================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Binukot
-    </h2>
-
-
-    <div class="binukot">
-
-        <h3>
-            Binukot (Itinago / Itiniwalag)
-        </h3>
-
-        <p>
-            • Inilalarawan bilang maganda at parang prinsesa.<br>
-            • Hindi maaaring tumapak sa lupa.<br>
-            • Nakapag-aral matapos ang Ikalawang Digmaang Pandaigdig.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     KAMALAYANG PANGKASAYSAYAN
-========================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Kamalayang Pangkasaysayan
-    </h2>
-
-
-    <div class="full-content">
-
-        <p>
-            Ang <b>kamalayang pangkasaysayan</b> ay ang
-            pagkakaroon ng kaalaman at pag-unawa sa mga
-            pangyayari sa nakaraan na humubog sa kasalukuyang
-            kalagayan ng isang lipunan.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     UGNAYAN NG KULTURA AT KASAYSAYAN
-========================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Ugnayan ng Kultura at Kasaysayan
-    </h2>
-
-
-    <div class="content-row">
-
-        <div class="content-text">
-
-            <p>
-                Ang <b>kultura</b> ay nabubuo at nagbabago
-                dahil sa mga karanasan at pangyayari sa
-                kasaysayan.
-            </p>
-
-
-            <p>
-                Samantala, ang <b>kasaysayan</b> naman ang
-                nagbibigay ng paliwanag kung paano nabuo
-                ang kultura ng isang pangkat ng tao.
-            </p>
-
-        </div>
-
-
-        <div class="info-card">
-
-            <h3>
-                Mahahalagang Kaisipan
-            </h3>
-
-            <p>
-                Magkaugnay ang kultura at kasaysayan dahil
-                ang mga pangyayari sa nakaraan ay nakaaapekto
-                sa paraan ng pamumuhay, paniniwala, at
-                pagkakakilanlan ng mga tao.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     KAHALAGAHAN NG KULTURA
-========================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Kahalagahan ng Kultura sa Kasaysayan
+        Kahalagahan at Bahagi ng Kasaysayan
     </h2>
 
 
     <div class="info-grid">
 
-
         <div class="info-card">
 
             <h3>
-                Pagkakakilanlan
+                Kahalagahan
             </h3>
 
             <p>
-                Pinapanatili ang pagkakakilanlan
-                ng isang pangkat.
+                Ang mga paniniwala at pananampalataya ay
+                may malaking papel sa paghubog ng kultura,
+                tradisyon, at pagkakakilanlan ng isang
+                pangkat ng tao.
             </p>
 
         </div>
@@ -1265,12 +956,13 @@ body{
         <div class="info-card">
 
             <h3>
-                Alaala ng mga Ninuno
+                Bahagi ng Kasaysayan
             </h3>
 
             <p>
-                Nagpapakita ng mga karanasan
-                ng mga ninuno.
+                Makikita sa mga paniniwala ng mga tao ang
+                kanilang paraan ng pamumuhay, pagpapahalaga,
+                at pakikitungo sa kapwa.
             </p>
 
         </div>
@@ -1279,12 +971,14 @@ body{
         <div class="info-card">
 
             <h3>
-                Koneksyon sa Nakaraan
+                Epekto sa Kultura
             </h3>
 
             <p>
-                Nagbibigay ng koneksyon sa
-                nakaraan at kasalukuyan.
+                Nagbibigay ito ng gabay sa paggawa ng
+                desisyon, nagpapatibay ng pagkakaisa,
+                at nagpapasa ng tradisyon sa susunod
+                na henerasyon.
             </p>
 
         </div>
@@ -1293,12 +987,13 @@ body{
         <div class="info-card">
 
             <h3>
-                Pag-unawa sa Lipunan
+                Pagkakaugnay sa Kasaysayan
             </h3>
 
             <p>
-                Tumutulong upang mas maunawaan
-                kung paano nahubog ang isang lipunan.
+                Tinutulungan tayo nitong maunawaan kung
+                bakit nabuo ang iba't ibang kultura
+                at pamayanan.
             </p>
 
         </div>
@@ -1309,30 +1004,433 @@ body{
 
 
 <!-- =========================
-     PAGPAPANATILI NG KULTURA
+     MGA PANGUNAHING RELIHIYON
 ========================= -->
 
 <section class="section">
 
     <h2 class="section-title">
-        Pagpapanatili ng Kultura
+        Mga Pangunahing Relihiyon sa Mundo
+    </h2>
+
+
+    <div class="table-container">
+
+        <table class="religion-table">
+
+            <tr>
+
+                <th>
+                    Kristiyanismo
+                </th>
+
+                <th>
+                    Islam
+                </th>
+
+                <th>
+                    Hudaismo
+                </th>
+
+                <th>
+                    Budismo
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Krus
+                </td>
+
+                <td>
+                    Koran
+                </td>
+
+                <td>
+                    Torah
+                </td>
+
+                <td>
+                    Ginoong Buddha
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Bibliya
+                </td>
+
+                <td>
+                    Moske
+                </td>
+
+                <td>
+                    Sinagoga
+                </td>
+
+                <td>
+                    Reincarnation
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Simbahan
+                </td>
+
+                <td>
+                    Crescent Moon and Star
+                </td>
+
+                <td>
+                    Menorah
+                </td>
+
+                <td>
+                    Nirvana
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Simbang Gabi
+                </td>
+
+                <td>
+                    Ramadan
+                </td>
+
+                <td>
+                    Sabbath
+                </td>
+
+                <td>
+                    Dharma
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Papa (Pope)
+                </td>
+
+                <td>
+                    Praying Mat
+                </td>
+
+                <td>
+                    Kosher
+                </td>
+
+                <td>
+                    Walong Dakilang Landas
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Rosaryo
+                </td>
+
+                <td>
+                    Pagdarasal isang beses sa isang araw
+                </td>
+
+                <td>
+                    Rabbi
+                </td>
+
+                <td>
+                    Monghe
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Pasko
+                </td>
+
+                <td>
+                    Eid al-Fitr
+                </td>
+
+                <td>
+                    Kandila ng Hanukkah
+                </td>
+
+                <td>
+                    Monasteryo
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Kumpisal
+                </td>
+
+                <td>
+                    Halal
+                </td>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    -
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    Imam
+                </td>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    -
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    Hindi kumakain ng baboy
+                </td>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    -
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGKAKAIBA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Pagkakaiba ng Paniniwala at Pananampalataya
+    </h2>
+
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <h3>
+                Paniniwala
+            </h3>
+
+            <p>
+                Nakabase sa limang pandama na ginagamit
+                kasama ng isip.
+            </p>
+
+            <p>
+                • Paningin<br>
+                • Pandinig<br>
+                • Panlasa<br>
+                • Pang-amoy<br>
+                • Pandama
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Pananampalataya
+            </h3>
+
+            <p>
+                Hindi nakabase sa limang pandama at mas
+                nakatuon sa pagtitiwala at pananalig.
+            </p>
+
+            <p>
+                Ito ay paniniwala o pag-asa na ang
+                kanilang hinahangad ay mangyayari.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SINAUNANG PANINIWALA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Mga Sinaunang Paniniwala at Sistema ng Pananampalataya
+    </h2>
+
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <h3>
+                1. Animismo
+            </h3>
+
+            <p>
+                Ito ang paniniwala na ang lahat ng bagay
+                sa kalikasan, buhay man o hindi, ay may
+                sariling kaluluwa, espiritu, o kamalayan.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                2. Paganismo
+            </h3>
+
+            <p>
+                Ito ay tumutukoy sa mga relihiyon na
+                nakasentro sa kalikasan o mga lumang
+                tradisyon na labas sa mga pangunahing
+                relihiyon sa mundo.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                3. Mitolohiya
+            </h3>
+
+            <p>
+                Tumutukoy sa mga kuwento, alamat, at
+                salaysay ng isang kultura tungkol sa
+                kanilang mga diyos, bayani, at pinagmulan
+                ng mundo.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                4. Politeismo
+            </h3>
+
+            <p>
+                Ito ay paniniwala o relihiyon kung saan
+                sumasamba ang mga tao sa higit sa isang
+                diyos.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                5. Monoteismo
+            </h3>
+
+            <p>
+                Ito ay paniniwala o pagsamba sa iisang
+                diyos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLOSING
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Kultura at Kasaysayan
     </h2>
 
 
     <div class="full-content">
 
         <p>
-            Mahalaga ang pagprotekta sa kultura upang
-            hindi mawala ang mga tradisyon at kaalaman
-            na ipinasa ng mga naunang henerasyon.
+            Sa pag-unawa sa paniniwala at pananampalataya
+            ng mga tao, mas nakikilala natin ang kanilang
+            kasaysayan, kultura, at pagkatao.
         </p>
 
 
         <p>
-            Sa pamamagitan ng pag-aaral ng kultura at
-            kasaysayan, mas nauunawaan natin ang ating
-            pinagmulan at kung paano tayo nahubog bilang
-            isang lipunan.
+            Ang pag-aaral ng mga paniniwala ay nagbibigay
+            rin ng mas malalim na pag-unawa sa paraan ng
+            pamumuhay at mga tradisyong ipinasa mula sa
+            isang henerasyon patungo sa susunod.
         </p>
 
     </div>
@@ -1348,7 +1446,7 @@ body{
 
     <button
         class="lesson-button"
-        onclick="location.href='ilaya_ilawod.html'">
+        onclick="location.href='kultura.html'">
 
         ← Previous Lesson
 
@@ -1366,7 +1464,7 @@ body{
 
     <button
         class="lesson-button"
-        onclick="location.href='paniniwala.html'">
+        onclick="location.href='pamahiin.html'">
 
         Next Lesson →
 
@@ -1392,7 +1490,7 @@ body{
 
 
     <p>
-        Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+        Paniniwala at Pananampalataya
     </p>
 
 </footer>
