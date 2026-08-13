@@ -14,161 +14,212 @@
    BASIC PAGE
 ========================= */
 
-html,
-body{
-    margin:0;
-    padding:0;
-    min-height:100%;
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
+    margin:0;
     min-height:100vh;
 
     background:#b99272;
 
+    color:#5b3a1e;
+
     font-family:Georgia, serif;
 
-    text-align:center;
-
     overflow-x:hidden;
-
-    display:flex;
-    flex-direction:column;
 }
 
 
 /* =========================
-   TOP PAPER
+   MAIN PAGE
 ========================= */
 
-.paper{
-    width:80%;
-    max-width:900px;
+.page{
+    width:100%;
+    max-width:1200px;
 
-    margin:40px auto 0;
+    margin:auto;
 
-    box-sizing:border-box;
+    padding:25px 20px 0;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+
+    min-height:520px;
 
     background:#f8f1df;
 
     border:8px solid #d8c3a3;
 
-    padding:50px;
+    padding:60px 30px;
 
-    position:relative;
+    display:flex;
 
-    box-shadow:0 0 20px rgba(0,0,0,.25);
+    flex-direction:column;
 
-    animation:paperEnter .8s ease-out;
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+    animation:heroEnter .8s ease-out;
 }
 
 
-@keyframes paperEnter{
+/* Inner border */
 
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
+.hero::before{
+    content:"";
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    position:absolute;
 
-}
+    inset:18px;
 
+    border:2px solid #d8c3a3;
 
-.paper h3{
-    color:#5b3a1e;
-
-    margin:0;
-
-    font-size:32px;
-}
-
-
-.paper h4{
-    color:#5b3a1e;
-
-    margin:10px 0;
-
-    font-size:24px;
-}
-
-
-.paper h1{
-    color:#5b3a1e;
-
-    font-size:90px;
-
-    font-family:cursive;
-
-    margin-top:70px;
-
-    animation:titleEnter 1s ease-out .5s both;
-}
-
-
-@keyframes titleEnter{
-
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
+    pointer-events:none;
 }
 
 
 /* =========================
-   DECORATIONS
+   HERO IMAGES
 ========================= */
 
 .clock{
     position:absolute;
 
-    top:-20px;
-    right:-20px;
+    width:85px;
 
-    width:80px;
+    top:5px;
+
+    right:5px;
+
+    z-index:2;
+
+    animation:clockFloat 4s ease-in-out infinite;
 }
 
 
 .feather{
     position:absolute;
 
-    left:-20px;
-    bottom:10px;
+    width:140px;
 
-    width:130px;
+    left:-10px;
+
+    bottom:5px;
+
+    z-index:2;
+
+    transform:rotate(-8deg);
+
+    opacity:.85;
 }
 
 
 .phoenix-logo{
-    width:120px;
+    width:125px;
 
     margin-bottom:20px;
 
-    animation:logoEnter 1s ease-out .3s both;
+    z-index:2;
+
+    animation:logoEnter 1s ease-out;
 }
 
 
-@keyframes logoEnter{
+/* =========================
+   HERO TEXT
+========================= */
 
-    from{
-        opacity:0;
-        transform:scale(.8);
-    }
+.hero h3{
+    margin:0;
 
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
+    font-size:32px;
 
+    letter-spacing:2px;
+
+    z-index:2;
+}
+
+
+.hero h4{
+    margin:10px 0 0;
+
+    font-size:21px;
+
+    letter-spacing:1px;
+
+    font-weight:normal;
+
+    z-index:2;
+}
+
+
+.hero h1{
+    margin:45px 0 0;
+
+    font-family:cursive;
+
+    font-size:90px;
+
+    font-weight:normal;
+
+    line-height:1;
+
+    z-index:2;
+
+    animation:titleEnter 1s ease-out .3s both;
+}
+
+
+/* =========================
+   HERO LINE
+========================= */
+
+.hero-line{
+    width:180px;
+
+    height:2px;
+
+    background:#d8c3a3;
+
+    margin:25px 0;
+
+    z-index:2;
+}
+
+
+.hero-subtitle{
+    margin:0;
+
+    font-size:16px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    opacity:.75;
+
+    z-index:2;
 }
 
 
@@ -176,373 +227,359 @@ body{
    NAVIGATION
 ========================= */
 
-.navigation{
+.main-navigation{
     width:100%;
 
-    margin:40px auto 0;
+    margin:35px auto 0;
 
     display:flex;
-    flex-direction:column;
 
-    align-items:center;
+    justify-content:center;
 
-    flex:0 0 auto;
+    gap:20px;
+
+    flex-wrap:wrap;
 }
 
 
-/* =========================
-   MAIN SCROLL BUTTONS
-========================= */
+.main-button{
+    min-width:230px;
 
-.scroll-button{
-
-    width:60%;
+    padding:18px 30px;
 
     background:#8b5a2b;
 
     color:#f8f1df;
 
-    border:none;
+    border:3px solid #d8c3a3;
 
-    padding:20px 40px;
-
-    margin:15px auto 0;
-
-    font-size:25px;
+    border-radius:8px;
 
     font-family:Georgia, serif;
 
-    border-radius:12px;
+    font-size:20px;
 
     cursor:pointer;
 
-    box-shadow:0 5px 10px rgba(0,0,0,.3);
-
-    transition:.3s;
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-
-.scroll-button:hover{
-
-    background:#a66b35;
-
-    transform:translateY(-5px);
-
-    box-shadow:0 10px 15px rgba(0,0,0,.4);
-
-}
-
-
-.scroll-button:active{
-
-    transform:translateY(2px);
-
-}
-
-
-/* =========================
-   DROPDOWN SCROLL
-========================= */
-
-.scroll{
-
-    width:60%;
-
-    box-sizing:border-box;
-
-    background:#f8f1df;
-
-    border-left:5px solid #d8c3a3;
-
-    border-right:5px solid #d8c3a3;
-
-    overflow:hidden;
-
-    max-height:0;
-
-    opacity:0;
-
-    transform:scaleY(0);
-
-    transform-origin:top;
-
-    padding:0 20px;
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.25);
 
     transition:
-        max-height .7s ease,
-        opacity .4s ease,
-        transform .7s ease,
-        padding .7s ease;
-
-    box-shadow:0 8px 15px rgba(0,0,0,.2);
-
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
 }
 
 
-/* OPEN */
+.main-button:hover{
+    background:#a66b35;
 
-.scroll.open{
+    transform:translateY(-4px);
 
-    max-height:1200px;
+    box-shadow:
+        0 9px 16px rgba(0,0,0,.3);
+}
 
-    opacity:1;
 
-    transform:scaleY(1);
-
-    padding:25px 20px;
-
+.main-button:active{
+    transform:translateY(1px);
 }
 
 
 /* =========================
-   SCROLL ROLLS
+   SECTION TITLE
 ========================= */
 
-.scroll-top,
-.scroll-bottom{
+.section-title{
+    margin:70px 0 25px;
 
-    height:18px;
+    text-align:center;
+}
+
+
+.section-title h2{
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:42px;
+
+    font-weight:normal;
+}
+
+
+.section-title p{
+    margin:8px 0 0;
+
+    font-size:16px;
+
+    opacity:.75;
+}
+
+
+.section-line{
+    width:120px;
+
+    height:2px;
 
     background:#d8c3a3;
 
-    border-radius:12px;
-
-    box-shadow:0 3px 5px rgba(0,0,0,.2);
-
-}
-
-
-.scroll-bottom{
-
-    margin-top:20px;
-
-    box-shadow:0 -3px 5px rgba(0,0,0,.2);
-
+    margin:18px auto 0;
 }
 
 
 /* =========================
-   MEMBER NAMES
+   LESSON AREA
 ========================= */
 
-.member-name{
+.lesson-grid{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+    gap:20px;
+}
+
+
+/* =========================
+   LESSON CARD
+========================= */
+
+.lesson-card{
+    position:relative;
+
+    min-height:150px;
+
+    padding:25px;
+
+    background:#f8f1df;
+
+    border:5px solid #d8c3a3;
+
+    border-radius:8px;
 
     color:#5b3a1e;
 
-    font-size:22px;
-
-    margin:14px 0;
-
-    opacity:0;
-
-    transform:translateY(-10px);
-
-    transition:.4s ease;
-
-}
-
-
-.scroll.open .member-name{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-.member-name:nth-child(2){
-    transition-delay:.10s;
-}
-
-.member-name:nth-child(3){
-    transition-delay:.15s;
-}
-
-.member-name:nth-child(4){
-    transition-delay:.20s;
-}
-
-.member-name:nth-child(5){
-    transition-delay:.25s;
-}
-
-.member-name:nth-child(6){
-    transition-delay:.30s;
-}
-
-.member-name:nth-child(7){
-    transition-delay:.35s;
-}
-
-.member-name:nth-child(8){
-    transition-delay:.40s;
-}
-
-.member-name:nth-child(9){
-    transition-delay:.45s;
-}
-
-
-/* =========================
-   LESSON BUTTONS
-========================= */
-
-.lesson-button{
-
-    width:90%;
-
-    background:#8b5a2b;
-
-    color:#f8f1df;
-
-    border:none;
-
-    padding:18px 25px;
-
-    margin:12px auto;
-
-    font-size:21px;
-
-    font-family:Georgia, serif;
-
-    border-radius:12px;
+    text-align:left;
 
     cursor:pointer;
 
-    box-shadow:0 5px 10px rgba(0,0,0,.3);
-
-    opacity:0;
-
-    transform:translateY(-10px);
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.2);
 
     transition:
-        opacity .4s ease,
         transform .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
-
+        box-shadow .3s ease,
+        background .3s ease;
 }
 
 
-.scroll.open .lesson-button{
+.lesson-card:hover{
+    background:#fff8e9;
 
-    opacity:1;
+    transform:translateY(-6px);
 
-    transform:translateY(0);
-
+    box-shadow:
+        0 11px 20px rgba(0,0,0,.3);
 }
 
 
-.lesson-button:hover{
+.lesson-number{
+    display:block;
 
-    background:#a66b35;
+    font-size:14px;
 
-    transform:translateY(-5px);
+    letter-spacing:2px;
 
-    box-shadow:0 10px 15px rgba(0,0,0,.4);
+    opacity:.6;
 
+    margin-bottom:12px;
 }
 
 
-.lesson-button:active{
+.lesson-card h3{
+    margin:0;
 
-    transform:translateY(2px);
+    font-size:22px;
 
+    line-height:1.3;
+
+    font-weight:normal;
 }
 
 
-/* Lesson animation */
+.lesson-arrow{
+    position:absolute;
 
-.lesson-button:nth-child(2){
-    transition-delay:.10s;
-}
+    right:20px;
 
-.lesson-button:nth-child(3){
-    transition-delay:.15s;
-}
+    bottom:18px;
 
-.lesson-button:nth-child(4){
-    transition-delay:.20s;
-}
+    font-size:24px;
 
-.lesson-button:nth-child(5){
-    transition-delay:.25s;
-}
-
-.lesson-button:nth-child(6){
-    transition-delay:.30s;
-}
-
-.lesson-button:nth-child(7){
-    transition-delay:.35s;
-}
-
-.lesson-button:nth-child(8){
-    transition-delay:.40s;
-}
-
-.lesson-button:nth-child(9){
-    transition-delay:.45s;
-}
-
-.lesson-button:nth-child(10){
-    transition-delay:.50s;
+    opacity:.65;
 }
 
 
 /* =========================
-   BOTTOM DECORATION
+   ANIMATIONS
 ========================= */
 
-.bottom-images{
+@keyframes heroEnter{
 
-    width:100%;
+    from{
+        opacity:0;
+
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+        opacity:0;
+
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+
+        transform:scale(1);
+    }
+
+}
+
+
+@keyframes titleEnter{
+
+    from{
+        opacity:0;
+
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes clockFloat{
+
+    0%,100%{
+        transform:rotate(-3deg) translateY(0);
+    }
+
+    50%{
+        transform:rotate(3deg) translateY(-5px);
+    }
+
+}
+    /* =========================
+   FOOTER
+========================= */
+
+.footer{
+    position:relative;
+
+    margin-top:70px;
+
+    min-height:180px;
+
+    background:#f8f1df;
+
+    border-top:8px solid #d8c3a3;
 
     display:flex;
 
-    justify-content:space-between;
+    flex-direction:column;
 
-    align-items:flex-end;
+    justify-content:center;
 
-    margin-top:auto;
+    align-items:center;
 
-    padding-top:20px;
+    text-align:center;
 
-    line-height:0;
+    overflow:hidden;
 
-    flex-shrink:0;
-
+    box-shadow:
+        0 -5px 15px rgba(0,0,0,.15);
 }
 
 
-.bottom-images img{
+.footer h2{
+    margin:0;
 
-    display:block;
+    font-family:cursive;
 
+    font-size:34px;
+
+    font-weight:normal;
+
+    z-index:2;
 }
 
 
-.church{
+.footer p{
+    margin:8px 0;
 
-    width:400px;
+    font-size:16px;
 
-    opacity:.80;
-
+    z-index:2;
 }
 
 
-.tower{
+.footer-line{
+    width:100px;
+
+    height:2px;
+
+    background:#d8c3a3;
+
+    margin:10px 0;
+}
+
+
+/* Footer decorations */
+
+.footer-church{
+    position:absolute;
 
     width:280px;
 
-    opacity:.80;
+    left:-20px;
 
+    bottom:0;
+
+    opacity:.75;
+}
+
+
+.footer-tower{
+    position:absolute;
+
+    width:190px;
+
+    right:-10px;
+
+    bottom:0;
+
+    opacity:.75;
 }
 
 
@@ -550,106 +587,208 @@ body{
    MOBILE
 ========================= */
 
-@media screen and (max-width:600px){
+@media screen and (max-width:700px){
 
-    .paper{
-
-        width:90%;
-
-        padding:30px;
-
+    .page{
+        padding:15px 12px 0;
     }
 
 
-    .paper h1{
+    .hero{
+        min-height:450px;
 
-        font-size:55px;
-
+        padding:50px 20px;
     }
 
 
-    .paper h3{
-
-        font-size:24px;
-
-    }
-
-
-    .paper h4{
-
-        font-size:18px;
-
+    .hero::before{
+        inset:12px;
     }
 
 
     .phoenix-logo{
-
-        width:90px;
-
-    }
-
-
-    .scroll-button{
-
-        width:85%;
-
-        font-size:18px;
-
-        padding:15px 20px;
-
-    }
-
-
-    .scroll{
-
-        width:85%;
-
-    }
-
-
-    .lesson-button{
-
-        width:95%;
-
-        font-size:18px;
-
-        padding:15px;
-
-    }
-
-
-    .member-name{
-
-        font-size:18px;
-
+        width:95px;
     }
 
 
     .clock{
-
         width:60px;
 
+        top:5px;
+
+        right:5px;
     }
 
 
     .feather{
+        width:95px;
 
-        width:90px;
+        left:-8px;
 
+        bottom:5px;
     }
 
 
-    .church{
-
-        width:230px;
-
+    .hero h3{
+        font-size:24px;
     }
 
 
-    .tower{
+    .hero h4{
+        font-size:17px;
+    }
 
-        width:170px;
 
+    .hero h1{
+        font-size:58px;
+
+        margin-top:35px;
+    }
+
+
+    .hero-subtitle{
+        font-size:12px;
+
+        letter-spacing:2px;
+    }
+
+
+    .main-navigation{
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:12px;
+    }
+
+
+    .main-button{
+        width:90%;
+
+        min-width:0;
+
+        font-size:18px;
+
+        padding:15px 20px;
+    }
+
+
+    .section-title{
+        margin-top:55px;
+    }
+
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+
+    .section-title p{
+        font-size:14px;
+    }
+
+
+    .lesson-grid{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+
+    .lesson-card{
+        min-height:125px;
+
+        padding:20px;
+    }
+
+
+    .lesson-card h3{
+        font-size:19px;
+
+        padding-right:25px;
+    }
+
+
+    .footer{
+        min-height:150px;
+
+        margin-top:55px;
+    }
+
+
+    .footer h2{
+        font-size:28px;
+    }
+
+
+    .footer p{
+        font-size:14px;
+    }
+
+
+    .footer-church{
+        width:150px;
+
+        left:-20px;
+    }
+
+
+    .footer-tower{
+        width:110px;
+
+        right:-5px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media screen and (max-width:400px){
+
+    .hero h1{
+        font-size:50px;
+    }
+
+
+    .hero h3{
+        font-size:21px;
+    }
+
+
+    .hero h4{
+        font-size:15px;
+    }
+
+
+    .hero-subtitle{
+        font-size:10px;
+    }
+
+
+    .lesson-card h3{
+        font-size:18px;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
     }
 
 }
@@ -663,224 +802,529 @@ body{
 
 
 <!-- =========================
-     TOP PAPER
+     PAGE WRAPPER
 ========================= -->
 
-<div class="paper">
-
-    <img class="clock" src="Project/Img/Clock.png">
-
-    <img class="phoenix-logo" src="Project/Img/Phoenix.png">
-
-    <h3>HISTO PAGE</h3>
-
-    <h4>TECH-PRO 1103</h4>
-
-    <h1>"Phoenix"</h1>
-
-    <img class="feather" src="Project/Img/Feather.png">
-
-</div>
-
+<div class="page">
 
 
 <!-- =========================
-     NAVIGATION
+     HERO
 ========================= -->
 
-<div class="navigation">
+<section class="hero">
 
 
-    <!-- MEMBERS -->
+<img
+    class="clock"
+    src="Project/Img/Clock.png"
+    alt="Decorative clock"
+>
 
-    <button
-        class="scroll-button"
-        onclick="toggleScroll('membersScroll')">
 
-        Members ↓
+<img
+    class="phoenix-logo"
+    src="Project/Img/Phoenix.png"
+    alt="Phoenix logo"
+>
 
-    </button>
 
+<h3>
+    HISTO PAGE
+</h3>
 
-    <div
-        class="scroll"
-        id="membersScroll">
 
-        <div class="scroll-top"></div>
+<h4>
+    TECH-PRO 1103
+</h4>
 
 
-        <p class="member-name">
-            Sam Eduard O. Alaan
-        </p>
+<h1>
+    "Phoenix"
+</h1>
 
-        <p class="member-name">
-            Angeline Blando
-        </p>
 
-        <p class="member-name">
-            Ilyn Plaza
-        </p>
+<div class="hero-line"></div>
 
-        <p class="member-name">
-            Venice Dela Cruz
-        </p>
 
-        <p class="member-name">
-            Elmer Jr. Alcaraz
-        </p>
+<p class="hero-subtitle">
+    A Journey Through History
+</p>
 
-        <p class="member-name">
-            Prince Delgado
-        </p>
 
-        <p class="member-name">
-            Ariane Mae Dailisan
-        </p>
+<img
+    class="feather"
+    src="Project/Img/Feather.png"
+    alt="Decorative feather"
+>
 
-        <p class="member-name">
-            Ally Ian Santander
-        </p>
 
-
-        <div class="scroll-bottom"></div>
-
-    </div>
-
-    <br><br>
-
-    <!-- LESSONS -->
-
-    <button
-        class="scroll-button"
-        onclick="toggleScroll('lessonsScroll')">
-
-        ↓ Lessons ↓
-
-    </button>
-
-
-    <div
-        class="scroll"
-        id="lessonsScroll">
-
-        <div class="scroll-top"></div>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='heograpiya.html'">
-
-            Pag-aaral ng Heograpiya ng Mundo
-
-        </button>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='history.html'">
-
-            Kahulugan ng Kasaysayan
-
-        </button>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='muntinlupa.html'">
-
-            Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
-
-        </button>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='groups.html'">
-
-            Iba't-ibang Pangkat ng Tao na Naging Bahagi ng Ating Pinagmulan
-
-        </button>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='ilaya_ilawod.html'">
-
-            Ilaya at Ilawod
-
-        </button>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='kultura.html'">
-
-            Ugnayan ng Kultura at Kamalayang Pangkasaysayan
-
-        </button>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='paniniwala.html'">
-
-            Paniniwala at Pananampalataya
-
-        </button>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='pamahiin.html'">
-
-            Sinaunang paniniwala at kultura ng mga Pilipino
-
-        </button>
-
-
-        <button
-            class="lesson-button"
-            onclick="location.href='gamot.html'">
-
-            Halamang Gamot
-
-        </button>
-
-
-        <div class="scroll-bottom"></div>
-
-    </div>
-
-</div>
-
+</section>
 
 
 <!-- =========================
-     BOTTOM IMAGES
+     MAIN NAVIGATION
 ========================= -->
 
-<div class="bottom-images">
+<div class="main-navigation">
 
-    <img
-        class="church"
-        src="Project/Img/Church.png">
 
-    <img
-        class="tower"
-        src="Project/Img/Tower.png">
+<button
+    class="main-button"
+    onclick="document.getElementById('lessons').scrollIntoView({behavior:'smooth'})"
+>
+    Explore Lessons
+</button>
+
+
+<button
+    class="main-button"
+    onclick="document.getElementById('members').scrollIntoView({behavior:'smooth'})"
+>
+    Meet the Members
+</button>
+
 
 </div>
 
 
+<!-- =========================
+     LESSONS
+========================= -->
+
+<section id="lessons">
+
+
+<div class="section-title">
+
+<h2>
+    Our Lessons
+</h2>
+
+<p>
+    Explore the topics prepared by Phoenix.
+</p>
+
+<div class="section-line"></div>
+
+</div>
+
+
+<div class="lesson-grid">
+    <!-- =========================
+     LESSON 1
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='heograpiya.html'"
+>
+
+<span class="lesson-number">
+    LESSON 01
+</span>
+
+<h3>
+    Pag-aaral ng Heograpiya ng Mundo
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- =========================
+     LESSON 2
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='history.html'"
+>
+
+<span class="lesson-number">
+    LESSON 02
+</span>
+
+<h3>
+    Kahulugan ng Kasaysayan
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- =========================
+     LESSON 3
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='muntinlupa.html'"
+>
+
+<span class="lesson-number">
+    LESSON 03
+</span>
+
+<h3>
+    Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- =========================
+     LESSON 4
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='groups.html'"
+>
+
+<span class="lesson-number">
+    LESSON 04
+</span>
+
+<h3>
+    Iba't-ibang Pangkat ng Tao na Naging Bahagi ng Ating Pinagmulan
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- =========================
+     LESSON 5
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='ilaya_ilawod.html'"
+>
+
+<span class="lesson-number">
+    LESSON 05
+</span>
+
+<h3>
+    Ilaya at Ilawod
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- =========================
+     LESSON 6
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='kultura.html'"
+>
+
+<span class="lesson-number">
+    LESSON 06
+</span>
+
+<h3>
+    Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- =========================
+     LESSON 7
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='paniniwala.html'"
+>
+
+<span class="lesson-number">
+    LESSON 07
+</span>
+
+<h3>
+    Paniniwala at Pananampalataya
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- =========================
+     LESSON 8
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='pamahiin.html'"
+>
+
+<span class="lesson-number">
+    LESSON 08
+</span>
+
+<h3>
+    Sinaunang Paniniwala at Kultura ng mga Pilipino
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- =========================
+     LESSON 9
+========================= -->
+
+<div
+    class="lesson-card"
+    onclick="location.href='gamot.html'"
+>
+
+<span class="lesson-number">
+    LESSON 09
+</span>
+
+<h3>
+    Halamang Gamot
+</h3>
+
+<span class="lesson-arrow">
+    →
+</span>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MEMBERS
+========================= -->
+
+<section id="members">
+
+
+<div class="section-title">
+
+<h2>
+    The Phoenix Team
+</h2>
+
+<p>
+    The members behind this project.
+</p>
+
+<div class="section-line"></div>
+
+</div>
+
+
+<div class="lesson-grid">
+
+
+<div class="lesson-card">
+
+<span class="lesson-number">
+    MEMBER 01
+</span>
+
+<h3>
+    Sam Eduard O. Alaan
+</h3>
+
+</div>
+
+
+<div class="lesson-card">
+
+<span class="lesson-number">
+    MEMBER 02
+</span>
+
+<h3>
+    Angeline Blando
+</h3>
+
+</div>
+
+
+<div class="lesson-card">
+
+<span class="lesson-number">
+    MEMBER 03
+</span>
+
+<h3>
+    Ilyn Plaza
+</h3>
+
+</div>
+
+
+<div class="lesson-card">
+
+<span class="lesson-number">
+    MEMBER 04
+</span>
+
+<h3>
+    Venice Dela Cruz
+</h3>
+
+</div>
+
+
+<div class="lesson-card">
+
+<span class="lesson-number">
+    MEMBER 05
+</span>
+
+<h3>
+    Elmer Jr. Alcaraz
+</h3>
+
+</div>
+
+
+<div class="lesson-card">
+
+<span class="lesson-number">
+    MEMBER 06
+</span>
+
+<h3>
+    Prince Delgado
+</h3>
+
+</div>
+
+
+<div class="lesson-card">
+
+<span class="lesson-number">
+    MEMBER 07
+</span>
+
+<h3>
+    Ariane Mae Dailisan
+</h3>
+
+</div>
+
+
+<div class="lesson-card">
+
+<span class="lesson-number">
+    MEMBER 08
+</span>
+
+<h3>
+    Ally Ian Santander
+</h3>
+
+</div>
+
+
+</div>
+
+</section>
+    <!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+
+<img
+    class="footer-church"
+    src="Project/Img/Church.png"
+    alt="Decorative church"
+>
+
+
+<div class="footer-line"></div>
+
+
+<h2>
+    Phoenix
+</h2>
+
+
+<p>
+    TECH-PRO 1103
+</p>
+
+
+<div class="footer-line"></div>
+
+
+<img
+    class="footer-tower"
+    src="Project/Img/Tower.png"
+    alt="Decorative tower"
+>
+
+
+</footer>
+
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-function toggleScroll(id){
+function scrollToSection(id){
 
-    const scroll =
+    const section =
         document.getElementById(id);
 
-    scroll.classList.toggle("open");
+    if(section){
+
+        section.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
 
 }
 
@@ -889,4 +1333,4 @@ function toggleScroll(id){
 
 </body>
 
-</html>
+   </html>
