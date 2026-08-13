@@ -25,7 +25,7 @@ body{
 
 
 /* =========================
-   PAPER
+   MAIN PAPER
 ========================= */
 
 .paper{
@@ -51,7 +51,20 @@ body{
 
 
 /* =========================
-   TEXT
+   LOGO
+========================= */
+
+.phoenix-logo{
+    width:120px;
+
+    margin-bottom:10px;
+
+    animation:logoEnter 1s ease-out;
+}
+
+
+/* =========================
+   TITLES
 ========================= */
 
 .paper h1{
@@ -61,7 +74,22 @@ body{
 
     font-family:cursive;
 
+    line-height:1.3;
+
+    margin:10px 0 40px;
+
     animation:headingEnter .8s ease-out;
+}
+
+
+.paper h1 span{
+    display:block;
+
+    font-family:Georgia, serif;
+
+    font-size:27px;
+
+    margin-top:10px;
 }
 
 
@@ -70,11 +98,20 @@ body{
 
     font-size:32px;
 
-    margin-top:50px;
+    margin-top:55px;
+    margin-bottom:20px;
 
-    animation:headingEnter .8s ease-out;
+    padding-bottom:8px;
+
+    border-bottom:3px solid #d8c3a3;
+
+    animation:headingEnter .7s ease-out;
 }
 
+
+/* =========================
+   TEXT
+========================= */
 
 .paper p{
     color:#5b3a1e;
@@ -84,47 +121,249 @@ body{
     line-height:1.7;
 
     text-align:left;
+
+    margin:15px 0;
+}
+
+
+.center-text{
+    text-align:center !important;
 }
 
 
 /* =========================
-   LOGO
+   MATERIALS
 ========================= */
 
-.phoenix-logo{
-    width:120px;
+.materials{
+    background:#efe3c9;
 
-    animation:imageEnter 1s ease-out;
+    border-left:6px solid #8b5a2b;
+
+    padding:20px 25px;
+
+    margin:20px 0 35px;
+
+    text-align:left;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.12);
+
+    animation:cardEnter .7s ease-out;
+}
+
+
+.materials p{
+    margin:8px 0;
 }
 
 
 /* =========================
-   IMAGES
+   PROCEDURE
 ========================= */
+
+.procedure{
+    margin:30px 0 45px;
+
+    padding:20px;
+
+    background:#f3e9d4;
+
+    border:3px solid #d8c3a3;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.12);
+
+    animation:cardEnter .7s ease-out;
+}
+
+
+.step-title{
+    color:#5b3a1e;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+
+.step-number{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:42px;
+    height:42px;
+
+    margin-right:8px;
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    border-radius:50%;
+
+    font-size:20px;
+}
+
+
+.procedure p{
+    text-align:center;
+
+    margin:15px auto;
+
+    max-width:700px;
+}
+
+
+/* =========================
+   PROCEDURE IMAGES
+========================= */
+
+.image-box{
+    margin:15px auto;
+}
+
 
 .image-box img{
     width:80%;
 
     max-width:500px;
 
-    margin:20px auto;
-
     border:5px solid #d8c3a3;
 
-    box-shadow:0 0 10px rgba(0,0,0,.2);
+    box-shadow:0 5px 12px rgba(0,0,0,.2);
 
     display:block;
 
-    animation:imageEnter 1s ease-out;
+    margin:auto;
 
-    transition:.4s;
+    transition:.35s;
+
+    animation:imageEnter .8s ease-out;
 }
 
 
 .image-box img:hover{
     transform:scale(1.03);
 
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   ADVANTAGES / DISADVANTAGES
+========================= */
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    margin-top:25px;
+}
+
+
+.info-card{
+    background:#efe3c9;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    border:3px solid #d8c3a3;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.12);
+
+    text-align:left;
+
+    animation:cardEnter .7s ease-out;
+}
+
+
+.info-card h3{
+    color:#5b3a1e;
+
+    text-align:center;
+
+    font-size:25px;
+
+    margin-top:0;
+
+    padding-bottom:10px;
+
+    border-bottom:2px solid #d8c3a3;
+}
+
+
+.info-card p{
+    font-size:18px;
+
+    margin:10px 0;
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits{
+    background:#efe3c9;
+
+    border:3px solid #d8c3a3;
+
+    border-radius:12px;
+
+    padding:20px 25px;
+
+    margin-top:25px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.12);
+}
+
+
+.benefits p{
+    margin:8px 0;
+}
+
+
+/* =========================
+   PAALALA
+========================= */
+
+.warning{
+    margin-top:35px;
+
+    padding:20px;
+
+    background:#ead8b7;
+
+    border-left:7px solid #8b5a2b;
+
+    text-align:left;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.12);
+}
+
+
+.warning h3{
+    color:#5b3a1e;
+
+    margin-top:0;
+
+    font-size:24px;
+}
+
+
+.warning p{
+    font-size:17px;
+
+    margin:8px 0;
 }
 
 
@@ -133,7 +372,6 @@ body{
 ========================= */
 
 .thank-you-section{
-
     position:relative;
 
     width:100%;
@@ -152,10 +390,7 @@ body{
 }
 
 
-/* Thank You Card */
-
 .thank-you-card{
-
     width:55%;
 
     padding:30px 20px;
@@ -177,6 +412,9 @@ body{
 
 
 .thank-you-card h2{
+    border:none;
+
+    padding:0;
 
     margin:0 0 15px;
 
@@ -189,7 +427,6 @@ body{
 
 
 .thank-you-card p{
-
     text-align:center;
 
     color:#5b3a1e;
@@ -201,7 +438,6 @@ body{
 
 
 .thank-you-card h3{
-
     color:#5b3a1e;
 
     font-family:cursive;
@@ -213,17 +449,17 @@ body{
 
 
 .thank-you-card span{
-
     color:#5b3a1e;
 
     font-size:15px;
 }
 
 
-/* Hello Kitty */
+/* =========================
+   HELLO KITTY IMAGES
+========================= */
 
 .hello-kitty{
-
     position:absolute;
 
     object-fit:contain;
@@ -235,7 +471,6 @@ body{
 
 
 .hello-left{
-
     width:140px;
 
     left:0;
@@ -249,7 +484,6 @@ body{
 
 
 .hello-right{
-
     width:140px;
 
     right:0;
@@ -263,7 +497,6 @@ body{
 
 
 .hello-bottom{
-
     width:120px;
 
     left:50%;
@@ -281,7 +514,6 @@ body{
 ========================= */
 
 .navigation{
-
     display:flex;
 
     justify-content:center;
@@ -290,12 +522,11 @@ body{
 
     flex-wrap:wrap;
 
-    margin-top:30px;
+    margin-top:35px;
 }
 
 
 .info-button{
-
     background:#8b5a2b;
 
     color:#f8f1df;
@@ -303,8 +534,6 @@ body{
     border:none;
 
     padding:18px 40px;
-
-    margin:20px 10px 10px;
 
     font-size:22px;
 
@@ -321,7 +550,6 @@ body{
 
 
 .info-button:hover{
-
     background:#a66b35;
 
     transform:translateY(-5px);
@@ -331,7 +559,6 @@ body{
 
 
 .info-button:active{
-
     transform:translateY(2px);
 }
 
@@ -350,6 +577,21 @@ body{
     to{
         opacity:1;
         transform:translateY(0);
+    }
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
     }
 
 }
@@ -380,6 +622,21 @@ body{
     to{
         opacity:1;
         transform:scale(1);
+    }
+
+}
+
+
+@keyframes cardEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 
 }
@@ -449,12 +706,18 @@ body{
 
     .paper{
         width:90%;
+
         padding:30px;
     }
 
 
     .paper h1{
         font-size:35px;
+    }
+
+
+    .paper h1 span{
+        font-size:21px;
     }
 
 
@@ -478,14 +741,46 @@ body{
     }
 
 
+    .info-grid{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+
+    .info-card p{
+        font-size:17px;
+    }
+
+
+    .procedure{
+        padding:15px;
+    }
+
+
+    .step-title{
+        font-size:20px;
+    }
+
+
+    .step-number{
+        width:36px;
+        height:36px;
+
+        font-size:17px;
+    }
+
+
     .thank-you-section{
         min-height:300px;
+
         margin-top:60px;
     }
 
 
     .thank-you-card{
         width:65%;
+
         padding:22px 15px;
     }
 
@@ -507,27 +802,34 @@ body{
 
     .hello-left{
         width:90px;
+
         left:-5px;
+
         bottom:20px;
     }
 
 
     .hello-right{
         width:90px;
+
         right:-5px;
+
         top:20px;
     }
 
 
     .hello-bottom{
         width:80px;
+
         bottom:-10px;
     }
 
 
     .info-button{
         width:80%;
+
         font-size:18px;
+
         padding:15px 20px;
     }
 
@@ -542,6 +844,7 @@ body{
 
     *{
         animation:none !important;
+
         transition:none !important;
     }
 
@@ -570,12 +873,17 @@ body{
 
 
 <!-- =========================
-     MAIN TITLE
+     TITLE
 ========================= -->
 
 <h1>
-"Halamang Gamot"<br>
+
+"Halamang Gamot"
+
+<span>
 Dahon ng Tuba-Tuba
+</span>
+
 </h1>
 
 
@@ -587,13 +895,21 @@ Dahon ng Tuba-Tuba
 Materials
 </h2>
 
-<p>
-<br>
-• Dahon ng Tuba-Tuba.<br>
-• Langis.<br>
-• Elmer.
+<div class="materials">
 
+<p>
+• Dahon ng Tuba-Tuba
 </p>
+
+<p>
+• Kaunting langis
+</p>
+
+<p>
+• Malinis na tubig
+</p>
+
+</div>
 
 
 <!-- =========================
@@ -605,106 +921,225 @@ Procedures
 </h2>
 
 
-<p>
+<!-- STEP 1 -->
 
-<br>
+<div class="procedure">
 
-1. Pumili ng dahon ng tuba-tuba sa malinis na lugar.
-</p>
-<div class="image-box">
-<img src="Project/Img/putol.jpg">
+<div class="step-title">
+<span class="step-number">1</span>
+Pagpili ng Dahon
 </div>
-    <br>
-    
-    <p>
-2. Hugasan ang dahon gamit ang malinis na tubig.
-    </p>
+
+<p>
+Pumili ng dahon ng tuba-tuba mula sa malinis na lugar.
+</p>
+
 <div class="image-box">
-<img src="Project/Img/hugas.jpg">
-</div>    
-    <br>
-    <p>
-3. Patuyuin anh tuba-tuba.
-    </p>
+<img src="Project/Img/putol.jpg" alt="Pagpili ng dahon">
+</div>
+
+</div>
+
+
+<!-- STEP 2 -->
+
+<div class="procedure">
+
+<div class="step-title">
+<span class="step-number">2</span>
+Paghuhugas
+</div>
+
+<p>
+Hugasan ang dahon gamit ang malinis na tubig.
+</p>
+
 <div class="image-box">
-<img src="Project/Img/tuyo.jpg">
-</div>    
-    
-    <br>
-    <p>
-4. Idadarang ang tuba-tuba sa apoy
-    </p>
+<img src="Project/Img/hugas.jpg" alt="Paghuhugas ng dahon">
+</div>
+
+</div>
+
+
+<!-- STEP 3 -->
+
+<div class="procedure">
+
+<div class="step-title">
+<span class="step-number">3</span>
+Pagpapatuyo
+</div>
+
+<p>
+Patuyuin ang tuba-tuba bago ito ihanda para sa susunod na hakbang.
+</p>
+
 <div class="image-box">
-<img src="Project/Img/apoy.jpg">
-</div>    
-    <br>
-    <p>
-5. Lagyan ng kaunting langis.
-    </p>
+<img src="Project/Img/tuyo.jpg" alt="Pagpapatuyo ng dahon">
+</div>
+
+</div>
+
+
+<!-- STEP 4 -->
+
+<div class="procedure">
+
+<div class="step-title">
+<span class="step-number">4</span>
+Pagdadarang
+</div>
+
+<p>
+Idarang ang tuba-tuba sa apoy nang maingat.
+</p>
+
 <div class="image-box">
-<img src="Project/Img/langis.jpg">
-</div>    
-    <br>
-    <p>
-6. Ilapat na ito sa balat.    
-    </p>
+<img src="Project/Img/apoy.jpg" alt="Pagdadarang ng tuba-tuba">
+</div>
+
+</div>
+
+
+<!-- STEP 5 -->
+
+<div class="procedure">
+
+<div class="step-title">
+<span class="step-number">5</span>
+Paglalagay ng Langis
+</div>
+
+<p>
+Lagyan ng kaunting langis ang dahon.
+</p>
+
 <div class="image-box">
-<img src="Project/Img/lapat.jpg">
+<img src="Project/Img/langis.jpg" alt="Paglalagay ng langis">
+</div>
+
+</div>
+
+
+<!-- STEP 6 -->
+
+<div class="procedure">
+
+<div class="step-title">
+<span class="step-number">6</span>
+Paglalapat
+</div>
+
+<p>
+Ilapat ito sa balat ayon sa tradisyunal na paggamit.
+</p>
+
+<div class="image-box">
+<img src="Project/Img/lapat.jpg" alt="Paglalapat ng dahon">
+</div>
+
 </div>
 
 
 <!-- =========================
-     ADVANTAGES
+     ADVANTAGES / DISADVANTAGES
 ========================= -->
 
 <h2>
+Advantages and Disadvantages
+</h2>
+
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<h3>
 Advantages
-</h2>
-
+</h3>
 
 <p>
-
-<br>
-
-• Nakakatanggal ng lamig sa katawan.<br>
-
-• Tradisyunal na ginagamit bilang halamang panlapat sa ilang lugar.<br>
-
-• Madaling tumubo sa tropical na klima.
-
+• Tradisyunal na ginagamit bilang halamang panlapat sa ilang lugar.
 </p>
+
+<p>
+• Madaling tumubo sa tropical na klima.
+</p>
+
+<p>
+• Bahagi ng tradisyunal na kaalaman tungkol sa halamang gamot.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>
+Disadvantages
+</h3>
+
+<p>
+• Hindi ligtas inumin nang walang wastong gabay.
+</p>
+
+<p>
+• Maaaring magdulot ng pangangati, pamumula, o pamamaga sa balat.
+</p>
+
+<p>
+• Hindi dapat ilapat sa bukas o malalim na sugat.
+</p>
+
+</div>
+
+
+</div>
 
 
 <!-- =========================
-     DISADVANTAGES
+     BENEFITS
 ========================= -->
 
 <h2>
-Disadvantages
+Benefits
 </h2>
 
 
+<div class="benefits">
+
 <p>
-
-<br>
-
-• Nakakalason kapag ininom.<br>
-
-• Maaaring magdulot ng pangangati,pamumula at pamamaga sa balat.<br>
-
-• Hindi dapat ito gamitin sa bukas o malalim na sugat.
-
+• Tradisyunal na ginagamit bilang tapal sa ilang uri ng pamamaga.
 </p>
 
-    <h2>Benefits</h2>
-        
 <p>
-    
-•Ginagamit bilang tapal sa ilang uti ng pamamaga.            
-    <br>           
-•Ginagamit sa ibang lugar para sa minor na pananakit             
-            
-        </p>    
+• Ginagamit sa ilang lugar para sa minor na pananakit.
+</p>
+
+</div>
+
+
+<!-- =========================
+     PAALALA
+========================= -->
+
+<div class="warning">
+
+<h3>
+Paalaala
+</h3>
+
+<p>
+Ang paggamit ng tuba-tuba bilang halamang gamot ay bahagi ng tradisyunal na kaalaman. Hindi ito kapalit ng payo o paggamot mula sa isang kwalipikadong health professional.
+</p>
+
+<p>
+Huwag itong inumin at iwasang gamitin sa bukas na sugat. Kung magkaroon ng matinding pangangati, pamumula, pamamaga, o iba pang hindi magandang reaksyon, itigil ang paggamit at humingi ng angkop na payo.
+</p>
+
+</div>
+
 
 <!-- =========================
      HELLO KITTY ENDING
@@ -722,21 +1157,21 @@ Disadvantages
 
 <div class="thank-you-card">
 
-    <h2>
-        Salamat sa Paglalakbay!
-    </h2>
+<h2>
+Salamat sa Pakikinig!
+</h2>
 
-    <p>
-        Thank you for exploring our history with us.
-    </p>
+<p>
+Maraming salamat sa inyong oras at pakikinig sa aming presentasyon.
+</p>
 
-    <h3>
-        PHOENIX
-    </h3>
+<h3>
+PHOENIX
+</h3>
 
-    <span>
-        TECH-PRO 1103
-    </span>
+<span>
+TECH-PRO 1103
+</span>
 
 </div>
 
@@ -764,14 +1199,11 @@ Disadvantages
 
 <div class="navigation">
 
-
 <button
     class="info-button"
     onclick="location.href='pamahiin.html'"
 >
-
 Previous Lesson
-
 </button>
 
 
@@ -779,11 +1211,8 @@ Previous Lesson
     class="info-button"
     onclick="location.href='index.html'"
 >
-
 Back to Home
-
 </button>
-
 
 </div>
 
