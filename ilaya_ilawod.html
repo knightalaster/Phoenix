@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Phoenix - Ilaya at Ilawod
+</title>
+
+
+<style>
+
+/* =========================
+   BASIC PAGE
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dce8df 0%,
+            #c8dfe3 100%
+        );
+
+    font-family:Georgia, serif;
+
+    color:#263b35;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+   DECORATIVE BACKGROUND
+========================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:#6d9b7d;
+
+    opacity:.12;
+
+    top:-120px;
+
+    left:-120px;
+
+    z-index:-1;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:380px;
+
+    height:380px;
+
+    border-radius:50%;
+
+    background:#4f91a3;
+
+    opacity:.12;
+
+    right:-160px;
+
+    bottom:-150px;
+
+    z-index:-1;
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.paper{
+
+    width:92%;
+
+    max-width:1050px;
+
+    margin:30px auto 50px;
+
+    background:#f8f7ef;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 30px
+        rgba(30,65,58,.20);
+
+    animation:
+        paperEnter
+        .7s
+        ease-out;
+
+}
+
+
+@keyframes paperEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        16px
+        25px;
+
+    background:#25483d;
+
+    color:white;
+
+}
+
+
+.back-home{
+
+    display:inline-block;
+
+    padding:
+        9px
+        17px;
+
+    background:#d8ad4a;
+
+    color:#263b35;
+
+    text-decoration:none;
+
+    border-radius:20px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.back-home:hover{
+
+    background:#edca70;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.page-label{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+    opacity:.75;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        45px
+        20px
+        55px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #315e4d,
+            #23483d
+        );
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+
+/* Decorative circles */
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:#d8ad4a;
+
+    opacity:.13;
+
+    left:-90px;
+
+    top:-110px;
+
+}
+
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:#5c9aaa;
+
+    opacity:.12;
+
+    right:-120px;
+
+    bottom:-150px;
+
+}
+
+
+.phoenix-logo{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100px;
+
+    margin-bottom:12px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(0,0,0,.25)
+        );
+
+    animation:
+        logoEnter
+        .8s
+        ease-out;
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+.header h1{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:50px;
+
+    line-height:1.2;
+
+    color:#f0d477;
+
+}
+
+
+.header p{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:
+        15px
+        auto
+        0;
+
+    max-width:700px;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:#edf5f0;
+
+}
+
+
+/* =========================
+   TOP TOPIC STRIP
+========================= */
+
+.topic-strip{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    padding:
+        18px
+        20px;
+
+    background:#ffffff;
+
+    border-bottom:
+        1px solid #dce3dd;
+
+}
+
+
+.topic{
+
+    padding:
+        8px
+        15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:.5px;
+
+}
+
+
+.topic-ilaya{
+
+    background:#dcebdc;
+
+    color:#315e4d;
+
+}
+
+
+.topic-ilawod{
+
+    background:#dcecf1;
+
+    color:#286276;
+
+}
+
+
+/* =========================
+   SECTION CARD
+========================= */
+
+.section{
+
+    position:relative;
+
+    margin:28px;
+
+    padding:28px;
+
+    background:#ffffff;
+
+    border:
+        1px solid #dce3dd;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 5px 14px
+        rgba(35,72,61,.08);
+
+    animation:
+        sectionEnter
+        .6s
+        ease-out;
+
+}
+
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:70px;
+
+    height:4px;
+
+    background:#d8ad4a;
+
+    border-radius:
+        16px
+        0
+        4px
+        0;
+
+}
+
+
+@keyframes sectionEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+
+    margin:
+        0
+        0
+        20px;
+
+    padding-bottom:12px;
+
+    border-bottom:
+        2px solid
+        #dce3dd;
+
+    font-size:30px;
+
+    color:#25483d;
+
+    text-align:left;
+
+}
+
+
+/* =========================
+   CONTENT LAYOUT
+========================= */
+
+.content-row{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(250px,1fr)
+        minmax(250px,1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+
+.content-text{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.content-text b{
+
+    color:#315e4d;
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box{
+
+    text-align:center;
+
+}
+
+
+.image-box img{
+
+    width:100%;
+
+    max-width:430px;
+
+    max-height:320px;
+
+    object-fit:contain;
+
+    border:
+        5px solid
+        #e4d59e;
+
+    border-radius:14px;
+
+    background:#f5f4eb;
+
+    box-shadow:
+        0 7px 15px
+        rgba(35,72,61,.16);
+
+    transition:.3s;
+
+}
+
+
+.image-box img:hover{
+
+    transform:
+        scale(1.025);
+
+    box-shadow:
+        0 10px 20px
+        rgba(35,72,61,.22);
+
+}
+
+
+/* =========================
+   SMALL INFORMATION CARDS
+========================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:25px;
+
+}
+
+
+.info-card{
+
+    position:relative;
+
+    padding:20px;
+
+    background:#f1f6f0;
+
+    border:
+        1px solid #d8e4d9;
+
+    border-left:
+        5px solid #4d8067;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+
+.info-card:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(35,72,61,.12);
+
+}
+
+
+.info-card h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size:21px;
+
+    color:#315e4d;
+
+}
+
+
+.info-card p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   ILAWOD CARDS
+========================= */
+
+.info-card:nth-child(n+1){
+
+    background:#f1f6f0;
+
+}
+
+
+/* =========================
+   FULL WIDTH CONTENT
+========================= */
+
+.full-content{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.full-content p{
+
+    margin:
+        12px
+        0;
+
+}
+
+
+/* =========================
+   CLOSING SECTION
+========================= */
+
+.section:last-of-type{
+
+    background:
+        linear-gradient(
+            135deg,
+            #315e4d,
+            #286276
+        );
+
+    color:white;
+
+}
+
+
+.section:last-of-type .section-title{
+
+    color:#f0d477;
+
+    border-color:
+        rgba(255,255,255,.25);
+
+}
+
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.lesson-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:
+        35px
+        28px;
+
+    padding-top:25px;
+
+    border-top:
+        2px solid
+        #dce3dd;
+
+}
+
+
+.lesson-button{
+
+    background:#315e4d;
+
+    color:white;
+
+    border:none;
+
+    padding:
+        13px
+        23px;
+
+    border-radius:25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 9px
+        rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+
+.lesson-button:hover{
+
+    background:#23483d;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(0,0,0,.2);
+
+}
+
+
+.lesson-button:active{
+
+    transform:
+        translateY(1px);
+
+}
+
+
+.lesson-button:nth-child(2){
+
+    background:#d8ad4a;
+
+    color:#263b35;
+
+}
+
+
+.lesson-button:nth-child(2):hover{
+
+    background:#edca70;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    padding:
+        30px
+        20px;
+
+    background:#1d3b33;
+
+    color:white;
+
+}
+
+
+.footer p{
+
+    margin:
+        5px
+        0;
+
+    font-size:14px;
+
+    opacity:.7;
+
+}
+
+
+.footer-title{
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:29px;
+
+    color:#f0d477;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width:700px){
+
+    .paper{
+
+        width:95%;
+
+        margin:
+            15px
+            auto
+            30px;
+
+        border-radius:16px;
+
+    }
+
+
+    .top-bar{
+
+        padding:
+            14px
+            16px;
+
+    }
+
+
+    .back-home{
+
+        padding:
+            8px
+            13px;
+
+        font-size:13px;
+
+    }
+
+
+    .page-label{
+
+        font-size:9px;
+
+        letter-spacing:1px;
+
+        text-align:right;
+
+    }
+
+
+    .header{
+
+        padding:
+            38px
+            18px
+            45px;
+
+    }
+
+
+    .phoenix-logo{
+
+        width:80px;
+
+    }
+
+
+    .header h1{
+
+        font-size:37px;
+
+    }
+
+
+    .header p{
+
+        font-size:15px;
+
+    }
+
+
+    .section{
+
+        margin:
+            18px
+            12px;
+
+        padding:21px 18px;
+
+    }
+
+
+    .section-title{
+
+        font-size:25px;
+
+    }
+
+
+    .content-row{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .content-text{
+
+        font-size:17px;
+
+    }
+
+
+    .image-box{
+
+        order:-1;
+
+    }
+
+
+    .image-box img{
+
+        max-width:100%;
+
+        max-height:280px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .lesson-navigation{
+
+        flex-direction:column;
+
+        margin:
+            25px
+            12px;
+
+    }
+
+
+    .lesson-button{
+
+        width:100%;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width:701px)
+and (max-width:900px){
+
+    .paper{
+
+        width:94%;
+
+    }
+
+
+    .section{
+
+        margin:
+            24px
+            20px;
+
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="paper">
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <a
+        href="index.html"
+        class="back-home">
+
+        ← Back to Home
+
+    </a>
+
+
+    <div class="page-label">
+
+        PHOENIX • HISTO PAGE
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <img
+        class="phoenix-logo"
+        src="Project/Img/Phoenix.png"
+        alt="Phoenix Logo"
+    >
+
+
+    <h1>
+
+        Ilaya at Ilawod
+
+    </h1>
+
+
+    <p>
+
+        Pagkilala sa kahulugan ng Ilaya at Ilawod
+        at sa iba't ibang pangkat ng taong
+        naninirahan sa mga kaugnay na lugar.
+
+    </p>
+
+</header>
+
+
+<!-- =========================
+     TOPIC STRIP
+========================= -->
+
+<div class="topic-strip">
+
+    <span class="topic topic-ilaya">
+
+        ▲ ILAYA • MATAAS NA LUGAR
+
+    </span>
+
+
+    <span class="topic topic-ilawod">
+
+        ≋ ILAWOD • MABABANG LUGAR
+
+    </span>
+
+</div>
+
+
+<!-- =========================
+     ILAYA AT ILAWOD
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Ilaya at Ilawod
+
+    </h2>
+
+
+    <div class="content-row">
+
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>Ilaya</b> ay nangangahulugan ng lugar
+                na nasa mataas o pa-bundok na bahagi.
+
+            </p>
+
+
+            <p>
+
+                Ang <b>Ilawod</b> naman ay nangangahulugan
+                ng lugar na malapit sa dagat o mababang bahagi.
+
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/ilaya.jpeg"
+                alt="Ilaya"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ILAYA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Ilaya
+
+    </h2>
+
+
+    <div class="content-row">
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/ilaya.jpeg"
+                alt="Ilaya"
+            >
+
+        </div>
+
+
+        <div class="content-text">
+
+            <p>
+
+                Ang Ilaya ay tumutukoy sa mga lugar na
+                nasa mataas o kabundukang bahagi.
+
+            </p>
+
+
+            <p>
+
+                <b>Igorot (Cordillera)</b><br>
+
+                Isang pangkat ng mga katutubo na
+                naninirahan sa kabundukan ng Cordillera.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Ifugao
+
+            </h3>
+
+            <p>
+
+                Matatagpuan sa Cordillera Region.
+                Kilala sa Banaue Rice Terraces,
+                na tinatawag na Ika-walong Kababalaghan
+                sa Mundo.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Bontoc
+
+            </h3>
+
+            <p>
+
+                Isang pangkat na kilala sa kanilang
+                pamumuhay sa kabundukan at paggawa
+                ng hagdang palayan.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Kankanaey
+
+            </h3>
+
+            <p>
+
+                Matatagpuan sa Benguet at
+                Mountain Province.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Ibaloi
+
+            </h3>
+
+            <p>
+
+                Matatagpuan sa Benguet,
+                Baguio, at La Trinidad.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ILAWOD
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Ilawod
+
+    </h2>
+
+
+    <div class="content-row">
+
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>Ilawod</b> ay tumutukoy sa mga
+                pangkat at pamayanang nakaugnay sa
+                mga mabababang lugar at katubigan.
+
+            </p>
+
+
+            <p>
+
+                Ang mga pamayanang nasa Ilawod ay
+                kadalasang umaasa sa pangingisda,
+                kalakalan, at ugnayan sa mga karatig
+                na lugar.
+
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/ilawod.jpeg"
+                alt="Ilawod"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Badjao
+
+            </h3>
+
+            <p>
+
+                Madalas matatagpuan sa Tawi-Tawi,
+                Sulu, at Zamboanga.
+                Paglalayag at pangingisda ang
+                pangunahing pamumuhay.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Tagbanua
+
+            </h3>
+
+            <p>
+
+                Matatagpuan sa Palawan.
+                Malapit sa baybayin at mayaman
+                sa yamang dagat.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+
+                Ivatan
+
+            </h3>
+
+            <p>
+
+                Matatagpuan sa Batanes.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLOSING MESSAGE
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Pagkakaugnay
+
+    </h2>
+
+
+    <div class="full-content">
+
+        <p style="text-align:center;">
+
+            <i>
+                "Ang pag-aasahan ang pundasyon
+                ng kapayapaan at seguridad."
+            </i>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LESSON NAVIGATION
+========================= -->
+
+<div class="lesson-navigation">
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='groups.html'">
+
+        ← Previous Lesson
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='index.html'">
+
+        Back to Home
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='kultura.html'">
+
+        Next Lesson →
+
+    </button>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+
+    <h2 class="footer-title">
+
+        PHOENIX
+
+    </h2>
+
+
+    <p>
+
+        TECH-PRO 1103
+
+    </p>
+
+
+    <p>
+
+        Pag-aaral ng Kasaysayan at Kulturang Pilipino
+
+    </p>
+
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>

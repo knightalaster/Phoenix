@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Phoenix - Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
+</title>
+
+
+<style>
+
+/* =========================
+   BASIC PAGE
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color:#414438;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9e0d2 0%,
+            #d8c9ad 50%,
+            #e4d8bf 100%
+        );
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+   HISTORY BACKGROUND
+========================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:380px;
+
+    height:380px;
+
+    border-radius:50%;
+
+    background:#536b4d;
+
+    opacity:.10;
+
+    top:-160px;
+
+    left:-140px;
+
+    z-index:-1;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:430px;
+
+    height:430px;
+
+    border-radius:50%;
+
+    background:#a9794e;
+
+    opacity:.10;
+
+    right:-190px;
+
+    bottom:-180px;
+
+    z-index:-1;
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.paper{
+
+    width:92%;
+
+    max-width:1050px;
+
+    margin:
+        30px auto
+        50px;
+
+    background:#f8f6ec;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 32px
+        rgba(55,65,51,.22);
+
+    animation:
+        paperEnter
+        .7s
+        ease-out;
+
+}
+
+
+@keyframes paperEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        16px
+        25px;
+
+    background:#394d3c;
+
+    color:white;
+
+}
+
+
+.back-home{
+
+    display:inline-block;
+
+    padding:
+        9px
+        17px;
+
+    background:#d1aa54;
+
+    color:#2e3b32;
+
+    text-decoration:none;
+
+    border-radius:20px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.back-home:hover{
+
+    background:#e6c773;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.page-label{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+    opacity:.75;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        50px
+        20px
+        60px;
+
+    color:white;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #3d5b43,
+            #536b4d 55%,
+            #87664d
+        );
+
+}
+
+
+/* Historical grid */
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.08) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.08) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        38px 38px;
+
+    opacity:.4;
+
+}
+
+
+/* Decorative circle */
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:330px;
+
+    height:330px;
+
+    border:
+        2px solid
+        rgba(255,255,255,.13);
+
+    border-radius:50%;
+
+    right:-120px;
+
+    bottom:-150px;
+
+}
+
+
+.phoenix-logo{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100px;
+
+    margin-bottom:14px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(0,0,0,.25)
+        );
+
+    animation:
+        logoEnter
+        .8s
+        ease-out;
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+.header h1{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:46px;
+
+    line-height:1.2;
+
+    color:#f1d27b;
+
+    animation:
+        titleEnter
+        .8s
+        ease-out;
+
+}
+
+
+.header p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:730px;
+
+    margin:
+        15px
+        auto
+        0;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:#f1f4ed;
+
+}
+
+
+@keyframes titleEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   HISTORY TOPIC STRIP
+========================= */
+
+.topic-strip{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    padding:
+        18px
+        20px;
+
+    background:#ffffff;
+
+    border-bottom:
+        1px solid #d8ddd2;
+
+}
+
+
+.topic{
+
+    padding:
+        8px
+        16px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:.6px;
+
+}
+
+
+.topic-history{
+
+    background:#e1e8dc;
+
+    color:#496247;
+
+}
+
+
+.topic-local{
+
+    background:#eee1d1;
+
+    color:#825c43;
+
+}
+
+
+.topic-community{
+
+    background:#e7e4d0;
+
+    color:#67643d;
+
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+
+    position:relative;
+
+    margin:
+        28px;
+
+    padding:
+        28px;
+
+    background:#ffffff;
+
+    border:
+        1px solid #d9dfd5;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 5px 14px
+        rgba(50,70,52,.08);
+
+    animation:
+        sectionEnter
+        .6s
+        ease-out;
+
+}
+
+
+/* Gold history accent */
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:80px;
+
+    height:5px;
+
+    background:#d1aa54;
+
+    border-radius:
+        16px
+        0
+        5px
+        0;
+
+}
+
+
+@keyframes sectionEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+
+    margin:
+        0
+        0
+        20px;
+
+    padding-bottom:
+        12px;
+
+    border-bottom:
+        2px solid #dce1d8;
+
+    font-size:30px;
+
+    color:#405d47;
+
+    text-align:center;
+
+}
+
+
+/* =========================
+   CONTENT ROW
+========================= */
+
+.content-row{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(250px,1fr)
+        minmax(250px,1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+
+.content-text{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.content-text b{
+
+    color:#4c674d;
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box{
+
+    text-align:center;
+
+}
+
+
+.image-box img{
+
+    width:100%;
+
+    max-width:470px;
+
+    max-height:350px;
+
+    object-fit:contain;
+
+    border:
+        5px solid #d2b875;
+
+    border-radius:13px;
+
+    background:#f4f3ea;
+
+    box-shadow:
+        0 7px 15px
+        rgba(50,65,50,.16);
+
+    transition:.3s;
+
+}
+
+
+.image-box img:hover{
+
+    transform:
+        scale(1.025);
+
+    box-shadow:
+        0 10px 20px
+        rgba(50,65,50,.23);
+
+}
+
+
+/* =========================
+   HISTORY INFO CARDS
+========================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:25px;
+
+}
+
+
+.info-card{
+
+    padding:20px;
+
+    background:#eef4ed;
+
+    border:
+        1px solid #d6e0d5;
+
+    border-left:
+        5px solid #55745a;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+
+.info-card:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(50,70,52,.12);
+
+}
+
+
+.info-card h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size:20px;
+
+    color:#456148;
+
+}
+
+
+.info-card p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   LOCAL HISTORY BOX
+========================= */
+
+.history-box{
+
+    padding:22px;
+
+    background:#f2e9dc;
+
+    border:
+        1px solid #e2d5c5;
+
+    border-left:
+        5px solid #9a6d4c;
+
+    border-radius:10px;
+
+    margin-top:20px;
+
+}
+
+
+.history-box p{
+
+    margin:
+        8px
+        0;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+
+    position:relative;
+
+    margin-top:25px;
+
+    padding-left:25px;
+
+    border-left:
+        3px solid #d1aa54;
+
+}
+
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:24px;
+
+    padding:
+        17px
+        20px;
+
+    background:#f5f3e9;
+
+    border-radius:10px;
+
+    border:
+        1px solid #e0dfd2;
+
+}
+
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:13px;
+
+    height:13px;
+
+    background:#d1aa54;
+
+    border-radius:50%;
+
+    left:-33px;
+
+    top:22px;
+
+}
+
+
+.timeline-item h3{
+
+    margin:
+        0
+        0
+        7px;
+
+    color:#755a38;
+
+    font-size:20px;
+
+}
+
+
+.timeline-item p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================
+   IMPORTANCE
+========================= */
+
+.importance-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+.importance-card{
+
+    padding:20px;
+
+    text-align:center;
+
+    background:#edf3ed;
+
+    border-radius:11px;
+
+    border:
+        1px solid #d7e1d7;
+
+    transition:.25s;
+
+}
+
+
+.importance-card:hover{
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+.importance-card h3{
+
+    margin:
+        0
+        0
+        9px;
+
+    color:#466249;
+
+    font-size:20px;
+
+}
+
+
+.importance-card p{
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   CLOSING MESSAGE
+========================= */
+
+.highlight{
+
+    margin:
+        35px
+        28px;
+
+    padding:25px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #405d47,
+            #557057
+        );
+
+    border-radius:14px;
+
+    box-shadow:
+        0 6px 14px
+        rgba(45,65,48,.18);
+
+}
+
+
+.highlight p{
+
+    color:#f5f3e9;
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+
+
+.highlight strong{
+
+    color:#f1d27b;
+
+}
+
+
+/* =========================
+   LESSON NAVIGATION
+========================= */
+
+.lesson-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:
+        35px
+        28px;
+
+    padding-top:
+        25px;
+
+    border-top:
+        2px solid #d9dfd5;
+
+}
+
+
+.lesson-button{
+
+    background:#45664f;
+
+    color:white;
+
+    border:none;
+
+    padding:
+        13px
+        23px;
+
+    border-radius:25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 9px
+        rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+
+.lesson-button:hover{
+
+    background:#314b3a;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.lesson-button:nth-child(1){
+
+    background:#d1aa54;
+
+    color:#293a31;
+
+}
+
+
+.lesson-button:nth-child(1):hover{
+
+    background:#e4c66f;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    padding:
+        30px
+        20px;
+
+    background:#394d3c;
+
+    color:white;
+
+}
+
+
+.footer p{
+
+    margin:
+        5px
+        0;
+
+    font-size:14px;
+
+    opacity:.7;
+
+}
+
+
+.footer-title{
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:29px;
+
+    color:#f1d27b;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width:700px){
+
+    .paper{
+
+        width:95%;
+
+        margin:
+            15px
+            auto
+            30px;
+
+        border-radius:16px;
+
+    }
+
+
+    .top-bar{
+
+        padding:
+            14px
+            16px;
+
+    }
+
+
+    .back-home{
+
+        padding:
+            8px
+            13px;
+
+        font-size:13px;
+
+    }
+
+
+    .page-label{
+
+        font-size:9px;
+
+        letter-spacing:1px;
+
+        text-align:right;
+
+    }
+
+
+    .header{
+
+        padding:
+            38px
+            18px
+            45px;
+
+    }
+
+
+    .phoenix-logo{
+
+        width:80px;
+
+    }
+
+
+    .header h1{
+
+        font-size:34px;
+
+    }
+
+
+    .header p{
+
+        font-size:15px;
+
+    }
+
+
+    .topic-strip{
+
+        padding:
+            15px
+            10px;
+
+    }
+
+
+    .topic{
+
+        font-size:11px;
+
+        padding:
+            7px
+            12px;
+
+    }
+
+
+    .section{
+
+        margin:
+            18px
+            12px;
+
+        padding:
+            21px
+            18px;
+
+    }
+
+
+    .section-title{
+
+        font-size:25px;
+
+    }
+
+
+    .content-row{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .content-text{
+
+        font-size:17px;
+
+    }
+
+
+    .image-box{
+
+        order:-1;
+
+    }
+
+
+    .image-box img{
+
+        max-width:100%;
+
+        max-height:280px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .importance-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .history-box{
+
+        padding:18px;
+
+    }
+
+
+    .history-box p{
+
+        font-size:16px;
+
+    }
+
+
+    .timeline{
+
+        padding-left:20px;
+
+    }
+
+
+    .timeline-item{
+
+        padding:16px;
+
+    }
+
+
+    .lesson-navigation{
+
+        flex-direction:column;
+
+        margin:
+            25px
+            12px;
+
+    }
+
+
+    .lesson-button{
+
+        width:100%;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width:701px)
+and (max-width:900px){
+
+    .paper{
+
+        width:94%;
+
+    }
+
+
+    .section{
+
+        margin:
+            24px
+            20px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .importance-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="paper">
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <a
+        href="index.html"
+        class="back-home">
+
+        ← Back to Home
+
+    </a>
+
+
+    <div class="page-label">
+
+        PHOENIX • HISTO PAGE
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="header">
+
+    <img
+        class="phoenix-logo"
+        src="Project/Img/Phoenix.png"
+        alt="Phoenix Logo"
+    >
+
+
+    <h1>
+
+        Kamalayang Pangkasaysayan at
+        Lokal na Konteksto ng Muntinlupa
+
+    </h1>
+
+
+    <p>
+
+        Pag-unawa sa kasaysayan ng Muntinlupa,
+        sa lokal na konteksto nito, at sa kahalagahan
+        ng pagkilala sa sariling pamayanan.
+
+    </p>
+
+</header>
+
+
+<!-- =========================
+     TOPICS
+========================= -->
+
+<div class="topic-strip">
+
+    <span class="topic topic-history">
+        KAMALAYANG PANGKASAYSAYAN
+    </span>
+
+
+    <span class="topic topic-local">
+        LOKAL NA KONTEKSTO
+    </span>
+
+
+    <span class="topic topic-community">
+        MUNTINLUPA
+    </span>
+
+</div>
+
+
+<!-- =========================
+     MUNTINLUPA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Muntinlupa
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>Muntinlupa</b> ay isang lungsod
+                sa timog na bahagi ng Kalakhang Maynila.
+                Ito ay may sariling kasaysayan, kultura,
+                at mga pamayanang naging bahagi ng
+                pag-unlad nito.
+
+            </p>
+
+
+            <p>
+
+                Sa pag-aaral ng lokal na kasaysayan,
+                mas nauunawaan natin kung paano nabuo
+                at nagbago ang isang pamayanan sa paglipas
+                ng panahon.
+
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/munti.jpg"
+                alt="Muntinlupa"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KAMALAYANG PANGKASAYSAYAN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Kamalayang Pangkasaysayan
+
+    </h2>
+
+
+    <div class="content-text">
+
+        <p>
+
+            Ang <b>kamalayang pangkasaysayan</b> ay tumutukoy
+            sa pagkilala at pag-unawa ng mga tao sa mga
+            pangyayari, karanasan, at pagbabago na humubog
+            sa kanilang pamayanan.
+
+        </p>
+
+
+        <p>
+
+            Hindi lamang nito pinag-aaralan ang malalaking
+            pangyayari sa bansa. Mahalaga rin ang mga
+            karanasan ng mga ordinaryong tao at komunidad.
+
+        </p>
+
+    </div>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                Nakaraan
+            </h3>
+
+            <p>
+                Pagkilala sa mga pangyayari at karanasan
+                na naganap sa isang pamayanan.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Kasalukuyan
+            </h3>
+
+            <p>
+                Pag-unawa kung paano nakaapekto ang
+                nakaraan sa kalagayan ng komunidad ngayon.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Hinaharap
+            </h3>
+
+            <p>
+                Paggamit ng kaalaman sa kasaysayan upang
+                makagawa ng mas mabuting mga desisyon.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOKAL NA KONTEKSTO
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Lokal na Konteksto
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/munti.jpg"
+                alt="Lokal na konteksto ng Muntinlupa"
+            >
+
+        </div>
+
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>lokal na konteksto</b> ay tumutukoy
+                sa kalagayan, kultura, karanasan, at
+                kasaysayan ng isang partikular na lugar.
+
+            </p>
+
+
+            <p>
+
+                Sa pag-aaral ng kasaysayan, mahalagang
+                isaalang-alang ang sariling lugar upang
+                makita kung paano nakaugnay ang malalaking
+                pangyayari sa buhay ng mga tao sa komunidad.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KASAYSAYAN NG MUNTINLUPA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Kasaysayan ng Muntinlupa
+
+    </h2>
+
+
+    <div class="history-box">
+
+        <p>
+
+            Ang Muntinlupa ay nagsimula bilang isang
+            pamayanang unti-unting umunlad kasabay ng
+            pagbabago sa mga karatig na lugar.
+
+        </p>
+
+
+        <p>
+
+            Sa paglipas ng panahon, lumawak ang
+            pamayanan at naging mahalagang bahagi
+            ng Kalakhang Maynila.
+
+        </p>
+
+
+        <p>
+
+            Ang kasaysayan nito ay nagpapakita kung paano
+            nagbabago ang isang komunidad habang lumalaki
+            ang populasyon, ekonomiya, at mga institusyon.
+
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <h3>
+                Sinaunang Pamayanan
+            </h3>
+
+            <p>
+                Nabuo ang mga unang pamayanan at
+                komunidad sa lugar.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>
+                Pagbabago ng Pamayanan
+            </h3>
+
+            <p>
+                Unti-unting nagbago ang pamumuhay
+                at kapaligiran habang lumalaki ang
+                komunidad.
+            </p>
+
+   </div>
+
+
+        <div class="timeline-item">
+
+            <h3>
+                Makabagong Muntinlupa
+            </h3>
+
+            <p>
+                Naging isang mahalagang lungsod ang
+                Muntinlupa sa loob ng Kalakhang Maynila.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KAHALAGAHAN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Kahalagahan ng Lokal na Kasaysayan
+
+    </h2>
+
+
+    <div class="importance-grid">
+
+
+        <div class="importance-card">
+
+            <h3>
+                Kultura
+            </h3>
+
+            <p>
+                Napahahalagahan ang mga tradisyon,
+                kaugalian, at kultura ng pamayanan.
+            </p>
+
+        </div>
+
+
+        <div class="importance-card">
+
+            <h3>
+                Pagkakakilanlan
+            </h3>
+
+            <p>
+                Napapalakas ang pagkilala ng mga tao
+                sa kanilang sariling komunidad.
+            </p>
+
+        </div>
+
+
+        <div class="importance-card">
+
+            <h3>
+                Pag-unawa
+            </h3>
+
+            <p>
+                Mas nauunawaan kung bakit nagbago
+                at umunlad ang isang lugar.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLOSING
+========================= -->
+
+<div class="highlight">
+
+    <p>
+
+        Ang pag-aaral ng kasaysayan ng Muntinlupa ay
+        hindi lamang tungkol sa nakaraan.
+
+        <strong>
+            Ito ay tungkol sa pag-unawa kung paano
+            hinubog ng nakaraan ang kasalukuyan at
+            kung paano natin mapahahalagahan ang
+            ating komunidad sa hinaharap.
+        </strong>
+
+    </p>
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<div class="lesson-navigation">
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='history.html'">
+
+        ← Previous Lesson
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='index.html'">
+
+        Back to Home
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='groups.html'">
+
+        Next Lesson →
+
+    </button>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <h2 class="footer-title">
+        PHOENIX
+    </h2>
+
+
+    <p>
+        TECH-PRO 1103
+    </p>
+
+
+    <p>
+        Kamalayang Pangkasaysayan at
+        Lokal na Konteksto ng Muntinlupa
+    </p>
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>

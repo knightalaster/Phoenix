@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Phoenix - Pag-aaral ng Heograpiya ng Mundo
+</title>
+
+
+<style>
+
+/* =========================
+   BASIC PAGE
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color:#263c46;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8e8e9 0%,
+            #c7d9d0 50%,
+            #dce5d5 100%
+        );
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+   GEOGRAPHIC BACKGROUND
+========================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:360px;
+
+    height:360px;
+
+    border-radius:50%;
+
+    background:#4d8491;
+
+    opacity:.10;
+
+    top:-150px;
+
+    left:-130px;
+
+    z-index:-1;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:#9c9b60;
+
+    opacity:.10;
+
+    right:-180px;
+
+    bottom:-170px;
+
+    z-index:-1;
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.paper{
+
+    width:92%;
+
+    max-width:1050px;
+
+    margin:30px auto 50px;
+
+    background:#f8f6ec;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 32px
+        rgba(35,65,73,.22);
+
+    animation:
+        paperEnter
+        .7s
+        ease-out;
+
+}
+
+
+@keyframes paperEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        16px
+        25px;
+
+    background:#173f4c;
+
+    color:white;
+
+}
+
+
+.back-home{
+
+    display:inline-block;
+
+    padding:
+        9px
+        17px;
+
+    background:#d1ad55;
+
+    color:#243a40;
+
+    text-decoration:none;
+
+    border-radius:20px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.back-home:hover{
+
+    background:#e8c875;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.page-label{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+    opacity:.75;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        50px
+        20px
+        60px;
+
+    color:white;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            160deg,
+            #1d5262,
+            #285f67 55%,
+            #426c5d
+        );
+
+}
+
+
+/* Map-grid decoration */
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.08) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.08) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        35px 35px;
+
+    opacity:.45;
+
+}
+
+
+/* Globe-like circle */
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    border:
+        2px solid
+        rgba(255,255,255,.13);
+
+    border-radius:50%;
+
+    right:-100px;
+
+    bottom:-140px;
+
+}
+
+
+.phoenix-logo{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100px;
+
+    margin-bottom:14px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(0,0,0,.25)
+        );
+
+    animation:
+        logoEnter
+        .8s
+        ease-out;
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+.header h1{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#f1d37b;
+
+    animation:
+        titleEnter
+        .8s
+        ease-out;
+
+}
+
+
+.header p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    margin:
+        15px
+        auto
+        0;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:#eef5f3;
+
+}
+
+
+@keyframes titleEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   GEOGRAPHY TOPIC STRIP
+========================= */
+
+.topic-strip{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    padding:
+        18px
+        20px;
+
+    background:#ffffff;
+
+    border-bottom:
+        1px solid #d5dfdc;
+
+}
+
+
+.topic{
+
+    padding:
+        8px
+        16px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:.6px;
+
+}
+
+
+.topic-map{
+
+    background:#dce9dc;
+
+    color:#38634e;
+
+}
+
+
+.topic-coordinate{
+
+    background:#d9e9ed;
+
+    color:#275d6d;
+
+}
+
+
+.topic-location{
+
+    background:#f1e5c9;
+
+    color:#80652d;
+
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+
+    position:relative;
+
+    margin:
+        28px;
+
+    padding:
+        28px;
+
+    background:#ffffff;
+
+    border:
+        1px solid #d9e1dd;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 5px 14px
+        rgba(27,67,77,.08);
+
+    animation:
+        sectionEnter
+        .6s
+        ease-out;
+
+}
+
+
+/* Map-marker style accent */
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:75px;
+
+    height:5px;
+
+    background:#d1ad55;
+
+    border-radius:
+        16px
+        0
+        5px
+        0;
+
+}
+
+
+@keyframes sectionEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+
+    margin:
+        0
+        0
+        20px;
+
+    padding-bottom:
+        12px;
+
+    border-bottom:
+        2px solid #d9e1dd;
+
+    font-size:30px;
+
+    color:#214b59;
+
+    text-align:center;
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-row{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(250px,1fr)
+        minmax(250px,1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+
+.content-text{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.content-text b{
+
+    color:#275d6d;
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box{
+
+    text-align:center;
+
+}
+
+
+.image-box img{
+
+    width:100%;
+
+    max-width:430px;
+
+    max-height:320px;
+
+    object-fit:contain;
+
+    border:
+        5px solid #d8c58f;
+
+    border-radius:13px;
+
+    background:#f4f5ed;
+
+    box-shadow:
+        0 7px 15px
+        rgba(31,67,76,.16);
+
+    transition:.3s;
+
+}
+
+
+.image-box img:hover{
+
+    transform:
+        scale(1.025);
+
+    box-shadow:
+        0 10px 20px
+        rgba(31,67,76,.23);
+
+}
+
+
+/* =========================
+   INFO CARDS
+========================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:25px;
+
+}
+
+
+.info-card{
+
+    padding:20px;
+
+    background:#eef5f1;
+
+    border:
+        1px solid #d4e1da;
+
+    border-left:
+        5px solid #467c65;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+
+.info-card:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(31,67,76,.12);
+
+}
+
+
+.info-card h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size:21px;
+
+    color:#315e4d;
+
+}
+
+
+.info-card p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   COORDINATE CARDS
+========================= */
+
+.section:nth-of-type(3)
+.info-card,
+.section:nth-of-type(4)
+.info-card{
+
+    border-left-color:#39798a;
+
+    background:#eef6f7;
+
+}
+
+
+.section:nth-of-type(3)
+.info-card h3,
+.section:nth-of-type(4)
+.info-card h3{
+
+    color:#286276;
+
+}
+
+
+/* =========================
+   FULL WIDTH
+========================= */
+
+.full-content{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.full-content p{
+
+    margin:
+        12px
+        0;
+
+}
+
+
+/* =========================
+   GEOGRAPHY TERMS
+========================= */
+
+.term-list{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+.term{
+
+    background:#eef5f1;
+
+    border:
+        2px solid #d3e0da;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    transition:.25s;
+
+}
+
+
+.term:hover{
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 6px 12px
+        rgba(31,67,76,.10);
+
+}
+
+
+.term h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    color:#286276;
+
+    font-size:21px;
+
+}
+
+
+.term p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   ISLANDS
+========================= */
+
+.islands{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:18px;
+
+}
+
+
+.island{
+
+    position:relative;
+
+    background:#39798a;
+
+    color:#ffffff;
+
+    padding:
+        11px
+        21px;
+
+    border-radius:20px;
+
+    font-size:16px;
+
+    box-shadow:
+        0 3px 7px
+        rgba(0,0,0,.16);
+
+    transition:.25s;
+
+}
+
+
+.island:hover{
+
+    background:#315e4d;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================
+   LESSON NAVIGATION
+========================= */
+
+.lesson-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:
+        35px
+        28px;
+
+    padding-top:
+        25px;
+
+    border-top:
+        2px solid #d9e1dd;
+
+}
+
+
+.lesson-button{
+
+    background:#315e4d;
+
+    color:white;
+
+    border:none;
+
+    padding:
+        13px
+        23px;
+
+    border-radius:25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 9px
+        rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+
+.lesson-button:hover{
+
+    background:#21483c;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.lesson-button:nth-child(1){
+
+    background:#d1ad55;
+
+    color:#263b40;
+
+}
+
+
+.lesson-button:nth-child(1):hover{
+
+    background:#e8c875;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    padding:
+        30px
+        20px;
+
+    background:#173f4c;
+
+    color:white;
+
+}
+
+
+.footer p{
+
+    margin:
+        5px
+        0;
+
+    font-size:14px;
+
+    opacity:.7;
+
+}
+
+
+.footer-title{
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:29px;
+
+    color:#f1d37b;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width:700px){
+
+    .paper{
+
+        width:95%;
+
+        margin:
+            15px
+            auto
+            30px;
+
+        border-radius:16px;
+
+    }
+
+
+    .top-bar{
+
+        padding:
+            14px
+            16px;
+
+    }
+
+
+    .back-home{
+
+        padding:
+            8px
+            13px;
+
+        font-size:13px;
+
+    }
+
+
+    .page-label{
+
+        font-size:9px;
+
+        letter-spacing:1px;
+
+        text-align:right;
+
+    }
+
+
+    .header{
+
+        padding:
+            38px
+            18px
+            45px;
+
+    }
+
+
+    .phoenix-logo{
+
+        width:80px;
+
+    }
+
+
+    .header h1{
+
+        font-size:36px;
+
+    }
+
+
+    .header p{
+
+        font-size:15px;
+
+    }
+
+
+    .topic-strip{
+
+        padding:
+            15px
+            10px;
+
+    }
+
+
+    .topic{
+
+        font-size:11px;
+
+        padding:
+            7px
+            12px;
+
+    }
+
+
+    .section{
+
+        margin:
+            18px
+            12px;
+
+        padding:
+            21px
+            18px;
+
+    }
+
+
+    .section-title{
+
+        font-size:25px;
+
+    }
+
+
+    .content-row{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .content-text{
+
+        font-size:17px;
+
+    }
+
+
+    .image-box{
+
+        order:-1;
+
+    }
+
+
+    .image-box img{
+
+        max-width:100%;
+
+        max-height:280px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .term-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .lesson-navigation{
+
+        flex-direction:column;
+
+        margin:
+            25px
+            12px;
+
+    }
+
+
+    .lesson-button{
+
+        width:100%;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width:701px)
+and (max-width:900px){
+
+    .paper{
+
+        width:94%;
+
+    }
+
+
+    .section{
+
+        margin:
+            24px
+            20px;
+
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="paper">
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <a
+        href="index.html"
+        class="back-home">
+
+        ← Back to Home
+
+    </a>
+
+
+    <div class="page-label">
+
+        PHOENIX • HISTO PAGE
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <img
+        class="phoenix-logo"
+        src="Project/Img/Phoenix.png"
+        alt="Phoenix Logo"
+    >
+
+
+    <h1>
+
+        Pag-aaral ng Heograpiya ng Mundo
+
+    </h1>
+
+
+    <p>
+
+        Pagkilala sa mapa, globo, lokasyon, at mga pangunahing
+        konsepto ng heograpiya ng mundo.
+
+    </p>
+
+</header>
+
+
+<!-- =========================
+     GEOGRAPHY TOPICS
+========================= -->
+
+<div class="topic-strip">
+
+    <span class="topic topic-map">
+
+        MAPA • GLOBO
+
+    </span>
+
+
+    <span class="topic topic-coordinate">
+
+        LATITUDE • LONGITUDE
+
+    </span>
+
+
+    <span class="topic topic-location">
+
+        LOKASYON • MUNDO
+
+    </span>
+
+</div>
+
+
+<!-- =========================
+     MAPA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Mapa
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+                Ang <b>mapa</b> ay isang representasyon o larawan
+                ng isang lugar na nagpapakita ng lokasyon, anyo,
+                at katangian ng isang pook.
+            </p>
+
+
+            <p>
+                Ginagamit ito upang mas madaling matukoy at
+                maunawaan ang lokasyon ng iba't ibang lugar.
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/map.jpg"
+                alt="Mapa"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GLOBO
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Globo
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/globe.png"
+                alt="Globo"
+            >
+
+        </div>
+
+
+        <div class="content-text">
+
+            <p>
+                Ang <b>globo</b> ay isang modelo ng mundo na
+                nagpapakita ng tunay na hugis at pagkakaugnay
+                ng mga kontinente at karagatan.
+            </p>
+
+
+            <p>
+                Dito makikita ang iba't ibang guhit na ginagamit
+                upang matukoy ang lokasyon ng isang lugar.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LATITUDE AT LONGITUDE
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Latitude at Longitude
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <div class="info-card">
+
+                <h3>
+                    Latitude
+                </h3>
+
+
+                <p>
+                    Mga guhit na pahalang sa globo na ginagamit
+                    upang malaman ang layo ng isang lugar mula
+                    sa Ekwador.
+                </p>
+
+            </div>
+
+
+            <div
+                class="info-card"
+                style="margin-top:18px;"
+            >
+
+                <h3>
+                    Longitude
+                </h3>
+
+
+                <p>
+                    Mga guhit na patayo sa globo na ginagamit
+                    upang malaman ang lokasyon ng isang lugar
+                    mula sa Prime Meridian.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/lat.jpeg"
+                alt="Latitude at Longitude"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EKUADOR AT PRIME MERIDIAN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Ekwador at Prime Meridian
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/ep.jpeg"
+                alt="Ekwador at Prime Meridian"
+            >
+
+        </div>
+
+
+        <div class="content-text">
+
+            <div class="info-card">
+
+                <h3>
+                    Ekwador
+                </h3>
+
+
+                <p>
+                    Guhit na naghahati sa mundo sa Hilaga
+                    at Timog na bahagi.
+                </p>
+
+            </div>
+
+
+            <div
+                class="info-card"
+                style="margin-top:18px;"
+            >
+
+                <h3>
+                    Prime Meridian
+                </h3>
+
+
+                <p>
+                    Pangunahing guhit ng longitude na nagsisilbing
+                    batayan ng lokasyon sa Silangan at Kanlurang
+                    bahagi ng mundo.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PILIPINAS
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Pilipinas
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+                Ang <b>Pilipinas</b> ay isang arkipelago na
+                binubuo ng maraming pulo.
+            </p>
+
+
+            <p>
+                <b>Main Islands:</b>
+            </p>
+
+
+            <div class="islands">
+
+                <div class="island">
+                    Luzon
+                </div>
+
+
+                <div class="island">
+                    Visayas
+                </div>
+
+
+                <div class="island">
+                    Mindanao
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/ph.jpeg"
+                alt="Mapa ng Pilipinas"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <h3>
+                Lokasyon ng Pilipinas
+            </h3>
+
+
+            <p>
+                Matatagpuan sa pagitan ng 4° at 22°
+                Hilagang latitud.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Absolute Location
+            </h3>
+
+
+            <p>
+                Matatagpuan sa pagitan ng 116° at 127°
+                Silangang longhitud.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RELATIVE LOCATION
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Relative Location
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/rl.jpeg"
+                alt="Relative Location"
+            >
+
+        </div>
+
+
+        <div class="content-text">
+ <p>
+                Ang <b>relative location</b> ay tumutukoy sa
+                lokasyon ng isang lugar batay sa kalapit na
+                kalupaan o katubigan.
+            </p>
+
+
+            <div class="term-list">
+
+                <div class="term">
+
+                    <h3>
+                        Vicinal Location
+                    </h3>
+
+
+                    <p>
+                        Kalapit na kalupaan.
+                    </p>
+
+                </div>
+
+
+                <div class="term">
+
+                    <h3>
+                        Incular Location
+                    </h3>
+
+
+                    <p>
+                        Kalapit na katubigan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="info-card"
+        style="margin-top:25px;"
+    >
+
+        <h3>
+            Kartograpo
+        </h3>
+
+
+        <p>
+            Isang taong gumagawa o nag-aaral ng mapa.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LESSON NAVIGATION
+========================= -->
+
+<div class="lesson-navigation">
+
+    <button
+        class="lesson-button"
+        onclick="location.href='index.html'">
+
+        ← Back to Home
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='history.html'">
+
+        Next Lesson →
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <h2 class="footer-title">
+
+        PHOENIX
+
+    </h2>
+
+
+    <p>
+
+        TECH-PRO 1103
+
+    </p>
+
+
+    <p>
+
+        Pag-aaral ng Heograpiya ng Mundo
+
+    </p>
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>

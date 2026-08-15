@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Phoenix - Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+</title>
+
+
+<style>
+
+/* =========================
+   BASIC PAGE
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color:#513b31;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ead8c4 0%,
+            #d8b99b 50%,
+            #e7d9c0 100%
+        );
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+   HERITAGE BACKGROUND
+========================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:360px;
+    height:360px;
+
+    border-radius:50%;
+
+    background:#9b533b;
+
+    opacity:.10;
+
+    top:-150px;
+    left:-130px;
+
+    z-index:-1;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:#9b8047;
+
+    opacity:.12;
+
+    right:-180px;
+    bottom:-170px;
+
+    z-index:-1;
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.paper{
+
+    width:92%;
+
+    max-width:1050px;
+
+    margin:30px auto 50px;
+
+    background:#faf6ed;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 32px
+        rgba(78,48,35,.24);
+
+    animation:
+        paperEnter
+        .7s
+        ease-out;
+
+}
+
+
+@keyframes paperEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        16px
+        25px;
+
+    background:#613d31;
+
+    color:white;
+
+}
+
+
+.back-home{
+
+    display:inline-block;
+
+    padding:
+        9px
+        17px;
+
+    background:#d0a653;
+
+    color:#49382d;
+
+    text-decoration:none;
+
+    border-radius:20px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.back-home:hover{
+
+    background:#e3c16e;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.page-label{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+    opacity:.75;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        50px
+        20px
+        60px;
+
+    color:white;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            155deg,
+            #713f32,
+            #9b533b 55%,
+            #9b7746
+        );
+
+}
+
+
+/* Heritage pattern */
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.07) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.07) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        35px 35px;
+
+    opacity:.4;
+
+}
+
+
+/* Decorative heritage circle */
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:330px;
+    height:330px;
+
+    border:
+        2px solid
+        rgba(255,255,255,.14);
+
+    border-radius:50%;
+
+    right:-110px;
+    bottom:-150px;
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.phoenix-logo{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100px;
+
+    margin-bottom:14px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(0,0,0,.25)
+        );
+
+    animation:
+        logoEnter
+        .8s
+        ease-out;
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+        opacity:0;
+        transform:scale(.85);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.header h1{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#f3d27a;
+
+    animation:
+        titleEnter
+        .8s
+        ease-out;
+
+}
+
+
+.header p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:730px;
+
+    margin:
+        15px
+        auto
+        0;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:#fff3e3;
+
+}
+
+
+@keyframes titleEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================
+   TOPIC STRIP
+========================= */
+
+.topic-strip{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    padding:
+        18px
+        20px;
+
+    background:#fffdf7;
+
+    border-bottom:
+        1px solid #ded0bd;
+
+}
+
+
+.topic{
+
+    padding:
+        8px
+        16px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:.6px;
+
+}
+
+
+.topic-culture{
+
+    background:#ead0bd;
+
+    color:#754333;
+
+}
+
+
+.topic-history{
+
+    background:#eadbbd;
+
+    color:#775a2c;
+
+}
+
+
+.topic-identity{
+
+    background:#dfe1c5;
+
+    color:#59603b;
+
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+
+    position:relative;
+
+    margin:
+        28px;
+
+    padding:
+        28px;
+
+    background:#fffdfa;
+
+    border:
+        1px solid #dfd5c7;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 5px 14px
+        rgba(78,48,35,.09);
+
+    animation:
+        sectionEnter
+        .6s
+        ease-out;
+
+}
+
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:75px;
+
+    height:5px;
+
+    background:#c79a4b;
+
+    border-radius:
+        16px
+        0
+        5px
+        0;
+
+}
+
+
+@keyframes sectionEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+
+    margin:
+        0
+        0
+        20px;
+
+    padding-bottom:
+        12px;
+
+    border-bottom:
+        2px solid #ded5c9;
+
+    font-size:30px;
+
+    color:#754333;
+
+    text-align:center;
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-row{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(250px,1fr)
+        minmax(250px,1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+
+.content-text{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.content-text b{
+
+    color:#8b5038;
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box{
+
+    text-align:center;
+
+}
+
+
+.image-box img{
+
+    width:100%;
+
+    max-width:430px;
+
+    max-height:320px;
+
+    object-fit:contain;
+
+    border:
+        5px solid #d3b77e;
+
+    border-radius:13px;
+
+    background:#f7f2e8;
+
+    box-shadow:
+        0 7px 15px
+        rgba(78,48,35,.16);
+
+    transition:.3s;
+
+}
+
+
+.image-box img:hover{
+
+    transform:
+        scale(1.025);
+
+    box-shadow:
+        0 10px 20px
+        rgba(78,48,35,.23);
+
+}
+
+
+/* =========================
+   CULTURE CARDS
+========================= */
+
+.culture-list{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+.culture-card{
+
+    padding:20px;
+
+    background:#f4e5d8;
+
+    border:
+        1px solid #e2cfc0;
+
+    border-left:
+        5px solid #a85d40;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+
+.culture-card:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(78,48,35,.12);
+
+}
+
+
+.culture-card h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size:21px;
+
+    color:#7a4836;
+
+}
+
+
+.culture-card p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   HISTORICAL PERIODS
+========================= */
+
+.period-list{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+.period{
+
+    padding:20px;
+
+    background:#eee2d1;
+
+    border:
+        1px solid #ddcfbd;
+
+    border-left:
+        5px solid #806044;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+
+.period:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(78,48,35,.12);
+
+}
+
+
+.period h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    color:#694b38;
+
+    font-size:21px;
+
+}
+
+
+.period p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   BINUKOT
+========================= */
+
+.binukot{
+
+    padding:22px;
+
+    background:#f3e5c7;
+
+    border-left:
+        5px solid #b48843;
+
+    border-radius:10px;
+
+}
+
+
+.binukot h3{
+
+    margin:
+        0
+        0
+        10px;
+
+    color:#76582c;
+
+    font-size:22px;
+
+}
+
+
+.binukot p{
+
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================
+   INFORMATION CARDS
+========================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+.info-card{
+
+    padding:20px;
+
+    background:#e7ead5;
+
+    border:
+        1px solid #d4d8bc;
+
+    border-left:
+        5px solid #68724a;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+
+.info-card:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(78,48,35,.12);
+
+}
+
+
+.info-card h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    color:#59613e;
+
+    font-size:21px;
+
+}
+
+
+.info-card p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   FULL WIDTH CONTENT
+========================= */
+
+.full-content{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.full-content p{
+
+    margin:
+        12px
+        0;
+
+}
+
+
+/* =========================
+   IMPORTANT IDEA
+========================= */
+
+.idea-box{
+
+    margin-top:20px;
+
+    padding:22px;
+
+    background:#e9ded2;
+
+    border-left:
+        5px solid #8b5038;
+
+    border-radius:10px;
+
+}
+
+
+.idea-box h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    color:#754333;
+
+}
+
+
+.idea-box p{
+
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================
+   LESSON NAVIGATION
+========================= */
+
+.lesson-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:
+        35px
+        28px;
+
+    padding-top:
+        25px;
+
+    border-top:
+        2px solid #ded5c9;
+
+}
+
+
+.lesson-button{
+
+    background:#68724a;
+
+    color:white;
+
+    border:none;
+
+    padding:
+        13px
+        23px;
+
+    border-radius:25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 9px
+        rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+
+.lesson-button:hover{
+
+    background:#505a38;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.lesson-button:first-child{
+
+    background:#c79a4b;
+
+    color:#49382d;
+
+}
+
+
+.lesson-button:first-child:hover{
+
+    background:#dfb965;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    padding:
+        30px
+        20px;
+
+    background:#613d31;
+
+    color:white;
+
+}
+
+
+.footer p{
+
+    margin:
+        5px
+        0;
+
+    font-size:14px;
+
+    opacity:.7;
+
+}
+
+
+.footer-title{
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:29px;
+
+    color:#f3d27a;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width:700px){
+
+    .paper{
+
+        width:95%;
+
+        margin:
+            15px
+            auto
+            30px;
+
+        border-radius:16px;
+
+    }
+
+
+    .top-bar{
+
+        padding:
+            14px
+            16px;
+
+    }
+
+
+    .back-home{
+
+        padding:
+            8px
+            13px;
+
+        font-size:13px;
+
+    }
+
+
+    .page-label{
+
+        font-size:9px;
+
+        letter-spacing:1px;
+
+        text-align:right;
+
+    }
+
+
+    .header{
+
+        padding:
+            38px
+            18px
+            45px;
+
+    }
+
+
+    .phoenix-logo{
+
+        width:80px;
+
+    }
+
+
+    .header h1{
+
+        font-size:36px;
+
+    }
+
+
+    .header p{
+
+        font-size:15px;
+
+    }
+
+
+    .topic-strip{
+
+        padding:
+            15px
+            10px;
+
+    }
+
+
+    .topic{
+
+        font-size:11px;
+
+        padding:
+            7px
+            12px;
+
+    }
+
+
+    .section{
+
+        margin:
+            18px
+            12px;
+
+        padding:
+            21px
+            18px;
+
+    }
+
+
+    .section-title{
+
+        font-size:25px;
+
+    }
+
+
+    .content-row{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .content-text{
+
+        font-size:17px;
+
+    }
+
+
+    .image-box{
+
+        order:-1;
+
+    }
+
+
+    .image-box img{
+
+        max-width:100%;
+
+        max-height:280px;
+
+    }
+
+
+    .culture-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .period-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .lesson-navigation{
+
+        flex-direction:column;
+
+        margin:
+            25px
+            12px;
+
+    }
+
+
+    .lesson-button{
+
+        width:100%;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width:701px)
+and (max-width:900px){
+
+    .paper{
+
+        width:94%;
+
+    }
+
+
+    .section{
+
+        margin:
+            24px
+            20px;
+
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="paper">
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <a
+        href="index.html"
+        class="back-home">
+
+        ← Back to Home
+
+    </a>
+
+
+    <div class="page-label">
+
+        PHOENIX • HISTO PAGE
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="header">
+
+    <img
+        class="phoenix-logo"
+        src="Project/Img/Phoenix.png"
+        alt="Phoenix Logo"
+    >
+
+
+    <h1>
+
+        Ugnayan ng Kultura at
+        Kamalayang Pangkasaysayan
+
+    </h1>
+
+
+    <p>
+
+        Pag-unawa sa kultura, pagbabago nito sa paglipas
+        ng panahon, at kahalagahan ng kamalayang
+        pangkasaysayan sa pagkakakilanlan ng isang lipunan.
+
+    </p>
+
+</header>
+
+
+<!-- =========================
+     TOPIC STRIP
+========================= -->
+
+<div class="topic-strip">
+
+    <span class="topic topic-culture">
+
+        KULTURA
+
+    </span>
+
+
+    <span class="topic topic-history">
+
+        KASAYSAYAN
+
+    </span>
+
+
+    <span class="topic topic-identity">
+
+        PAGKAKAKILANLAN
+
+    </span>
+
+</div>
+
+
+<!-- =========================
+     ANO ANG KULTURA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Ano ang Kultura?
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>kultura</b> ay paraan ng pamumuhay
+                ng isang pangkat ng tao. Kabilang dito ang
+                kanilang mga kaugalian, tradisyon, paniniwala,
+                wika, sining, at mga kagamitang nagpapakita
+                ng kanilang pagkakakilanlan.
+
+            </p>
+
+
+            <p>
+
+                Sa pamamagitan ng kultura, mas nauunawaan
+                natin ang ating kasaysayan at pinagmulan.
+
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/kultura.jpeg"
+                alt="Kultura"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MATERYAL AT DI-MATERYAL
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Materyal at Di-Materyal na Kultura
+
+    </h2>
+
+
+    <div class="culture-list">
+
+
+        <div class="culture-card">
+
+            <h3>
+                Materyal (Tangible)
+            </h3>
+
+            <p>
+
+                • Bahay<br>
+                • Kasuotan<br>
+                • Kagamitan<br>
+                • Pagkain<br>
+                • Sining
+
+            </p>
+
+        </div>
+
+
+        <div class="culture-card">
+
+            <h3>
+                Di-Materyal (Intangible)
+            </h3>
+
+            <p>
+
+                • Wika<br>
+                • Kaugalian<br>
+                • Tradisyon<br>
+                • Paniniwala<br>
+                • Pagpapahalaga
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGBABAGO NG KULTURA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Pagbabago ng Kultura sa Paglipas ng Panahon
+
+    </h2>
+
+
+    <div class="period-list">
+
+
+        <div class="period">
+
+            <h3>
+                Panahon ng Katutubo
+            </h3>
+
+            <p>
+                Tradisyonal at payak na pamumuhay
+                ng mga sinaunang Pilipino.
+            </p>
+
+        </div>
+
+
+        <div class="period">
+
+            <h3>
+                Panahon ng Espanyol
+            </h3>
+
+            <p>
+                Paglaganap ng Kristiyanismo at
+                mga pagbabagong dulot ng kolonyalismo.
+            </p>
+
+        </div>
+
+
+        <div class="period">
+
+            <h3>
+                Panahon ng Amerika
+            </h3>
+
+            <p>
+                Pagpapakilala ng wikang Ingles,
+                bagong sistema ng edukasyon, at
+                demokratikong pamahalaan.
+            </p>
+
+        </div>
+
+
+        <div class="period">
+
+            <h3>
+                Panahon ng Hapon
+            </h3>
+
+            <p>
+                Panahon ng Ikalawang Digmaang
+                Pandaigdig at mga pagbabagong
+                naranasan ng mga Pilipino.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BINUKOT
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Binukot
+
+    </h2>
+
+
+    <div class="binukot">
+
+        <h3>
+            Binukot (Itinago / Itiniwalag)
+        </h3>
+
+        <p>
+
+            • Inilalarawan bilang maganda at parang prinsesa.<br>
+            • Hindi maaaring tumapak sa lupa.<br>
+            • Nakapag-aral matapos ang Ikalawang Digmaang Pandaigdig.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KAMALAYANG PANGKASAYSAYAN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Kamalayang Pangkasaysayan
+
+    </h2>
+
+
+    <div class="full-content">
+
+        <p>
+
+            Ang <b>kamalayang pangkasaysayan</b> ay ang
+            pagkakaroon ng kaalaman at pag-unawa sa mga
+            pangyayari sa nakaraan na humubog sa kasalukuyang
+            kalagayan ng isang lipunan.
+
+        </p>
+
+
+        <div class="idea-box">
+
+            <h3>
+                Bakit ito mahalaga?
+            </h3>
+
+            <p>
+
+                Tinutulungan tayo nitong maunawaan kung
+                saan tayo nagmula, kung paano nabuo ang
+                ating lipunan, at kung bakit mahalagang
+                pahalagahan ang ating kultura at kasaysayan.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     UGNAYAN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Ugnayan ng Kultura at Kasaysayan
+
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+
+                Ang <b>kultura</b> ay nabubuo at nagbabago
+                dahil sa mga karanasan at pangyayari sa
+                kasaysayan.
+
+            </p>
+
+
+            <p>
+
+                Samantala, ang <b>kasaysayan</b>
+                naman ang
+                nagbibigay ng paliwanag kung paano nabuo
+                ang kultura ng isang pangkat ng tao.
+
+            </p>
+
+        </div>
+
+
+        <div class="idea-box">
+
+            <h3>
+                Mahahalagang Kaisipan
+            </h3>
+
+            <p>
+
+                Magkaugnay ang kultura at kasaysayan dahil
+                ang mga pangyayari sa nakaraan ay nakaaapekto
+                sa paraan ng pamumuhay, paniniwala, at
+                pagkakakilanlan ng mga tao.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KAHALAGAHAN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Kahalagahan ng Kultura sa Kasaysayan
+
+    </h2>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                Pagkakakilanlan
+            </h3>
+
+            <p>
+                Pinapanatili ang pagkakakilanlan
+                ng isang pangkat.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Alaala ng mga Ninuno
+            </h3>
+
+            <p>
+                Nagpapakita ng mga karanasan
+                ng mga ninuno.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Koneksyon sa Nakaraan
+            </h3>
+
+            <p>
+                Nagbibigay ng koneksyon sa
+                nakaraan at kasalukuyan.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Pag-unawa sa Lipunan
+            </h3>
+
+            <p>
+                Tumutulong upang mas maunawaan
+                kung paano nahubog ang isang lipunan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGPAPANATILI
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Pagpapanatili ng Kultura
+
+    </h2>
+
+
+    <div class="full-content">
+
+        <p>
+
+            Mahalaga ang pagprotekta sa kultura upang
+            hindi mawala ang mga tradisyon at kaalaman
+            na ipinasa ng mga naunang henerasyon.
+
+        </p>
+
+
+        <p>
+
+            Sa pamamagitan ng pag-aaral ng kultura at
+            kasaysayan, mas nauunawaan natin ang ating
+            pinagmulan at kung paano tayo nahubog bilang
+            isang lipunan.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<div class="lesson-navigation">
+
+    <button
+        class="lesson-button"
+        onclick="location.href='ilaya_ilawod.html'">
+
+        ← Previous Lesson
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='index.html'">
+
+        Back to Home
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='paniniwala.html'">
+
+        Next Lesson →
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <h2 class="footer-title">
+        PHOENIX
+    </h2>
+
+
+    <p>
+        TECH-PRO 1103
+    </p>
+
+
+    <p>
+        Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+    </p>
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>

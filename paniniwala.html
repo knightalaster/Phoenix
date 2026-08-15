@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Phoenix - Paniniwala at Pananampalataya
+</title>
+
+
+<style>
+
+/* =========================
+   BASIC PAGE
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color:#302d45;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9d7e8,
+            #c8c5dc,
+            #e4dfd2
+        );
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+   BACKGROUND DECORATION
+========================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:340px;
+    height:340px;
+
+    border-radius:50%;
+
+    background:#70699b;
+
+    opacity:.10;
+
+    top:-150px;
+    left:-120px;
+
+    z-index:-1;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:#b79a4b;
+
+    opacity:.09;
+
+    right:-180px;
+    bottom:-180px;
+
+    z-index:-1;
+
+}
+
+
+/* =========================
+   MAIN PAPER
+========================= */
+
+.paper{
+
+    width:92%;
+
+    max-width:1050px;
+
+    margin:30px auto 50px;
+
+    background:#f7f4ec;
+
+    border:
+        6px solid
+        #b9b3c9;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 30px
+        rgba(49,43,72,.22);
+
+    animation:
+        paperEnter
+        .7s
+        ease-out;
+
+}
+
+
+@keyframes paperEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        16px
+        24px;
+
+    background:#37334f;
+
+    color:#ffffff;
+
+}
+
+
+.back-home{
+
+    display:inline-block;
+
+    padding:
+        9px
+        17px;
+
+    background:#d0b76a;
+
+    color:#302d45;
+
+    text-decoration:none;
+
+    border-radius:20px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.back-home:hover{
+
+    background:#e1cc87;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.page-label{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+    opacity:.75;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        48px
+        20px
+        55px;
+
+    color:white;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #393450,
+            #514b78 55%,
+            #68618f
+        );
+
+}
+
+
+/* subtle pattern */
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.12) 1px,
+            transparent 1px
+        );
+
+    background-size:25px 25px;
+
+    opacity:.35;
+
+}
+
+
+/* decorative circle */
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:310px;
+    height:310px;
+
+    border:
+        2px solid
+        rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    right:-120px;
+    bottom:-150px;
+
+}
+
+
+.phoenix-logo{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100px;
+
+    margin-bottom:14px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(0,0,0,.25)
+        );
+
+    animation:
+        logoEnter
+        .8s
+        ease-out;
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+.header h1{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:46px;
+
+    line-height:1.2;
+
+    color:#e4cc7e;
+
+    text-shadow:
+        0 2px 3px
+        rgba(0,0,0,.25);
+
+    animation:
+        titleEnter
+        .8s
+        ease-out;
+
+}
+
+
+.header p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:720px;
+
+    margin:
+        15px
+        auto
+        0;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:#f1eff7;
+
+}
+
+
+@keyframes titleEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   TOPIC STRIP
+========================= */
+
+.topic-strip{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    padding:
+        18px
+        20px;
+
+    background:#ffffff;
+
+    border-bottom:
+        1px solid
+        #d5d1df;
+
+}
+
+
+.topic{
+
+    padding:
+        8px
+        16px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:.5px;
+
+}
+
+
+.topic-belief{
+
+    background:#e8e5f2;
+
+    color:#514b78;
+
+}
+
+
+.topic-religion{
+
+    background:#eee7d2;
+
+    color:#806a32;
+
+}
+
+
+.topic-history{
+
+    background:#e3e9e5;
+
+    color:#476252;
+
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+
+    position:relative;
+
+    margin:
+        28px;
+
+    padding:
+        28px;
+
+    background:#ffffff;
+
+    border:
+        1px solid
+        #d8d4df;
+
+    border-radius:15px;
+
+    box-shadow:
+        0 5px 14px
+        rgba(54,48,76,.09);
+
+    animation:
+        sectionEnter
+        .6s
+        ease-out;
+
+}
+
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:75px;
+    height:5px;
+
+    background:#c7a958;
+
+    border-radius:
+        15px
+        0
+        5px
+        0;
+
+}
+
+
+@keyframes sectionEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+
+    margin:
+        0
+        0
+        20px;
+
+    padding-bottom:
+        12px;
+
+    border-bottom:
+        2px solid
+        #dedbe5;
+
+    font-size:30px;
+
+    color:#484262;
+
+    text-align:center;
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-row{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(250px,1fr)
+        minmax(250px,1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+
+.content-text{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.content-text b{
+
+    color:#514b78;
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box{
+
+    text-align:center;
+
+}
+
+
+.image-box img{
+
+    width:100%;
+
+    max-width:430px;
+
+    max-height:320px;
+
+    object-fit:contain;
+
+    border:
+        5px solid
+        #d5c998;
+
+    border-radius:13px;
+
+    background:#f6f3e9;
+
+    box-shadow:
+        0 7px 15px
+        rgba(48,43,68,.15);
+
+    transition:.3s;
+
+}
+
+
+.image-box img:hover{
+
+    transform:
+        scale(1.025);
+
+    box-shadow:
+        0 10px 20px
+        rgba(48,43,68,.22);
+
+}
+
+
+/* =========================
+   INFORMATION CARDS
+========================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+.info-card{
+
+    padding:20px;
+
+    background:#efedf6;
+
+    border:
+        1px solid
+        #dad6e5;
+
+    border-left:
+        5px solid
+        #625b88;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+
+.info-card:hover{
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(48,43,68,.10);
+
+}
+
+
+.info-card h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size:21px;
+
+    color:#4c466d;
+
+}
+
+
+.info-card p{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   FULL CONTENT
+========================= */
+
+.full-content{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.full-content p{
+
+    margin:
+        12px
+        0;
+
+}
+
+
+/* =========================
+   RELIGION TABLE
+========================= */
+
+.table-container{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    margin:
+        25px
+        0;
+
+}
+
+
+.religion-table{
+
+    width:100%;
+
+    min-width:700px;
+
+    border-collapse:collapse;
+
+    background:#ffffff;
+
+}
+
+
+.religion-table th{
+
+    background:#514b78;
+
+    color:#ffffff;
+
+    border:
+        2px solid
+        #cfc9dc;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+
+.religion-table td{
+
+    border:
+        2px solid
+        #d8d4df;
+
+    padding:12px;
+
+    color:#302d45;
+
+    background:#faf9f5;
+
+    text-align:center;
+
+    line-height:1.5;
+
+}
+
+
+.religion-table tr:nth-child(even) td{
+
+    background:#f0eef5;
+
+}
+
+
+/* =========================
+   SPECIAL RELIGION COLORS
+========================= */
+
+.religion-table th:nth-child(1){
+
+    background:#596b57;
+
+}
+
+
+.religion-table th:nth-child(2){
+
+    background:#75633e;
+
+}
+
+
+.religion-table th:nth-child(3){
+
+    background:#555f7d;
+
+}
+
+
+.religion-table th:nth-child(4){
+
+    background:#66577e;
+
+}
+
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.lesson-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:
+        35px
+        28px;
+
+    padding-top:
+        25px;
+
+    border-top:
+        2px solid
+        #d8d4df;
+
+}
+
+
+.lesson-button{
+
+    background:#514b78;
+
+    color:white;
+
+    border:none;
+
+    padding:
+        13px
+        23px;
+
+    border-radius:25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 9px
+        rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+
+.lesson-button:hover{
+
+    background:#393450;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.lesson-button:nth-child(2){
+
+    background:#c7a958;
+
+    color:#302d45;
+
+}
+
+
+.lesson-button:nth-child(2):hover{
+
+    background:#ddc477;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    padding:
+        30px
+        20px;
+
+    background:#37334f;
+
+    color:#ffffff;
+
+}
+
+
+.footer p{
+
+    margin:
+        5px
+        0;
+
+    font-size:14px;
+
+    opacity:.7;
+
+}
+
+
+.footer-title{
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:29px;
+
+    color:#e4cc7e;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width:700px){
+
+    .paper{
+
+        width:95%;
+
+        margin:
+            15px
+            auto
+            30px;
+
+        border-radius:16px;
+
+    }
+
+
+    .top-bar{
+
+        padding:
+            14px
+            16px;
+
+    }
+
+
+    .back-home{
+
+        padding:
+            8px
+            13px;
+
+        font-size:13px;
+
+    }
+
+
+    .page-label{
+
+        font-size:9px;
+
+        letter-spacing:1px;
+
+        text-align:right;
+
+    }
+
+
+    .header{
+
+        padding:
+            38px
+            18px
+            45px;
+
+    }
+
+
+    .phoenix-logo{
+
+        width:80px;
+
+    }
+
+
+    .header h1{
+
+        font-size:34px;
+
+    }
+
+
+    .header p{
+
+        font-size:15px;
+
+    }
+
+
+    .topic-strip{
+
+        padding:
+            15px
+            10px;
+
+    }
+
+
+    .topic{
+
+        font-size:11px;
+
+        padding:
+            7px
+            12px;
+
+    }
+
+
+    .section{
+
+        margin:
+            18px
+            12px;
+
+        padding:
+            21px
+            18px;
+
+    }
+
+
+    .section-title{
+
+        font-size:25px;
+
+    }
+
+
+    .content-row{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .content-text{
+
+        font-size:17px;
+
+    }
+
+
+    .image-box{
+
+        order:-1;
+
+    }
+
+
+    .image-box img{
+
+        max-width:100%;
+
+        max-height:280px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .religion-table{
+
+        min-width:650px;
+
+        font-size:14px;
+
+    }
+
+
+    .religion-table th,
+    .religion-table td{
+
+        padding:8px;
+
+    }
+
+
+    .lesson-navigation{
+
+        flex-direction:column;
+
+        margin:
+            25px
+            12px;
+
+    }
+
+
+    .lesson-button{
+
+        width:100%;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width:701px)
+and (max-width:900px){
+
+    .paper{
+
+        width:94%;
+
+    }
+
+
+    .section{
+
+        margin:
+            24px
+            20px;
+
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="paper">
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <a
+        href="index.html"
+        class="back-home">
+
+        ← Back to Home
+
+    </a>
+
+
+    <div class="page-label">
+
+        PHOENIX • HISTO PAGE
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <img
+        class="phoenix-logo"
+        src="Project/Img/Phoenix.png"
+        alt="Phoenix Logo"
+    >
+
+
+    <h1>
+        Paniniwala at Pananampalataya
+    </h1>
+
+
+    <p>
+        Pag-unawa sa mga paniniwala, pananampalataya,
+        relihiyon, at sinaunang sistema ng paniniwala
+        na naging bahagi ng kasaysayan at kultura.
+    </p>
+
+</header>
+
+
+<!-- =========================
+     TOPIC STRIP
+========================= -->
+
+<div class="topic-strip">
+
+    <span class="topic topic-belief">
+        PANINIWALA
+    </span>
+
+
+    <span class="topic topic-religion">
+        RELIHIYON
+    </span>
+
+
+    <span class="topic topic-history">
+        KASAYSAYAN
+    </span>
+
+</div>
+
+
+<!-- =========================
+     PANINIWALA AT PANANAMPALATAYA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Paniniwala at Pananampalataya
+    </h2>
+
+
+    <div class="content-row">
+
+        <div class="content-text">
+
+            <p>
+                Ang <b>paniniwala</b> ay mga ideya, pananaw,
+                o kaisipan na tinatanggap ng isang tao o
+                pangkat bilang bahagi ng kanilang pag-unawa
+                sa mundo.
+            </p>
+
+
+            <p>
+                Ang <b>pananampalataya</b> ay mas malalim na
+                pagtitiwala o paniniwala na kadalasang may
+                kaugnayan sa relihiyon at espirituwalidad.
+            </p>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/a.jpeg"
+                alt="Paniniwala at Pananampalataya"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KAHALAGAHAN
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Kahalagahan at Bahagi ng Kasaysayan
+    </h2>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                Kahalagahan
+            </h3>
+
+            <p>
+                Ang mga paniniwala at pananampalataya ay
+                may malaking papel sa paghubog ng kultura,
+                tradisyon, at pagkakakilanlan ng isang
+                pangkat ng tao.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Bahagi ng Kasaysayan
+            </h3>
+
+            <p>
+                Makikita sa mga paniniwala ng mga tao ang
+                kanilang paraan ng pamumuhay, pagpapahalaga,
+                at pakikitungo sa kapwa.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Epekto sa Kultura
+            </h3>
+
+            <p>
+                Nagbibigay ito ng gabay sa paggawa ng
+                desisyon, nagpapatibay ng pagkakaisa,
+                at nagpapasa ng tradisyon sa susunod
+                na henerasyon.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Pagkakaugnay sa Kasaysayan
+            </h3>
+
+            <p>
+                Tinutulungan tayo nitong maunawaan kung
+                bakit nabuo ang iba't ibang kultura
+                at pamayanan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MGA PANGUNAHING RELIHIYON
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Mga Pangunahing Relihiyon sa Mundo
+    </h2>
+
+
+    <div class="table-container">
+
+        <table class="religion-table">
+
+            <tr>
+
+                <th>
+                    Kristiyanismo
+                </th>
+
+                <th>
+                    Islam
+                </th>
+
+                <th>
+                    Hudaismo
+                </th>
+
+                <th>
+                    Budismo
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Krus
+                </td>
+
+                <td>
+                    Koran
+                </td>
+
+                <td>
+                    Torah
+                </td>
+
+                <td>
+                    Ginoong Buddha
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Bibliya
+                </td>
+
+                <td>
+                    Moske
+                </td>
+
+                <td>
+                    Sinagoga
+                </td>
+
+                <td>
+                    Reincarnation
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Simbahan
+                </td>
+
+                <td>
+                    Crescent Moon and Star
+                </td>
+
+                <td>
+                    Menorah
+                </td>
+
+                <td>
+                    Nirvana
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Simbang Gabi
+                </td>
+
+                <td>
+                    Ramadan
+                </td>
+
+                <td>
+                    Sabbath
+                </td>
+
+                <td>
+                    Dharma
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Papa (Pope)
+                </td>
+
+                <td>
+                    Praying Mat
+                </td>
+
+                <td>
+                    Kosher
+                </td>
+
+                <td>
+                    Walong Dakilang Landas
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Rosaryo
+                </td>
+
+                <td>
+                    Pagdarasal isang beses sa isang araw
+                </td>
+
+                <td>
+                    Rabbi
+                </td>
+
+                <td>
+                    Monghe
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Pasko
+                </td>
+
+                <td>
+                    Eid al-Fitr
+                </td>
+
+                <td>
+                    Kandila ng Hanukkah
+                </td>
+
+                <td>
+                    Monasteryo
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Kumpisal
+                </td>
+
+                <td>
+                    Halal
+                </td>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    -
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    Imam
+                </td>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    -
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    -
+    </td>
+
+                <td>
+                    Hindi kumakain ng baboy
+                </td>
+
+                <td>
+                    -
+                </td>
+
+                <td>
+                    -
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGKAKAIBA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Pagkakaiba ng Paniniwala at Pananampalataya
+    </h2>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                Paniniwala
+            </h3>
+
+            <p>
+                Nakabase sa limang pandama na ginagamit
+                kasama ng isip.
+            </p>
+
+            <p>
+                • Paningin<br>
+                • Pandinig<br>
+                • Panlasa<br>
+                • Pang-amoy<br>
+                • Pandama
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Pananampalataya
+            </h3>
+
+            <p>
+                Hindi nakabase sa limang pandama at mas
+                nakatuon sa pagtitiwala at pananalig.
+            </p>
+
+            <p>
+                Ito ay paniniwala o pag-asa na ang
+                kanilang hinahangad ay mangyayari.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SINAUNANG PANINIWALA
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Mga Sinaunang Paniniwala at Sistema ng Pananampalataya
+    </h2>
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                1. Animismo
+            </h3>
+
+            <p>
+                Ito ang paniniwala na ang lahat ng bagay
+                sa kalikasan, buhay man o hindi, ay may
+                sariling kaluluwa, espiritu, o kamalayan.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                2. Paganismo
+            </h3>
+
+            <p>
+                Ito ay tumutukoy sa mga relihiyon na
+                nakasentro sa kalikasan o mga lumang
+                tradisyon na labas sa mga pangunahing
+                relihiyon sa mundo.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                3. Mitolohiya
+            </h3>
+
+            <p>
+                Tumutukoy sa mga kuwento, alamat, at
+                salaysay ng isang kultura tungkol sa
+                kanilang mga diyos, bayani, at pinagmulan
+                ng mundo.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                4. Politeismo
+            </h3>
+
+            <p>
+                Ito ay paniniwala o relihiyon kung saan
+                sumasamba ang mga tao sa higit sa isang
+                diyos.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                5. Monoteismo
+            </h3>
+
+            <p>
+                Ito ay paniniwala o pagsamba sa iisang
+                diyos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLOSING
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Kultura at Kasaysayan
+    </h2>
+
+
+    <div class="full-content">
+
+        <p>
+            Sa pag-unawa sa paniniwala at pananampalataya
+            ng mga tao, mas nakikilala natin ang kanilang
+            kasaysayan, kultura, at pagkatao.
+        </p>
+
+
+        <p>
+            Ang pag-aaral ng mga paniniwala ay nagbibigay
+            rin ng mas malalim na pag-unawa sa paraan ng
+            pamumuhay at mga tradisyong ipinasa mula sa
+            isang henerasyon patungo sa susunod.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LESSON NAVIGATION
+========================= -->
+
+<div class="lesson-navigation">
+
+    <button
+        class="lesson-button"
+        onclick="location.href='kultura.html'">
+
+        ← Previous Lesson
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='index.html'">
+
+        Back to Home
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='pamahiin.html'">
+
+        Next Lesson →
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <h2 class="footer-title">
+        PHOENIX
+    </h2>
+
+
+    <p>
+        TECH-PRO 1103
+    </p>
+
+
+    <p>
+        Paniniwala at Pananampalataya
+    </p>
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Phoenix - Pangkat ng Tao
+</title>
+
+
+<style>
+
+/* =================================================
+   BASIC PAGE
+================================================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color:#4a382b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ead8c5 0%,
+            #d9c5aa 50%,
+            #e5d5bd 100%
+        );
+
+    overflow-x:hidden;
+
+}
+
+
+/* =================================================
+   CULTURAL BACKGROUND DECORATION
+================================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:360px;
+    height:360px;
+
+    border-radius:50%;
+
+    background:#9b5c3d;
+
+    opacity:.09;
+
+    top:-150px;
+    left:-130px;
+
+    z-index:-1;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:#46634d;
+
+    opacity:.10;
+
+    right:-180px;
+    bottom:-170px;
+
+    z-index:-1;
+
+}
+
+
+/* =================================================
+   MAIN CONTAINER
+================================================= */
+
+.paper{
+
+    width:92%;
+
+    max-width:1050px;
+
+    margin:30px auto 50px;
+
+    background:#faf6ed;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 32px
+        rgba(70,48,35,.22);
+
+    animation:
+        paperEnter
+        .7s
+        ease-out;
+
+}
+
+
+@keyframes paperEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =================================================
+   TOP BAR
+================================================= */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        16px
+        25px;
+
+    background:#4b3529;
+
+    color:white;
+
+}
+
+
+.back-home{
+
+    display:inline-block;
+
+    padding:
+        9px
+        17px;
+
+    background:#d2a85a;
+
+    color:#3f3026;
+
+    text-decoration:none;
+
+    border-radius:20px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.back-home:hover{
+
+    background:#e5c477;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.page-label{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+    opacity:.75;
+
+}
+
+
+/* =================================================
+   HERO / TITLE
+================================================= */
+
+.header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        50px
+        20px
+        60px;
+
+    color:white;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            155deg,
+            #754536,
+            #875642 52%,
+            #52644b
+        );
+
+}
+
+
+/* Cultural pattern */
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            45deg,
+            rgba(255,255,255,.07) 25%,
+            transparent 25%
+        ),
+
+        linear-gradient(
+            -45deg,
+            rgba(255,255,255,.05) 25%,
+            transparent 25%
+        );
+
+    background-size:
+        42px 42px;
+
+    opacity:.45;
+
+}
+
+
+/* Decorative circle */
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border:
+        2px solid
+        rgba(255,255,255,.14);
+
+    border-radius:50%;
+
+    right:-120px;
+
+    bottom:-150px;
+
+}
+
+
+.phoenix-logo{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100px;
+
+    margin-bottom:14px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(0,0,0,.25)
+        );
+
+    animation:
+        logoEnter
+        .8s
+        ease-out;
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+        opacity:0;
+        transform:scale(.85);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+.header h1{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#f2d17b;
+
+    animation:
+        titleEnter
+        .8s
+        ease-out;
+
+}
+
+
+.header p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:720px;
+
+    margin:
+        15px
+        auto
+        0;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:#f8eee4;
+
+}
+
+
+@keyframes titleEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =================================================
+   CULTURE TOPIC STRIP
+================================================= */
+
+.topic-strip{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    padding:
+        18px
+        20px;
+
+    background:#fff;
+
+    border-bottom:
+        1px solid #e0d5c6;
+
+}
+
+
+.topic{
+
+    padding:
+        8px
+        16px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:.6px;
+
+}
+
+
+.topic-heritage{
+
+    background:#ead8cc;
+
+    color:#784333;
+
+}
+
+
+.topic-culture{
+
+    background:#e2eadc;
+
+    color:#456148;
+
+}
+
+
+.topic-people{
+
+    background:#f0e4c5;
+
+    color:#80652d;
+
+}
+
+
+/* =================================================
+   GROUP CARD
+================================================= */
+
+.group-card{
+
+    position:relative;
+
+    margin:
+        28px;
+
+    padding:
+        28px;
+
+    background:#ffffff;
+
+    border:
+        1px solid #ded5c9;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 5px 14px
+        rgba(77,53,39,.09);
+
+    animation:
+        sectionEnter
+        .6s
+        ease-out;
+
+}
+
+
+.group-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:80px;
+
+    height:5px;
+
+    background:#b56b4d;
+
+    border-radius:
+        16px
+        0
+        5px
+        0;
+
+}
+
+
+@keyframes sectionEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =================================================
+   GROUP TITLE
+================================================= */
+
+.group-card h2{
+
+    margin:
+        0
+        0
+        20px;
+
+    padding-bottom:
+        12px;
+
+    border-bottom:
+        2px solid #e1d8ce;
+
+    font-size:30px;
+
+    color:#684333;
+
+    text-align:center;
+
+}
+
+
+/* =================================================
+   GROUP CONTENT
+================================================= */
+
+.group-content{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(250px,1fr)
+        minmax(250px,1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+
+/* =================================================
+   IMAGE
+================================================= */
+
+.image-box{
+
+    text-align:center;
+
+}
+
+
+.image-box img{
+
+    width:100%;
+
+    max-width:430px;
+
+    max-height:320px;
+
+    object-fit:contain;
+
+    border:
+        5px solid #d7bc86;
+
+    border-radius:13px;
+
+    background:#f5f1e8;
+
+    box-shadow:
+        0 7px 15px
+        rgba(76,51,37,.16);
+
+    transition:.3s;
+
+}
+
+
+.image-box img:hover{
+
+    transform:
+        scale(1.025);
+
+    box-shadow:
+        0 10px 20px
+        rgba(76,51,37,.23);
+
+}
+
+
+/* =================================================
+   DESCRIPTION
+================================================= */
+
+.group-description{
+
+    padding:20px;
+
+    background:#f4eee5;
+
+    border:
+        1px solid #e2d8cb;
+
+    border-left:
+        5px solid #557157;
+
+    border-radius:
+        0
+        10px
+        10px
+        0;
+
+}
+
+
+.group-description p{
+
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+.group-description b{
+
+    color:#784333;
+
+}
+
+
+/* =================================================
+   CULTURAL FACTS
+================================================= */
+
+.fact-list{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:18px;
+
+}
+
+
+.fact{
+
+    padding:
+        13px
+        15px;
+
+    background:#eef3eb;
+
+    border:
+        1px solid #d6e1d2;
+
+    border-radius:9px;
+
+    color:#4a604d;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+    transition:.25s;
+
+}
+
+
+.fact:hover{
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 6px 12px
+        rgba(68,91,69,.12);
+
+}
+
+
+/* =================================================
+   GROUP COLORS
+================================================= */
+
+.group-card:nth-of-type(2)::before{
+
+    background:#7c4c3c;
+
+}
+
+.group-card:nth-of-type(3)::before{
+
+    background:#557157;
+
+}
+
+.group-card:nth-of-type(4)::before{
+
+    background:#8c7040;
+
+}
+
+.group-card:nth-of-type(5)::before{
+
+    background:#52788a;
+
+}
+
+
+/* =================================================
+   CLOSING MESSAGE
+================================================= */
+
+.highlight{
+
+    margin:
+        35px
+        28px;
+
+    padding:24px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #52644b,
+            #405743
+        );
+
+    border-radius:14px;
+
+    box-shadow:
+        0 6px 14px
+        rgba(55,73,53,.2);
+
+}
+
+
+.highlight p{
+
+    margin:0;
+
+    color:#fff8ec;
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+/* =================================================
+   LESSON NAVIGATION
+================================================= */
+
+.lesson-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:
+        35px
+        28px;
+
+    padding-top:25px;
+
+    border-top:
+        2px solid #dfd7ce;
+
+}
+
+
+.lesson-button{
+
+    background:#52644b;
+
+    color:white;
+
+    border:none;
+
+    padding:
+        13px
+        23px;
+
+    border-radius:25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 9px
+        rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+
+.lesson-button:hover{
+
+    background:#3f5039;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.lesson-button:nth-child(1){
+
+    background:#d2a85a;
+
+    color:#3f3026;
+
+}
+
+
+.lesson-button:nth-child(1):hover{
+
+    background:#e5c477;
+
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    padding:
+        30px
+        20px;
+
+    background:#4b3529;
+
+    color:white;
+
+}
+
+
+.footer p{
+
+    margin:
+        5px
+        0;
+
+    font-size:14px;
+
+    opacity:.7;
+
+}
+
+
+.footer-title{
+
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:29px;
+
+    color:#f2d17b;
+
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media screen and (max-width:700px){
+
+    .paper{
+
+        width:95%;
+
+        margin:
+            15px
+            auto
+            30px;
+
+        border-radius:16px;
+
+    }
+
+
+    .top-bar{
+
+        padding:
+            14px
+            16px;
+
+    }
+
+
+    .back-home{
+
+        padding:
+            8px
+            13px;
+
+        font-size:13px;
+
+    }
+
+
+    .page-label{
+
+        font-size:9px;
+
+        letter-spacing:1px;
+
+        text-align:right;
+
+    }
+
+
+    .header{
+
+        padding:
+            38px
+            18px
+            45px;
+
+    }
+
+
+    .phoenix-logo{
+
+        width:80px;
+
+    }
+
+
+    .header h1{
+
+        font-size:36px;
+
+    }
+
+
+    .header p{
+
+        font-size:15px;
+
+    }
+
+
+    .topic-strip{
+
+        padding:
+            15px
+            10px;
+
+    }
+
+
+    .topic{
+
+        font-size:11px;
+
+        padding:
+            7px
+            12px;
+
+    }
+
+
+    .group-card{
+
+        margin:
+            18px
+            12px;
+
+        padding:
+            21px
+            18px;
+
+    }
+
+
+    .group-card h2{
+
+        font-size:25px;
+
+    }
+
+
+    .group-content{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .image-box{
+
+        order:-1;
+
+    }
+
+
+    .image-box img{
+
+        max-width:100%;
+
+        max-height:280px;
+
+    }
+
+
+    .group-description p{
+
+        font-size:17px;
+
+    }
+
+
+    .fact-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .highlight{
+
+        margin:
+            25px
+            12px;
+
+        padding:20px;
+
+    }
+
+
+    .highlight p{
+
+        font-size:16px;
+
+    }
+
+
+    .lesson-navigation{
+
+        flex-direction:column;
+
+        margin:
+            25px
+            12px;
+
+    }
+
+
+    .lesson-button{
+
+        width:100%;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* =================================================
+   TABLET
+================================================= */
+
+@media screen and (min-width:701px)
+and (max-width:900px){
+
+    .paper{
+
+        width:94%;
+
+    }
+
+
+    .group-card{
+
+        margin:
+            24px
+            20px;
+
+    }
+
+}
+
+
+/* =================================================
+   REDUCED MOTION
+================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="paper">
+
+
+<!-- =================================================
+     TOP BAR
+================================================= -->
+
+<div class="top-bar">
+
+    <a
+        href="index.html"
+        class="back-home">
+
+        ← Back to Home
+
+    </a>
+
+
+    <div class="page-label">
+
+        PHOENIX • HISTO PAGE
+
+    </div>
+
+</div>
+
+
+<!-- =================================================
+     HERO
+================================================= -->
+
+<header class="header">
+
+    <img
+        class="phoenix-logo"
+        src="Project/Img/Phoenix.png"
+        alt="Phoenix Logo"
+    >
+
+
+    <h1>
+
+        Iba't-ibang Pangkat ng Tao na
+        Naging Bahagi ng Ating Pinagmulan
+
+    </h1>
+
+
+    <p>
+
+        Ang iba't ibang pangkat ng tao ay naging mahalagang
+        bahagi ng paghubog sa kasaysayan, kultura, at
+        pagkakakilanlan ng ating bansa.
+
+    </p>
+
+</header>
+
+
+<!-- =================================================
+     TOPIC STRIP
+================================================= -->
+
+<div class="topic-strip">
+
+    <span class="topic topic-heritage">
+
+        KASAYSAYAN
+
+    </span>
+
+
+    <span class="topic topic-culture">
+
+        KULTURA
+
+    </span>
+
+
+    <span class="topic topic-people">
+
+        MGA TAO
+
+    </span>
+
+</div>
+
+
+<!-- =================================================
+     AETA
+================================================= -->
+
+<section class="group-card">
+
+    <h2>
+        AETA
+    </h2>
+
+
+    <div class="group-content">
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/aeta.jpeg"
+                alt="Aeta"
+            >
+
+        </div>
+
+
+        <div class="group-description">
+
+            <p>
+
+                Ang <b>Aeta</b> ay isa sa mga katutubong
+                pangkat na matagal nang naninirahan sa
+                Pilipinas. Sila ay may natatanging kultura
+                at paraan ng pamumuhay na bahagi ng ating
+                kasaysayan.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     MALAY
+================================================= -->
+
+<section class="group-card">
+
+    <h2>
+        MALAY
+    </h2>
+
+
+    <div class="group-content">
+
+
+        <div class="group-description">
+
+            <p>
+
+                Ang <b>Malay</b> ay kabilang sa mga pangkat
+                na may kaugnayan sa kasaysayan ng
+                paglalayag at paglipat ng mga tao sa
+                Timog-Silangang Asya.
+
+            </p>
+
+
+            <div class="fact-list">
+
+                <div class="fact">
+                    Balangay
+                </div>
+
+                <div class="fact">
+                    Java, Sumatra, Borneo at Malay Peninsula
+                </div>
+
+                <div class="fact">
+                    Tuwid at maitim na buhok
+                </div>
+
+                <div class="fact">
+                    Mabilog at maitim na mata
+                </div>
+
+                <div class="fact">
+                    Katamtamang tangos ng ilong
+                </div>
+
+                <div class="fact">
+                    Katamtamang tangkad
+                </div>
+
+                <div class="fact">
+                    Matipuno
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/malay.jpeg"
+                alt="Malay"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     INDONESIAN
+================================================= -->
+
+<section class="group-card">
+
+    <h2>
+        INDONESIAN
+    </h2>
+
+
+    <div class="group-content">
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/indo.jpeg"
+                alt="Indonesian"
+            >
+
+        </div>
+
+
+        <div class="group-description">
+
+            <p>
+
+                Ang <b>Indonesian</b> ay kabilang sa mga
+                pangkat ng tao sa Timog-Silangang Asya
+                na may mga ugnayan sa kasaysayan at kultura
+                ng rehiyon.
+
+            </p>
+
+
+            <div class="fact-list">
+
+                <div class="fact">
+                    Matangkad
+                </div>
+
+                <div class="fact">
+                    Kayumanggi
+                </div>
+
+                <div class="fact">
+                    Matangos ang ilong
+                </div>
+
+                <div class="fact">
+                    Tuwid o wavy na buhok
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     IVATAN
+================================================= -->
+
+<section class="group-card">
+
+    <h2>
+        IVATAN
+    </h2>
+
+
+    <div class="group-content">
+
+
+        <div class="group-description">
+
+            <p>
+
+                Ang <b>Ivatan</b> ay isang pangkat ng
+                katutubong Pilipino na matatagpuan sa
+                Batanes. Kilala sila sa kanilang natatanging
+                kultura at pamumuhay na angkop sa kapaligiran.
+
+            </p>
+
+
+            <div class="fact-list">
+
+                <div class="fact">
+                    Kayumanggi
+                </div>
+
+                <div class="fact">
+                    Itim na buhok at mata
+                </div>
+
+                <div class="fact">
+                    Katamtamang pangangatawan
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="image-box">
+
+            <img
+                src="Project/Img/ivatan.jpeg"
+                alt="Ivatan"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     CLOSING MESSAGE
+================================================= -->
+
+<div class="highlight">
+
+    <p>
+
+        Ang iba't ibang pangkat ng tao ay bahagi ng
+        kasaysayan at pinagmulan ng ating bansa.
+        Ang kanilang kultura, pamumuhay, at karanasan
+        ay nakatulong sa paghubog ng ating pagkakakilanlan.
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     LESSON NAVIGATION
+================================================= -->
+
+<div class="lesson-navigation">
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='muntinlupa.html'">
+
+        ← Previous Lesson
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='index.html'">
+
+        Back to Home
+
+    </button>
+
+
+    <button
+        class="lesson-button"
+        onclick="location.href='ilaya_ilawod.html'">
+
+        Next Lesson →
+
+    </button>
+
+
+</div>
+
+
+<!-- =================================================
+     FOOTER
+==================================
+    = -->
+
+<footer class="footer">
+
+    <h2 class="footer-title">
+
+        PHOENIX
+
+    </h2>
+
+
+    <p>
+
+        TECH-PRO 1103
+
+    </p>
+
+
+    <p>
+
+        Pag-aaral ng Kasaysayan at Kulturang Pilipino
+
+    </p>
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>
