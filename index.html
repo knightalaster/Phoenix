@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Phoenix - Histo Page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Indie+Flower&family=Permanent+Marker&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">    
+    
+<link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet"
+>    
+    
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+
+    background:#b99272;
+
+    color:#5b3a1e;
+
+    font-family:Georgia, serif;
+
+    overflow-x:hidden;
+}
+
+
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
+
+.page{
+    width:100%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:25px 20px 0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+
+    min-height:520px;
+
+    background:#f8f1df;
+
+    border:8px solid #d8c3a3;
+
+    padding:60px 30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+    animation:heroEnter .8s ease-out;
+}
+
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    inset:18px;
+
+    border:2px solid #d8c3a3;
+
+    pointer-events:none;
+}
+
+
+.hero::after{
+    content:"✦";
+
+    position:absolute;
+
+    top:25px;
+    left:28px;
+
+    color:#8b5a2b;
+
+    font-size:22px;
+
+    opacity:.55;
+
+    z-index:2;
+}
+
+
+/* =========================================================
+   HERO DECORATIONS
+========================================================= */
+
+.clock{
+    position:absolute;
+
+    width:85px;
+
+    top:5px;
+
+    right:5px;
+
+    z-index:2;
+
+    animation:clockFloat 4s ease-in-out infinite;
+}
+
+
+.feather{
+    position:absolute;
+
+    width:140px;
+
+    left:-10px;
+
+    bottom:5px;
+
+    z-index:2;
+
+    transform:rotate(-8deg);
+
+    opacity:.85;
+}
+
+
+.phoenix-logo{
+    width:125px;
+
+    margin-bottom:20px;
+
+    z-index:2;
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero h3{
+    margin:0;
+
+    font-size:32px;
+
+    letter-spacing:2px;
+
+    z-index:2;
+}
+
+
+.hero h4{
+    margin:10px 0 0;
+
+    font-size:21px;
+
+    letter-spacing:1px;
+
+    font-weight:normal;
+
+    z-index:2;
+}
+
+
+.hero h1{
+    margin:45px 0 0;
+
+    font-family:cursive;
+
+    font-size:90px;
+
+    font-weight:normal;
+
+    line-height:1;
+
+    z-index:2;
+    
+}
+
+
+.hero-line{
+    width:180px;
+
+    height:2px;
+
+    background:#d8c3a3;
+
+    margin:25px 0;
+
+    z-index:2;
+}
+
+
+.hero-subtitle{
+    margin:0;
+
+    font-size:16px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    opacity:.75;
+
+    z-index:2;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.main-navigation{
+    width:100%;
+
+    margin:35px auto 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+
+.main-button{
+    min-width:230px;
+
+    padding:18px 30px;
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    border:3px solid #d8c3a3;
+
+    border-radius:8px;
+
+    font-family:Georgia, serif;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.25);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.main-button:hover{
+    background:#a66b35;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 9px 16px rgba(0,0,0,.3);
+}
+
+
+.main-button:active{
+    transform:translateY(1px);
+}
+
+
+.main-button:focus-visible{
+    outline:4px solid #5b3a1e;
+
+    outline-offset:4px;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.section-title{
+    margin:70px 0 25px;
+
+    text-align:center;
+}
+
+
+.section-title h2{
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:42px;
+
+    font-weight:normal;
+}
+
+
+.section-title p{
+    margin:8px 0 0;
+
+    font-size:16px;
+
+    opacity:.75;
+}
+
+
+.section-line{
+    width:120px;
+
+    height:2px;
+
+    background:#d8c3a3;
+
+    margin:18px auto 0;
+}
+
+
+/* =========================================================
+   LESSON GRID
+========================================================= */
+
+.lesson-grid{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap:20px;
+}
+
+
+/* =========================================================
+   HIRAYA-STYLE LESSON CARD
+========================================================= */
+
+.lesson-card{
+    position:relative;
+
+    background:#f8f1df;
+
+    border:5px solid #d8c3a3;
+
+    border-radius:8px;
+
+    padding:22px;
+
+    min-height:245px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    color:#5b3a1e;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.2);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+
+.lesson-card:hover{
+    transform:translateY(-8px) scale(1.01);
+
+    box-shadow:
+        0 14px 25px rgba(0,0,0,.18);
+
+    border-color:#c9ad84;
+}
+
+.lesson-card:active{
+    transform:translateY(-1px);
+}
+
+
+.lesson-card:focus-visible{
+    outline:4px solid #8b5a2b;
+
+    outline-offset:4px;
+}
+
+/* =========================================================
+   LESSON CARD SCROLL REVEAL
+========================================================= */
+
+.lesson-card{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease,
+        box-shadow .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+
+}
+
+
+.lesson-card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}    
+
+/* =========================================================
+   LESSON NUMBER
+========================================================= */
+
+.lesson-number{
+    font-family:Arial, sans-serif;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    color:#8b5a2b;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================================================
+   LESSON ICON
+========================================================= */
+
+.lesson-icon{
+    width:50px;
+
+    height:50px;
+
+    border-radius:10px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#e5d2b5;
+
+    color:#8b5a2b;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+    border:2px solid #d8c3a3;
+    
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.lesson-card:hover .lesson-icon{
+    transform:translateY(-3px) scale(1.05);
+
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.12);
+}    
+
+/* =========================================================
+   LESSON TITLE
+========================================================= */
+
+.lesson-card h4{
+    margin:0 0 8px;
+
+    font-family:Georgia, serif;
+
+    font-size:21px;
+
+    font-weight:normal;
+
+    color:#5b3a1e;
+
+    line-height:1.2;
+}
+
+
+/* =========================================================
+   LESSON DESCRIPTION
+========================================================= */
+
+.lesson-card p{
+    margin:0;
+
+    font-family:Arial, sans-serif;
+
+    font-size:13px;
+
+    line-height:1.55;
+
+    color:#75604d;
+}
+
+
+/* =========================================================
+   LESSON BOTTOM
+========================================================= */
+
+.lesson-bottom{
+    margin-top:auto;
+
+    padding-top:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+}
+
+
+/* =========================================================
+   LESSON TAG
+========================================================= */
+
+.lesson-tag{
+    font-family:Arial, sans-serif;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+    color:#8b5a2b;
+
+    background:#eadbc4;
+
+    border:1px solid #d8c3a3;
+
+    padding:6px 9px;
+
+    border-radius:20px;
+}
+
+
+/* =========================================================
+   LEARN BUTTON
+========================================================= */
+
+.learn-btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#8b5a2b;
+
+    color:#f8f1df;
+
+    border:2px solid #d8c3a3;
+
+    border-radius:8px;
+
+    padding:10px 14px;
+
+    font-family:Arial, sans-serif;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.learn-btn:hover{
+    transform:translateX(5px);
+
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.18);
+}
+
+
+/* =========================================================
+   MEMBERS
+========================================================= */
+
+.members-grid{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0,1fr));
+
+    gap:18px;
+}
+
+
+.member-card{
+    position:relative;
+
+    min-height:130px;
+
+    padding:22px 18px;
+
+    background:#f8f1df;
+
+    border:4px solid #d8c3a3;
+
+    border-radius:8px;
+
+    color:#5b3a1e;
+
+    text-align:center;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.18);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease,
+        border-color .3s ease;
+}
+
+
+.member-card:hover{
+    background:#fff8e9;
+
+    border-color:#c9ad84;
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 10px 18px rgba(0,0,0,.25);
+}
+
+
+.member-number{
+    display:block;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    opacity:.55;
+
+    margin-bottom:12px;
+}
+
+
+.member-card h3{
+    margin:0;
+
+    font-size:19px;
+
+    line-height:1.35;
+
+    font-weight:normal;
+}
+
+/* =========================================================
+   MOVING DECORATION
+========================================================= */
+
+.moving-decoration{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    margin-top:70px;
+
+    padding:10px 0;
+
+    pointer-events:none;
+
+}
+
+.decoration-track{
+
+    display:flex;
+
+    gap:60px;
+
+    width:max-content;
+
+    animation:
+        decorationMove
+        24s
+        linear
+        infinite;
+
+}
+
+
+.decoration-box{
+
+    width:115px;
+
+    height:95px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#f3e6ce;
+
+    border:2px solid #d8c3a3;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0,0,0,.12);
+
+}
+
+
+.decoration-box img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    display:block;
+
+    opacity:80%;
+
+}
+
+
+@keyframes decorationMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}    
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+    position:relative;
+
+    margin-top:90px;
+
+    min-height:220px;
+
+    background:#f8f1df;
+
+    border-top:8px solid #d8c3a3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 -5px 15px rgba(0,0,0,.15);
+
+    padding:40px 20px;
+}
+
+
+.footer h2{
+    margin:0;
+
+    font-family:cursive;
+
+    font-size:36px;
+
+    font-weight:normal;
+
+    z-index:2;
+}
+
+
+.footer p{
+    margin:8px 0;
+
+    font-size:16px;
+
+    z-index:2;
+}
+
+
+.footer-quote{
+    margin:8px 0 15px;
+
+    max-width:500px;
+
+    font-size:15px;
+
+    font-style:italic;
+
+    line-height:1.5;
+
+    opacity:.75;
+
+    z-index:2;
+}
+
+
+.footer-line{
+    width:100px;
+
+    height:2px;
+
+    background:#d8c3a3;
+
+    margin:10px 0;
+
+    z-index:2;
+}
+
+
+/* Footer decorations */
+
+.footer-church{
+    position:absolute;
+
+    width:280px;
+
+    left:-20px;
+
+    bottom:0;
+
+    opacity:.75;
+
+    pointer-events:none;
+}
+
+
+.footer-tower{
+    position:absolute;
+
+    width:190px;
+
+    right:-10px;
+
+    bottom:0;
+
+    opacity:.75;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroEnter{
+
+    from{
+        opacity:0;
+
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes logoEnter{
+
+    from{
+        opacity:0;
+
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+
+        transform:scale(1);
+    }
+
+}
+
+
+@keyframes titleEnter{
+
+    from{
+        opacity:0;
+
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes clockFloat{
+
+    0%,100%{
+        transform:rotate(-3deg) translateY(0);
+    }
+
+    50%{
+        transform:rotate(3deg) translateY(-5px);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (max-width:900px){
+
+    .members-grid{
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width:700px){
+
+    .page{
+        padding:15px 12px 0;
+    }
+
+
+    /* Hero */
+
+    .hero{
+        min-height:450px;
+
+        padding:50px 20px;
+    }
+
+
+    .hero::before{
+        inset:12px;
+    }
+
+
+    .hero::after{
+        top:18px;
+
+        left:20px;
+
+        font-size:17px;
+    }
+
+
+    .phoenix-logo{
+        width:95px;
+    }
+
+
+    .clock{
+        width:60px;
+
+        top:5px;
+
+        right:5px;
+    }
+
+
+    .feather{
+        width:95px;
+
+        left:-8px;
+
+        bottom:5px;
+    }
+
+
+    .hero h3{
+        font-size:24px;
+    }
+
+
+    .hero h4{
+        font-size:17px;
+    }
+
+
+    .hero h1{
+        font-size:58px;
+
+        margin-top:35px;
+    }
+
+
+    .hero-subtitle{
+        font-size:12px;
+
+        letter-spacing:2px;
+    }
+
+
+    /* Main buttons */
+
+    .main-navigation{
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:12px;
+    }
+
+
+    .main-button{
+        width:90%;
+
+        min-width:0;
+
+        font-size:18px;
+
+        padding:15px 20px;
+    }
+
+
+    /* Section titles */
+
+    .section-title{
+        margin-top:55px;
+    }
+
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+
+    .section-title p{
+        font-size:14px;
+    }
+
+
+    /* Lessons */
+
+    .lesson-grid{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+
+    .lesson-card{
+        min-height:220px;
+
+        padding:20px;
+    }
+
+
+    .lesson-card h4{
+        font-size:19px;
+
+        line-height:1.25;
+    }
+
+
+    .lesson-card p{
+        font-size:13px;
+    }
+
+
+    .lesson-icon{
+        width:48px;
+
+        height:48px;
+
+        font-size:22px;
+    }
+
+
+    .learn-btn{
+        padding:9px 12px;
+
+        font-size:11px;
+    }
+
+
+    /* Members */
+
+    .members-grid{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+
+    .member-card{
+        min-height:110px;
+
+        padding:20px;
+    }
+
+
+    .member-card h3{
+        font-size:18px;
+    }
+
+    
+
+    /* Footer */
+
+    .footer{
+        min-height:210px;
+
+        margin-top:60px;
+
+        padding:35px 15px;
+    }
+
+
+    .footer h2{
+        font-size:28px;
+    }
+
+
+    .footer p{
+        font-size:14px;
+    }
+
+
+    .footer-quote{
+        font-size:13px;
+
+        max-width:270px;
+    }
+
+
+    .footer-church{
+        width:150px;
+
+        left:-20px;
+    }
+
+
+    .footer-tower{
+        width:110px;
+
+        right:-5px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media screen and (max-width:400px){
+
+    .hero h1{
+        font-size:50px;
+    }
+
+
+    .hero h3{
+        font-size:21px;
+    }
+
+
+    .hero h4{
+        font-size:15px;
+    }
+
+
+    .hero-subtitle{
+        font-size:10px;
+    }
+
+
+    .lesson-card{
+        min-height:220px;
+
+        padding:18px;
+    }
+
+
+    .lesson-card h4{
+        font-size:18px;
+    }
+
+
+    .lesson-card p{
+        font-size:12px;
+    }
+
+
+    .member-card h3{
+        font-size:17px;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE TV / VERY LARGE SCREENS
+========================================================= */
+
+@media screen and (min-width:1500px){
+
+    .page{
+        max-width:1250px;
+    }
+
+
+    .hero{
+        min-height:560px;
+    }
+
+
+    .hero h1{
+        font-size:100px;
+    }
+
+
+    .lesson-card{
+        min-height:270px;
+
+        padding:30px;
+    }
+
+
+    .lesson-card h4{
+        font-size:24px;
+    }
+
+
+    .lesson-card p{
+        font-size:14px;
+    }
+
+
+    .member-card{
+        min-height:145px;
+
+        padding:25px 20px;
+    }
+
+
+    .member-card h3{
+        font-size:21px;
+    }
+
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.lesson-card{
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        box-shadow .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+.lesson-card.show{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* Slight stagger between cards */
+
+.lesson-card:nth-child(1){
+    transition-delay:.05s;
+}
+
+.lesson-card:nth-child(2){
+    transition-delay:.10s;
+}
+
+.lesson-card:nth-child(3){
+    transition-delay:.15s;
+}
+
+.lesson-card:nth-child(4){
+    transition-delay:.20s;
+}
+
+.lesson-card:nth-child(5){
+    transition-delay:.25s;
+}
+
+.lesson-card:nth-child(6){
+    transition-delay:.30s;
+}
+
+.lesson-card:nth-child(7){
+    transition-delay:.35s;
+}
+
+.lesson-card:nth-child(8){
+    transition-delay:.40s;
+}
+
+.lesson-card:nth-child(9){
+    transition-delay:.45s;
+}    
+
+/* =========================================================
+   SECTION TITLE REVEAL
+========================================================= */
+
+.section-title{
+    opacity:0;
+    transform:translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.section-title.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+.section-line{
+    transform:scaleX(0);
+
+    transform-origin:center;
+
+    transition:
+        transform .8s ease .2s;
+}
+
+.section-title.show .section-line{
+    transform:scaleX(1);
+}    
+    
+/* =========================================================
+   HERO ENTRANCE SEQUENCE
+========================================================= */
+
+.hero > .phoenix-logo{
+    opacity:0;
+    transform:translateY(15px) scale(.92);
+
+    animation:
+        heroLogoEnter .8s ease-out .1s forwards;
+}
+
+
+.hero > h3{
+    opacity:0;
+    transform:translateY(15px);
+
+    animation:
+        heroTextEnter .7s ease-out .35s forwards;
+}
+
+
+.hero > h4{
+    opacity:0;
+    transform:translateY(15px);
+
+    animation:
+        heroTextEnter .7s ease-out .5s forwards;
+}
+
+
+.hero > h1{
+    opacity:0;
+    transform:translateY(25px);
+
+    animation:
+        heroTitleEnter .9s ease-out .65s forwards;
+}
+
+
+.hero > .hero-line{
+    opacity:0;
+    transform:scaleX(0);
+
+    animation:
+        heroLineEnter .7s ease-out 1.15s forwards;
+}
+
+
+.hero > .hero-subtitle{
+    opacity:0;
+    transform:translateY(12px);
+
+    animation:
+        heroTextEnter .7s ease-out 1.35s forwards;
+}
+
+
+/* =========================
+   HERO KEYFRAMES
+========================= */
+
+@keyframes heroLogoEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(15px) scale(.92);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes heroTextEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes heroTitleEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes heroLineEnter{
+
+    from{
+        opacity:0;
+        transform:scaleX(0);
+    }
+
+    to{
+        opacity:1;
+        transform:scaleX(1);
+    }
+
+}   
+    
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+.scroll-progress{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:0%;
+    height:3px;
+
+    background:#8b5a2b;
+
+    z-index:9999;
+
+    transition:width .08s linear;
+
+}    
+    
+/* =========================================================
+   PAGE TRANSITION
+========================================================= */
+
+body{
+    opacity:1;
+
+    transition:
+        opacity .35s ease;
+}
+
+body.page-exit{
+    opacity:0;
+}    
+    
+/* =========================================================
+   PHOENIX TEAM INTRO
+========================================================= */
+
+.team-intro{
+
+    width:100%;
+
+    overflow:hidden;
+
+    margin-top:70px;
+
+    margin-bottom:20px;
+
+    padding:0px 0;
+
+    pointer-events:none;
+
+}
+
+
+.team-track{
+
+    display:flex;
+
+    width:max-content;
+
+    gap:70px;
+
+    animation:
+        teamMove
+        24s
+        linear
+        infinite;
+
+}
+
+
+.team-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    flex-shrink:0;
+
+    color:#9a6a2f;
+
+    font-family:
+        "Elsie",
+        Georgia,
+        serif;
+
+    font-size:100px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    opacity:100;
+
+    white-space:nowrap;
+
+}
+
+
+.team-item img{
+
+    width:100px;
+
+    height:100px;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
+
+@keyframes teamMove{
+
+    from{
+
+        transform:translateX(-50%);
+
+    }
+
+    to{
+
+        transform:translateX(0);
+
+    }
+
+}    
+    
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="scroll-progress"></div>    
+    
+<!-- =========================================================
+     PAGE
+========================================================= -->
+
+<div class="page">
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+
+<img
+    class="clock"
+    src="Project/Img/Clock.png"
+    alt="Decorative clock"
+>
+
+
+<img
+    class="phoenix-logo"
+    src="Project/Img/Phoenix.png"
+    alt="Phoenix logo"
+>
+
+
+<h3>
+    HISTO PAGE
+</h3>
+
+
+<h4>
+    TECH-PRO 1103
+</h4>
+
+
+<h1>
+    "Phoenix"
+</h1>
+
+
+<div class="hero-line"></div>
+
+
+<p class="hero-subtitle">
+    A Journey Through History
+</p>
+
+
+<img
+    class="feather"
+    src="Project/Img/Feather.png"
+    alt="Decorative feather"
+>
+
+
+</section>
+
+
+<!-- =========================================================
+     MAIN NAVIGATION
+========================================================= -->
+
+<div class="main-navigation">
+
+
+<button
+    class="main-button"
+    onclick="scrollToSection('lessons')"
+>
+    Explore Lessons
+</button>
+
+
+<button
+    class="main-button"
+    onclick="scrollToSection('members')"
+>
+    Meet the Members
+</button>
+
+
+</div>
+
+
+<!-- =========================================================
+     LESSONS
+========================================================= -->
+
+<section id="lessons">
+
+
+<div class="section-title">
+
+<h2>
+    Our Lessons
+</h2>
+
+<p>
+    Explore the topics prepared by Phoenix.
+</p>
+
+<div class="section-line"></div>
+
+</div>
+
+
+<div class="lesson-grid">
+
+
+<!-- =====================================================
+     LESSON 1
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 01
+</span>
+
+<div class="lesson-icon">
+    🌍
+</div>
+
+<h4>
+    Pag-aaral ng Heograpiya ng Mundo
+</h4>
+
+<p>
+    Learn how maps, globes, latitude, longitude,
+    and locations help us understand our world.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    GEOGRAPHY
+</span>
+
+<a
+    href="heograpiya.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =====================================================
+     LESSON 2
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 02
+</span>
+
+<div class="lesson-icon">
+    📜
+</div>
+
+<h4>
+    Kahulugan ng Kasaysayan
+</h4>
+
+<p>
+    Discover what history means and learn about
+    important thinkers who shaped historical study.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    HISTORY
+</span>
+
+<a
+    href="history.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =====================================================
+     LESSON 3
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 03
+</span>
+
+<div class="lesson-icon">
+    🏛
+</div>
+
+<h4>
+    Kamalayang Pangkasaysayan at Lokal na Konteksto ng Muntinlupa
+</h4>
+
+<p>
+    Understand how history connects with local
+    identity and the story of Muntinlupa.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    LOCAL HISTORY
+</span>
+
+<a
+    href="muntinlupa.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =====================================================
+     LESSON 4
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 04
+</span>
+
+<div class="lesson-icon">
+    👥
+</div>
+
+<h4>
+    Iba't-ibang Pangkat ng Tao na Naging Bahagi ng Ating Pinagmulan
+</h4>
+
+<p>
+    Explore different groups of people and discover
+    how geography and migration shaped communities.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    PEOPLE
+</span>
+
+<a
+    href="groups.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =====================================================
+     LESSON 5
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 05
+</span>
+
+<div class="lesson-icon">
+    🏞️
+</div>
+
+<h4>
+    Ilaya at Ilawod
+</h4>
+
+<p>
+    Learn about different communities and groups
+    associated with the upland and lowland regions.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    CULTURE
+</span>
+
+<a
+    href="ilaya_ilawod.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =====================================================
+     LESSON 6
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 06
+</span>
+
+<div class="lesson-icon">
+    🧵
+</div>
+
+<h4>
+    Ugnayan ng Kultura at Kamalayang Pangkasaysayan
+</h4>
+
+<p>
+    Explore material and non-material culture
+    and discover how culture shapes everyday life.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    CULTURE
+</span>
+
+<a
+    href="kultura.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =====================================================
+     LESSON 7
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 07
+</span>
+
+<div class="lesson-icon">
+    🕊️
+</div>
+
+<h4>
+    Paniniwala at Pananampalataya
+</h4>
+
+<p>
+    Learn about major religions, beliefs, mythology,
+    animism, polytheism, and monotheism.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    BELIEFS
+</span>
+
+<a
+    href="paniniwala.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =====================================================
+     LESSON 8
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 08
+</span>
+
+<div class="lesson-icon">
+    🪔
+</div>
+
+<h4>
+    Sinaunang Paniniwala at Kultura ng mga Pilipino
+</h4>
+
+<p>
+    Discover ancient Filipino beliefs, traditions,
+    Bathala, Babaylan, Katalonan, and the Manunggul Jar.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    PHILIPPINE CULTURE
+</span>
+
+<a
+    href="pamahiin.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =====================================================
+     LESSON 9
+===================================================== -->
+
+<article class="lesson-card">
+
+<span class="lesson-number">
+    LESSON 09
+</span>
+
+<div class="lesson-icon">
+    🌿
+</div>
+
+<h4>
+    Halamang Gamot
+</h4>
+
+<p>
+    Examine the traditional use of guava leaves,
+    including its possible benefits and limitations.
+</p>
+
+<div class="lesson-bottom">
+
+<span class="lesson-tag">
+    HEALTH & CULTURE
+</span>
+
+<a
+    href="gamot.html"
+    class="learn-btn"
+>
+    Learn →
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     PHOENIX TEAM INTRO
+========================================================= -->
+
+<div class="team-intro">
+
+    <div class="team-track">
+
+        <div class="team-item">
+
+            <img
+                src="Project/Img/Phoenix.png"
+                alt=""
+            >
+
+            <span>
+                PHOENIX TEAM
+            </span>
+
+        </div>
+
+
+        <div class="team-item">
+
+            <img
+                src="Project/Img/Phoenix.png"
+                alt=""
+            >
+
+            <span>
+                PHOENIX TEAM
+            </span>
+
+        </div>
+
+
+        <div class="team-item">
+
+            <img
+                src="Project/Img/Phoenix.png"
+                alt=""
+            >
+
+            <span>
+                PHOENIX TEAM
+            </span>
+
+        </div>
+
+
+        <div class="team-item">
+
+            <img
+                src="Project/Img/Phoenix.png"
+                alt=""
+            >
+
+            <span>
+                PHOENIX TEAM
+            </span>
+
+        </div>
+
+    </div>
+
+</div>    
+
+<!-- =========================================================
+     MEMBERS
+========================================================= -->
+
+<section id="members">
+
+
+<div class="section-title">
+
+<h2>
+    The Phoenix Team
+</h2>
+
+<p>
+    The members behind this project.
+</p>
+
+<div class="section-line"></div>
+
+</div>
+
+
+<div class="members-grid">
+
+
+<!-- MEMBER 1 -->
+
+<div class="member-card">
+
+<span class="member-number">
+    MEMBER 01
+</span>
+
+<h3>
+    Sam Eduard O. Alaan
+</h3>
+
+</div>
+
+
+<!-- MEMBER 2 -->
+
+<div class="member-card">
+
+<span class="member-number">
+    MEMBER 02
+</span>
+
+<h3>
+    Angeline Blando
+</h3>
+
+</div>
+
+
+<!-- MEMBER 3 -->
+
+<div class="member-card">
+
+<span class="member-number">
+    MEMBER 03
+</span>
+
+<h3>
+    Ilyn Plaza
+</h3>
+
+</div>
+
+
+<!-- MEMBER 4 -->
+
+<div class="member-card">
+
+<span class="member-number">
+    MEMBER 04
+</span>
+
+<h3>
+    Venice Dela Cruz
+</h3>
+
+</div>
+
+
+<!-- MEMBER 5 -->
+
+<div class="member-card">
+
+<span class="member-number">
+    MEMBER 05
+</span>
+
+<h3>
+    Elmer Jr. Alcaraz
+</h3>
+
+</div>
+
+
+<!-- MEMBER 6 -->
+
+<div class="member-card">
+
+<span class="member-number">
+    MEMBER 06
+</span>
+
+<h3>
+    Prince Delgado
+</h3>
+
+</div>
+
+
+<!-- MEMBER 7 -->
+
+<div class="member-card">
+
+<span class="member-number">
+    MEMBER 07
+</span>
+
+<h3>
+    Ariane Mae Dailisan
+</h3>
+
+</div>
+
+
+<!-- MEMBER 8 -->
+
+<div class="member-card">
+
+<span class="member-number">
+    MEMBER 08
+</span>
+
+<h3>
+    Ally Ian Santander
+</h3>
+
+</div>
+
+
+</div>
+
+</section>
+
+<div class="moving-decoration">
+
+    <div class="decoration-track">
+
+        <div class="decoration-box">
+            <img src="Project/Img/feat.png" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/q.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/e.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/r.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/t.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/w.jpeg" alt="">
+        </div>
+        
+        <div class="decoration-box">
+            <img src="Project/Img/feat.png" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/q.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/e.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/r.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/t.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/w.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/feat.png" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/q.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/e.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/r.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/t.jpeg" alt="">
+        </div>
+
+        <div class="decoration-box">
+            <img src="Project/Img/w.jpeg" alt="">
+        </div>
+
+    </div>
+
+</div>
+    
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+
+<img
+    class="footer-church"
+    src="Project/Img/Church.png"
+    alt="Decorative church"
+>
+
+
+<div class="footer-line"></div>
+
+
+<h2>
+    Phoenix
+</h2>
+
+
+<p>
+    TECH-PRO 1103
+</p>
+
+
+<p class="footer-quote">
+    “From the ashes of the past,<br>
+    we rise to shape the future.”
+</p>
+
+
+<div class="footer-line"></div>
+
+
+<img
+    class="footer-tower"
+    src="Project/Img/Tower.png"
+    alt="Decorative tower"
+>
+
+
+</footer>
+
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+function scrollToSection(id){
+
+    const section =
+        document.getElementById(id);
+
+    if(section){
+
+        section.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    }
+
+}
+
+
+function openCard(event,url){
+
+    if(
+        event.key === "Enter" ||
+        event.key === " "
+    ){
+
+        event.preventDefault();
+
+        location.href = url;
+
+    }
+
+}
+
+const lessonCards =
+    document.querySelectorAll(".lesson-card");
+
+const sectionTitles =
+    document.querySelectorAll(".section-title");    
+
+const lessonObserver =
+    new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                    lessonObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold:0.15
+        }
+    );
+
+
+lessonCards.forEach((card) => {
+
+    lessonObserver.observe(card);
+
+});    
+    
+sectionTitles.forEach((title) => {
+
+    lessonObserver.observe(title);
+
+});    
+    
+const scrollProgress =
+    document.querySelector(".scroll-progress");
+
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop =
+        window.scrollY;
+
+    const documentHeight =
+        document.documentElement.scrollHeight
+        - window.innerHeight;
+
+    const progress =
+        (scrollTop / documentHeight) * 100;
+
+    scrollProgress.style.width =
+        progress + "%";
+
+});    
+    
+/* =========================================================
+   PAGE TRANSITION
+========================================================= */
+
+document.querySelectorAll(".learn-btn").forEach((button) => {
+
+    button.addEventListener("click", (event) => {
+
+        event.preventDefault();
+
+        const destination =
+            button.href;
+
+        document.body.classList.add("page-exit");
+
+        setTimeout(() => {
+
+            window.location.href =
+                destination;
+
+        }, 350);
+
+    });
+
+});    
+    
+    
+    
+</script>
+
+
+</body>
+</html>
