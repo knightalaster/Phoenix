@@ -1,0 +1,3139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Phoenix</title>
+
+<style>
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: #000;
+    scroll-behavior: auto;
+}
+
+body {
+    overflow-x: hidden;
+    background: #f3eee5;
+    color: #123f78;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+:root {
+    --blue: #123f78;
+    --deep-blue: #071b36;
+    --orange: #f47721;
+    --paper: #f3eee5;
+    --paper-dark: #e5dccd;
+    --muted: #687587;
+    --black: #000;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+section {
+    position: relative;
+}
+
+.scene {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+    height: 100svh;
+
+    overflow: hidden;
+}
+
+.label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+}
+
+.display {
+    font-weight: 900;
+    letter-spacing: -.085em;
+    line-height: .82;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    height: 190vh;
+    background: var(--paper);
+}
+
+.hero-scene {
+    background: var(--paper);
+}
+
+.hero-header {
+    position: absolute;
+    top: 30px;
+    left: 6vw;
+    right: 6vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+.hero-header .label:first-child {
+    color: var(--orange);
+}
+
+.hero-ghost {
+    position: absolute;
+    left: -4vw;
+    bottom: -1vw;
+
+    color: rgba(18, 63, 120, .035);
+
+    font-size: 28vw;
+    font-weight: 900;
+    letter-spacing: -.12em;
+
+    white-space: nowrap;
+    user-select: none;
+}
+
+.hero-logo {
+    position: absolute;
+
+    left: 8vw;
+    top: 15vh;
+
+    width: clamp(120px, 15vw, 200px);
+
+    opacity: 0;
+
+    transform:
+        translateY(70px)
+        scale(.8);
+
+    will-change:
+        transform,
+        opacity;
+}
+
+.hero-title {
+    position: absolute;
+
+    left: 8vw;
+    bottom: 17vh;
+
+    font-size: clamp(
+        64px,
+        10vw,
+        150px
+    );
+
+    opacity: 0;
+
+    transform:
+        translateY(60px);
+
+    will-change:
+        transform,
+        opacity;
+}
+
+.hero-title span {
+    display: block;
+    color: var(--orange);
+}
+
+.hero-description {
+    position: absolute;
+
+    right: 8vw;
+    bottom: 18vh;
+
+    width: min(
+        340px,
+        34vw
+    );
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    will-change:
+        transform,
+        opacity;
+}
+
+.hero-scroll {
+    position: absolute;
+
+    left: 8vw;
+    bottom: 5vh;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .25em;
+}
+
+.hero-scroll span {
+    width: 45px;
+    height: 1px;
+
+    background: var(--blue);
+}
+
+
+/* =========================================================
+   PROJECT SECTION
+========================================================= */
+
+.project {
+    height: 190vh;
+    background: var(--blue);
+    color: white;
+}
+
+.project-scene {
+    background: var(--blue);
+}
+
+.project-number {
+    position: absolute;
+
+    top: 7vh;
+    left: 6vw;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        .55
+    );
+}
+
+.project-line {
+    position: absolute;
+
+    left: 7vw;
+    top: 15vh;
+    bottom: 10vh;
+
+    width: 2px;
+
+    background: var(--orange);
+
+    transform-origin: top;
+
+    transform:
+        scaleY(0);
+}
+
+.project-heading {
+    position: absolute;
+
+    left: 10vw;
+    top: 23vh;
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+}
+
+.project-heading .label {
+    color: var(--orange);
+}
+
+.project-heading h2 {
+    margin-top: 20px;
+
+    font-size: clamp(
+        55px,
+        7vw,
+        105px
+    );
+}
+
+.project-image {
+    position: absolute;
+
+    left: 13vw;
+    bottom: 11vh;
+
+    width: clamp(
+        150px,
+        18vw,
+        270px
+    );
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transform:
+        translateY(90px)
+        rotate(-7deg);
+}
+
+.project-panel {
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    width: min(
+        650px,
+        84vw
+    );
+
+    min-height: 56vh;
+
+    padding:
+        clamp(
+            40px,
+            6vw,
+            75px
+        );
+
+    background: var(--paper);
+
+    color: var(--blue);
+
+    border-radius:
+        26px 0 0 26px;
+
+    transform:
+        translateX(115%)
+        translateY(-50%);
+
+    will-change: transform;
+}
+
+.project-panel::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 35px;
+    bottom: 35px;
+
+    width: 7px;
+
+    background: var(--orange);
+
+    border-radius:
+        0 5px 5px 0;
+}
+
+.project-panel .label {
+    color: var(--orange);
+}
+
+.project-panel h3 {
+    margin-top: 20px;
+
+    font-size: clamp(
+        45px,
+        6vw,
+        80px
+    );
+}
+
+.project-panel p {
+    max-width: 500px;
+
+    margin-top: 28px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   IMAGE EDITORIAL SECTION
+========================================================= */
+
+.image-section {
+    height: 160vh;
+    background: var(--paper);
+}
+
+.image-scene {
+    background: var(--paper);
+}
+
+.image-heading {
+    position: absolute;
+
+    top: 10vh;
+    left: 7vw;
+
+    z-index: 5;
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+}
+
+.image-heading .label {
+    color: var(--orange);
+}
+
+.image-heading h2 {
+    margin-top: 18px;
+
+    font-size: clamp(
+        60px,
+        9vw,
+        130px
+    );
+}
+
+.editorial-image {
+    position: absolute;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+.editorial-one {
+    width: 28vw;
+    max-width: 380px;
+
+    left: 8vw;
+    bottom: 10vh;
+
+    transform:
+        translateY(100px)
+        rotate(-8deg);
+}
+
+.editorial-two {
+    width: 25vw;
+    max-width: 330px;
+
+    right: 14vw;
+    top: 17vh;
+
+    transform:
+        translateY(-90px)
+        rotate(7deg);
+}
+
+.editorial-three {
+    width: 18vw;
+    max-width: 240px;
+
+    left: 43vw;
+    bottom: 12vh;
+
+    transform:
+        scale(.7)
+        rotate(4deg);
+}
+
+
+/* =========================================================
+   TOPICS
+========================================================= */
+
+.topics {
+    min-height: 155vh;
+
+    padding:
+        14vh
+        8vw;
+
+    background: var(--paper-dark);
+}
+
+.topics-grid {
+    width: min(
+        1200px,
+        100%
+    );
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        .75fr
+        1.25fr;
+
+    gap: 10vw;
+}
+
+.topics-heading {
+    position: sticky;
+    top: 14vh;
+
+    align-self: start;
+}
+
+.topics-heading .label {
+    color: var(--orange);
+}
+
+.topics-heading h2 {
+    margin-top: 20px;
+
+    font-size: clamp(
+        60px,
+        8vw,
+        115px
+    );
+}
+
+.topics-heading p {
+    width: 280px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.topic-list {
+    list-style: none;
+}
+
+.topic {
+    padding: 29px 0;
+
+    border-top:
+        1px solid
+        rgba(
+            18,
+            63,
+            120,
+            .18
+        );
+
+    cursor: pointer;
+
+    transition:
+        padding-left .35s ease,
+        color .35s ease;
+}
+
+.topic:last-child {
+    border-bottom:
+        1px solid
+        rgba(
+            18,
+            63,
+            120,
+            .18
+        );
+}
+
+.topic:hover {
+    padding-left: 12px;
+}
+
+.topic.active {
+    color: var(--orange);
+}
+
+.topic-number {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: .25em;
+
+    opacity: .5;
+}
+
+.topic-name {
+    font-size: clamp(
+        28px,
+        3.5vw,
+        46px
+    );
+
+    font-weight: 800;
+
+    letter-spacing: -.05em;
+}
+
+.topic-info {
+    max-width: 500px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    margin-top: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    opacity: 0;
+
+    transition:
+        max-height .5s ease,
+        margin .4s ease,
+        opacity .4s ease;
+}
+
+.topic.active .topic-info {
+    max-height: 180px;
+
+    margin-top: 14px;
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   HALF CIRCLE SECTION
+========================================================= */
+
+.circle-section {
+    height: 235vh;
+
+    background: var(--deep-blue);
+
+    color: white;
+}
+
+.circle-scene {
+    background: var(--deep-blue);
+}
+
+.circle-label {
+    position: absolute;
+
+    top: 8vh;
+    right: 7vw;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        .55
+    );
+}
+
+.circle-shape {
+    position: absolute;
+
+    width: min(
+        760px,
+        78vw
+    );
+
+    height: min(
+        760px,
+        78vw
+    );
+
+    min-width: 580px;
+    min-height: 580px;
+
+    left: -78vw;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    will-change: left;
+}
+
+.circle-image {
+    position: absolute;
+
+    width: 0.1%;
+
+    object-fit: cover;
+
+    left: 12%;
+    top: 35%;
+
+    opacity: 0;
+
+    transform:
+        scale(.8)
+        rotate(-7deg);
+}
+
+.circle-text {
+    position: absolute;
+
+    left: -70vw;
+    top: 50%;
+
+    width: min(
+        410px,
+        38vw
+    );
+
+    transform:
+        translateY(-50%);
+
+    color: var(--blue);
+
+    opacity: 0;
+
+    will-change:
+        left,
+        opacity;
+}
+
+.circle-text h2 {
+    font-size: clamp(
+        50px,
+        6vw,
+        82px
+    );
+}
+
+.circle-text p {
+    margin-top: 20px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .2em;
+}
+
+.circle-info {
+    position: absolute;
+
+    right: 8vw;
+    top: 50%;
+
+    width: min(
+        350px,
+        30vw
+    );
+
+    transform:
+        translateY(-50%);
+
+    opacity: 0;
+}
+
+.circle-info .label {
+    color: var(--orange);
+}
+
+.circle-info h3 {
+    margin-top: 20px;
+
+    font-size: clamp(
+        45px,
+        6vw,
+        80px
+    );
+}
+
+.circle-info p {
+    margin-top: 25px;
+
+    color: #c9d5e5;
+
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   FINAL SECTION
+========================================================= */
+
+.final-section {
+    height: 310vh;
+
+    background: #000;
+
+    color: white;
+}
+
+.final-scene {
+    background: #000;
+}
+
+.final-blue {
+    position: absolute;
+
+    inset: 0;
+
+    background: var(--blue);
+
+    clip-path:
+        inset(
+            100% 0 0 0
+        );
+
+    will-change:
+        clip-path;
+}
+
+.final-title {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        translateY(50px);
+}
+
+.final-title .label {
+    color: var(--orange);
+}
+
+.final-title h2 {
+    margin-top: 20px;
+
+    font-size: clamp(
+        70px,
+        13vw,
+        180px
+    );
+}
+
+.final-title span {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.marquee {
+    position: absolute;
+
+    left: 0;
+    bottom: 4vh;
+
+    white-space: nowrap;
+
+    font-size: clamp(
+        100px,
+        18vw,
+        250px
+    );
+
+    font-weight: 900;
+
+    letter-spacing: -.11em;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .07
+        );
+
+    transform:
+        translateX(100vw);
+
+    will-change:
+        transform;
+}
+
+
+/* =========================================================
+   FALLING IMAGES
+========================================================= */
+
+.falling-area {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.falling-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    opacity: 0;
+
+    display: block;
+
+    transform-origin: center bottom;
+
+    will-change: transform, opacity;
+
+    /* prevents the white image frame */
+    background: transparent;
+}
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.ending {
+    height: 100svh;
+
+    background: #000;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.ending-content {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+}
+
+.ending .label {
+    color: var(--orange);
+}
+
+.back-home {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: clamp(
+        55px,
+        9vw,
+        120px
+    );
+
+    font-weight: 900;
+
+    letter-spacing: -.09em;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.back-home:hover {
+    color: var(--orange);
+
+    transform:
+        translateY(-5px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        height: 190vh;
+    }
+
+    .hero-logo {
+        left: 8vw;
+        top: 17vh;
+
+        width: 125px;
+    }
+
+    .hero-title {
+        left: 8vw;
+        bottom: 19vh;
+
+        font-size: 18vw;
+    }
+
+    .hero-description {
+        left: 8vw;
+        right: auto;
+        bottom: 6vh;
+
+        width: 76vw;
+
+        font-size: 11px;
+    }
+
+
+    .project {
+        height: 190vh;
+    }
+
+    .project-heading {
+        left: 10vw;
+        top: 14vh;
+    }
+
+    .project-panel {
+        width: 92vw;
+
+        min-height: 55vh;
+
+        padding: 38px;
+
+        border-radius:
+            22px 0 0 22px;
+    }
+
+    .project-image {
+        left: 10vw;
+        bottom: 10vh;
+
+        width: 180px;
+    }
+
+
+    .image-section {
+        height: 160vh;
+    }
+
+    .image-heading h2 {
+        font-size: 18vw;
+    }
+
+    .editorial-one {
+        width: 47vw;
+        left: 5vw;
+    }
+
+    .editorial-two {
+        width: 42vw;
+        right: 5vw;
+    }
+
+    .editorial-three {
+        width: 30vw;
+        left: 37vw;
+    }
+
+
+    .topics {
+        padding:
+            12vh
+            7vw;
+    }
+
+    .topics-grid {
+        display: block;
+    }
+
+    .topics-heading {
+        position: relative;
+        top: auto;
+
+        margin-bottom: 55px;
+    }
+
+    .topics-heading h2 {
+        font-size: 18vw;
+    }
+
+
+    .circle-section {
+        height: 235vh;
+    }
+
+    .circle-shape {
+        width: 145vw;
+        height: 145vw;
+
+        min-width: 600px;
+        min-height: 600px;
+
+        left: -135vw;
+    }
+
+    .circle-image {
+        width: 31%;
+    }
+
+    .circle-text {
+        left: -110vw;
+
+        width: 50vw;
+    }
+
+    .circle-text h2 {
+        font-size: 40px;
+    }
+
+    .circle-info {
+        right: 7vw;
+
+        width: 40vw;
+    }
+
+    .circle-info h3 {
+        font-size: 35px;
+    }
+
+    .circle-info p {
+        font-size: 10px;
+    }
+
+
+    .final-section {
+        height: 310vh;
+    }
+
+    .final-title h2 {
+        font-size: 20vw;
+    }
+
+    .marquee {
+        font-size: 22vw;
+    }
+
+    .falling-image {
+        width: 105px;
+        padding: 5px;
+    }
+}
+    
+.teacher-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.teacher-name {
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+}    
+    
+/* =========================================================
+   DESKTOP POLISH
+========================================================= */
+
+@media screen and (min-width: 1000px) {
+
+    /* -----------------------------------------
+       GENERAL DESKTOP SCALE
+    ----------------------------------------- */
+
+    .hero-header {
+        left: 5vw;
+        right: 5vw;
+    }
+
+    .hero-logo {
+        left: 10vw;
+        top: 18vh;
+        width: clamp(150px, 13vw, 210px);
+    }
+
+    .hero-title {
+        left: 10vw;
+        bottom: 16vh;
+    }
+
+    .hero-description {
+        right: 10vw;
+        bottom: 17vh;
+        width: min(360px, 28vw);
+    }
+
+
+    /* -----------------------------------------
+       PROJECT
+    ----------------------------------------- */
+
+    .project-number {
+        left: 5vw;
+    }
+
+    .project-line {
+        left: 6vw;
+    }
+
+    .project-heading {
+        left: 10vw;
+    }
+
+    .project-panel {
+        width: min(680px, 52vw);
+        min-height: 55vh;
+        padding: clamp(50px, 5vw, 80px);
+    }
+
+    .project-image {
+        left: 13vw;
+        width: clamp(180px, 17vw, 280px);
+    }
+
+
+    /* -----------------------------------------
+       PIECES OF PHOENIX
+    ----------------------------------------- */
+
+    .image-heading {
+        left: 9vw;
+    }
+
+    .editorial-one {
+        width: clamp(260px, 24vw, 390px);
+        left: 10vw;
+    }
+
+    .editorial-two {
+        width: clamp(230px, 21vw, 350px);
+        right: 12vw;
+    }
+
+    .editorial-three {
+        width: clamp(170px, 16vw, 260px);
+        left: 44vw;
+    }
+
+
+    /* -----------------------------------------
+       TOPICS
+    ----------------------------------------- */
+
+    .topics {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .topics-grid {
+        max-width: 1250px;
+        grid-template-columns: minmax(300px, .8fr) minmax(450px, 1.2fr);
+        gap: clamp(70px, 9vw, 150px);
+    }
+
+    .topics-heading {
+        top: 13vh;
+    }
+
+    .topics-heading h2 {
+        font-size: clamp(70px, 7vw, 115px);
+    }
+
+    .topic {
+        padding: 32px 0;
+    }
+
+    .topic-name {
+        font-size: clamp(30px, 3vw, 46px);
+    }
+
+    .topic-info {
+        max-width: 560px;
+    }
+
+
+    /* -----------------------------------------
+       HALF CIRCLE
+    ----------------------------------------- */
+
+    .circle-shape {
+        width: min(760px, 58vw);
+        height: min(760px, 58vw);
+
+        min-width: 580px;
+        min-height: 580px;
+    }
+
+    .circle-text {
+        width: min(430px, 34vw);
+    }
+
+    .circle-info {
+        right: 9vw;
+        width: min(380px, 27vw);
+    }
+
+
+    /* -----------------------------------------
+       FINAL
+    ----------------------------------------- */
+
+    .final-title h2 {
+        font-size: clamp(100px, 12vw, 190px);
+    }
+
+    .marquee {
+        font-size: clamp(150px, 17vw, 260px);
+    }
+
+
+    /* -----------------------------------------
+       FALLING IMAGES
+    ----------------------------------------- */
+
+    .falling-image {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    /* -----------------------------------------
+       ENDING
+    ----------------------------------------- */
+
+    .back-home {
+        font-size: clamp(70px, 8vw, 125px);
+    }
+
+}    
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     01 — HERO
+======================================================= -->
+
+<section class="hero">
+
+    <div class="scene hero-scene">
+
+        <div class="hero-header">
+
+            <div class="label">
+                About Phoenix
+            </div>
+
+            <div class="label">
+                01 / 06
+            </div>
+
+        </div>
+
+
+        <div class="hero-ghost">
+            PHOENIX
+        </div>
+
+
+        <!-- CHANGE THIS IMAGE IF NEEDED -->
+        <img
+            src="Project/Img/Phoenix.png"
+            class="hero-logo"
+            id="heroLogo"
+            alt="Phoenix"
+        >
+
+
+        <h1
+            class="hero-title display"
+            id="heroTitle"
+        >
+            PHOENIX
+
+            <span>
+                HISTO PAGE
+            </span>
+        </h1>
+
+
+        <p
+            class="hero-description"
+            id="heroDescription"
+        >
+            A visual introduction to the ideas,
+            history, people, and inspiration
+            behind Phoenix Histo Page.(best for mobile)
+        </p>
+
+
+        <div class="hero-scroll">
+
+            SCROLL TO EXPLORE
+
+            <span></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     02 — PROJECT
+======================================================= -->
+
+<section class="project">
+
+    <div class="scene project-scene">
+
+        <div class="project-number label">
+            02 / THE PROJECT
+        </div>
+
+
+        <div
+            class="project-line"
+            id="projectLine"
+        ></div>
+
+
+        <div
+            class="project-heading"
+            id="projectHeading"
+        >
+
+            <div class="label">
+                The idea
+            </div>
+
+            <h2 class="display">
+                MADE<br>
+                TO BE<br>
+                SEEN.
+            </h2>
+
+        </div>
+
+
+        <!-- EDIT IMAGE HERE -->
+        <img
+            src="Project/Img/img1.jpeg"
+            class="project-image"
+            id="projectImage"
+            alt=""
+        >
+
+
+        <div
+            class="project-panel"
+            id="projectPanel"
+        >
+
+            <div class="label">
+                Phoenix Histo Page
+            </div>
+
+            <h3 class="display">
+                NOT JUST<br>
+                ANOTHER<br>
+                PAGE.
+            </h3>
+
+            <p>
+                Phoenix was created to turn historical
+                information into something that can be
+                explored visually. The project combines
+                research, storytelling, design, and web
+                development into one experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     03 — IMAGE EDITORIAL
+======================================================= -->
+
+<section class="image-section">
+
+    <div class="scene image-scene">
+
+        <div
+            class="image-heading"
+            id="imageHeading"
+        >
+
+            <div class="label">
+                A closer look
+            </div>
+
+            <h2 class="display">
+                PIECES<br>
+                OF<br>
+                PHOENIX.
+            </h2>
+
+        </div>
+
+
+        <!-- CHANGE THESE THREE IMAGES -->
+
+        <img
+            src="Project/Img/img2.jpeg"
+            class="editorial-image editorial-one"
+            id="editorialOne"
+            alt=""
+        >
+
+
+        <img
+            src="Project/Img/img3.jpeg"
+            class="editorial-image editorial-two"
+            id="editorialTwo"
+            alt=""
+        >
+
+
+        <img
+            src="Project/Img/img4.jpeg"
+            class="editorial-image editorial-three"
+            id="editorialThree"
+            alt=""
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     04 — TOPICS
+======================================================= -->
+
+<section class="topics">
+
+    <div class="topics-grid">
+
+
+        <div class="topics-heading">
+
+            <div class="label">
+                04 / EXPLORE
+            </div>
+
+            <h2 class="display">
+                WHAT<br>
+                IS<br>
+                PHOENIX?
+            </h2>
+
+            <p>
+                Click a topic to reveal a little
+                more about the project.
+            </p>
+
+        </div>
+
+
+        <ul class="topic-list">
+
+
+            <li class="topic">
+
+                <span class="topic-number">
+                    01
+                </span>
+
+                <div class="topic-name">
+                    Purpose
+                </div>
+
+                <div class="topic-info">
+                    Phoenix was created to make
+                    historical information easier
+                    to explore while giving the
+                    project its own visual identity.
+                </div>
+
+            </li>
+
+
+            <li class="topic">
+
+                <span class="topic-number">
+                    02
+                </span>
+
+                <div class="topic-name">
+                    Why Phoenix?
+                </div>
+
+                <div class="topic-info">
+                    Phoenix represents rebirth and the continuation of knowledge through time. Like the Phoenix, history rises from the past and continues to shape the future.
+                </div>
+
+            </li>
+
+
+            <li class="topic">
+
+                <span class="topic-number">
+                    03
+                </span>
+
+                <div class="topic-name">
+                    Where it began
+                </div>
+
+                <div class="topic-info">
+                    <div class="teacher-name">
+   Sir PaulJohn Agapito
+</div>
+                    The teacher who gave us the project that became Phoenix. What began as an assignment became something we could make our own.
+                    
+                       </div>
+
+            </li>
+
+
+            <li class="topic">
+
+                <span class="topic-number">
+                    04
+                </span>
+
+                <div class="topic-name">
+                    Contributors
+                </div>
+
+                <div class="topic-info">
+                    Research, content, ideas, design,
+                    and development come together
+                    to create the final project.
+                </div>
+
+            </li>
+
+
+            <li class="topic">
+
+                <span class="topic-number">
+                    05
+                </span>
+
+                <div class="topic-name">
+                    Inspiration
+                </div>
+
+                <div class="topic-info">
+                    Phoenix takes inspiration from
+                    editorial design, visual storytelling,
+                    minimalist websites, and interactive
+                    digital experiences.
+                </div>
+
+            </li>
+
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     05 — HALF CIRCLE
+======================================================= -->
+
+<section class="circle-section">
+
+    <div class="scene circle-scene">
+
+
+        <div class="circle-label label">
+            05 / CONTEXT
+        </div>
+
+
+        <div
+            class="circle-shape"
+            id="circleShape"
+        >
+
+            <!-- EDIT THIS IMAGE -->
+            <img
+                src="Project/Img/img5.jpeg"
+                class="circle-image"
+                id="circleImage"
+                alt=""
+            >
+
+        </div>
+
+
+        <div
+            class="circle-text"
+            id="circleText"
+        >
+
+            <h2 class="display">
+                MEMORY<br>
+                MATTERS.
+            </h2>
+
+            <p>
+                HISTORY • CULTURE • IDENTITY
+            </p>
+
+        </div>
+
+
+        <div
+            class="circle-info"
+            id="circleInfo"
+        >
+
+            <div class="label">
+                Look closer
+            </div>
+
+            <h3 class="display">
+                HISTORY<br>
+                LIVES.
+            </h3>
+
+            <p>
+                History is more than dates and names.
+                It lives in places, traditions, beliefs,
+                communities, objects, and the stories
+                people continue to carry.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     06 — FINAL
+======================================================= -->
+
+<section class="final-section">
+
+    <div class="scene final-scene">
+
+
+        <div
+            class="final-blue"
+            id="finalBlue"
+        ></div>
+
+
+        <div
+            class="final-title"
+            id="finalTitle"
+        >
+
+            <div class="label">
+                06 / THE SIGNATURE
+            </div>
+
+            <h2 class="display">
+                THIS IS<br>
+
+                <span>
+                    PHOENIX.
+                </span>
+            </h2>
+
+        </div>
+
+
+        <div
+            class="marquee"
+            id="marquee"
+        >
+            PHOENIX&nbsp;&nbsp;&nbsp;
+            PHOENIX&nbsp;&nbsp;&nbsp;
+            PHOENIX&nbsp;&nbsp;&nbsp;
+            PHOENIX&nbsp;&nbsp;&nbsp;
+            PHOENIX&nbsp;&nbsp;&nbsp;
+            PHOENIX
+        </div>
+
+
+        <div
+            class="falling-area"
+            id="fallingArea"
+        ></div>
+
+
+    </div>
+
+</section>
+  
+<!-- =======================================================
+     BLACK ENDING
+======================================================= -->
+
+<section class="ending">
+
+    <div
+        class="ending-content"
+        id="endingContent"
+    >
+
+        <div class="label">
+            END OF ABOUT
+        </div>
+
+        <a
+            href="index.html"
+            class="back-home"
+        >
+            BACK TO HOME
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const hero =
+    document.querySelector(".hero");
+
+const heroLogo =
+    document.getElementById("heroLogo");
+
+const heroTitle =
+    document.getElementById("heroTitle");
+
+const heroDescription =
+    document.getElementById(
+        "heroDescription"
+    );
+
+
+const project =
+    document.querySelector(".project");
+
+const projectLine =
+    document.getElementById(
+        "projectLine"
+    );
+
+const projectHeading =
+    document.getElementById(
+        "projectHeading"
+    );
+
+const projectImage =
+    document.getElementById(
+        "projectImage"
+    );
+
+const projectPanel =
+    document.getElementById(
+        "projectPanel"
+    );
+
+
+const imageSection =
+    document.querySelector(
+        ".image-section"
+    );
+
+const imageHeading =
+    document.getElementById(
+        "imageHeading"
+    );
+
+const editorialOne =
+    document.getElementById(
+        "editorialOne"
+    );
+
+const editorialTwo =
+    document.getElementById(
+        "editorialTwo"
+    );
+
+const editorialThree =
+    document.getElementById(
+        "editorialThree"
+    );
+
+
+const circleSection =
+    document.querySelector(
+        ".circle-section"
+    );
+
+const circleShape =
+    document.getElementById(
+        "circleShape"
+    );
+
+const circleImage =
+    document.getElementById(
+        "circleImage"
+    );
+
+const circleText =
+    document.getElementById(
+        "circleText"
+    );
+
+const circleInfo =
+    document.getElementById(
+        "circleInfo"
+    );
+
+
+const finalSection =
+    document.querySelector(
+        ".final-section"
+    );
+
+const finalBlue =
+    document.getElementById(
+        "finalBlue"
+    );
+
+const finalTitle =
+    document.getElementById(
+        "finalTitle"
+    );
+
+const marquee =
+    document.getElementById(
+        "marquee"
+    );
+
+const fallingArea =
+    document.getElementById(
+        "fallingArea"
+    );
+
+
+const ending =
+    document.querySelector(
+        ".ending"
+    );
+
+const endingContent =
+    document.getElementById(
+        "endingContent"
+    );
+
+
+/* =========================================================
+   MATH
+========================================================= */
+
+function clamp(
+    value,
+    min = 0,
+    max = 1
+) {
+
+    return Math.min(
+        Math.max(
+            value,
+            min
+        ),
+        max
+    );
+
+}
+
+
+function easeInOut(t) {
+
+    return t < .5
+
+        ? 4 * t * t * t
+
+        : 1 -
+          Math.pow(
+              -2 * t + 2,
+              3
+          ) / 2;
+
+}
+
+
+function easeOut(t) {
+
+    return 1 -
+        Math.pow(
+            1 - t,
+            3
+        );
+
+}
+
+
+function sectionProgress(
+    section
+) {
+
+    const start =
+        section.offsetTop;
+
+    const distance =
+        section.offsetHeight -
+        window.innerHeight;
+
+    return clamp(
+        (
+            smoothScroll -
+            start
+        ) / distance
+    );
+
+}
+
+
+/* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+
+let smoothScroll =
+    window.scrollY;
+
+let lastTime =
+    performance.now();
+
+
+function animationLoop(now) {
+
+    const delta =
+        Math.min(
+            now - lastTime,
+            40
+        );
+
+    lastTime = now;
+
+
+    const follow =
+        1 -
+        Math.pow(
+            .00005,
+            delta / 1000
+        );
+
+
+    smoothScroll +=
+        (
+            window.scrollY -
+            smoothScroll
+        ) *
+        follow;
+
+
+    render();
+
+    requestAnimationFrame(
+        animationLoop
+    );
+
+}
+
+
+requestAnimationFrame(
+    animationLoop
+);
+
+
+/* =========================================================
+   DETERMINISTIC RANDOM
+========================================================= */
+
+function random(seed) {
+
+    const value =
+        Math.sin(
+            seed * 127.41
+        ) *
+        43758.5453;
+
+    return value -
+        Math.floor(value);
+
+}
+
+
+/* =========================================================
+   CREATE 27 FALLING IMAGES
+========================================================= */
+
+const fallingImages = [];
+
+for (
+    let i = 1;
+    i <= 27;
+    i++
+) {
+
+    const image =
+        document.createElement(
+            "img"
+        );
+
+    image.className =
+        "falling-image";
+
+    image.src =
+        `Project/Img/img${i}.jpeg`;
+
+    image.alt =
+        `Phoenix image ${i}`;
+
+    image.dataset.x =
+        4 +
+        random(i * 4.1) * 92;
+
+    image.dataset.speed =
+        .72 +
+        random(i * 7.7) * .65;
+
+    image.dataset.rotation =
+        -25 +
+        random(i * 12.2) * 50;
+
+    image.dataset.delay =
+        random(i * 9.6) * .22;
+
+    image.dataset.drift =
+        -1 +
+        random(i * 14.8) * 2;
+
+    fallingArea.appendChild(
+        image
+    );
+
+    fallingImages.push(
+        image
+    );
+
+}
+
+
+/* =========================================================
+   FALLING IMAGE PHYSICS
+========================================================= */
+
+function renderFallingImages(progress) {
+
+    const start = 0.46;
+
+    const p = clamp(
+        (progress - start) /
+        (1 - start)
+    );
+
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    const mobile = width <= 700;
+
+    /*
+    IMAGE SIZE
+    */
+
+    const imageWidth =
+        mobile ? 70 : 105;
+
+    const imageHeight =
+        imageWidth;
+
+
+    /*
+    OVERLAP
+
+    0.70 means each image moves
+    70% of its width.
+
+    Therefore the next image
+    overlaps the previous one.
+    */
+
+    const step =
+        imageWidth * 0.70;
+
+
+    /*
+    TOTAL WIDTH OF THE STRIP
+    */
+
+    const totalWidth =
+        (
+            fallingImages.length - 1
+        ) * step +
+        imageWidth;
+
+
+    /*
+    CENTER THE WHOLE GROUP
+    */
+
+    const rowStart =
+        (
+            width - totalWidth
+        ) / 2;
+
+
+    /*
+    GROUND
+    */
+
+    const floor =
+        height -
+        imageHeight;
+
+
+    fallingImages.forEach(
+        (image, index) => {
+
+            /*
+            ---------------------------------
+            FALL TIMING
+            ---------------------------------
+            */
+
+            const delay =
+                index * 0.015;
+
+            const fall =
+                clamp(
+                    (
+                        p - delay
+                    ) / 0.70
+                );
+
+
+            /*
+            HIDE UNTIL ITS TURN
+            */
+
+            if (fall <= 0) {
+
+                image.style.opacity = "0";
+
+                return;
+            }
+
+
+            image.style.opacity = "1";
+
+
+            image.style.width =
+                imageWidth + "px";
+
+            image.style.height =
+                imageHeight + "px";
+
+
+            /*
+            ---------------------------------
+            FINAL X
+            ---------------------------------
+
+            Mostly sequential,
+            but slightly irregular.
+            */
+
+            const irregularX =
+                Math.sin(
+                    index * 2.31
+                ) *
+                imageWidth *
+                0.10;
+
+
+            const finalX =
+                rowStart +
+                index * step +
+                irregularX;
+
+
+            /*
+            ---------------------------------
+            FINAL Y
+            ---------------------------------
+
+            Small variation only.
+
+            This keeps everything
+            in ONE horizontal band.
+            */
+
+            const irregularY =
+                Math.sin(
+                    index * 1.71
+                ) *
+                imageHeight *
+                0.10;
+
+
+            const finalY =
+                floor +
+                irregularY;
+
+
+            /*
+            ---------------------------------
+            FINAL ROTATION
+            ---------------------------------
+            */
+
+            const finalRotation =
+                -8 +
+                Math.sin(
+                    index * 3.17
+                ) *
+                12;
+
+
+            /*
+            ---------------------------------
+            STARTING POSITION
+            ---------------------------------
+            */
+
+            const startX =
+    finalX +
+    (
+        Math.sin(index * 8.37) *
+        imageWidth *
+        0.8
+    );
+
+
+            const startY =
+                -imageHeight -
+                index * 25;
+
+
+            /*
+            ---------------------------------
+            GRAVITY
+            ---------------------------------
+            */
+
+            const eased =
+                1 -
+                Math.pow(
+                    1 - fall,
+                    3
+                );
+
+
+            /*
+            ---------------------------------
+            CURRENT POSITION
+            ---------------------------------
+            */
+
+            const x =
+                startX +
+                (
+                    finalX -
+                    startX
+                ) *
+                eased;
+
+
+            const y =
+                startY +
+                (
+                    finalY -
+                    startY
+                ) *
+                eased;
+
+
+            /*
+            ---------------------------------
+            ROTATION WHILE FALLING
+            ---------------------------------
+            */
+
+            const rotation =
+                finalRotation +
+                (
+                    1 - eased
+                ) *
+                Number(
+                    image.dataset.rotation
+                );
+
+
+            /*
+            ---------------------------------
+            LAYERING
+            ---------------------------------
+
+            Gives the images a natural
+            front/back relationship.
+            */
+
+            image.style.zIndex =
+                100 + index;
+
+
+            /*
+            ---------------------------------
+            APPLY
+            ---------------------------------
+            */
+
+            image.style.transform =
+                `
+                translate3d(
+                    ${x}px,
+                    ${y}px,
+                    0
+                )
+                rotate(
+                    ${rotation}deg
+                )
+                `;
+
+        }
+    );
+}        
+      
+/* =========================================================
+   MAIN RENDER
+========================================================= */
+
+function render() {
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    const heroProgress =
+        sectionProgress(
+            hero
+        );
+
+
+    const logoProgress =
+        easeOut(
+            clamp(
+                (
+                    heroProgress -
+                    .06
+                ) / .27
+            )
+        );
+
+
+    heroLogo.style.opacity =
+        logoProgress;
+
+
+    heroLogo.style.transform =
+        `
+        translateY(
+            ${
+                70 -
+                logoProgress * 70
+            }px
+        )
+        scale(
+            ${
+                .8 +
+                logoProgress * .2
+            }
+        )
+        `;
+
+
+    const titleProgress =
+        easeOut(
+            clamp(
+                (
+                    heroProgress -
+                    .19
+                ) / .28
+            )
+        );
+
+
+    heroTitle.style.opacity =
+        titleProgress;
+
+
+    heroTitle.style.transform =
+        `
+        translateY(
+            ${
+                60 -
+                titleProgress * 60
+            }px
+        )
+        `;
+
+
+    const descriptionProgress =
+        easeOut(
+            clamp(
+                (
+                    heroProgress -
+                    .32
+                ) / .20
+            )
+        );
+
+
+    heroDescription.style.opacity =
+        descriptionProgress;
+
+
+    heroDescription.style.transform =
+        `
+        translateY(
+            ${
+                30 -
+                descriptionProgress * 30
+            }px
+        )
+        `;
+
+
+
+    /* -----------------------------------------------------
+       PROJECT
+    ----------------------------------------------------- */
+
+    const projectProgress =
+        sectionProgress(
+            project
+        );
+
+
+    const lineProgress =
+        easeOut(
+            clamp(
+                projectProgress /
+                .24
+            )
+        );
+
+
+    projectLine.style.transform =
+        `
+        scaleY(
+            ${lineProgress}
+        )
+        `;
+
+
+    const headingProgress =
+        easeOut(
+            clamp(
+                (
+                    projectProgress -
+                    .07
+                ) / .21
+            )
+        );
+
+
+    projectHeading.style.opacity =
+        headingProgress;
+
+
+    projectHeading.style.transform =
+        `
+        translateY(
+            ${
+                30 -
+                headingProgress * 30
+            }px
+        )
+        `;
+
+
+    const projectImageProgress =
+        easeOut(
+            clamp(
+                (
+                    projectProgress -
+                    .14
+                ) / .25
+            )
+        );
+
+
+    projectImage.style.opacity =
+        projectImageProgress;
+
+
+    projectImage.style.transform =
+        `
+        translateY(
+            ${
+                90 -
+                projectImageProgress * 90
+            }px
+        )
+        rotate(
+            ${
+                -7 +
+                projectImageProgress * 7
+            }deg
+        )
+        `;
+
+
+    const panelProgress =
+        easeInOut(
+            clamp(
+                (
+                    projectProgress -
+                    .12
+                ) / .38
+            )
+        );
+
+
+    projectPanel.style.transform =
+        `
+        translateX(
+            ${
+                115 -
+                panelProgress * 115
+            }%
+        )
+        translateY(-50%)
+        `;
+
+
+
+    /* -----------------------------------------------------
+       IMAGE SECTION
+    ----------------------------------------------------- */
+
+    const imageProgress =
+        sectionProgress(
+            imageSection
+        );
+
+
+    const imageHeadingProgress =
+        easeOut(
+            clamp(
+                imageProgress /
+                .20
+            )
+        );
+
+
+    imageHeading.style.opacity =
+        imageHeadingProgress;
+
+
+    imageHeading.style.transform =
+        `
+        translateY(
+            ${
+                30 -
+                imageHeadingProgress *
+                30
+            }px
+        )
+        `;
+
+
+    const editorialOneProgress =
+        easeOut(
+            clamp(
+                (
+                    imageProgress -
+                    .10
+                ) / .30
+            )
+        );
+
+
+    editorialOne.style.opacity =
+        editorialOneProgress;
+
+
+    editorialOne.style.transform =
+        `
+        translateY(
+            ${
+                100 -
+                editorialOneProgress *
+                100
+            }px
+        )
+        rotate(
+            ${
+                -8 +
+                editorialOneProgress *
+                8
+            }deg
+        )
+        `;
+
+
+    const editorialTwoProgress =
+        easeOut(
+            clamp(
+                (
+                    imageProgress -
+                    .22
+                ) / .29
+            )
+        );
+
+
+    editorialTwo.style.opacity =
+        editorialTwoProgress;
+
+
+    editorialTwo.style.transform =
+        `
+        translateY(
+            ${
+                -90 +
+                editorialTwoProgress *
+                90
+            }px
+        )
+        rotate(
+            ${
+                7 -
+                editorialTwoProgress *
+                7
+            }deg
+        )
+        `;
+
+
+    const editorialThreeProgress =
+        easeOut(
+            clamp(
+                (
+                    imageProgress -
+                    .34
+                ) / .25
+            )
+        );
+
+
+    editorialThree.style.opacity =
+        editorialThreeProgress;
+
+
+    editorialThree.style.transform =
+        `
+        scale(
+            ${
+                .7 +
+                editorialThreeProgress *
+                .3
+            }
+        )
+        rotate(
+            ${
+                4 -
+                editorialThreeProgress *
+                4
+            }deg
+        )
+        `;
+
+
+
+    /* -----------------------------------------------------
+       CIRCLE
+    ----------------------------------------------------- */
+
+    const circleProgress =
+        sectionProgress(
+            circleSection
+        );
+
+
+    const circleProgressIn =
+        easeInOut(
+            clamp(
+                (
+                    circleProgress -
+                    .10
+                ) / .34
+            )
+        );
+
+
+    const circleLeft =
+        -78 +
+        circleProgressIn * 44;
+
+
+    circleShape.style.left =
+        circleLeft +
+        "vw";
+
+
+    const circleImageProgress =
+        easeOut(
+            clamp(
+                (
+                    circleProgress -
+                    .28
+                ) / .23
+            )
+        );
+
+
+    circleImage.style.opacity =
+        circleImageProgress;
+
+
+    circleImage.style.transform =
+        `
+        scale(
+            ${
+                .8 +
+                circleImageProgress *
+                .2
+            }
+        )
+        rotate(
+            ${
+                -7 +
+                circleImageProgress *
+                7
+            }deg
+        )
+        `;
+
+
+    const circleTextProgress =
+        easeOut(
+            clamp(
+                (
+                    circleProgress -
+                    .43
+                ) / .28
+            )
+        );
+
+
+    circleText.style.left =
+        (
+            -70 +
+            circleTextProgress *
+            78
+        ) +
+        "vw";
+
+
+    circleText.style.opacity =
+        circleTextProgress;
+
+
+    const circleInfoProgress =
+        easeOut(
+            clamp(
+                (
+                    circleProgress -
+                    .63
+                ) / .20
+            )
+        );
+
+
+    circleInfo.style.opacity =
+        circleInfoProgress;
+
+
+
+    /* -----------------------------------------------------
+       FINAL
+    ----------------------------------------------------- */
+
+    const finalProgress =
+        sectionProgress(
+            finalSection
+        );
+
+
+    const blueProgress =
+        easeInOut(
+            clamp(
+                finalProgress /
+                .40
+            )
+        );
+
+
+    finalBlue.style.clipPath =
+        `
+        inset(
+            ${
+                100 -
+                blueProgress * 100
+            }% 0 0 0
+        )
+        `;
+
+
+    const finalTitleProgress =
+        easeOut(
+            clamp(
+                (
+                    finalProgress -
+                    .17
+                ) / .27
+            )
+        );
+
+
+    finalTitle.style.opacity =
+        finalTitleProgress;
+
+
+    finalTitle.style.transform =
+        `
+        translateY(
+            ${
+                50 -
+                finalTitleProgress *
+                50
+            }px
+        )
+        `;
+
+
+    const marqueeProgress =
+        clamp(
+            (
+                finalProgress -
+                .35
+            ) / .65
+        );
+
+
+    marquee.style.transform =
+        `
+        translateX(
+            ${
+                100 -
+                marqueeProgress *
+                150
+            }vw
+        )
+        `;
+
+
+    renderFallingImages(
+        finalProgress
+    );
+
+
+
+    /* -----------------------------------------------------
+       ENDING
+    ----------------------------------------------------- */
+
+    const endingProgress =
+        clamp(
+            (
+                smoothScroll -
+                ending.offsetTop +
+                window.innerHeight
+            ) /
+            (
+                window.innerHeight *
+                .65
+            )
+        );
+
+
+    endingContent.style.opacity =
+        endingProgress;
+
+
+    endingContent.style.transform =
+        `
+        translateY(
+            ${
+                35 -
+                endingProgress *
+                35
+            }px
+        )
+        `;
+
+}
+
+
+/* =========================================================
+   TOPIC INTERACTION
+========================================================= */
+
+const topics =
+    document.querySelectorAll(
+        ".topic"
+    );
+
+
+topics.forEach(
+    topic => {
+
+        topic.addEventListener(
+            "click",
+            () => {
+
+                const alreadyOpen =
+                    topic.classList.contains(
+                        "active"
+                    );
+
+
+                topics.forEach(
+                    item => {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                if (!alreadyOpen) {
+
+                    topic.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   RESIZE
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        smoothScroll =
+            window.scrollY;
+
+    }
+);
+
+</script>
+
+</body>
+</html>  
