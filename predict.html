@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix - Term 2: Lesson 1 - Pakikibaka</title>
+
+    <style>
+    /* =========================
+       BASIC PAGE
+    ========================= */
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: #5b3a1e;
+        background: #b99272;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+    .paper {
+        width: 92%;
+        max-width: 1050px;
+        margin: 30px auto 50px;
+        background: #f8f1df;
+        border: 6px solid #d8c3a3;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, .25);
+        animation: paperEnter .7s ease-out;
+    }
+
+    @keyframes paperEnter {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 16px 25px;
+        background: #5b3a1e;
+        color: #f8f1df;
+    }
+
+    .back-home {
+        display: inline-block;
+        padding: 9px 17px;
+        background: #8b5a2b;
+        color: #f8f1df;
+        text-decoration: none;
+        border: 2px solid #d8c3a3;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: bold;
+        transition: .25s;
+    }
+
+    .back-home:hover {
+        background: #a66b35;
+        transform: translateY(-2px);
+    }
+
+    .page-label {
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        opacity: .85;
+    }
+
+    /* =========================
+       HERO / HEADER
+    ========================= */
+    .header {
+        position: relative;
+        text-align: center;
+        padding: 50px 20px 60px;
+        color: #f8f1df;
+        background: linear-gradient(160deg, #5b3a1e, #8b5a2b 55%, #a66b35);
+        border-bottom: 4px solid #d8c3a3;
+    }
+
+    .phoenix-logo {
+        position: relative;
+        z-index: 2;
+        width: 100px;
+        margin-bottom: 14px;
+        filter: drop-shadow(0 5px 8px rgba(0, 0, 0, .25));
+        animation: logoEnter .8s ease-out;
+    }
+
+    @keyframes logoEnter {
+        from {
+            opacity: 0;
+            transform: scale(.85);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .header h1 {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        font-family: cursive;
+        font-size: 44px;
+        line-height: 1.2;
+        color: #f8f1df;
+        animation: titleEnter .8s ease-out;
+    }
+
+    .header p {
+        position: relative;
+        z-index: 2;
+        max-width: 750px;
+        margin: 15px auto 0;
+        font-size: 17px;
+        line-height: 1.7;
+        color: #eadbc4;
+    }
+
+    @keyframes titleEnter {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* =========================
+       TOPIC STRIP
+    ========================= */
+    .topic-strip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 18px 20px;
+        background: #f8f1df;
+        border-bottom: 2px solid #d8c3a3;
+    }
+
+    .topic {
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: .6px;
+        border: 1px solid #d8c3a3;
+    }
+
+    .topic-map {
+        background: #eadbc4;
+        color: #8b5a2b;
+    }
+
+    .topic-coordinate {
+        background: #e5d2b5;
+        color: #5b3a1e;
+    }
+
+    .topic-location {
+        background: #d8c3a3;
+        color: #5b3a1e;
+    }
+
+    /* =========================
+       SECTION
+    ========================= */
+    .section {
+        position: relative;
+        margin: 28px;
+        padding: 28px;
+        background: #ffffff;
+        border: 2px solid #d8c3a3;
+        border-radius: 16px;
+        box-shadow: 0 5px 14px rgba(0, 0, 0, .08);
+        animation: sectionEnter .6s ease-out;
+    }
+
+    .section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75px;
+        height: 5px;
+        background: #8b5a2b;
+        border-radius: 16px 0 5px 0;
+    }
+
+    @keyframes sectionEnter {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .section-title {
+        margin: 0 0 20px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #d8c3a3;
+        font-size: 30px;
+        color: #5b3a1e;
+        text-align: center;
+    }
+
+    /* =========================
+       CONTENT LAYOUTS
+    ========================= */
+    .content-row {
+        display: grid;
+        grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
+        gap: 30px;
+        align-items: center;
+    }
+
+    .content-text {
+        font-size: 17px;
+        line-height: 1.8;
+        color: #75604d;
+    }
+
+    .content-text b {
+        color: #8b5a2b;
+    }
+
+    .content-text ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    .content-text li {
+        margin-bottom: 8px;
+    }
+
+    .image-box {
+        text-align: center;
+    }
+
+    .image-box img {
+        width: 100%;
+        max-width: 430px;
+        max-height: 320px;
+        object-fit: contain;
+        border: 5px solid #d8c3a3;
+        border-radius: 13px;
+        background: #f8f1df;
+        box-shadow: 0 7px 15px rgba(0, 0, 0, .15);
+        transition: .3s;
+    }
+
+    .image-box img:hover {
+        transform: scale(1.025);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .22);
+    }
+
+    /* =========================
+       INFO CARDS & TERMS
+    ========================= */
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    .info-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    .info-card {
+        padding: 20px;
+        background: #f8f1df;
+        border: 1px solid #d8c3a3;
+        border-left: 5px solid #8b5a2b;
+        border-radius: 10px;
+        transition: .25s;
+    }
+
+    .info-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 7px 14px rgba(0, 0, 0, .12);
+        border-color: #c9ad84;
+    }
+
+    .info-card h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        color: #5b3a1e;
+    }
+
+    .info-card p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #75604d;
+    }
+
+    .term-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .term {
+        background: #f8f1df;
+        border: 2px solid #d8c3a3;
+        border-radius: 10px;
+        padding: 18px;
+        transition: .25s;
+    }
+
+    .term:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .12);
+    }
+
+    .term h3 {
+        margin: 0 0 8px;
+        color: #8b5a2b;
+        font-size: 20px;
+    }
+
+    .term p, .term ul {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #75604d;
+    }
+
+    .term ul {
+        padding-left: 18px;
+    }
+
+    /* =========================
+       LESSON NAVIGATION
+    ========================= */
+    .lesson-navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin: 35px 28px;
+        padding-top: 25px;
+        border-top: 2px solid #d8c3a3;
+    }
+
+    .lesson-button {
+        background: #8b5a2b;
+        color: #f8f1df;
+        border: 2px solid #d8c3a3;
+        padding: 13px 23px;
+        border-radius: 25px;
+        font-family: Georgia, serif;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 9px rgba(0, 0, 0, .2);
+        transition: .3s;
+    }
+
+    .lesson-button:hover {
+        background: #a66b35;
+        transform: translateY(-3px);
+    }
+
+    .lesson-button:nth-child(1) {
+        background: #eadbc4;
+        color: #5b3a1e;
+    }
+
+    .lesson-button:nth-child(1):hover {
+        background: #d8c3a3;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    .footer {
+        text-align: center;
+        margin-top: 35px;
+        padding: 30px 20px;
+        background: #5b3a1e;
+        color: #f8f1df;
+        border-top: 4px solid #d8c3a3;
+    }
+
+    .footer p {
+        margin: 5px 0;
+        font-size: 14px;
+        opacity: .8;
+    }
+
+    .footer-title {
+        margin: 0;
+        font-family: cursive;
+        font-size: 29px;
+        color: #f8f1df;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media screen and (max-width: 700px) {
+        .paper {
+            width: 95%;
+            margin: 15px auto 30px;
+            border-radius: 16px;
+        }
+
+        .top-bar {
+            padding: 14px 16px;
+        }
+
+        .back-home {
+            padding: 8px 13px;
+            font-size: 13px;
+        }
+
+        .page-label {
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-align: right;
+        }
+
+        .header {
+            padding: 38px 18px 45px;
+        }
+
+        .phoenix-logo {
+            width: 80px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+        }
+
+        .header p {
+            font-size: 15px;
+        }
+
+        .topic-strip {
+            padding: 15px 10px;
+        }
+
+        .topic {
+            font-size: 11px;
+            padding: 7px 12px;
+        }
+
+        .section {
+            margin: 18px 12px;
+            padding: 21px 18px;
+        }
+
+        .section-title {
+            font-size: 24px;
+        }
+
+        .content-row {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .content-text {
+            font-size: 16px;
+        }
+
+        .image-box {
+            order: -1;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            max-height: 280px;
+        }
+
+        .info-grid, .info-grid-4, .term-list {
+            grid-template-columns: 1fr;
+        }
+
+        .lesson-navigation {
+            flex-direction: column;
+            margin: 25px 12px;
+        }
+
+        .lesson-button {
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+<div class="paper">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <a href="index.html" class="back-home">← Back to Home</a>
+        <div class="page-label">TERM 2 • LESSON 1</div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <img class="phoenix-logo" src="Project/Img/Phoenix.png" alt="Phoenix Logo">
+        <h1>Pakikibaka</h1>
+        <p>Ang Pagtutol, Pagsisikap, at Sama-samang Pagkilos para sa Kalayaan at Katarungan</p>
+    </header>
+
+    <!-- TOPIC STRIP -->
+    <div class="topic-strip">
+        <span class="topic topic-map">UGAT NG PAKIKIBAKA</span>
+        <span class="topic topic-coordinate">PANAHON NG ESPANYOL</span>
+        <span class="topic topic-location">PANAHON NG AMERIKANO</span>
+        <span class="topic topic-location">PANAHON NG HAPON</span>
+    </div>
+
+    <!-- SECTION 1: KONSEPTO NG PAKIKIBAKA -->
+    <section class="section">
+        <h2 class="section-title">Ano ang Pakikibaka?</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <p>Ang <b>Pakikibaka</b> ay ang pagsisikap, pagtutol, at sama-samang pagkilos ng isang tao o pangkat upang ipaglaban sa anumang uri ng pang-aapi o hadlang.</p>
+            </div>
+
+            <div class="image-box">
+                <img src="Project/Img/bak.png" alt="Pakikibaka Concept">
+            </div>
+        </div>
+
+        <h3 style="margin-top: 30px; text-align: center; color: #5b3a1e;">Ugat ng Pakikibaka</h3>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>1. Malay</h3>
+                <p>Paggising ng kaisipan.</p>
+            </div>
+            <div class="info-card">
+                <h3>2. Laya</h3>
+                <p>Mithiing walang gapos.</p>
+            </div>
+            <div class="info-card">
+                <h3>3. Baka</h3>
+                <p>Pagharap ng walang katiyakan.</p>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 30px; text-align: center; color: #5b3a1e;">Mga Uri ng Pakikibaka</h3>
+        <div class="info-grid-4">
+            <div class="info-card">
+                <h3>Armadong Pakikibaka</h3>
+            </div>
+            <div class="info-card">
+                <h3>Mapayapang Pakikibaka</h3>
+            </div>
+            <div class="info-card">
+                <h3>Intelektwal na Pakikibaka</h3>
+            </div>
+            <div class="info-card">
+                <h3>Panlipunang Pakikibaka</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PANAHON NG ESPANYOL -->
+    <section class="section">
+        <h2 class="section-title">Pagdating ng Espanya (1565)</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <ul>
+                    <li><b>1565:</b> Miguel Lopez De Legazpi ang nag-utos sa ekspedisyon ni Magellan kasama ang mga sasakyang dagat na San Pedro, San Pablo, at San Juan.</li>
+                    <li>Dumating sa Cebu ang ekspedisyong Espanyol.</li>
+                    <li>Bago pa man ang permanenteng kolonisasyon ni Legazpi, dumating na sa kapuluan ang ekspedisyon ni Ferdinand Magellan noong 1521, ngunit hindi sya nagsimula ng tuloy-tuloy na kolonisasyon.</li>
+                    <li>Ngunit bago iyon, nagkaroon ng bagyo habang sila ay naglalakbay at sila ay napunta sa India na tinawag nilang "Cape of the Good Hope".</li>
+                </ul>
+            </div>
+
+            <div class="image-box">
+                <img src="Project/Img/span.jpeg" alt="Panahon ng Espanyol">
+            </div>
+        </div>
+
+        <div class="term-list">
+            <div class="term">
+                <h3>Ginawa Nila:</h3>
+                <ul>
+                    <li>Ipinatupad ang pamahalaang kolonyal</li>
+                    <li>Lumaganap ang Kristiyanismo sa maraming bahagi ng Kapuluan</li>
+                    <li>Itinatag ang mga bayan at parokya: Naging mahalaga ang papel ng mga prayle sa relihiyon at edukasyon</li>
+                    <li>Ipinatupad ang ibat ibang buwis at sapilitang paggawa:
+                        <ul>
+                            <li><b>Polo Y Serbisyo</b></li>
+                            <li><b>Falla</b> = Bayad para hindi kasali sa Polo Y Serbisyo</li>
+                        </ul>
+                    </li>
+                    <li>Naranasan ng ilang Pilipino ang diskriminasyon at pang-aabuso sa ilalim ng kolonya na sistema.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <h3>3G (Layunin ng Pananakop)</h3>
+                <ul>
+                    <li><b>God</b> - Relihiyon</li>
+                    <li><b>Gold</b> - Mga likas na yaman</li>
+                    <li><b>Glory</b> - Katanyagan</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SUB-SECTION: PARING REGULAR AT SECULAR -->
+        <div style="margin-top: 25px;" class="term-list">
+            <div class="term">
+                <h3>Paring Regular at Paring Secular</h3>
+                <p><b>Paring Regular (Mga Espanyol):</b> Pagpapalaganap ng Kristiyanismo, Nagpupunta sa ibat ibang lugar.</p>
+                <p><b>Paring Secular (Pilipino):</b> Naiwan upang ipagpatuloy ang pagpapalaganap ng relihiyon.</p>
+                <br>
+                <p>Ngunit, mangyari hindi tanggap ng mga tao ang mga Paring Regular dahil hindi nila ito kilala.</p>
+                <p>Kaya naman, nagpalit sila ng gagawin. Mga Paring Regular ang nanatili, habang ang mga Paring Secular ang maglalakbay upang ipalaganap ang relihiyon.</p>
+                <p>Dahil duon, nalaman ng mga Paring Secular na may hindi magandang nangyayari sa kanilang bayan.</p>
+            </div>
+
+            <div class="term">
+                <h3>GOMBURZA</h3>
+                <p>Ang tatlong Paring Martir:</p>
+                <ul>
+                    <li>Mariano Gomez</li>
+                    <li>Jose Burgos</li>
+                    <li>Jacinto Zamora</li>
+                </ul>
+                <p style="margin-top: 10px;">Sila ay pinaslang na lalong nagpagalit sa taong bayan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PANAHON NG AMERIKANO -->
+    <section class="section">
+        <h2 class="section-title">Panahon ng Amerikano (1898)</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <ul>
+                    <li><b>1898</b></li>
+                    <li>Digmaang Espanyol-Amerikano</li>
+                    <li>Labanan sa look ng Maynila</li>
+                    <li>Kunwa-kunwaring laban sa Maynila (Mock-Battle of Manila)</li>
+                    <li>48 taon na kolonya</li>
+                    <li><b>Treaty of Paris noong 1898 (Kasunduan sa Paris):</b> Ibinenta ng mga Espanyol ang mga Pilipino sa halagang $20 million dollars</li>
+                </ul>
+            </div>
+
+            <div class="image-box">
+                <img src="Project/Img/amerikano.jpg" alt="Panahon ng Amerikano">
+            </div>
+        </div>
+
+        <div class="term-list" style="margin-top: 20px;">
+            <div class="term" style="grid-column: span 2;">
+                <h3>Ginawa Nila:</h3>
+                <ul>
+                    <li>Nagpatupad ng Sistemang Pamahalaan</li>
+                    <li>Pampublikong edukasyon</li>
+                    <li>Pinapalaganap ang paggamit ng wikang ingles sa edukasyon at pamahalaan</li>
+                    <li>Nagpatayo ng mga institusyon at imprastraktura</li>
+                    <li>Ngunit nanatili ang kolonya na pamamahala at nagkaroon ng armadong tunggalian sa pagitan ng mga Pilipino at Amerikano</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PANAHON NG MGA HAPON -->
+    <section class="section">
+        <h2 class="section-title">Panahon ng mga Hapon (1941)</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <ul>
+                    <li><b>1941</b></li>
+                    <li><b>Pearl Harbor:</b> Disyembre 7, 1941</li>
+                    <li><b>Disyembre 8, 1941:</b> Ilang oras pagkatapos salakayin ang Pearl Harbor sa Hawaii.</li>
+                    <li><b>3 taon</b> ng pananakop.</li>
+                </ul>
+            </div>
+
+            <div class="image-box">
+                <img src="Project/Img/hapon.jpg" alt="Panahon ng mga Hapon">
+            </div>
+        </div>
+
+        <div class="term-list" style="margin-top: 20px;">
+            <div class="term" style="grid-column: span 2;">
+                <h3>Ginawa Nila:</h3>
+                <ul>
+                    <li>Itinatag ang pamahalaang nasa ilalim ng kontrol ng Hapon</li>
+                    <li>Nilimitahan ang ilang Kalayaan</li>
+                    <li>Naranasan ng mga Pilipino ang kakulangan sa pagkain at iba pang pangangailangan</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- LESSON NAVIGATION -->
+    <div class="lesson-navigation">
+        <button class="lesson-button" onclick="location.href='index.html'">← Back to Home</button>
+        <button class="lesson-button" onclick="location.href='page.html'">Next Lesson →</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2 class="footer-title">PHOENIX</h2>
+        <p>TECH-PRO 1103</p>
+        <p>Term 2: Lesson 1 - Pakikibaka</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
