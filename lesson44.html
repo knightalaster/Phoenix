@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+
+<html lang="tl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bunga ng Kilusang Panlipunan – Himagsikan sa Pagsulong ng Kamalayang Pilipino</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: #5b3a1e;
+        background: #b99272;
+        overflow-x: hidden;
+    }
+    .paper {
+        width: 92%;
+        max-width: 1050px;
+        margin: 30px auto 50px;
+        background: #f8f1df;
+        border: 6px solid #d8c3a3;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, .25);
+        animation: paperEnter .7s ease-out;
+    }
+    @keyframes paperEnter {
+        from { opacity: 0; transform: translateY(25px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 16px 25px;
+        background: #5b3a1e;
+        color: #f8f1df;
+    }
+    .back-home {
+        display: inline-block;
+        padding: 9px 17px;
+        background: #8b5a2b;
+        color: #f8f1df;
+        text-decoration: none;
+        border: 2px solid #d8c3a3;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: bold;
+        transition: .25s;
+    }
+    .back-home:hover {
+        background: #a66b35;
+        transform: translateY(-2px);
+    }
+    .page-label {
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        opacity: .85;
+    }
+    .header {
+        position: relative;
+        text-align: center;
+        padding: 50px 20px 60px;
+        color: #f8f1df;
+        background: linear-gradient(160deg, #5b3a1e, #8b5a2b 55%, #a66b35);
+        border-bottom: 4px solid #d8c3a3;
+    }
+    .phoenix-logo {
+        position: relative;
+        z-index: 2;
+        width: 100px;
+        margin-bottom: 14px;
+        filter: drop-shadow(0 5px 8px rgba(0, 0, 0, .25));
+        animation: logoEnter .8s ease-out;
+    }
+    @keyframes logoEnter {
+        from { opacity: 0; transform: scale(.85); }
+        to { opacity: 1; transform: scale(1); }
+    }
+    .header h1 {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        font-family: cursive;
+        font-size: 36px;
+        line-height: 1.3;
+        color: #f8f1df;
+        animation: titleEnter .8s ease-out;
+    }
+    @keyframes titleEnter {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .section {
+        position: relative;
+        margin: 28px;
+        padding: 28px;
+        background: #ffffff;
+        border: 2px solid #d8c3a3;
+        border-radius: 16px;
+        box-shadow: 0 5px 14px rgba(0, 0, 0, .08);
+        animation: sectionEnter .6s ease-out;
+    }
+    .section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75px;
+        height: 5px;
+        background: #8b5a2b;
+        border-radius: 16px 0 5px 0;
+    }
+    @keyframes sectionEnter {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .section-title {
+        margin: 0 0 20px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #d8c3a3;
+        font-size: 26px;
+        color: #5b3a1e;
+        text-align: center;
+    }
+    .content-text {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #75604d;
+    }
+    .content-text b, .content-text strong { color: #8b5a2b; }
+    .content-text ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    .content-text li {
+        margin-bottom: 8px;
+    }
+    .image-box-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+    }
+    .image-box {
+        text-align: center;
+    }
+    .image-box img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 320px;
+        object-fit: contain;
+        border: 5px solid #d8c3a3;
+        border-radius: 13px;
+        background: #f8f1df;
+        box-shadow: 0 7px 15px rgba(0, 0, 0, .15);
+        transition: .3s;
+    }
+    .image-box img:hover {
+        transform: scale(1.025);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .22);
+    }
+    .term-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        margin-top: 20px;
+    }
+    .term {
+        background: #f8f1df;
+        border: 2px solid #d8c3a3;
+        border-radius: 10px;
+        padding: 18px;
+        transition: .25s;
+    }
+    .term:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .12);
+    }
+    .term h3 {
+        margin: 0 0 8px;
+        color: #8b5a2b;
+        font-size: 18px;
+    }
+    .term p, .term ul {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #75604d;
+    }
+    .info-card {
+        padding: 20px;
+        background: #f8f1df;
+        border: 1px solid #d8c3a3;
+        border-left: 5px solid #8b5a2b;
+        border-radius: 10px;
+        margin-top: 15px;
+        transition: .25s;
+    }
+    .info-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 14px rgba(0, 0, 0, .12);
+    }
+    .info-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        color: #5b3a1e;
+    }
+    .info-card p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #75604d;
+    }
+    
+    /* TABLE STYLES */
+    .table-container {
+        overflow-x: auto;
+        margin-top: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        border: 2px solid #d8c3a3;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #d8c3a3;
+        border-right: 1px solid #d8c3a3;
+        font-size: 15px;
+        color: #75604d;
+    }
+    th:last-child, td:last-child {
+        border-right: none;
+    }
+    th {
+        background: #8b5a2b;
+        color: #f8f1df;
+        font-size: 16px;
+    }
+    tr:nth-child(even) {
+        background: #f8f1df;
+    }
+
+    .lesson-navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin: 35px 28px;
+        padding-top: 25px;
+        border-top: 2px solid #d8c3a3;
+    }
+    .lesson-button {
+        background: #8b5a2b;
+        color: #f8f1df;
+        border: 2px solid #d8c3a3;
+        padding: 13px 23px;
+        border-radius: 25px;
+        font-family: Georgia, serif;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 9px rgba(0, 0, 0, .2);
+        transition: .3s;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+    .lesson-button:hover {
+        background: #a66b35;
+        transform: translateY(-3px);
+    }
+    .lesson-button:nth-child(1) {
+        background: #eadbc4;
+        color: #5b3a1e;
+    }
+    .lesson-button:nth-child(1):hover {
+        background: #d8c3a3;
+    }
+    .footer {
+        font-family: cursive;
+        text-align: center;
+        margin-top: 35px;
+        padding: 30px 20px;
+        background: #5b3a1e;
+        color: #f8f1df;
+        border-top: 4px solid #d8c3a3;
+    }
+    .footer p {
+        margin: 5px 0;
+        font-size: 14px;
+        opacity: .8;
+    }
+    .footer-title {
+        margin: 0;
+        font-family: cursive;
+        font-size: 29px;
+        color: #f8f1df;
+    }
+    @media screen and (max-width: 700px) {
+        .paper { width: 95%; margin: 15px auto 30px; border-radius: 16px; }
+        .top-bar { padding: 14px 16px; }
+        .back-home { padding: 8px 13px; font-size: 13px; }
+        .page-label { font-size: 9px; letter-spacing: 1px; text-align: right; }
+        .header { padding: 38px 18px 45px; }
+        .phoenix-logo { width: 80px; }
+        .header h1 { font-size: 26px; }
+        .section { margin: 18px 12px; padding: 21px 18px; }
+        .section-title { font-size: 20px; }
+        .content-text { font-size: 15px; }
+        .lesson-navigation { flex-direction: column; margin: 25px 12px; }
+        .lesson-button { width: 100%; font-size: 16px; }
+    }
+    
+
+    /* PRESENTATION LAYOUT: spacing and alignment only; original content,
+       palette, image boxes, and navigation are preserved. */
+    .paper {
+        width: min(96%, 1180px);
+        margin: 24px auto 40px;
+    }
+    .header {
+        padding: 42px clamp(22px, 5vw, 72px) 48px;
+    }
+    .header h1 {
+        max-width: 920px;
+        margin-inline: auto;
+        text-wrap: balance;
+    }
+    .section {
+        margin: 24px;
+        padding: clamp(22px, 3vw, 34px);
+        border-radius: 14px;
+    }
+    .section-title {
+        text-align: left;
+        line-height: 1.35;
+        max-width: 100%;
+    }
+    .content-text {
+        max-width: 960px;
+        margin-inline: auto;
+    }
+    .content-text p {
+        margin: 0 0 12px;
+    }
+    .content-text ul, .content-text ol {
+        padding-left: 24px;
+        margin: 10px 0 18px;
+    }
+    .content-text li {
+        padding-left: 3px;
+        margin-bottom: 9px;
+    }
+    .term-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 16px;
+    }
+    .term {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+    .image-box-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        gap: 18px;
+    }
+    .image-box {
+        min-width: 0;
+    }
+    .image-box img {
+        display: block;
+        margin-inline: auto;
+    }
+    .section > .image-box {
+        width: min(100%, 560px);
+        margin-inline: auto;
+    }
+    .section > .term-list,
+    .section > .image-box-grid {
+        width: 100%;
+    }
+    .section:has(> .info-card) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: stretch;
+    }
+    .section:has(> .info-card) > .section-title {
+        grid-column: 1 / -1;
+        margin-bottom: 2px;
+    }
+    .section:has(> .info-card) > .info-card {
+        margin-top: 0;
+        height: 100%;
+    }
+    .table-container {
+        margin-top: 16px;
+    }
+    th, td {
+        vertical-align: top;
+        line-height: 1.55;
+    }
+    .lesson-navigation {
+        margin: 28px 24px 34px;
+        gap: 12px;
+    }
+    .footer {
+        margin-top: 28px;
+    }
+    @media screen and (max-width: 760px) {
+        .paper {
+            width: 96%;
+            margin: 12px auto 24px;
+            border-width: 4px;
+        }
+        .section {
+            margin: 14px 10px;
+            padding: 20px 16px;
+        }
+        .section-title {
+            font-size: 21px;
+        }
+        .term-list {
+            grid-template-columns: 1fr;
+        }
+        .image-box-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+        .section:has(> .info-card) {
+            grid-template-columns: 1fr;
+        }
+        .section:has(> .info-card) > .section-title {
+            grid-column: auto;
+        }
+        .lesson-navigation {
+            margin: 22px 10px 28px;
+        }
+    }
+    @media screen and (max-width: 440px) {
+        .image-box-grid {
+            grid-template-columns: 1fr;
+        }
+        .header h1 {
+            font-size: 23px;
+        }
+        .top-bar {
+            align-items: flex-start;
+        }
+    }
+
+
+    /* HELLO KITTY THANK-YOU ENDING */
+    .thank-you-section {
+        position: relative;
+        width: 100%;
+        min-height: 330px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .thank-you-card {
+        width: 55%;
+        padding: 30px 20px;
+        background: #f8f1df;
+        border: 5px solid #d8c3a3;
+        box-shadow: 0 6px 15px rgba(0,0,0,.2);
+        position: relative;
+        z-index: 2;
+        transform: rotate(-1deg);
+        text-align: center;
+        animation: thankYouEnter .8s ease-out;
+    }
+    .thank-you-card h2 {
+        margin: 0 0 15px;
+        color: #5b3a1e;
+        font-family: cursive;
+        font-size: 32px;
+    }
+    .thank-you-card p {
+        color: #75604d;
+        font-size: 17px;
+        line-height: 1.6;
+        text-align: center;
+        margin: 10px 0 20px;
+    }
+    .thank-you-card h3 {
+        color: #5b3a1e;
+        font-family: cursive;
+        font-size: 26px;
+        margin: 10px 0 5px;
+    }
+    .thank-you-card span {
+        color: #8b5a2b;
+        font-size: 15px;
+    }
+    .hello-kitty {
+        position: absolute;
+        object-fit: contain;
+        filter: drop-shadow(0 5px 5px rgba(0,0,0,.2));
+        z-index: 3;
+    }
+    .hello-left {
+        width: 140px;
+        left: 0;
+        bottom: 10px;
+        transform: rotate(-8deg);
+        animation: kittyLeft 3s ease-in-out infinite;
+    }
+    .hello-right {
+        width: 140px;
+        right: 0;
+        top: 10px;
+        transform: rotate(8deg);
+        animation: kittyRight 3s ease-in-out infinite;
+    }
+    .hello-bottom {
+        width: 120px;
+        left: 50%;
+        bottom: -15px;
+        transform: translateX(-50%);
+        animation: kittyBottom .8s ease-out;
+    }
+    @keyframes thankYouEnter {
+        from { opacity: 0; transform: translateY(20px) rotate(-1deg); }
+        to { opacity: 1; transform: translateY(0) rotate(-1deg); }
+    }
+    @keyframes kittyLeft {
+        0%,100% { transform: rotate(-8deg) translateY(0); }
+        50% { transform: rotate(-8deg) translateY(-8px); }
+    }
+    @keyframes kittyRight {
+        0%,100% { transform: rotate(8deg) translateY(0); }
+        50% { transform: rotate(8deg) translateY(-8px); }
+    }
+    @keyframes kittyBottom {
+        from { opacity: 0; transform: translate(-50%,20px); }
+        to { opacity: 1; transform: translate(-50%,0); }
+    }
+    @media screen and (max-width: 700px) {
+        .thank-you-section { min-height: 300px; margin-top: 30px; }
+        .thank-you-card { width: 65%; padding: 22px 15px; }
+        .thank-you-card h2 { font-size: 25px; }
+        .thank-you-card p { font-size: 14px; }
+        .thank-you-card h3 { font-size: 22px; }
+        .hello-left { width: 90px; left: -5px; bottom: 20px; }
+        .hello-right { width: 90px; right: -5px; top: 20px; }
+        .hello-bottom { width: 80px; bottom: -10px; }
+    }
+
+</style>
+</head>
+<body>
+<div class="paper">
+<!-- TOP BAR -->
+<div class="top-bar">
+<a class="back-home" href="index.html">← Back to Home</a>
+<div class="page-label">PHOENIX • HISTO PAGE</div>
+</div>
+<!-- HEADER / HERO -->
+<header class="header">
+<img alt="Phoenix Logo" class="phoenix-logo" src="Project/Img/phoenix.png"/>
+<h1>Bunga ng Kilusang Panlipunan – Himagsikan sa Pagsulong ng Kamalayang Pilipino</h1>
+</header>
+<!-- INTRO DEFINITIONS -->
+<section class="section">
+<div class="term-list">
+<div class="term">
+<h3>Kilusang panlipunan -</h3>
+<p>Ito ay sama-samang pagkilos ng mga tao upang makamit ang pagbabago sa lipunan.</p>
+</div>
+<div class="term">
+<h3>Himagsikan -</h3>
+<p>Ito ay malawakang pag-aalsa o pakikibaka laban sa isang umiiral na kapangyarihan o pamahalaan upang makamit ang malaking pagbabago.</p>
+</div>
+<div class="term">
+<h3>Kamalayang Pilipino -</h3>
+<p>Ito ay ang pag-unawa ng mga Pilipino sa kanilang pagkakakilanlan, karapatan, pagkakaisa, at kakayahang mamahala sa sariling bayan.</p>
+</div>
+</div>
+<!-- 3 IMAGE BOXES FOR 3 IMAGES -->
+<div class="image-box-grid">
+<div class="image-box">
+<img alt="r1" src="Project/image/r1.jpeg"/>
+</div>
+<div class="image-box">
+<img alt="r2" src="Project/image/r2.jpeg"/>
+</div>
+<div class="image-box">
+<img alt="r3" src="Project/image/r3.png"/>
+</div>
+</div>
+</section>
+<!-- SECTION 1 -->
+<section class="section">
+<h2 class="section-title">"Kalagayan ng Pilipinas bago ang himagsikan"</h2>
+<div class="content-text">
+<p><strong>Pamamahala ng mga Espanyol</strong></p>
+<p>Sa loob ng mahigit tatlong siglo, ang Pilipinas ay nasa ilalim ng pamamahala ng Espanya. Maraming Pilipino ang nakaranas ng hindi pantay na pagtrato at limitadong pagkakataong makilahok sa pamahalaan.</p>
+<p><strong>Ilan sa mga suliranin noon :</strong></p>
+<ul>
+<li><strong>Hindi pantay na pagtrato.</strong> Nagkaroon ng pagkakaiba sa katayuan at pribilehiyo ng mga tao batay sa kanilang pinagmulan at posisyon sa lipunan.</li>
+<li><strong>Pang-aabuso sa kapangyarihan.</strong> May mga opisyal at prayleng inakusahan ng pang-aabuso at kawalan ng katarungan.</li>
+<li><strong>Limitadong kalayaan sa pagpapahayag.</strong> Ang mga kritiko ng pamahalaang kolonyal ay maaaring usigin, ikulong, o ipatapon.</li>
+<li><strong>Pasaning pang-ekonomiya.</strong> Ang mga buwis, sapilitang paggawa sa ilang sistema, at iba pang obligasyon ay nagpahirap sa maraming mamamayan.</li>
+<li><strong>Kawalan ng sapat na representasyon.</strong> Maraming Pilipino ang nagnanais ng mas malaking papel sa paggawa ng mga batas at pagpapasya para sa bansa.</li>
+</ul>
+</div>
+<!-- 3 IMAGE BOXES -->
+
+</section>
+<!-- SECTION 2 -->
+<section class="section">
+<h2 class="section-title">"Ang pag-usbong ng mga ilustrado"</h2>
+<div class="content-text">
+<p>Ang mga ilustrado ay mga edukadong Pilipino, kabilang ang mga nakapag-aral sa Europa, na naging aktibo sa pagsusulong ng reporma at karapatan ng mga Pilipino.</p>
+<p>Sa pamamagitan ng pagsusulat, talumpati, at paglalathala, inilantad nila ang mga suliranin ng lipunan. Nakatulong ang kanilang mga ideya upang maunawaan ng mas maraming Pilipino na kailangang baguhin ang mapang-abusong sistema ng pamamahala.</p>
+</div><div class="image-box-grid">
+<div class="image-box">
+<img alt="r4" src="Project/image/r4.jpeg"/>
+</div>
+<div class="image-box">
+<img alt="r5" src="Project/image/r5.jpeg"/>
+</div>
+<div class="image-box">
+<img alt="r6" src="Project/image/r6.jpeg"/>
+</div>
+</div>
+<!-- 1 IMAGE BOX -->
+
+</section>
+<!-- SECTION 3 -->
+<section class="section">
+<h2 class="section-title">"Ang Pagbitay sa GOMBURZA noong 1872"</h2>
+<div class="image-box" style="margin-top: 20px;">
+<img alt="r7" src="Project/image/r7.jpeg"/>
+</div>
+    <div class="content-text">
+<p><br>
+    Noong Pebrero 17, 1872, binitay sa pamamagitan ng garote ang tatlong paring Pilipino na sina:</p>
+<ul>
+<li><strong>Mariano Gomes (Gomez)</strong> – isa sa mga paring nagsusulong ng karapatan ng mga paring sekular.</li>
+<li><strong>José Burgos</strong> – kilala sa pagtatanggol sa kakayahan at karapatan ng mga paring Pilipino.</li>
+<li><strong>Jacinto Zamora</strong> – kapwa paring sekular na nahatulan kaugnay ng mga pangyayaring sumunod sa Cavite Mutiny.</li>
+</ul>
+<p>Kilala silang magkakasama bilang GOMBURZA.</p>
+<p>Nangyari ang kanilang pagbitay matapos ang Cavite Mutiny noong Enero 1872. Inakusahan silang sangkot sa paghihimagsik, ngunit ang paglilitis at pagbitay sa kanila ay naging sagisag ng kawalan ng katarungan sa ilalim ng pamahalaang kolonyal.</p>
+<p><strong>Bakit mahalaga ang GOMBURZA?</strong></p>
+<p>Ang kanilang pagkamatay ay nagpalalim sa pagnanais ng mga Pilipino na makamit ang katarungan. Naging mahalagang impluwensiya rin sila kay José Rizal, na nag-alay ng kaniyang nobelang El Filibusterismo sa kanilang alaala.</p>
+</div>
+<!-- 1 IMAGE BOX -->
+
+</section>
+<!-- SECTION 4 -->
+<section class="section">
+<h2 class="section-title">"Ang Kilusang Propaganda"</h2>
+<div class="image-box" style="margin-top: 20px;">
+<img alt="r8" src="Project/image/r8.jpeg"/>
+</div>
+    <div class="content-text">
+<p><br>Ang Kilusang Propaganda ay isang kilusan ng mga Pilipinong repormista na naging aktibo lalo na noong dekada 1880 hanggang kalagitnaan ng dekada 1890. Pangunahing layunin nitong makamit ang mga pagbabago sa mapayapang paraan, sa pamamagitan ng pagsusulat at panghihikayat.</p>
+<p>Hindi pa ganap na kalayaan ang pangunahing hinihingi ng karamihan sa mga repormista sa simula, nais muna nilang makamit ang pantay na karapatan at pagbabago sa pamamahala.</p>
+<p><strong>Mga pangunahing layunin</strong></p>
+<ul>
+<li>Pagkakapantay-pantay ng mga Pilipino at Espanyol sa ilalim ng batas.</li>
+<li>Pagkakaroon ng representasyon ng Pilipinas sa Cortes Generales ng Espanya.</li>
+<li>Pagpapabuti sa sistema ng edukasyon.</li>
+<li>Pagpigil sa pang-aabuso ng mga opisyal at prayle.</li>
+<li>Pagpapalawak ng kalayaan sa pamamahayag at pagpapahayag.</li>
+<li>Pagkilala sa karapatan ng mga Pilipino at sa kakayahan ng mga paring Pilipino.</li>
+</ul>
+<p><strong>"Mga pangunahing personalidad"</strong></p>
+<div class="term-list">
+<div class="term">
+<h3>1. Dr. José Rizal (1861–1896)</h3>
+<p>Isang doktor, manunulat, at repormista. Isinulat niya ang Noli Me Tangere at El Filibusterismo, na naglantad sa mga suliranin at pang-aabuso sa lipunang kolonyal.</p>
+<p>Nagtatag siya ng La Liga Filipina noong 1892. Isinulong niya ang reporma at pambansang pagkakaisa, ngunit hindi niya sinuportahan ang agarang armadong himagsikan nang kausapin siya ni Pio Valenzuela noong 1896.</p>
+</div>
+<div class="term">
+<h3>2. Marcelo H. del Pilar (1850–1896)</h3>
+<p>Isang manunulat at repormista na gumamit ng mga sanaysay at pamamahayag upang tuligsain ang pang-aabuso ng mga prayle. Naging mahalagang patnugot siya ng La Solidaridad.</p>
+</div>
+<div class="term">
+<h3>3. Graciano López Jaena (1856–1896)</h3>
+<p>Isang mahusay na mananalumpati at manunulat. Itinatag niya ang pahayagang La Solidaridad noong 1889, na nagsilbing daluyan ng mga panawagan para sa reporma.</p>
+</div>
+<div class="term">
+<h3>4. Mariano Ponce (1863–1918)</h3>
+<p>Isang manunulat at propagandista na tumulong sa pagpapalaganap ng mga ideya ng kilusan. Naging bahagi rin siya ng pamamahala at pagsusulat para sa La Solidaridad.</p>
+</div>
+<div class="term">
+<h3>5. Antonio Luna (1866–1899)</h3>
+<p>Isang manunulat, propagandista, at kalauna'y pinunong militar. Nakilahok siya sa pagsusulat at pagpapalaganap ng mga ideya ng reporma bago naging mahalagang heneral sa pakikibaka para sa kalayaan.</p>
+</div>
+</div>
+<p style="margin-top: 20px;"><strong>"Ang mga akda at publikasyon"</strong></p>
+<ul>
+<li><strong>Noli Me Tangere (1887)</strong> – Inilantad ang mga suliranin, katiwalian, at pang-aabuso sa lipunan.</li>
+<li><strong>El Filibusterismo (1891)</strong> – Nagpakita ng mas madilim na larawan ng pang-aapi at kawalan ng katarungan.</li>
+<li><strong>La Solidaridad (1889–1895)</strong> – Pahayagang nagpalaganap ng mga ideya at panawagan ng mga repormista.</li>
+<li><strong>Mga sanaysay ni Marcelo H. del Pilar</strong> – Tumuligsa sa pang-aabuso at nagtaguyod ng mga reporma.</li>
+</ul>
+<p><strong>Bakit hindi nagtagumpay ang Kilusang Propaganda?</strong></p>
+<p>Sa kabila ng kanilang mga pagsisikap, hindi naibigay ng pamahalaang Espanyol ang mga pangunahing repormang hinihingi ng mga Pilipino. Nahirapan din ang kilusan dahil sa kakulangan ng pondo, pagkakaiba ng pananaw ng mga kasapi, at pagtutol ng mga makapangyarihang sektor.</p>
+<p>Dahil dito, may mga Pilipinong naniwalang hindi sapat ang pagsusulat at mapayapang paghingi ng pagbabago. Unti-unting lumakas ang panawagan para sa ganap na kalayaan.</p>
+</div>
+<!-- 1 IMAGE BOX -->
+
+</section>
+<!-- SECTION 5 -->
+<section class="section">
+<h2 class="section-title">"La Liga Filipina at ang pagkakatatag ng Katipunan"</h2>
+<div class="image-box" style="margin-top: 20px;">
+<img alt="r9" src="Project/image/r9.jpeg"/>
+</div>
+    <div class="content-text">
+<p><br>Itinatag ni José Rizal ang La Liga Filipina sa Tondo, Maynila, noong Hulyo 3, 1892.</p>
+<p><strong>Layunin nitong:</strong></p>
+<ul>
+<li>Pagkaisahin ang mga Pilipino.</li>
+<li>Magbigay ng tulong sa mga kasapi.</li>
+<li>Isulong ang edukasyon, agrikultura, at kalakalan.</li>
+<li>Itaguyod ang mga reporma sa mapayapang paraan.</li>
+<li>Ipaglaban ang mga karapatan ng mamamayan.</li>
+</ul>
+<p>Ilang araw matapos itong itatag, inaresto si Rizal at ipinatapon sa Dapitan. Humina ang organisasyon at nagkaroon ng pagkakahati sa mga kasapi tungkol sa mga susunod na hakbang.</p>
+</div>
+<!-- 1 IMAGE BOX -->
+
+</section>
+<!-- SECTION 6 -->
+<section class="section">
+<h2 class="section-title">"Ang Katipunan"</h2>
+<div class="image-box" style="margin-top: 20px;">
+<img alt="r10" src="Project/image/r10.jpeg"/>
+</div>
+    <div class="content-text">
+<p>Noong Hulyo 7, 1892, itinatag ang Kataastaasan, Kagalanggalangang Katipunan ng mga Anak ng Bayan (KKK), na karaniwang tinatawag na Katipunan.</p>
+<p>Isa itong lihim na samahang naglalayong makamit ang kalayaan ng Pilipinas mula sa Espanya sa pamamagitan ng rebolusyon.</p>
+<p><strong>Mga kinikilalang unang nagtatag nito:</strong></p>
+<ul>
+<li><strong>Andrés Bonifacio</strong> – pangunahing pinuno at unang Supremo ng Katipunan.</li>
+<li><strong>Deodato Arellano</strong> – unang pangulo ng Kataas-taasang Sanggunian.</li>
+<li><strong>Ladislao Diwa</strong> – isa sa mga unang kasapi at tagapagtatag.</li>
+<li><strong>Teodoro Plata</strong> – isa sa mga unang kasapi at tagapagtatag.</li>
+<li><strong>Valentín Díaz</strong> – isa sa mga unang kasapi at tagapagtatag.</li>
+<li><strong>José Dizon</strong> – isa sa mga unang kasapi at tagapagtatag.</li>
+</ul>
+<p><strong>Mga layunin at paraan ng Katipunan :</strong></p>
+<ul>
+<li>Makamit ang kalayaan ng Pilipinas mula sa Espanya.</li>
+<li>Pagkaisahin ang mga Pilipino sa iisang layunin.</li>
+<li>Itaguyod ang pagkakapantay-pantay at paggalang sa kapwa.</li>
+<li>Palaganapin ang pagmamahal sa bayan.</li>
+<li>Ihanda ang mga kasapi para sa rebolusyon.</li>
+</ul>
+<p><strong>Mga dokumento at sagisag ng Katipunan :</strong></p>
+<ol>
+<li><strong>Kartilya ng Katipunan</strong> – isinulat ni Emilio Jacinto at naglalaman ng mga aral tungkol sa dangal, pagkakapantay-pantay, at wastong asal.</li>
+<li><strong>Kalayaan</strong> – opisyal na pahayagan ng Katipunan na tumulong sa pagpapalaganap ng mga ideya nito.</li>
+<li><strong>Andres Bonifacio</strong> – tinaguriang Ama ng Himagsikang Pilipino at pangunahing pinuno ng Katipunan.</li>
+<li><strong>Emilio Jacinto</strong> – kilala bilang Utak ng Katipunan dahil sa kaniyang mga kaisipan at mga isinulat.</li>
+<li><strong>Gregoria de Jesus</strong> – kilala bilang Lakambini ng Katipunan; tumulong sa pag-iingat ng mga dokumento at iba pang gawain ng samahan.</li>
+</ol>
+</div>
+</section>
+<!-- SECTION 7 -->
+<section class="section">
+<h2 class="section-title">"Mga mahahalagang personalidad sa Himagsikang Pilipino"</h2>
+<div class="term-list">
+<div class="term">
+<h3>1. Andrés Bonifacio (1863–1897)</h3>
+<p>Pangunahing pinuno ng Katipunan at isa sa mga pangunahing nagpasimula ng himagsikan noong 1896. Naniniwala siyang dapat makamit ang kalayaan sa pamamagitan ng rebolusyon.</p>
+<div class="image-box" style="margin-top:10px;">
+<img alt="r11" src="Project/image/r11.jpeg"/>
+</div>
+</div>
+<div class="term">
+<h3>2. Emilio Aguinaldo (1869–1964)</h3>
+<p>Isang pinunong rebolusyonaryo mula sa Cavite. Nahalal siyang pangulo ng pamahalaang rebolusyonaryo sa Tejeros Convention noong 1897 at nanguna sa deklarasyon ng kalayaan noong Hunyo 12, 1898.</p>
+<div class="image-box" style="margin-top:10px;">
+<img alt="r12" src="Project/image/r12.jpeg"/>
+</div>
+</div>
+<div class="term">
+<h3>3. Emilio Jacinto (1875–1899)</h3>
+<p>Kilala bilang Utak ng Katipunan. Isinulat niya ang Kartilya ng Katipunan, na nagbigay-diin sa moralidad, dangal, at pagkakapantay-pantay.</p>
+<div class="image-box" style="margin-top:10px;">
+<img alt="r13" src="Project/image/r13.jpeg"/>
+</div>
+</div>
+<div class="term">
+<h3>4. Gregoria de Jesus (1875–1943)</h3>
+<p>Tinaguriang Lakambini ng Katipunan. Tumulong siya sa pagtatago at pag-iingat ng mga dokumento at sa pagpapanatili ng mga lihim ng samahan.</p>
+<div class="image-box" style="margin-top:10px;">
+<img alt="r14" src="Project/image/r14.jpeg"/>
+</div>
+</div>
+<div class="term">
+<h3>5. Melchora Aquino (1812–1919)</h3>
+<p>Kilala bilang Tandang Sora. Nagbigay siya ng pagkain, kanlungan, at tulong sa mga Katipunero. Naging mahalaga ang kaniyang suporta sa mga rebolusyonaryo.</p>
+<div class="image-box" style="margin-top:10px;">
+<img alt="r15" src="Project/image/r15.jpeg"/>
+</div>
+</div>
+<div class="term">
+<h3>6. Apolinario Mabini (1864–1903)</h3>
+<p>Isang abogado at palaisip na naging mahalagang tagapayo ni Aguinaldo. Malaki ang naging ambag niya sa paghubog ng pamahalaang rebolusyonaryo at sa mga prinsipyong pampolitika nito.</p>
+<div class="image-box" style="margin-top:10px;">
+<img alt="r16" src="Project/image/r16.jpeg"/>
+</div>
+</div>
+<div class="term">
+<h3>7. Pio Valenzuela (1869–1956)</h3>
+<p>Isang doktor at kasapi ng Katipunan. Ipinadala siya upang kausapin si Rizal sa Dapitan noong 1896 tungkol sa planong himagsikan.</p>
+<div class="image-box" style="margin-top:10px;">
+<img alt="r17" src="Project/image/r17.jpeg"/>
+</div>
+</div>
+<div class="term">
+<h3>8. Agueda Kahabagan</h3>
+<p>Isang babaeng rebolusyonaryo mula sa Laguna. Nakilala siya sa aktibong pakikilahok sa pakikibaka at kabilang sa mga babaeng kinilala sa mga puwersang rebolusyonaryo.</p>
+<div class="image-box" style="margin-top:10px;">
+<img alt="r18" src="Project/image/r18.jpeg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8 -->
+<section class="section">
+<h2 class="section-title">"Ang pagsiklab ng Himagsikang Pilipino noong 1896"</h2>
+<div class="content-text">
+<p><strong>Pagkakatuklas sa Katipunan :</strong></p>
+<p>Noong Agosto 1896, natuklasan ng mga awtoridad ng Espanya ang lihim na samahan ng Katipunan. Nagkaroon ng pag-aresto at pag-uusig sa mga pinaghinalaang kasapi.</p>
+<p>Dahil nanganganib ang organisasyon, nagpasya ang mga Katipunero na simulan ang malawakang pag-aalsa sa halip na ipagpatuloy lamang ang kanilang lihim na paghahanda.</p>
+</div>
+<!-- 1 IMAGE BOX -->
+
+</section>
+<!-- SECTION 9 -->
+<section class="section">
+<h2 class="section-title">"Sigaw ng Pugad Lawin"</h2>
+<div class="image-box" style="margin-top:20px;">
+<img alt="r19" src="Project/image/r19.jpeg"/>
+</div>
+    <div class="content-text">
+<p>
+    <br>Noong Agosto 23, 1896, nagtipon sina Andrés Bonifacio at mga Katipunero sa Pugad Lawin, na matatagpuan sa kasalukuyang Quezon City ayon sa kinikilalang makasaysayang pook.</p>
+<p>Pinunit nila ang kanilang mga sedula bilang simbolo ng pagtanggi sa kapangyarihan ng pamahalaang kolonyal at ng kanilang kahandaang lumaban para sa kalayaan.</p>
+<p><strong>Bakit mahalaga ang Sigaw ng Pugad Lawin?</strong></p>
+<ul>
+<li>Ipinakita nito ang hayagang pagtutol sa pamahalaang Espanyol.</li>
+<li>Nagsilbi itong sagisag ng pagsisimula ng malawakang himagsikan.</li>
+<li>Pinatunayan nito na may mga Pilipinong handang magsakripisyo para sa kalayaan.</li>
+</ul>
+</div>
+</section>
+<!-- SECTION 10 -->
+<section class="section">
+<h2 class="section-title">"Ang pagkamatay ni José Rizal"</h2>
+<div class="image-box" style="margin-top:20px;">
+<img alt="r20" src="Project/image/r20.jpeg"/>
+</div>
+    
+    <div class="content-text">
+<p><br>Noong Disyembre 30, 1896, binitay si José Rizal sa Bagumbayan, na kilala ngayon bilang Rizal Park sa Maynila.</p>
+<p>Bagaman hindi siya tagapagtaguyod ng agarang armadong himagsikan, naging makapangyarihan ang kaniyang mga akda at ang kaniyang pagkamatay sa paghubog ng nasyonalismong Pilipino.</p>
+<p>Maraming Pilipino ang nakakita sa kaniya bilang sagisag ng sakripisyo, katarungan, at pagmamahal sa bayan.</p>
+</div>
+</section>
+<!-- SECTION 11 -->
+<section class="section">
+<h2 class="section-title">Tejeros Convention — Marso 22, 1897</h2>
+<div class="image-box" style="margin-top:20px;">
+<img alt="r21" src="Project/image/r21.jpeg"/>
+</div>
+    
+    <div class="content-text">
+<p><br>Nagtipon ang mga pinunong rebolusyonaryo sa Tejeros, Cavite, upang pag-usapan ang pamamahala at pamumuno sa himagsikan.</p>
+<p><strong>Mga pangunahing pangyayari:</strong></p>
+<ul>
+<li>Nahalal si Emilio Aguinaldo bilang pangulo ng pamahalaang rebolusyonaryo.</li>
+<li>Nahalal si Mariano Trías bilang pangalawang pangulo.</li>
+<li>Nagkaroon ng alitan sa pagitan ng mga pangkat at pinunong rebolusyonaryo.</li>
+<li>Tinanggihan ni Bonifacio ang bisa ng halalan matapos ang mga pagtatalo at paghamak sa kaniyang kakayahan.</li>
+</ul>
+<p>Ang Tejeros Convention ay mahalagang halimbawa ng mga hamong kinaharap ng himagsikan: bukod sa pakikipaglaban sa Espanya, kailangan ding lutasin ng mga Pilipino ang kanilang mga hindi pagkakasundo sa pamumuno.</p>
+<br/>
+<p><strong>Pagkamatay ni Andrés Bonifacio — 1897</strong></p>
+<p>Matapos ang alitan sa pamumuno, inaresto si Bonifacio at ang kaniyang kapatid na si Procopio. Nilitis sila ng pamahalaang rebolusyonaryo at hinatulan ng kamatayan.</p>
+<p>Noong Mayo 10, 1897, pinatay ang magkapatid sa kabundukan ng Maragondon, Cavite.</p>
+</div>
+</section>
+<!-- SECTION 12 -->
+<section class="section">
+<h2 class="section-title">"Mula sa Biak-na-Bato hanggang sa deklarasyon ng kalayaan"</h2>
+<div class="image-box" style="margin-top:20px;">
+<img alt="r22" src="Project/image/r22.png"/>
+</div>
+    <div class="content-text">
+<p><br>
+    <strong>
+    Kasunduan sa Biak-na-Bato — Disyembre 1897</strong></p>
+<p>Sa pagpapatuloy ng digmaan, nagkaroon ng kasunduan sa pagitan ng mga rebolusyonaryo at ng pamahalaang Espanyol.</p>
+<p><strong>Sa ilalim ng Kasunduan sa Biak-na-Bato:</strong></p>
+<ul>
+<li>Pumayag si Emilio Aguinaldo at ilang kasamang rebolusyonaryo na magtungo sa Hong Kong.</li>
+<li>Nangako ang panig ng Espanya ng mga reporma at kabayaran.</li>
+<li>Pansamantalang humina ang labanan sa ilang lugar.</li>
+</ul>
+<p>Gayunman, hindi nito tuluyang nalutas ang mga suliranin. Hindi nakamit ang mga inaasahang pagbabago, at nagpatuloy ang pakikibaka sa sumunod na taon.</p>
+<p><strong>Pagbabalik ni Aguinaldo at pagpapatuloy ng rebolusyon — 1898</strong></p>
+<p>Noong 1898, nagkaroon ng digmaan sa pagitan ng Espanya at Estados Unidos. Bumalik si Aguinaldo sa Pilipinas at ipinagpatuloy ng mga rebolusyonaryo ang kanilang pakikibaka laban sa Espanya.</p>
+</div>
+</section>
+<!-- SECTION 13 -->
+<section class="section">
+<h2 class="section-title">Deklarasyon ng Kalayaan at Unang Republika</h2>
+<div class="image-box" style="margin-top:20px;">
+<img alt="r23" src="Project/image/r23.jpeg"/>
+</div>
+        <div class="content-text">
+<p><strong>Deklarasyon ng Kalayaan — Hunyo 12, 1898</strong></p>
+<p>Noong Hunyo 12, 1898, ipinahayag ni Emilio Aguinaldo ang kalayaan ng Pilipinas sa Kawit, Cavite.</p>
+<p>Ito ay isang mahalagang bunga ng mahabang pakikibaka ng mga Pilipino dahil ipinahayag nila sa publiko ang kanilang karapatang maging isang malayang bansa.</p>
+<p style="margin-top: 20px;"><strong>Unang Republika ng Pilipinas — Enero 23, 1899</strong></p>
+<p>Noong Enero 23, 1899, pinasinayaan ang Unang Republika ng Pilipinas sa Malolos, Bulacan, sa pamumuno ni Emilio Aguinaldo.</p>
+<p>Ipinakita nito na ang layunin ng mga rebolusyonaryo ay hindi lamang alisin ang pamamahalang Espanyol, kundi bumuo rin ng sariling pamahalaan at mga institusyon.</p>
+<p>Gayunman, hindi agad nakamit ang ganap na pagkilala sa kalayaan. Nagsimula ang Digmaang Pilipino-Amerikano noong Pebrero 4, 1899, at nagpatuloy ang pakikibaka laban sa bagong kapangyarihang kolonyal.</p>
+</div>
+</section>
+<!-- SECTION 14 -->
+<section class="section">
+<h2 class="section-title">"Mga bunga ng Kilusang Panlipunan at Himagsikan sa Pagsulong ng Kamalayang Pilipino"</h2>
+<div class="info-card">
+<h3>1. Pag-usbong ng nasyonalismong Pilipino</h3>
+<p><strong>Bunga:</strong> Lumakas ang pagnanais na ipagtanggol ang karapatan at kinabukasan ng buong bansa.</p>
+</div>
+<div class="info-card">
+<h3>2. Pagkakaisa ng mga Pilipino</h3>
+<p><strong>Bunga:</strong> Naging mas malinaw ang ideya na ang kalayaan ay hindi lamang para sa isang tao o pangkat kundi para sa buong bayan.</p>
+</div>
+<div class="info-card">
+<h3>3. Pagkamulat sa mga karapatan</h3>
+<p><strong>Bunga:</strong> Mas maraming Pilipino ang nagkaroon ng dahilan upang kuwestiyunin ang pang-aabuso at humiling ng makatarungang pamamahala.</p>
+</div>
+<div class="info-card">
+<h3>4. Pag-usbong ng mga Pilipinong pinuno</h3>
+<p><strong>Bunga:</strong> Napatunayan na ang mga Pilipino ay may kakayahang mag-organisa, magtakda ng layunin, mamuno, at bumuo ng mga institusyon para sa kanilang bayan.</p>
+</div>
+<div class="info-card">
+<h3>6. Pag-unlad ng panitikan at kamalayang panlipunan</h3>
+<p><strong>Bunga:</strong> Naging paraan ang panitikan upang mamulat ang mga tao, maipahayag ang kanilang saloobin, at maipalaganap ang mga ideya ng reporma at kalayaan.</p>
+</div>
+<div class="info-card">
+<h3>7. Pagkilala sa mahalagang papel ng kababaihan at karaniwang mamamayan</h3>
+<p><strong>Bunga:</strong> Ipinakita ng himagsikan na ang pagbabago ay nangangailangan ng ambag ng maraming sektor ng lipunan, hindi lamang ng iilang makapangyarihang tao.</p>
+</div>
+<div class="info-card">
+<h3>8. Pagpapatuloy ng pakikibaka para sa ganap na kasarinlan</h3>
+<p><strong>Bunga:</strong> Naging mas malalim ang pag-unawa na ang pagiging malaya ay hindi lamang pagkakaroon ng sariling watawat o pamahalaan; mahalaga rin ang kakayahang magpasya para sa kinabukasan ng bansa.</p>
+</div>
+</section>
+<!-- TABLE SECTION -->
+<section class="section">
+<h2 class="section-title">Talahanayan ng mga Makasaysayang Pangyayari</h2>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Petsa</th>
+<th>Pangyayari</th>
+<th>Kahalagahan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1872</td>
+<td>Pagbitay sa GOMBURZA</td>
+<td>Nagpalalim sa kamalayan tungkol sa kawalan ng katarungan.</td>
+</tr>
+<tr>
+<td>1887</td>
+<td>Paglalathala ng <i>Noli Me Tangere</i></td>
+<td>Inilantad ang mga suliranin sa lipunang kolonyal.</td>
+</tr>
+<tr>
+<td>1889</td>
+<td>Pagsisimula ng <i>La Solidaridad</i></td>
+<td>Nagpalaganap ng mga panawagan para sa reporma.</td>
+</tr>
+<tr>
+<td>1891</td>
+<td>Paglalathala ng <i>El Filibusterismo</i></td>
+<td>Naglantad sa pang-aabuso at kawalan ng katarungan.</td>
+</tr>
+<tr>
+<td>Hulyo 3, 1892</td>
+<td>Pagkakatatag ng La Liga Filipina</td>
+<td>Nagsulong ng pagkakaisa at mapayapang reporma.</td>
+</tr>
+<tr>
+<td>Hulyo 7, 1892</td>
+<td>Pagkakatatag ng Katipunan</td>
+<td>Naghanda para sa pakikibaka para sa kalayaan.</td>
+</tr>
+<tr>
+<td>Agosto 1896</td>
+<td>Pagkatuklas sa Katipunan at pagsiklab ng himagsikan</td>
+<td>Naging hayagan ang paglaban sa Espanya.</td>
+</tr>
+<tr>
+<td>Agosto 23, 1896</td>
+<td>Sigaw ng Pugad Lawin</td>
+<td>Sagisag ng pagsisimula ng malawakang pag-aalsa.</td>
+</tr>
+<tr>
+<td>Disyembre 30, 1896</td>
+<td>Pagbitay kay José Rizal</td>
+<td>Nagpalakas sa damdaming makabayan ng maraming Pilipino.</td>
+</tr>
+<tr>
+<td>Marso 22, 1897</td>
+<td>Tejeros Convention</td>
+<td>Nagkaroon ng bagong pamumuno at alitan sa mga rebolusyonaryo.</td>
+</tr>
+<tr>
+<td>Mayo 10, 1897</td>
+<td>Pagkamatay ni Bonifacio</td>
+<td>Nagpakita ng malalim na alitan sa loob ng himagsikan.</td>
+</tr>
+<tr>
+<td>Disyembre 1897</td>
+<td>Kasunduan sa Biak-na-Bato</td>
+<td>Pansamantalang nagpahina sa labanan.</td>
+</tr>
+<tr>
+<td>Hunyo 12, 1898</td>
+<td>Deklarasyon ng Kalayaan</td>
+<td>Ipinahayag ang kalayaan ng Pilipinas mula sa Espanya.</td>
+</tr>
+<tr>
+<td>Enero 23, 1899</td>
+<td>Pagtatatag ng Unang Republika</td>
+<td>Nagsimula ang isang republikang pamahalaang Pilipino.</td>
+</tr>
+<tr>
+<td>Pebrero 4, 1899</td>
+<td>Pagsisimula ng Digmaang Pilipino-Amerikano</td>
+<td>Nagpatuloy ang pakikibaka para sa kalayaan.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+    
+
+<!-- HELLO KITTY THANK-YOU ENDING -->
+<div class="thank-you-section">
+    <img class="hello-kitty hello-left" src="Project/Img/hello1.png" alt="Hello Kitty">
+    <div class="thank-you-card">
+        <h2>Salamat sa Pakikinig!</h2>
+        <p>Maraming salamat sa inyong oras at pakikinig sa aming presentasyon.</p>
+        <h3>PHOENIX</h3>
+        <span>TECH-PRO 1103</span>
+    </div>
+    <img class="hello-kitty hello-right" src="Project/Img/hello2.png" alt="Hello Kitty">
+    <img class="hello-kitty hello-bottom" src="Project/Img/hello3.png" alt="Hello Kitty">
+</div>    
+    
+<!-- LESSON NAVIGATION -->
+<div class="lesson-navigation">
+<button class="lesson-button" onclick="location.href='lesson2.html'">← Previous Lesson</button>
+<a class="lesson-button" href="index.html">Back to Home</a>
+<button class="lesson-button" onclick="location.href='next.html'">Next Lesson →</button>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+<h2 class="footer-title">PHOENIX</h2>
+<p>TECH-PRO 1103</p>
+<p>Lesson!</p>
+</footer>
+
+
+</div>
+</body>
+</html>
